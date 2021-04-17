@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    HienDTk: them item goi bang sim khac-->
+    <item
+        android:id="@+id/action_call_by_sim_other"
+        android:title="@string/action_call_by_sim_other"/>
+    <item
+        android:id="@+id/action_copy"
+        android:title="@string/action_copy_number_text"/>
+
+    <item
+        android:id="@+id/action_share"
+        android:title="@string/action_share"/>
+</menu>

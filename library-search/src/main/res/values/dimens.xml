@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="jelly_view_size">100dp</dimen>
+    <dimen name="jelly_view_offset">3dp</dimen>
+    <dimen name="icon_size">40dp</dimen>
+    <dimen name="icon_size_width">44dp</dimen>
+    <dimen name="icon_full_size">44dp</dimen>
+    <dimen name="jelly_view_width">44dp</dimen>
+    <dimen name="icon_padding">9dp</dimen>
+    <dimen name="icon_padding_horz">11dp</dimen>
+
+</resources>

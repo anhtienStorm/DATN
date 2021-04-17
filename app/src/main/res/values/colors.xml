@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Bkav TrungTH: nau nen bg binh thuong cua tab -->
+    <!--<color name="tab_bg_normal_color">#3B92BF</color>-->
+    <!-- Bkav TrungTH: Mau nen bg cua tab khi selected -->
+    <!--<color name="tab_bg_selected_color">#3381AA</color>-->
+    <!-- Bkav TrungTH: Mau shadow cua text tren tab -->
+    <color name="tab_text_shadow_color">#000000</color>
+    <!--Bkav QuangNDb: mau khi long press vao 1 conversation-->
+    <color name="conversation_pressed_color">#eceaea</color>
+    <!--Bkav QuangNDb: mau khi long press vao 1 conversation-->
+    <!--<color name="conversation_normal_color">#FAFAFA</color>-->
+    <!--Bkav QuangNDb: mau cua actionbar-->
+    <!--<color name="primary_color_dark">#0277bd</color>-->
+    <color name="primary_color_dark">#f5f5f5</color>
+    <!--Bkav QuangNDb: mau cua actionbar setting-->
+    <color name="actionbar_setting_color">#fafafa</color>
+    <!--Bkav QuangNDb: mau cua actionbar setting 5.1-->
+    <color name="actionbar_setting_color_lollipop">#eeeeee</color>
+
+    <!--Bkav QuangNDb: mau cua status bar -->
+    <!-- ANhdts chuyen tu 0288d1 sang f5f5f5-->
+    <color name="primary_color">#0288d1</color>
+    <color name="status_bar_detail_call_log">#f5f5f5</color>
+    <!-- Anhdts -->
+    <color name="accent_color">#f5f5f5</color>
+    <!--Bkav QuangNDb: mau mac dinh cua textview dung trong th muon doi lai mau textview khi da chuyen sang mau moi-->
+    <!--Bkav QuangNDb: mau cua view header trong list tin nhan-->
+    <!--Bkav QuangNDb doi mau tu 80ffffff sang 80848484 de hop voi themme moi-->
+    <!--Bkav QuangNDb doi mau tu 80848484 sang 999999 theo thiet ke moi-->
+    <color name="color_header">#999999</color>
+    <!--Bkav QuangNDb: mau cua theme color trong bubble view-->
+    <!--<color name="theme_color">3Aaaaaaa -> #ece9e8</color>-->
+    <color name="theme_color">#ece9e8</color>
+    <!--Bkav QuangNDb: mau cua background color trong bubble view-->
+    <!--Bkav QuangNDb: doi mau box tin nhan out going #CCf18b66 -> #f18b66-->
+    <!--Bkav TienNAb: doi mau box tin nhan out going #f18b66 -> #ef6c00-->
+    <color name="bubble_color_out_going">#ef6c00</color>
+    <!--<color name="bubble_color_out_going">#9f2195c1</color>-->
+    <!--<color name="bubble_color_out_going_black">#AA080808</color>-->
+    <!--Bkav QuangNDb: mau cua text message incoming #ff323232 -> #333333-->
+    <!--Bkav QuangNDb: mau cua text message outgoing #ffffffff -> #ffffff-->
+    <!--Bkav QuangNDb: ghi de lai mau text timestamp trong source goc de custom-->
+    <color name="btalk_timestamp_text_incoming">#99323232</color>
+    <color name="btalk_timestamp_text_outgoing">#99ffffff</color>
+    <!--Bkav QuangNDb: ghi de lai mau text incoming va outgoing de giong btalk cu-->
+    <!--Bkav TienNAb: sua lai mau text ten nhan den #ff323232 -> #ff000000-->
+    <color name="btalk_message_text_color_incoming">#ff000000</color>
+    <color name="btalk_message_text_color_outgoing">#ffffffff</color>
+    <!--Bkav QuangNDb mau nen cua emoticon-->
+    <!--Bkav QuangNDb mau cua nut them moi tin nhan nut binh thuong va luc press-->
+    <color name="btalk_fab_press_color">#ef7148</color>
+    <!--Bkav QuangNdB mau chu cua ten nguoi nhan tin -->
+    <!--Bkav QuangNDB mau chu noi dung tin nhan o list ben ngoai-->
+    <color name="covnersation_snippet_text_color">@color/btalk_second_text_color</color>
+    <!--Bkav QuangNDb mau cua timestamp trong tin nhan-->
+    <color name="covnersation_timestamp_text_color">#6f6e6e</color>
+    <!--Bkav QUangNDb mau cua links-->
+    <color name="btalk_color_message_body_link">#0000ff</color>
+    <!--<color name="btalk_color_compose_bg">#20f5f5f5</color>-->
+    <!--Bkav QuangNDb textColor cua cac primary line -->
+    <color name="btalk_primary_text_color">@android:color/black</color>
+    <color name="btalk_second_text_color">#717173</color>
+
+    <!--Bkav QuangNDb mau nen cua BtalkSimSelectorView-->
+
+    <!--Bkav QuangNDb mau cua bg conversation fragment-->
+    <color name="btalk_color_conversation_bg">#0Dffffff</color>
+
+    <!--Bkav QuangNDb: text compose color hint-->
+    <!--#99ffffff-->
+    <color name="btalk_color_text_compose_hint">@color/emoticon_tint</color>
+    <color name="btalk_color_text_search_view_hint">#99b6b6b6</color>
+    <color name="btalk_color_text_compose">#000000</color>
+
+    <!--Bkav QuangNDb: text actionbar conversation-->
+    <!--Bkav QuangNDb sua tu ffffff-> mau tab bar-->
+    <color name="text_color_action_bar_conversation">#1684fd</color>
+    <!--Bkav QuangNDb them tint cua emoticon-->
+    <color name="emoticon_tint">#999999</color>
+    <!--QuangNDb them color cua action mode-->
+    <color name="action_mode_color">#ef6c00</color>
+    <!--TienNAb them color cua action mode message-->
+    <color name="action_mode_message_color">#55ade9</color>
+    <!--****************Call Log*******************-->
+    <!--Anhdts: color label group recent call-->
+    <color name="bkav_date_section_text">#EA5D30</color>
+    <!--Anhdts color thanh bar-->
+    <color name="btalk_color_bg_actionbar">#ea5d30</color>
+    <!--Anhdts color button tren thanh bar-->
+    <!--Bkav TrungTh Test theo anh HoangNT color button tren thanh bar-->
+    <!--Anhdts color cua text ngay-->
+    <!--Anhdts color text so va ten trong calllog-->
+    <!--<color name="btalk_call_log_primary_color">#4e4e4e</color>-->
+    <color name="btalk_call_log_primary_color">@color/btalk_primary_text_color</color>
+    <color name="btalk_call_log_detail_color">@color/btalk_second_text_color</color>
+
+    <!--********************Dialpad***************************-->
+    <!--Anhdts color text chu so trong dialpad-->
+    <color name="btalk_dialpad_primary_text_color">#575757</color>
+    <!--Anhdts color text nhan tin-->
+    <color name="btalk_dialpad_action_send_color">#a8a8a8</color>
+    <!--Anhdts color ten nguoi goi cuoc goi chua doc-->
+    <color name="btalk_call_log_primary_color_miss_call">#ea5d30</color>
+    <!--<color name="color_digit_background">#f99900</color>-->
+
+    <!-- Mau item cua listview search dialpad-->
+    <!-- Anhdts mau text digits-->
+    <color name="text_digits_color">#FF7E38</color>
+    <!-- Anhdts mau title action bar-->
+    <!--**********TOOLTIP*********-->
+    <!-- Anhdts Tooltip -->
+    <color name="btalk_magicpad_tooltip_button_ok_pressed">#FFFFFF</color>
+    <color name="btalk_magicpad_tooltip_button_ok_normal">#FFFFFF</color>
+    <!--***********Bkav TrungTH phan rieng cho ma mau cua giao dien tong *************-->
+    <!--Mau nen cua actionbar la mau trang hoi xam-->
+    <!--Bkav TienNAb thay mau nen actionbar va tabbar thanh mau trang-->
+    <color name="btalk_actionbar_and_tabbar_bg_color">#ffffff</color>
+    <color name="btalk_actionbar_and_tabbar_bg_no_transparent_color">#f5f5f5</color>
+    <!--QuangNDb doi mau picker #f5f5f5 sang #D0ffffff-->
+    <!--Bkav TienNAb doi mau picker #D0ffffff sang ffffff-->
+    <color name="btalk_picker_fragment_color">#ffffff</color>
+    <!--QuangNDb mau nen cua giao dien pickcontact-->
+    <!--Mau cua text, icon tren actionbar , binh thuong den, khi select thi cam-->
+    <color name="btalk_ab_text_and_icon_normal_color">#666666</color>
+    <color name="btalk_ab_text_and_icon_selected_color">@color/btalk_orange_color</color>
+    <!--Mau cua list view de mau trang-->
+    <color name="btalk_listview_bg_color">#00ffffff</color>
+    <!--Mau cua duong ke ngan cach-->
+    <!--Bkav TienNAb: sua lai mau cua duong ke ngan cach tu #f6f6f6 -> #f0f0f0 theo thiet ke moi-->
+    <color name="btalk_line_divider_color">#f0f0f0</color>
+    <!--Mau nen cua button floating(button them moi)-->
+    <color name="btalk_fab_button_bg_color">@color/btalk_orange_color</color>
+    <!--Mau cam dac trung cua btalk-->
+    <color name="btalk_orange_color">#f15b2a</color>
+    <!--Mau cam dac trung cua btalk-->
+    <color name="btalk_white_bg">#ffffff</color>
+    <color name="btalk_black_bg">#000000</color>
+    <color name="btalk_transparent_view">@android:color/transparent</color>
+    <color name="btalk_fadingedge_start_color">#15000000</color>
+    <color name="btalk_fadingedge_end_color">@android:color/transparent</color>
+    <!--Bkav TienNAb sua mau background cac giao dien thanh mau trang khong co anpha-->
+    <color name="btalk_color_for_dialpad">#FFFFFF</color>
+    <color name="btalk_white_opacity_bg">#FFFFFF</color>
+    <color name="btalk_conversation_fragment_bg">#ffffff</color>
+
+    <color name="btalk_drawer_background_color">#EE333333</color>
+
+    <color name="btalk_blur_setting">#DD111111</color>
+
+    <!--=====================Anh em them các phan khac len tren nhe==========================-->
+<!--    <color name="btalk_smart_search_background">#D9f5f5f5</color>
+    <color name="btalk_color_for_dialpad">#e9ffffff</color>-->
+    <color name="bg_glass">#00ffffff</color>
+
+    <!--Anhdts mau cho tat ca action bar-->
+    <color name="btalk_actionbar_setting">#ffffff</color>
+    <color name="background_sim_row">#ffffff</color>
+
+    <color name="background_focus_sim_row">#999999</color>
+
+    <color name="workspace_icon_text_color">#FFF</color>
+    <color name="gray_pill_color">#CCCCCC</color>
+    <color name="btalk_archive_status_bar_color">#fefefe</color>
+
+    <!--Anhdts mau action bar-->
+    <color name="actionbar_setting_color_dialer">#ededed</color>
+    <color name="color_overlay_view">#66000000</color>
+
+    <!--HuyNQn hincolor searchView-->
+    <color name="color_hint_searchview">#848484</color>
+
+    <!--Bkav TienNAb: mau menu setting-->
+    <color name="setting_title">#4498f8</color>
+    <color name="setting_text_color">#000000</color>
+
+
+    <!--Bkav TienNAb: mau appbar layour cac tab-->
+    <color name="color_tab_messsage">#57aee9</color>
+    <color name="color_tab_recents">#ff7746</color>
+    <color name="color_tab_contacts">#57aee9</color>
+
+    <!--Bkav TienNAb: mau tablayout-->
+    <color name="color_icon_tablayout">#969696</color>
+    <color name="color_text_tablayout">#707070</color>
+
+    <!--Bkav TienNAb: mau chu tieu de giao dien lua chon sim-->
+    <color name="color_title_dialog_choose_sim">#3b92f8</color>
+<!--    Bkav QuangNDb ma mau sim 1, 2 dung cho truong hop lap 2 sim thuong-->
+    <color name="esim_01">#4498F8</color>
+    <color name="esim_02">#BC60FC</color>
+    <color name="esim_03">#5DC7FF</color>
+    <!--Bkav TienNAb: mau info message-->
+    <color name="color_info_message">#7c7b7b</color>
+
+    <!--Bkav TienNAb: mau icon nhan tin va icon xoa trong tab dien thoai-->
+    <color name="color_button_message_and_button_delete">#969696</color>
+
+    <!--Bkav TienNAb: mau icon copy-->
+    <color name="color_icon_copy">#0fb230</color>
+
+    <!--Bkav TienNAb: mau icon email-->
+    <color name="color_icon_email">#1684fd</color>
+
+    <color name="color_line_divider">#b8b8b8</color>
+</resources>

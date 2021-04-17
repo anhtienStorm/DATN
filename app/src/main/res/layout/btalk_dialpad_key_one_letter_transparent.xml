@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+     Bkav TrungTH copy lai , an voice mail va sua lai lui sang trai 1 it
+-->
+<bkav.android.btalk.fragments.dialpad.BtalkDialpadKeyButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/BtalkDialpadKeyButtonStyle">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dialpad_button_size"
+        android:layout_gravity="center"
+        android:background="@drawable/btalk_background_key_button"
+        android:layout_height="@dimen/dialpad_button_size">
+
+        <TextView
+            android:id="@+id/dialpad_key_number"
+            style="@style/BtalkLetterDialpadKeyNumberStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text_diapad_key"
+            android:layout_centerHorizontal="true"
+            android:paddingStart="2dp"
+            android:layout_marginBottom="-9dp"
+            android:elevation="@dimen/size_5dp"
+            android:textSize="34sp"
+            />
+        <TextView
+            android:id="@+id/text_diapad_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/text_dialpad_key_padding_bottom"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/text_dialpad_key_text_size"
+            />
+
+    </RelativeLayout>
+    <!-- Place empty text view so vertical height is same as other dialpad keys. -->
+</bkav.android.btalk.fragments.dialpad.BtalkDialpadKeyButton>

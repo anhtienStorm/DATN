@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/root_view"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/blurredOverlay"
+        android:layout_width="match_parent"
+        android:background="#DEf5f5f5"
+        android:layout_height="match_parent"/>
+
+    <com.ms_square.etsyblur.BlurringView
+        android:id="@id/blurring_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ImageView
+        android:id="@+id/fake_statusBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</FrameLayout>

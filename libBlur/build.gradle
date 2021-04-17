@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion project.ANDROID_COMPILE_SDK_VERSION
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion project.ANDROID_MIN_SDK_VERSION
+        targetSdkVersion project.ANDROID_TARGET_SDK_VERSION
+        renderscriptTargetApi project.ANDROID_RS_TARGET_VERSION
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation("com.android.support:appcompat-v7:${project.supportPackageVersion}")
+    implementation "com.android.support:palette-v7:${project.supportPackageVersion}"
+    implementation 'com.github.zomato:androidphotofilters:1.0.1'
+}

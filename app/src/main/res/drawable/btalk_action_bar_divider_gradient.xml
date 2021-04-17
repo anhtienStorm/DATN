@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb shadow view cua cac actiton bar-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/btalk_fadingedge_start_color"
+        android:endColor="@color/btalk_fadingedge_end_color"
+        android:angle="270"
+        android:dither="true"
+    />
+</shape>

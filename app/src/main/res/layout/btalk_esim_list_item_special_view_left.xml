@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="153dp"
+    android:layout_height="58dp">
+
+    <LinearLayout
+        android:elevation="2dp"
+        android:layout_margin="2dp"
+        android:background="@drawable/layout_esim_special_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="21dp"
+            android:layout_marginTop="15dp">
+
+            <bkav.android.btalk.esim.BtalkEsimIconView
+                android:id="@+id/icon_sim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/sim_possiton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/icon_padding"/>
+
+        </FrameLayout>
+        <LinearLayout
+            android:paddingBottom="@dimen/size_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/esim_display_name_text_size"/>
+
+            <TextView
+                android:id="@+id/number_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/esim_phone_number_text_size"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

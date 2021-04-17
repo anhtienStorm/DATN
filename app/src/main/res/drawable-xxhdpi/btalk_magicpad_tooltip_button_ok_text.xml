@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Active -->
+    <item android:state_focused="false" android:state_pressed="false" android:state_selected="true" android:color="@color/btalk_magicpad_tooltip_button_ok_pressed"/>
+    <!-- Inactive -->
+    <item android:state_focused="false" android:state_pressed="false" android:state_selected="false" android:color="@color/btalk_magicpad_tooltip_button_ok_normal"/>
+    <!-- Pressed -->
+    <item android:state_pressed="true" android:color="@color/btalk_magicpad_tooltip_button_ok_pressed"/>
+    <!-- focus -->
+    <item android:state_focused="true" android:state_pressed="false" android:state_selected="false" android:color="@color/btalk_magicpad_tooltip_button_ok_pressed"/>
+
+</selector>

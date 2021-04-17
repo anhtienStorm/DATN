@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    >
+    <TextView
+        android:id="@+id/conversation_title"
+        style="@style/ConversationActionBarTitleTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/text_color_action_bar_conversation"
+        android:textSize="@dimen/conversation_fragment_action_bar_text_size"
+        android:visibility="gone"/>
+    <HorizontalScrollView
+        android:id="@+id/scrollContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fillViewport="true"
+        android:visibility="visible"
+    >
+
+        <bkav.android.btalk.messaging.ui.contact.BtalkContactRecipientAutoCompleteView
+            android:id="@+id/recipient_text_view"
+            style="@style/BtalkRecipientEditTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:dropDownWidth="match_parent"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical"
+            android:hint="@string/recipient_hint"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            app:avatarPosition="start"
+            app:chipHeight="@dimen/compose_message_chip_height"
+            app:imageSpanAlignment="baseline"
+            app:unselectedChipBackgroundColor="@color/chips_background_color"
+            app:unselectedChipTextColor="@color/chips_text_color"
+            android:imeOptions="flagNoFullscreen">
+            <!--android:minHeight="@dimen/compose_message_contacts_height"-->
+
+            <!-- Put focus on the chips view by default so soft keyboard can be shown -->
+            <!--<requestFocus/>-->
+        </bkav.android.btalk.messaging.ui.contact.BtalkContactRecipientAutoCompleteView>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

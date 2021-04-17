@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--AnhNDd Các dimens liên quan đến view c-ontact-->
+    <dimen name="bkav_line1_text_size">16sp</dimen>
+    <!--AnhNDd: độ cao của thanh phân cách giữa các itemview contact.-->
+    <dimen name="btalk_section_divider_height">1px</dimen>
+    <!--AnhNDd: paddingRight của hình mũi tên trong itemview contact.-->
+    <dimen name="btalk_paddingRight_image_details">62dip</dimen>
+
+    <!--AnhNDd: kich thước mặc định của icon trong actionbar.-->
+
+    <!--AnhNDd: margin của tiêu đề trong dialog-->
+    <dimen name="btalk_title_dialog_marginLeft">12dip</dimen>
+    <dimen name="btalk_title_dialog_marginRight">10dip</dimen>
+
+    <!--AnhNDd: chiều cao của title dialog-->
+    <dimen name="btalk_title_dialog_height">60dip</dimen>
+
+    <!--AnhNDd: text size của title trong dialog-->
+    <dimen name="btalk_title_dialog_text_size">16sp</dimen>
+
+    <!-- AnhNDd: Kich thuoc chieu cao button -->
+    <dimen name="bkav_button_height">40dip</dimen>
+
+    <!-- AnhNDd: margin cua button trong dialog -->
+    <dimen name="btalk_button_dialog_margin">4dp</dimen>
+
+    <!--AnhNDd: padding cua text trong phan message dialog-->
+    <dimen name="btalk_padding_message_dialog">25dip</dimen>
+
+    <!--AnhNDd: padding cua icon tren actionbar-->
+    <dimen name="btalk_padding_right_ic_actionbar">15dip</dimen>
+
+    <!--AnhNDd: padding cua icon tren actionbar-->
+
+    <!--AnhNDd: chiều cao của action bar-->
+
+    <!--AnhNDd :margin right của nút thêm liên hệ.-->
+    <dimen name="btalk_floating_action_button_margin_right">16dp</dimen>
+
+</resources>

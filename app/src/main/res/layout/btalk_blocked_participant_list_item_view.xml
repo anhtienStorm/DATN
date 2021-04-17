@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bkav.android.btalk.messaging.ui.BtalkBlockedParticipantListItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/btalk_list_item_padding_top_bot"
+    android:paddingBottom="@dimen/btalk_list_item_padding_top_bot"
+    >
+    <bkav.android.btalk.messaging.ui.BtalkContactPhotoView
+        android:id="@+id/contact_icon"
+        android:layout_width="@dimen/conversation_list_contact_icon_size"
+        android:layout_height="@dimen/conversation_list_contact_icon_size"
+        android:layout_marginStart="@dimen/btalk_list_item_padding_start"
+        android:layout_marginEnd="@dimen/btalk_list_item_padding_start"
+        android:layout_gravity="center_vertical"/>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/black"
+        style="@style/ParticipantListItem"
+        android:layout_gravity="center_vertical"
+        />
+    <TextView
+        android:id="@+id/tap_to_unblock"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/unblock_item_text_color"
+        android:text="@string/tap_to_unblock_message"
+        android:layout_gravity="center_vertical"
+        android:gravity="end"
+        android:padding="@dimen/blocked_participant_list_item_view_padding"/>
+</bkav.android.btalk.messaging.ui.BtalkBlockedParticipantListItemView>

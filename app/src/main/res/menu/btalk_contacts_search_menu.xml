@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AnhNDd: menu search trong multipickcontacts.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/btalk_ic_ab_search_tint"
+        android:title="@string/menu_search"
+        android:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_close"
+        android:icon="@drawable/btalk_ic_close_dk_tint"
+        android:showAsAction="always" />
+</menu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bkav.android.btalk.messaging.ui.mediapicker.location.LocationChooserView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/location_picker_container"
+        android:layout_width="match_parent"
+        android:background="@color/btalk_white_bg"
+        android:layout_height="match_parent"/>
+</bkav.android.btalk.messaging.ui.mediapicker.location.LocationChooserView>

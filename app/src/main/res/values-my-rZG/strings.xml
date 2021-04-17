@@ -1,0 +1,364 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <string name="app_name">ဘီေတာ့</string>
+    <!--Bkav TrungTH text cho icon launcher-->
+    <string name="launcherDialer">ဖုန္း</string>
+    <string name="launcherMessage">စာတို</string>
+    <!--Bkav TrungTH ten cac tab-->
+    <string name="title_tab_phone">ဖုန္း</string>
+    <string name="title_tab_recents_call">မၾကာမွီက</string>
+    <string name="title_tab_messages">စာတိုမ်ား</string>
+    <string name="title_tab_contacts">ဆက္သြယ္မႈ</string>
+    <string name="title_tab_setting_tab">အေရာင္ေျပာင္းပါ</string>
+    <!--Bkav QuangNDb noi dung text va button text cua view dat btalk lam pm tin nhan mac dinh-->
+    <string name="title_set_as_default_sms">စာတိုပို႔ရန္ ဘီေတာ့ အက္ပ္ကို ပံုေသအျဖစ္သတ္မွတ္ပါ </string>
+    <string name="title_change">ေျပာင္းပါ</string>
+    <!--Bkav QuangNDb noi dung toast thong bao sau khi thay doi btalk lam pm nt mac dinh-->
+    <string name="notify_btalk_as_sms_default">ဘီေတာ့သည္ စာတိုပို႔ရန္ပံုေသ အက္ပ္ျဖစ္သည္ </string>
+    <string name="notify_btalk_not_as_sms_default">ဘီေတာ့သည္ စာတိုပို႔ရန္ ပံုေသ အက္ပ္မဟုတ္ပါ</string>
+    <!--Bkav QuangNDb cac text cua cac chuc nang trong menu cua moi conversation-->
+    <string name="menu_text_search_sms">စာတိုရွာရန္</string>
+    <string name="menu_text_attach_contact">တြဲထားေသာ အဆက္အသြယ္</string>
+    <string name="menu_text_add_subject">ေခါင္းစဥ္ထည့္ရန္</string>
+    <!--Bkav QuangNDb text label cua media chooser-->
+    <string name="media_chooser_emoticon">စိတ္ေနစိတ္ထား</string>
+    <string name="media_chooser_contact">အဆက္အသြယ္</string>
+    <string name="media_chooser_location">တည္ေနရာ</string>
+    <!--Bkav QuangNDb title cua menu search contact-->
+    <string name="contact_chooser_search_title">အဆက္အသြယ္ရွာရန္</string>
+
+    <!--Bkav QuangNDb String cua location map-->
+    <string name="link_map" translatable="false">%1$s\n%2$s\nhttps://maps.google.com/maps?q=%3$s,%4$s</string>
+    <string name="network_issue">ကြန္ယက္ မဟုတ္ပါ</string>
+    <string name="gps_issue">ဂ်ီပီအက္စ္ မရနိုင္ပါ</string>
+    <string name="default_info_title">ပံုေသတည္ေနရာ</string>
+    <string name="default_info_snippet">တည္ေနရာခြင့္ျပဳခ်က္ ပိတ္ထားေသာေၾကာင့္ ေနရာမ်ား မေတြ႔ပါ</string>
+    <string name="btn_try_again">ေနာက္တစ္ႀကိမ္ႀကိဳးစားပါ</string>
+    <!--Bkav QuangNDb invalid phone nunmber-->
+    <string name="invalid_contact">မမွန္ေသာ အဆက္အသြယ္</string>
+    <!--Bkav QuangNDb ten self participant-->
+    <string name="messagelist_sender_self">ကၽြနု္ပ္ကို</string>
+    <!--Bkav QuangNDb hint cua search view search sms-->
+    <string name="search_sms_hint">စာတိုရွာသည္</string>
+    <string name="hint_open_search">ဤေနရာတြင္ ရွာထားေသာ စာတိုမ်ားျပသည္</string>
+    <string name="hint_not_found_message">စာတိုမ်ားမေတြ႔ပါ</string>
+    <!--Bkav QuangNDb title tren dialog khi bam vao so dien thoai trong noi dung tin nhan-->
+    <string name="option_call">ေခၚသည္</string>
+    <string name="option_text">စာတိုပို႔သည္</string>
+    <string name="option_mail">အီးေမးလ္ပို႔သည္</string>
+    <string name="option_add_contact">အဆက္အသြယ္ေပါင္းထည့္သည္</string>
+    <string name="option_copy">ကူးယူသည္</string>
+    <string name="option_edit">အိုင္အမ္အီး ဂဏန္းမ်ားဖြင့္သည္</string>
+    <!--Bkav QuangNDb option show avatar-->
+    <string name="option_show_avatar">စာတိုတစ္ခုအတြင္း အဗာတာကိုျပပါ</string>
+    <string name="option_show_details">စာတိုတစ္ခုအတြင္း အေသးစိတ္ျပပါ</string>
+    <string name="option_show_info_sim">ဆင္းမ္အခ်က္အလက္မ်ားျပပါ</string>
+    <string name="option_show_avatar_key" translatable="false">စာတိုတစ္ခုအတြင္း အဗာတာကိုျပပါ</string>
+    <string name="option_show_details_key" translatable="false">စာတိုတစ္ခုအတြင္း အေသးစိတ္ျပပါ</string>
+    <string name="option_show_info_sim_key" translatable="false">ဆင္းမ္အခ်က္အလက္မ်ားျပပါ</string>
+    <string name="option_symmetry_box_message_key" translatable="false">ေခါက္ခ်ိဳးညီ စာတိုေသတၱာ</string>
+    <!--Bkav QuangNDb text toase has not connect 3g-->
+    <string name="toast_show_has_not_connect_3g">ဓာတ္ပံုႏွင့္ ဗြီဒီယိုမ်ားပို႔ရန္ ေက်းဇူးျပဳ၍အင္တာနက္ဖြင့္ပါ</string>
+    <!--QuangNDb action mark all read-->
+    <string name="action_mark_all_read">အားလံုးဖတ္ၿပီး</string>
+    <string name="progress_mark_all_message">ဖတ္ၿပီးအျဖစ္ ျပဳလုပ္ေနသည္</string>
+    <string name="missing_storage_permission">ဖုန္းေျပာစဥ္အသံသြင္းထားေသာ ဖိုင္ကို အမ္အမ္အက္စ္ အျဖစ္ ဖုန္းသိုေလွာင္မႈအတြင္းသိမ္းရန္ ဘီေတာ့အက္ပ္ကိုခြင့္ျပဳပါ</string>
+    <string name="allow">ခြင့္ျပဳသည္</string>
+    <!--     CALL LOG      -->
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo giay -->
+    <plurals name="recentCalls_timeInSeconds">
+        <item quantity="one">၁စကၠန္႔က</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>   စကၠန္႔က</item>
+    </plurals>
+
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo phut -->
+    <plurals name="recentCalls_timeInMinutes">
+        <item quantity="one">၁မိနစ္က</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>            မိနစ္က</item>
+    </plurals>
+
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo ngay -->
+
+    <!-- Anhdts Cac ngay trong tuan -->
+    <string name="day_of_week_long_sunday">တနဂၤေႏြ</string>
+    <string name="day_of_week_long_monday">တနလၤာ</string>
+    <string name="day_of_week_long_tuesday">အဂၤါ</string>
+    <string name="day_of_week_long_wednesday">ဗုဒၶဟူး</string>
+    <string name="day_of_week_long_thursday">ၾကာသပေတး</string>
+    <string name="day_of_week_long_friday">ေသာၾကာ</string>
+    <string name="day_of_week_long_saturday">စေန</string>
+    <string name="day_of_week_long_today">ယေန႔</string>
+
+    <!-- Anhdts su dung cho thanh chon hien thi tat ca cuoc goi hay chi cuoc goi nho -->
+    <string name="toolbar_recent_all_upper">အားလံုး</string>
+    <string name="toolbar_recent_missed_upper">လြဲေခ်ာ္ေသာ</string>
+
+    <!-- Anhdts title context menu cho item trong call log -->
+    <string name="action_add_contact">အဆက္အသြယ္ေပါင္းထည့္ပါ</string>
+    <string name="action_show_call_detail">ေခၚဆိုမႈမ်ားၾကည့္ရန္</string>
+    <string name="action_show_all_call_detail">ေခၚဆိုမႈမ်ားအားလံုးၾကည့္ရန္</string>
+    <string name="action_share_contact_via">အဆက္အသြယ္ကို မွ်ေဝမည္</string>
+    <string name="action_remove_in_call_log">ေခၚဆိုမႈမ်ားကို ဖ်က္မည္</string>
+    <string name="action_clear_in_call_log">ဤနံပါတ္၏ ေခၚဆိုမႈအားလံုးကို ဖ်က္မည္</string>
+    <string name="action_call_by_sim">ဆင္းမ္ျဖင့္ေခၚဆိုမႈ %1$s &lt;%2$s&gt;</string>
+    <string name="dialog_phone_send_prohibited_message">ဤနံပါတ္ကိုေခၚဆို၍မရပါ</string>
+    <string name="toast_warn_cannot_send_message">မွားယြင္းေနသည္။ စာတိုပို႔၍မရပါ။ စုေပါင္းေခၚဆုိမႈလက္ခံသူကို ေထာက္ပံ့ပါ။</string>
+
+    <!--  Dilpad -->
+    <!-- Anhdts letter cua phim * -->
+    <string name="btalk_dialpad_star_letters">,</string>
+    <!-- Anhdts letter cua phim # -->
+    <string name="btalk_dialpad_pound_letters">;</string>
+    <!--Anhdts xoa nhat ky cuoc goi-->
+    <string name="recentCalls_deleteAll">မၾကာခင္ကေခၚဆိုမႈမ်ားကို ရွင္းမည္</string>
+
+    <!--**************TOOLTIP******************-->
+    <!-- Anhdts text goi y dialpad-->
+    <string name="bkav_tooltip_magicpad_message">အၾကံေပး၊ သို႔ <b>အလ်င္အျမန္ရွာေဖြမႈကို ေဆာက္ရြက္ပါ</b> သက္မွတ္ထားေသာအဆက္အသြယ္အတြက္, တူညီေနသည့္နံပါတ္ကိုႏွိပ္ယံုျဖင့္<b>ပထမစာ</b> နံမည္၏၊ ဥပမာ \'၃ ၂ ၃\' -> \'ဒတ္\'</string>
+    <string name="btalk_tooltip_magicpad_not_show_again">ေနာက္တစ္ႀကိမ္မျပပါ</string>
+    <string name="count_show_tooltip_dialpad">ေရတြက္သည္_ျပသည္_သင့္ေလွ်ာ္ေသာကိရိယာ_ေခၚဆိုရန္နံပါတ္ျပား</string>
+    <string name="tooltip_pref_show_dialpad">ျပသည္_သင့္ေလွ်ာ္ေသာကိရိယာ_ေခၚဆိုရန္နံပါတ္ျပား</string>
+    <string name="tooltip_times_use_message">ေရတြက္သည္_အသံုးျပဳသည္_သင့္ေလွ်ာ္ေသာကိရိယာ_စာတို</string>
+    <string name="tooltip_times_use_contact">အႀကိမ္_အသံုးျပဳသည္_သင့္ေလွ်ာ္ေသာကိရိယာ_အဆက္အသြယ္</string>
+
+    <!--Bkav QuangNDb hint text compose view-->
+    <string name="btalk_compose_message_view_hint_text_multi_sim"><i>မွ ေပးပို႔သည္ %1$s</i></string>
+
+    <!--AnhNDd String trong nav drawer-->
+    <string name="btalk_title_nav_header">ဆက္တင္မ်ား</string>
+    <!--Bkav QuangNDb text hint cua box go tin nhan-->
+    <string name="btalk_hint_compose_message_not_multi_sim"><i>စာတို႐ိုက္ပါ</i></string>
+    <string name="btalk_notify_not_make_a_call">ပါဝင္သူမ်ားျခင္း သို႔မဟုတ္ ဖုန္းနံပါတ္မဟုတ္ေသာေၾကာင့္ ေခၚဆို၍မရနိုင္ပါ</string>
+    <!--Bkav QuangNDb override string text cua source goc de thay noi dung toast thay doi sms app-->
+    <string name="requires_default_sms_app_to_send">ပံုေသစာတိုေပးပို႔မႈအတြက္ ဘီေတာ့ အက္ပ္ကိုသတ္မွတ္ပါ </string>
+    <string name="requires_default_sms_app">ပံုေသစာတိုေပးပို႔မႈအတြက္ အက္ပ္ေ႐ြးပါ</string>
+
+    <!--*******************menu******************-->
+    <!-- Anhdts action shortcut menu-->
+    <string name="menu_label_new_message">စာတုိအသစ္</string>
+    <string name="menu_label_favorite">အႏွစ္သက္ဆံုးမ်ား</string>
+    <string name="menu_label_add_contact">အဆက္အသြယ္ ထည့္ရန္</string>
+    <string name="description_show_more">အဆက္အသြယ္မ်ား ျပပါ</string>
+
+    <!--Bkav QuangNDb text title ghi am cuoc goi den di-->
+    <string name="record_incoming_call">အဝင္ေခၚဆိုမႈမ်ားကို အသံသြင္းပါ</string>
+    <string name="record_outgoing_call">အထြက္ေခၚဆိုမႈမ်ားကို အသံသြင္းပါ</string>
+    <string name="notify_recoding_call">အသံသြင္းၿပီးပါၿပီ စာတိုေသတၱာတြင္ သိမ္းပါ</string>
+    <string name="notify_chooser_app_set_ringtone">ဤအဆက္အသြယ္၏ ဖုန္းျမည္သံအတြက္ အက္ပ္ေ႐ြးပါ</string>
+    <string name="notify_complete_set_ringtone">ဤအဆက္အသြယ္အတြက္ ဖုန္းျမည္သံ သတ္မွတ္ၿပီးၿပီ</string>
+    <string name="notify_empty_contact_new_message">အဆက္အသြယ္ မရွိပါ</string>
+    <string name="notify_empty_contact_find">အဆက္အသြယ္မေတြ႔ပါ</string>
+
+    <!-- Anhdts thong bao danh ba trong khi cham vao danh ba de goi-->
+    <string name="toast_cannot_call_without_number">ဘာမွ မရွိပါ</string>
+    <!--Bkav QuangNDB text title dialog nhieu nguoi trong cuoc hoi thoai-->
+    <string name="touch_to_call">ေခၚဆိုရန္နွိပ္ပါ</string>
+    <string name="recentCalls_edit_call_log">ေခၚဆုိမႈမွတ္တမ္းကို ျပင္ဆင္မည္</string>
+
+    <!--Anhdts title tab merge-->
+    <string name="title_merge_by_name">အမည္တူမ်ားကို ေပါင္းမည္</string>
+    <string name="title_merge_by_phone">ဖုန္းနံပါတ္တူမ်ားကို ေပါင္းမည္</string>
+    <string name="title_merge_by_mail">ေမးလ္တူမ်ားကို ေပါင္းမည္</string>
+
+    <!-- Anhdts setting dialer-->
+    <string name="sum_pref_open_app">အက္ပ္ပိတ္ၿပီးသည့္အခါ တည္ေနရာကိုသိမ္းမည္</string>
+    <string name="header_title_setting_open_app">အက္ပ္ဖြင့္ရန္ ဆက္တင္မ်ား</string>
+    <string name="sum_pref_call_button">ဆင္းမ္ ၂ကဒ္အတြက္ ခလုတ္ ၂ခုျပပါ</string>
+
+    <string name="toast_copy_contact">အဆက္အသြယ္ကူးၿပီးၿပီ</string>
+    <string name="toast_delete_calls_complete">ေခၚဆိုမႈမ်ားဖ်က္ၿပီးၿပီ</string>
+    <!-- Anhdts Title bar for all call detail screen -->
+    <string name="notify_not_permission">သိုေလွာင္မႈအတြင္း သိမ္းဆည္းရန္ ခြင့္မျပဳပါ။ ဖုန္းေခၚဆိုအသံသြင္းထားမႈမ်ားကို စာတိုအျဖစ္သိမ္း၍မရပါ။ ခြင့္ျပဳခ်က္ျပင္ဆင္ရန္ ဆက္တင္သို႔သြားပါ။</string>
+
+    <!-- Anhdts Title bar for all call detail screen -->
+    <string name="allCallDetailTitle">ေခၚဆိုမႈအေသးစိတ္အားလံုး</string>
+    <!-- Anhdts dialog sau khi nguoi dung deny cac quyen-->
+    <string name="message_request_permission"> ဤဆန္းသစ္မႈကိုဖြင့္ရန္ အက္ပ္ဆက္တင္ကိုႏွိပ္၍ ခြင့္ျပဳမႈတြင္ အဆက္အသြယ္ကို အသက္သြင္းပါ။ </string>
+    <string name="title_request_permission">အဆက္အသြယ္ႏွင့္ ဖုန္းအေျခအေနကို အသံုးျပဳရန္ ဘီေတာ့ကိုခြင့္ျပဳသည္</string>
+    <string name="positive_title_request_permission">အက္ပ္ဆက္တင္</string>
+    <string name="negative_title_request_permission">ယခုမဟုတ္ပါ</string>
+
+    <!-- Inform user of the names of permissions that are required to use the app -->
+    <string name="enable_permission_procedure">ခြင့္ျပဳခ်က္မ်ားေျပာင္းလဲရန္ ဆက္တင္၊ အက္ပ္၊ ဘီေတာ့၊ ခြင့္ျပဳခ်က္မ်ား သို႔အဆင့္ဆင့္သြားပါ။</string>
+    <string name="enable_permission_procedure_description">ခြင့္ျပဳခ်က္မ်ားေျပာင္းလည္းရန္ ဆက္တင္၊ အက္ပ္၊ ဘီေတာ့၊ ခြင့္ျပဳခ်က္မ်ား သို႔အဆင့္ဆင့္သြားပါ။</string>
+    <string name="required_permissions_promo">ဘီေတာ့က စာတို၊ ဖုန္း၊ အဆက္အသြယ္အတြက္ ခြင့္ျပဳမႈလိုသည္။</string>
+
+    <string name="enable_permission_audio">ဘီေတာ့ကို မိုက္ခ႐ိုဖုန္းအသံုးျပဳရန္ ခြင့္ျပဳပါ</string>
+    <string name="enable_permission_audio_summary">ဤဆန္းသစ္မႈကိုဖြင့္ရန္ အက္ပ္ဆက္တင္ကိုႏွိပ္၍ ခြင့္ျပဳမႈတြင္ မိုက္ခ႐ိုဖုန္းကို အသက္သြင္းပါ။</string>
+
+    <string name="enable_permission_camera">ဘီေတာ့ကို ကင္မရာအသံုးျပဳရန္ ခြင့္ျပဳပါ</string>
+    <string name="enable_permission_camera_summary"> ဤဆန္းသစ္မႈကိုဖြင့္ရန္ အက္ပ္ဆက္တင္ကိုႏွိပ္၍ ခြင့္ျပဳမႈတြင္ ကင္မရာကို အသက္သြင္းပါ။ </string>
+
+    <string name="enable_permission_gallery">ဘီေတာ့ကို သိုေလွာင္မႈအသံုးျပဳရန္ ခြင့္ျပဳပါ</string>
+    <string name="enable_permission_gallery_summary"> ဤဆန္းသစ္မႈကိုဖြင့္ရန္ အက္ပ္ဆက္တင္ကိုႏွိပ္၍ ခြင့္ျပဳမႈတြင္ သိုေလွာင္မႈကို အသက္သြင္းပါ။ </string>
+    <string name="quick_response_title">အလွ်င္ျမန္ တုန္႔ျပန္မႈ</string>
+    <string name="quick_response_edit_title">အလွ်င္ျမန္ တုန္႔ျပန္မႈကိုျပင္မည္</string>
+    <string name="quick_response_ok">အိုေက</string>
+    <string name="quick_response_goodnight">ေကာင္းေသာညပါ</string>
+    <string name="quick_response_wait">ကၽြန္ုပ္ကို ခနေစာင့္ပါ</string>
+    <string name="quick_response_what_up">ဘာျဖစ္တာလဲ</string>
+    <string name="add_response_title">အလွ်င္ျမန္စာတို ေပါင္းထည့္မည္</string>
+    <string name="add_response_hint">စာသား</string>
+    <string name="notify_empty_response_content">တုန္႔ျပန္ေသာ စာသားသည္ ဗလာ မျဖစ္ရ</string>
+
+    <string name="btalk_title_dialog_choose_number">နံပါတ္ေ႐ြးပါ</string>
+    <string name="other_telephone_exchange">တယ္လီဖုန္း အိတ္ခ်ိန္း</string>
+    <string name="police_text">ရဲစခန္း</string>
+    <string name="ambulance_text">လူနာတင္ယဥ္</string>
+    <string name="rescue_text">ကယ္ဆယ္ေရး</string>
+    <string name="firefighting_text">မီးသတ္</string>
+
+    <string name="display_name_date_format">\?ရက္စြဲ၊</string>
+
+    <string name="copy_done_suggest">ကူးၿပီးၿပီ</string>
+    <string name="dont_support_quick_response">ယခုမ်က္ႏွာျပင္တြင္ အလွ်င္ျမန္တုန္႔ျပန္မႈျပရန္ မေထာက္ပ့ံပါ</string>
+    <string name="notify_max_support_quick_response">အလွ်င္ျမန္တုန္႔ျပန္မႈ ၅ခုသာေထာက္ပ့ံသည္</string>
+    <string name="action_share_more">ပို၍…</string>
+    <!-- Anhdts: action loc tin nhan va ghi am-->
+    <string name="action_filter_mms">အမ္အမ္အက္စ္ စစ္ထုတ္မည္</string>
+    <string name="action_filter_audio">အသံသြင္းဖိုင္မ်ားကို စစ္ထုတ္မည္</string>
+    <string name="action_show_all_message">စာတိုအားလံုးျပပါ</string>
+    <string name="notify_use_number_zalo">ဘာမွမရွိပါ။ ဇာလိုအခ်က္အလက္ကို အသံုးျပဳခ်င္ပါသလား</string>
+    <string name="tooltip_choose_sim">ဆင္းမ္ေ႐ြးရန္ ႏွိပ္ထားပါ</string>
+
+    <string name="label_ringtone">ဖုန္းျမည္သံ</string>
+    <string name="label_ringtone_message">စာတိုအသစ္ ျမည္သံ</string>
+
+    <string name="default_text">ပံုေသ</string>
+    <string name="pick_gallery_title">ျပခန္း</string>
+    <string name="pick_camera_title">ကင္မရာ</string>
+    <string name="pick_default_photo">ပံုေသ ဓာတ္ပံု</string>
+    <string name="mute_conversation_title">ဤေျပာစကားမ်ားအတြက္ ေနာ္တီပိတ္မည္</string>
+    <string name="toast_change_account">အဆက္အသြယ္ကို ဆင္းမ္တြင္မသိမ္းပါနွင့္။ အခ်က္အလက္မ်ားေျပာင္းၿပီး သို႔မဟုတ္ အေကာင့္ေျပာင္း၍ ျပန္လည္ႀကိဳးစားပါ။</string>
+
+    <string name="recentCalls_born_contact">အဆက္အသြယ္ ေပါင္းထည့္ပါ</string>
+    <string name="confirm_convert_phone">ဖုန္းနံပါတ္အသြင္ေျပာင္းမည္ (%d အဆက္အသြယ္)</string>
+    <string name="converting">အသြင္ေျပာင္းေနသည္</string>
+    <string name="convert_success">အသြင္ေျပာင္းမႈ ေအာင္ျမင္သည္</string>
+    <string name="convert_phone">ဖုန္းနံပါတ္အသြင္ေျပာင္းမည္</string>
+    <string name="call_disambig_title">ေခၚဆိုမႈ အသံုးျပဳျခင္း</string>
+    <string name="make_primary">ဤေ႐ြးခ်ယ္မႈကို သတိရပါ</string>
+    <string name="bkav_about_eula_title">အသံုးျပဳမႈ စည္းကမ္းမ်ား</string>
+    <string name="accept">လက္ခံသည္</string>
+    <string name="bkav_about_eula_url">http://btalk.vn/m-termsofuseen</string>
+    <string name="dialog_check_internet_message">ခ်ိတ္ဆက္၍မရပါ။ ေက်းဇူးျပဳ၍ သင့္၏ကြန္ယက္အေျခအေနကို ျပန္စစ္ေဆးပါ</string>
+    <string name="menu_import">ထည့္သြင္းေသာ အဆက္အသြယ္မ်ား</string>
+    <string name="menu_export">ထုတ္ယူေသာ အဆက္အသြယ္မ်ား</string>
+    <string name="btalk_contactsFavoritesLabel">အႏွစ္သက္ဆံုး</string>
+
+    <!-- Bkav QuangNDb them string vao day do khong extend duoc class goc -->
+    <string name="today">ယေန႔</string>
+    <string name="yesterday">မေန႔က</string>
+    <string name="notify_image_error">မမွန္ေသာပံု</string>
+    <string name="uri_not_exits">မမွန္ေသာလမ္းေၾကာင္း</string>
+    <string name="notify_dont_support_type">မွ်ေဝေသာေခါင္းစဥ္အမ်ိဳးအစားကို မေထာက္ပံ့ပါ</string>
+    <string name="notify_wait_conversation_init">စတင္လုပ္ေဆာင္ေနသည္</string>
+
+    <string name="removePhoto">ဓာတ္ပံုဖယ္ရွားမည္</string>
+
+    <string name="action_menu_add_new_contact_button">အဆက္အသြယ္အသစ္ ေပါင္းထည့္မည္</string>
+    <string name="contact_editor_prompt_zero_accounts">သင့္ အဆက္အသြယ္အသစ္ကို အရန္သိမ္းမည္မဟုတ္ပါ။ အြန္လိုင္းတြင္ အရန္သိမ္းရန္ အေကာင့္တစ္ခု ေပါင္းထည့္မည္လား</string>
+    <string name="keep_local">ေဒသ ထိန္းသိမ္းသည္</string>
+    <string name="add_account">အေကာင့္ေပါင္းထည့္သည္</string>
+    <string name="add_new_account">အေကာင့္အသစ္ ေပါင္းထည့္သည္</string>
+    <string name="compact_editor_account_selector_title">သိမ္းဆည္းေနသည္</string>
+    <string name="speed_dial_unassigned_dialog_message">နံပါတ္ကီးသို႔ အျမန္ေခၚဆိုမႈအတြက္ မသတ္မွတ္ထားပါ \'<xliff:g id="number">%s</xliff:g>\'. ယခုသတ္မွတ္ခ်င္ပါသလား </string>
+    <string name="speed_dial_unassigned_dialog_title">သတ္မွတ္မထားေသာ ကီး</string>
+    <string name="yes">လုပ္မည္</string>
+
+    <string name="no">မလုပ္ပါ</string>
+    <string name="input_number">ထည့္သြင္းသည့္ နံပါတ္</string>
+    <string name="speed_dial_cancel">ဖ်က္သည္</string>
+
+    <string name="speed_dial_ok">အိုေက</string>
+    <string name="speed_dial_settings">အျမန္ေခၚဆိုမႈ ဆက္တင္</string>
+
+    <string name="speed_dial_not_set">(မသတ္မွတ္ပါ)</string>
+
+    <string name="speed_dial_replace">အစားထိုးသည္</string>
+
+    <string name="speed_dial_delete">ဖ်က္သည္</string>
+
+    <string name="menu_redirect_calls_to_vm">ေခၚဆိုမႈအားလံုး အသံေမးလ္သို႔</string>
+    <string name="menu_set_ring_tone">ဖုန္းျမည္သံသတ္မွတ္မည္</string>
+    <string name="menu_joinAggregate">လင့္ခ္</string>
+    <string name="menu_save">သိမ္းဆည္းသည္</string>
+    <string name="menu_editContact">ျပင္ဆင္သည္</string>
+    <string name="menu_deleteContact">ဖ်က္သည္</string>
+    <string name="edit_contact">အဆက္အသြယ္ ျပင္ဆင္သည္</string>
+    <string name="menu_share">မွ်ေဝသည္</string>
+    <string name="menu_add_contact">အဆက္အသြယ္သို႔ ေပါင္းထည့္သည္</string>
+    <string name="recent_card_title">လက္တေလာ</string>
+    <string name="contact_editor_prompt_multiple_accounts">အဆက္အသြယ္အသစ္အတြက္ ပံုေသအေကာင့္တစ္ခု ေရြးပါ</string>
+    <string name="contact_editor_title_new_contact">အဆက္အသြယ္အသစ္ေပါင္းထည့္သည္</string>
+    <string name="cancel_confirmation_dialog_message">သင့္ေျပာင္းလဲမႈမ်ားကို ဖယ္ရွားၿပီး ျပင္ဆင္ေနျခင္းမွ ထြက္မည္လား</string>
+    <string name="cancel_confirmation_dialog_cancel_editing_button">ဖယ္ရွားသည္</string>
+    <string name="cancel_confirmation_dialog_keep_editing_button">ျပင္ဆင္ေနမႈကို ထိန္းထားမည္</string>
+    <string name="header_entry_contact_list_adapter_header_title">အဆက္အသြယ္အသစ္ ဖန္တီးမည္t</string>
+    <string name="compact_editor_more_fields">ပိုမ်ားေသာ နယ္ပယ္</string>
+    <string name="menu_select_all">"အာလံုးေရြးမည္"</string>
+    <string name="menu_select_none">"အားလံုးမေရြးပါ"</string>
+    <string name="btn_ok">အုိေက</string>
+    <string name="btn_cancel">မလုပ္ပါ</string>
+    <string name="menu_blocked_numbers">ပိတ္ဆို႔ထားေသာ နံပါတ္မ်ား</string>
+    <string name="merge_contacts">"အဆက္အသြယ္ ေပါင္းစပ္မည္"</string>
+    <string name="menu_settings" msgid="377929915873428211">ဆက္တင္မ်ား</string>
+    <!--Bkav QuangNDb sua wrong font myanmar-->
+    <string name="profile_display_name">ကၽြႏု္ပ္ပရိုဖုိင္ကို တည္ေဆာက္မည္္</string>
+
+    <string name="quickcontact_add_phone_number">ဖုန္းနံပါတ္ ေပါင္းထည့္ပါ</string>
+    <string name="quickcontact_add_email">အီးေမးလ္ ေပါင္းထည့္ပါ</string>
+    <!--<string name="action_share_contact_via">အဆက္အသြယ္ မွ်ေဝပါ</string>-->
+    <string name="single_delete_confirmation">ဤအဆက္အသြယ္ကို ဖ်က္မည္လား</string>
+    <string name="batch_delete_confirmation">ေရြးခ်ယ္ထားေသာ အဆက္အသြယ္မ်ားကို ဖ်က္မည္လား</string>
+    <string name="local_profile_title">ျပည္တြင္းဖုန္း</string>
+    <string name="batch_delete_read_only_contact_confirmation">သင္၏ ဖတ္၍သာရေသာ အေကာင့္မွ အဆက္အသြယ္ ဖ်က္လုိ႔မရပါ၊ သို႔ေသာ္ ၄င္းတို႔ကိုဖြက္ထားလိမ့္မည္</string>
+
+    <string name="batch_delete_multiple_accounts_confirmation">ဖ်က္မည့္အဆက္အသြယ္တြင္  အေကာင့္မ်ားမွ အေသးစိတ္ပါရွိသည္။ ဖတ္၍သာရေသာ အေကာင့္မ်ားမွ အေသးစိတ္ကို ဖြက္လိမ့္မည္၊ မဖ်က္ပါ။</string>
+
+    <string name="multipleContactDeleteConfirmation">ဤအဆက္အသြယ္ကိုဖ်က္ျခင္းက အေကာင့္မ်ားမွ အေသးစိတ္ကို ဖ်က္လိမ့္မည္။</string>
+
+    <string name="deleteConfirmation">အဆက္အသြယ္ကို ဖ်က္မည္လား</string>
+
+    <string name="deleteConfirmation_positive_button">ဖ်က္မည္</string>
+
+    <!--<string name="ringtone_title_sim1">ဆင္းမ္ ၁ ဖုန္းျမည္သံ</string>-->
+    <!--<string name="ringtone_title_sim2">ဆင္းမ္ ၂ ဖုန္းျမည္သံ</string>-->
+
+    <!-- Anhdts setting tin nhan -->
+    <!--<string name="option_show_audio_message">အသံစာတို ျပပါ</string>-->
+    <!--<string name="speed_dial_info_label">အျမန္ေခၚဆိုမႈ</string>-->
+    <!--<string name="call_text_action">ေခၚဆိုသည္</string>-->
+    <!--<string name="no_phone_text_action">ဖုန္းမရွိပါ</string>-->
+    <!--<string name="option_show_phone_number">ဖုန္းနံပါတ္ ျပပါ</string>-->
+    <!--<string name="notification_cancel_message">ဖ်က္သိမ္းသည္</string>-->
+
+    <!-- Action that exports all contacts to SIM -->
+    <string name="export_to_sim">ဆင္းကဒ္သုိ ့ထုတ္ရန္</string>
+    <string name="ringtone_title_sim1">ဆင္းကဒ္ (၁) ဖုန္းမည္သံ</string>
+    <string name="ringtone_title_sim2">ဆင္းကဒ္ (၂) ဖုန္းမည္သံ</string>
+    <!--Bkav QuangNDb string option show sdt trong danh ba-->
+    <string name="option_show_phone_number">ဖုန္းနံပါတ္ကုိျပပါ</string>
+
+    <!--Bkav HuyNQn string view call log recorder-->
+    <string name="action_view_call_log_recorder">View call log recorder</string>
+    <string name="application_shortcut_has_been_created">Application shortcut has been created</string>
+    <string name="call_with_viber">Call with Viber</string>
+    <string name="call_with_zalo">Call with Zalo</string>
+
+    <!--Bkav HuyNQn String ghi am cuoc goi-->
+    <string name="delete_file_success">Delete file success</string>
+    <string name="delete_file_error">Delete file error</string>
+    <string name="button_pause">Pause</string>
+    <string name="button_play">Play</string>
+    <string name="button_exit">Exit</string>
+    <string name="play_call_recorder">Play call recorder</string>
+    <string name="call_recorder">Call Recorder</string>
+    <string name="choose_app">Choose app</string>
+    <string name="btalk_compose_message_view_hint_text_ask_before_send">Input Message</string>
+    <string name="string_copy_messager">Copied messager</string>
+
+
+    <string name="delete_files_success">Delete %1$d files success</string>
+</resources>

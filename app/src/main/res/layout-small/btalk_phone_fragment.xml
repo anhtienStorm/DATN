@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/btalk_transparent_view"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <include
+                layout="@layout/btalk_digits_container"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"/>
+
+            <include
+                android:id="@+id/container_suggest"
+                layout="@layout/btalk_suggest_view_dialpad"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btalk_height_suggest_container"
+                android:layout_below="@id/digits_container"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/container_suggest"
+                android:background="@color/btalk_color_for_dialpad"/>
+
+            <FrameLayout
+                android:id="@+id/smartsearch_fragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@id/container_suggest"
+                android:background="@color/btalk_transparent_view"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:id="@+id/overlay_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/btalk_color_for_dialpad"
+                android:visibility="invisible"/>
+
+            <FrameLayout
+                android:id="@+id/dialpad_fragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--<View-->
+    <!--android:id="@+id/overlay_spacer"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_above="@+id/dialpad_fragment"-->
+    <!--android:layout_alignWithParentIfMissing="true"-->
+    <!--android:layout_below="@id/digits_container"-->
+    <!--android:background="@color/btalk_transparent_view"/>-->
+
+    <ImageButton
+        android:id="@+id/floating_action_button"
+        android:layout_width="@dimen/floating_action_button_height"
+        android:layout_height="@dimen/floating_action_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="@dimen/btalk_fab_bottom_margin"
+        android:layout_marginEnd="@dimen/btalk_floating_action_button_margin_right"
+        android:layout_marginRight="@dimen/floating_action_button_margin_bottom"
+        android:background="@drawable/btalk_fab_new_message_bg"
+        android:contentDescription="@string/action_menu_dialpad_button"
+        android:elevation="@dimen/fab_elevation"
+        android:scaleType="center"
+        android:src="@drawable/fab_ic_dial"
+        android:visibility="gone"/>
+
+</RelativeLayout>

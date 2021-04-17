@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+AnhNDd: giao diện toolbar ở dưới đáy khi selection các contacts.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/selection_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bkav_actionbar_height"
+                android:background="@color/action_mode_color">
+
+    <!--Bkav TienNAb: them moi lien he trai,phai voi cac view khac fix loi icon edit bi de len khi de kich thuoc phong chu lon-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/action_copy"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/selection_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/action_menu_back_from_search"
+            android:paddingLeft="@dimen/btalk_padding_right_ic_actionbar"
+            android:paddingRight="@dimen/btalk_padding_right_ic_actionbar"
+            android:src="@drawable/ic_back_arrow"
+            />
+
+        <include layout="@layout/btalk_contacts_action_mode"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/action_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/action_message"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/btalk_ic_action_mode_copy_new"
+        android:paddingLeft="@dimen/btalk_padding_right_ic_actionbar"
+        android:paddingRight="@dimen/btalk_padding_right_ic_actionbar"
+        />
+
+    <ImageButton
+        android:id="@+id/action_share"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/action_delete"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:paddingLeft="@dimen/btalk_padding_right_ic_actionbar"
+        android:paddingRight="@dimen/btalk_padding_right_ic_actionbar"
+        android:src="@drawable/btalk_ic_action_mode_share_new"
+        />
+
+    <ImageButton
+        android:id="@+id/action_message"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/action_share"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:paddingLeft="@dimen/btalk_padding_right_ic_actionbar"
+        android:paddingRight="@dimen/btalk_padding_right_ic_actionbar"
+        android:src="@drawable/btalk_ic_action_mode_send_message"
+        />
+
+    <ImageButton
+        android:id="@+id/action_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:paddingLeft="@dimen/btalk_padding_right_ic_actionbar"
+        android:paddingRight="@dimen/btalk_padding_right_ic_actionbar"
+        android:src="@drawable/btalk_ic_action_mode_delete_new"
+        />
+
+</RelativeLayout>

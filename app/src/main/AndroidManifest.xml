@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="bkav.android.btalk"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:versionCode="211"
+          android:versionName="2.1.1">
+
+    <uses-sdk android:targetSdkVersion="28"/>
+
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.MANAGE_ROLE_HOLDERS"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_MMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"/> <!-- Google Maps for Android v2 requires OpenGL ES v2 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <!--    Bkav QuangNDb: them permission lpa service-->
+    <uses-permission android:name="com.qti.permission.USE_UIM_LPA_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <uses-permission android:name="com.bkav.bms.READ_PROVIDER"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:name=".BtalkApplication"
+        android:allowBackup="true"
+        android:allowTaskReparenting="true"
+        android:backupAgent=".backup.BkavBackupAgent"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_phone_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:resizeableActivity="true"
+        android:supportsRtl="true"
+        tools:replace="android:label,android:name"
+        tools:targetApi="n">
+
+        <!--BKAV HuyNQn them activity CallLogrecoder-->
+        <service android:name=".calllog.recoder.RecorderService"
+        android:enabled="true"
+        android:exported="true"/>
+
+
+        <!--Bkav QuangNDb service update contact-->
+        <service
+            android:name=".service.UpdateSmartDialIntentService"
+            android:exported="false">
+        </service>
+
+        <!-- Bkav QuangNDb them api key vao ung dung de co the chay dc google map -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key"/> <!-- key backup -->
+        <meta-data
+            android:name="com.google.android.backup.api_key"
+            android:value="AEdPqrEAAAAIX2N4AmhCDy-2jSNt2sXam3QxiRpuwEj_rMyWHA"/>
+        <!--
+Bkav TrungTH activity moi cho icon mesage
+        AEdPqrEAAAAIX2N4AmhCDy-2jSNt2sXam3QxiRpuwEj_rMyWHA
+        AEdPqrEAAAAIxB6_y0gBJ5P2lSVTGeHI3U47ZHLjAUsi8r04RQ
+        -->
+        <activity
+            android:name=".activities.ActivityPermission"
+            android:launchMode="singleTask"/> <!-- Bkav QuangNDb bo co nay di vi no se khong hien thi duoc trong recents -->
+        <!-- android:excludeFromRecents="true" -->
+        <activity
+            android:name=".activities.BtalkMessageActivity"
+            android:icon="@drawable/ic_launcher_message"
+            android:label="@string/launcherMessage"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.APP_MESSAGING"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/menu_btalk_message"/>
+        </activity> <!-- Bkav QuangNDb bo co nay di vi no se khong hien thi duoc trong recents -->
+        <!-- android:excludeFromRecents="true" -->
+
+        <!-- TienNAb khai bao HideMessageJobScheduler -->
+        <service
+            android:name="com.android.messaging.datamodel.action.HideMessageJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+
+        <activity
+            android:name=".activities.BtalkContactsActivity"
+            android:icon="@drawable/ic_launcher_contacts"
+            android:label="@string/title_tab_contacts"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.BtalkActivity"
+            android:configChanges="screenLayout|layoutDirection|uiMode"
+            android:icon="@drawable/ic_phone_launcher"
+            android:label="@string/launcherDialer"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/BtalkPeopleTheme"
+            android:windowSoftInputMode="stateHidden|adjustNothing">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+
+                <!-- Anhdts start activity truyen so sang -->
+                <action android:name="btalk.android.FIX_BEFORE_CALL"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="btalk.android.dialer.calllog.ACTION_SHOW_CALL_LOG_TAB"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+
+                <!-- Anhdts start activity truyen so sang -->
+                <action android:name="btalk.android.SHOW_FAVORITE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="btalk.intent.action.DIAL_BKAV"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:mimeType="vnd.android.cursor.item/phone"/>
+                <data android:mimeType="vnd.android.cursor.item/person"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="btalk.intent.action.DIAL_BKAV"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="voicemail"/>
+            </intent-filter>
+
+            <!-- Anhdts doi lai sang action bkav de khong hien chon ung dung goi -->
+            <intent-filter>
+                <action android:name="btalk.intent.action.DIAL_BKAV"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:label="@string/callHistoryIconLabel">
+                <action android:name="com.android.phone.action.RECENT_CALLS"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.TAB"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="btalk.intent.action.DIAL_BKAV_VIEW"/>
+                <action android:name="btalk.intent.action.DIAL_BKAV"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tel"/>
+            </intent-filter>
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:mimeType="vnd.android.cursor.dir/calls"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.CALL_BUTTON"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+
+            <!-- Anhdts intent filter cua contact goc -->
+            <intent-filter>
+                <action android:name="com.android.contacts.action.LIST_DEFAULT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.TAB"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.contacts.action.LIST_CONTACTS"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.TAB"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.contacts.action.LIST_ALL_CONTACTS"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.TAB"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.contacts.action.LIST_CONTACTS_WITH_PHONES"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.TAB"/>
+            </intent-filter>
+            <intent-filter android:label="@string/starredList">
+                <action android:name="com.android.contacts.action.LIST_STARRED"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.TAB"/>
+            </intent-filter>
+            <intent-filter android:label="@string/frequentList">
+                <action android:name="com.android.contacts.action.LIST_FREQUENT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.TAB"/>
+            </intent-filter>
+            <intent-filter android:label="@string/strequentList">
+                <action android:name="com.android.contacts.action.LIST_STREQUENT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.TAB"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.dir/contact"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.dir/person"/>
+                <data android:mimeType="vnd.android.cursor.dir/contact"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/menu_btalk_phone"/>
+        </activity>
+
+        <activity android:name=".calllog.recoder.CallLogRecoderActivity"
+                  android:launchMode="singleInstance"
+                  android:icon="@mipmap/ic_call_recoder_laucher"
+                  android:label="@string/title_call_recorder"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/BtalkPeopleTheme"
+            android:exported="true"
+            >
+        </activity>
+
+        <!--Bkav HuyNQn them provider de thuc hien share file cho ghi am cuoc goi-->
+        <provider
+            android:name=".calllog.recoder.GenericFileProvider"
+            android:authorities="bkav.android.btalk.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+<!--        Bkav QuangNDb an call record khoi launcher-->
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.MAIN"/>-->
+<!--            <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            <category android:name="android.intent.category.DEFAULT"/>-->
+<!--        </intent-filter>-->
+
+        <!--Bkav HuyNQn activity qrcode -->
+        <activity android:name=".qrcode.BkavQrCode"
+                  android:label="QRcode"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/BtalkPeopleTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".messaging.ui.conversation.BtalkConversationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:icon="@drawable/ic_launcher_message"
+            android:screenOrientation="user"
+            android:theme="@style/BugleTheme.ConversationActivity.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="btalk.intent.action.NEW_MESSAGE"/>
+                <action android:name="android.telephony.action.DEFAULT_SMS_SUBSCRIPTION_CHANGED"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".messaging.ui.appsettings.BtalkSettingsActivity"
+            android:theme="@style/BugleTheme.SettingsActivity"/> <!-- Anhdts giao dien quay so nhanh -->
+        <activity
+            android:name=".speeddial.BtalkSpeedDialListActivity"
+            android:label="@string/speed_dial_settings"
+            android:theme="@style/BtalkSpeedDialtactsTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity> <!-- Anhdts danh sach yeu thich -->
+        <!-- noHistory de vao activity back lai thi tro ve home thay vi ve giao dien nay -->
+        <activity
+            android:name=".activities.BtalkSpeedDialActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/BtalkPeopleTheme"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="btalk.android.SPEED_DIAL"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".messaging.ui.appsettings.BtalkApplicationSettingsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/general_settings_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/BugleTheme.SettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".settings.BtalkDialerSettingsActivity"
+            android:exported="false"
+            android:label="@string/dialer_settings_label"
+            android:screenOrientation="portrait"
+            android:theme="@style/BugleTheme.SettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="bkav.android.btalk.bmsblocked.BlockCallsOnlyBmsActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/block_phone_number_only_bms_title"
+            android:theme="@style/AppTheme.CallsBlockedOnlyBms">
+        </activity>
+        <!--
+ Bkav QuangLH: tren Android 8 can them android:visibleToInstantApps="true" de
+        qua CTS (export activity nay cho cac ben khac goi duoc)
+        -->
+        <activity
+            android:name=".messaging.ui.contact.activities.BtalkContactSelectionActivity"
+            android:clearTaskOnLaunch="true"
+            android:label="@string/launcherActivityLabel"
+            android:launchMode="singleTop"
+            android:theme="@style/BtalkContactPickerTheme"
+            android:uiOptions="splitActionBarWhenNarrow"
+            android:visibleToInstantApps="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.PICK"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.dir/contact"/>
+                <data android:mimeType="vnd.android.cursor.dir/person"/>
+                <data android:mimeType="vnd.android.cursor.dir/phone_v2"/>
+                <data android:mimeType="vnd.android.cursor.dir/phone"/>
+                <data android:mimeType="vnd.android.cursor.dir/postal-address_v2"/>
+                <data android:mimeType="vnd.android.cursor.dir/postal-address"/>
+                <data android:mimeType="vnd.android.cursor.dir/email_v2"/>
+            </intent-filter>
+
+            <!-- Bkav QuangNDb them action Insert va edit cho lop BtalkContactSelectionActivity -->
+            <intent-filter>
+                <action android:name="android.intent.action.INSERT_OR_EDIT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.item/person"/>
+                <data android:mimeType="vnd.android.cursor.item/contact"/>
+                <data android:mimeType="vnd.android.cursor.item/raw_contact"/>
+            </intent-filter>
+
+            <!-- Anhdts dong vao su dung cua btalk -->
+            <intent-filter>
+                <action android:name="com.android.contacts.action.JOIN_CONTACT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name="alias.MessageShortcut"
+            android:icon="@drawable/logo_quick_contacts_mail_color_44in48dp"
+            android:label="@string/shortcutMessageContact"
+            android:targetActivity=".messaging.ui.contact.activities.BtalkContactSelectionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name="alias.DialShortcut"
+            android:icon="@drawable/logo_quick_contacts_dialer_color_44in48dp"
+            android:label="@string/shortcutDialContact"
+            android:targetActivity=".messaging.ui.contact.activities.BtalkContactSelectionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.CAR_MODE"/>
+            </intent-filter>
+        </activity-alias> <!-- QuangNDb them shortcut tu ben contact sang -->
+        <activity-alias
+            android:name=".ContactShortcut"
+            android:icon="@drawable/logo_quick_contacts_color_44in48dp"
+            android:label="@string/shortcutContact"
+            android:targetActivity=".messaging.ui.contact.activities.BtalkContactSelectionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+            android:name=".messaging.ui.appsettings.BtalkPerSubscriptionSettingsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/general_settings_activity_title"
+            android:screenOrientation="user"
+            android:theme="@style/BugleTheme.SettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".messaging.ui.conversationlist.BtalkArchivedConversationListActivity"
+            android:theme="@style/BugleTheme.ArchivedConversationListActivity"/> <!-- Bkav QuangNDb them activity custom lai activity BlockedParticipantActivity -->
+        <activity
+            android:name=".messaging.ui.BtalkBlockedParticipantsActivity"
+            android:label="@string/block_list"
+            android:theme="@style/BugleTheme"/>
+        <activity
+            android:name=".messaging.ui.conversationlist.BtalkForwardMessageActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:icon="@drawable/ic_launcher_message"
+            android:label="@string/forward_message_activity_title"
+            android:screenOrientation="user"
+            android:theme="@style/BugleTheme.DialogActivity"/> <!-- AnhNDd: activity hiện thẻ khi click vào 1 contact -->
+        <activity
+            android:name=".contacts.BtalkQuickContactActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/quickContactActivityLabel"
+
+            android:theme="@style/Theme.BtalkQuickContact"
+            android:windowSoftInputMode="stateUnchanged">
+            <intent-filter>
+                <action android:name="com.android.contacts.action.QUICK_CONTACT"/>
+                <action android:name="android.provider.action.QUICK_CONTACT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.item/contact"/>
+                <data android:mimeType="vnd.android.cursor.item/person"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.item/person"/>
+                <data android:mimeType="vnd.android.cursor.item/contact"/>
+                <data android:mimeType="vnd.android.cursor.item/raw_contact"/>
+            </intent-filter>
+        </activity> <!-- Anhdts chuyen len tren de override DialerDatabaseHelper -->
+        <!-- Bkav Trungth: sua tam com sang android de build duoc ko phai go app dialer ra -->
+        <!-- Bkav QuangNDb them android:grantUriPermissions="true" de khong bi crash tren android P -->
+        <!-- Bkav HuyNQn: xoa android:taskAffinity="" de goi den contact khi star intent SEND_TO-->
+        <provider
+            android:name=".database.BtalkVoiceMailArchiveProvider"
+            android:authorities="bkav.android.dialer.database.voicemailarchiveprovider"
+            android:exported="false"
+            android:multiprocess="false"/> <!-- Bkav Trungth: sua tam com sang android de build duoc ko phai go app dialer ra -->
+        <provider
+            android:name=".database.BtalkFilteredNumberProvider"
+            android:authorities="bkav.android.dialer.database.filterednumberprovider"
+            android:readPermission="bkav.android.dialer.database.READ_DATABASE"
+            android:exported="true"
+            android:enabled="true"
+            android:multiprocess="false"/> <!-- Anhdts lop giao dien nhan tin -->
+
+        <activity
+            android:name=".messaging.ui.BtalkLaunchConversationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:documentLaunchMode="always"
+            android:icon="@drawable/ic_launcher_message"
+            android:noHistory="true"
+            android:screenOrientation="user"
+            android:theme="@style/Invisible">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.SENDTO"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="sms"/>
+                <data android:scheme="smsto"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.SENDTO"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="mms"/>
+                <data android:scheme="mmsto"/>
+            </intent-filter>
+        </activity> <!-- Bkav TrungTH: Full-screen photo viewer -->
+        <activity
+            android:name=".messaging.ui.photoviewer.BtalkBuglePhotoViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/photo_view_activity_title"
+            android:screenOrientation="user"
+            android:theme="@style/BuglePhotoViewTheme"/> <!-- Bkav QuangNDb receiver lang nghe su kien network change -->
+        <receiver android:name=".messaging.util.BtalkNetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".messaging.util.BtalkGPSReceiver">
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver> <!-- AnhNDd: -->
+        <activity
+            android:name=".contacts.BtalkSearchDupActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/ContactsAlertDialogTheme">
+            <intent-filter>
+
+                <!-- BKav QuangNDb doi ten action de qua cts, gg khong cho dung action bat dau bang android.intent -->
+                <action android:name="bkav.intent.action.MERGE_DUPLICATED"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".messaging.ui.searchSms.BtalkSearchActivity"
+            android:theme="@style/BugleTheme.ConversationActivity.NoActionBar"/>
+        <activity
+            android:name=".calllog.BtalkCallDetailActivity"
+            android:icon="@drawable/ic_phone_launcher"
+            android:label="@string/callDetailTitle"
+            android:parentActivityName="com.android.dialer.calllog.CallLogActivity"
+            android:theme="@style/BtalkBaseActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.item/calls"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".calllog.BtalkAllCallDetailActivity"
+            android:icon="@drawable/ic_phone_launcher"
+            android:label="@string/allCallDetailTitle"
+            android:parentActivityName="com.android.dialer.calllog.CallLogActivity"
+            android:theme="@style/BtalkBaseActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.item/calls"/>
+            </intent-filter>
+        </activity> <!-- TrungTH dua lop nay o duoi len tren de thay icon message khi share Handles sharing intent -->
+        <activity
+            android:name="com.android.messaging.ui.conversationlist.ShareIntentActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:documentLaunchMode="always"
+            android:excludeFromRecents="true"
+            android:icon="@drawable/ic_launcher_message"
+            android:label="@string/launcherMessage"
+            android:screenOrientation="portrait"
+            android:theme="@style/BugleTheme.DialogActivity">
+            <intent-filter android:label="@string/share_intent_label">
+                <action android:name="android.intent.action.SEND"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="text/x-vCard"/>
+                <data android:mimeType="text/x-vcard"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+            </intent-filter>
+            <intent-filter android:label="@string/share_intent_label">
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity> <!-- Bkav QuangNDb them activity custom setting -->
+        <activity
+            android:name=".messaging.ui.conversationsettings.BtalkPeopleAndOptionsActivity"
+            android:label="@string/settings"
+            android:theme="@style/BugleTheme"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="btalk.android.contacts.files"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <receiver android:name=".activities.BtalkActivity$BroadcastSimChange">
+            <intent-filter>
+                <action android:name="android.intent.action.SIM_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.CallRecorderReceiver">
+            <intent-filter>
+                <action android:name="bkav.com.btalk.intent.action.FINISH_CALL_RECORD"/>
+            </intent-filter>
+        </receiver> <!-- Bkav QuangNDb: them activity choose ringtone contact -->
+        <activity
+            android:name=".activities.BtalkChooseRingtoneContactActivity"
+            android:label="@string/contactPickerActivityTitle"
+            android:screenOrientation="portrait"
+            android:theme="@style/BugleTheme.SettingsActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="bkav.com.btalk.intent.action.SET_RINGTONE"/>
+            </intent-filter>
+        </activity> <!-- ******************************CONTACT********************************* -->
+        <activity
+            android:name="com.android.contacts.activities.ContactEditorActivity"
+            android:exported="false"
+            android:label="@string/editContactActivityLabel"
+            android:theme="@style/BtalkContactTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter android:label="@string/editContactDescription">
+                <action android:name="com.android.contacts.action.FULL_EDIT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.item/person"/>
+                <data android:mimeType="vnd.android.cursor.item/contact"/>
+                <data android:mimeType="vnd.android.cursor.item/raw_contact"/>
+            </intent-filter>
+            <intent-filter android:label="@string/insertContactDescription">
+                <action android:name="com.android.contacts.action.FULL_INSERT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.dir/person"/>
+                <data android:mimeType="vnd.android.cursor.dir/contact"/>
+                <data android:mimeType="vnd.android.cursor.dir/raw_contact"/>
+            </intent-filter>
+        </activity> <!-- AnhNDd -->
+        <activity
+            android:name=".contacts.BtalkExportVCardActivity"
+            android:label="@string/launcherActivityLabel"
+            android:theme="@style/BackgroundOnlyTheme"/>
+        <activity
+            android:name=".activities.BtalkMergeContactActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/merge_contacts"
+            android:theme="@style/BtalkContactTheme"/> <!-- AnhNDd: activity groups -->
+        <activity
+            android:name=".contacts.BtalkContactsGroupsActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/groupsLabel"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/BtalkContactTheme"
+            android:windowSoftInputMode="stateUnchanged"/> <!-- AnhNDd: Views the details of a single group -->
+        <activity
+            android:name=".contacts.BtalkGroupDetailActivity"
+            android:label=""
+            android:theme="@style/BtalkContactTheme"/> <!-- AnhNDd: Create a new or edit an existing group -->
+        <activity
+            android:name=".contacts.BtalkGroupEditorActivity"
+            android:theme="@style/BtalkContactTheme"
+            android:windowSoftInputMode="adjustResize"/> <!-- AnhNDd:  Edit or create a contact with only the most important fields displayed initially. -->
+        <activity
+            android:name=".contacts.BtalkCompactContactEditorActivity"
+            android:icon="@drawable/ic_launcher_message"
+            android:label="@string/editContactActivityLabel"
+            android:screenOrientation="portrait"
+            android:theme="@style/BtalkEditorActivityTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter android:label="@string/editContactDescription">
+                <action android:name="android.intent.action.EDIT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.item/person"/>
+                <data android:mimeType="vnd.android.cursor.item/contact"/>
+                <data android:mimeType="vnd.android.cursor.item/raw_contact"/>
+            </intent-filter>
+            <intent-filter android:label="@string/insertContactDescription">
+                <action android:name="android.intent.action.INSERT"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.dir/person"/>
+                <data android:mimeType="vnd.android.cursor.dir/contact"/>
+                <data android:mimeType="vnd.android.cursor.dir/raw_contact"/>
+            </intent-filter>
+        </activity> <!-- AnhNDd: Used to filter contacts list by account -->
+        <activity
+            android:name=".contacts.BtalkAccountFilterActivity"
+            android:label="@string/activity_title_contacts_filter"
+            android:theme="@style/BtalkContactTheme"/> <!-- AnhNDd: Used to select display and sync groups -->
+        <activity
+            android:name=".contacts.BtalkCustomContactListFilterActivity"
+            android:label="@string/custom_list_filter"
+            android:theme="@style/BtalkContactTheme"/> <!-- AnhNDd: activity giay phep nguon mo -->
+        <activity
+            android:name=".contacts.BtalkLicenseActivity"
+            android:exported="false"
+            android:label="@string/activity_title_licenses"
+            android:theme="@style/BtalkContactTheme"/>
+        <!-- AnhNDd: activity lựa chọn nhiều contac -->
+        <activity
+            android:name=".contacts.BtalkMultiPickContactActivity"
+            android:configChanges="orientation|keyboardHidden|layoutDirection|fontScale|locale"
+            android:screenOrientation="nosensor"
+            android:theme="@style/BtalkMultiSelectActivityTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="com.android.contacts.action.MULTI_PICK"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.dir/person"/>
+                <data android:mimeType="vnd.android.cursor.dir/contact"/>
+                <data android:mimeType="vnd.android.cursor.dir/raw_contact"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DELETE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.dir/person"/>
+                <data android:mimeType="vnd.android.cursor.dir/contact"/>
+                <data android:mimeType="vnd.android.cursor.dir/raw_contact"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.contacts.action.MULTI_PICK_CALL"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.contacts.action.MULTI_PICK_EMAIL"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="vnd.android.cursor.dir/person"/>
+                <data android:mimeType="vnd.android.cursor.dir/contact"/>
+                <data android:mimeType="vnd.android.cursor.dir/raw_contact"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.contacts.action.MULTI_PICK_SIM"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity> <!-- *****************************RECEIVER********************************* -->
+        <!-- Anhdts -->
+        <receiver
+            android:name=".utility.WallpaperChangeReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="bkav.android.wallpaper.intent.action.WALLPAPER_BLUR_COMPLETE">
+                </action>
+            </intent-filter>
+        </receiver> <!-- *****************************SERVICE********************************* -->
+        <!-- AnhNDd -->
+        <service
+            android:name=".contacts.BtalkVCardService"
+            android:exported="false"/> <!-- QuangNDb them activity nay lai vao, khong biet ai xoa di -->
+        <activity
+            android:name=".contacts.BtalkContactsPreferenceActivity"
+            android:exported="false"
+            android:label="@string/activity_title_settings"
+            android:theme="@style/BtalkContactTheme"/> <!-- Anhdts 3d touch btalk -->
+        <!-- <receiver -->
+        <!-- android:name=".receiver.TouchLauncherReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="bkav.android.3d_touch_btalk"> -->
+        <!-- </action> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <receiver android:name=".receiver.BootReceiver">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".messaging.ui.BtalkPermissionCheckActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/> <!-- QuangNDb them receiver sync message de bat dc su kien khi khong dat default sms app -->
+        <receiver
+            android:name=".messaging.receiver.SyncMessageReceiver"
+            android:enabled="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.provider.Telephony.MMS_DOWNLOADED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.MissCallReceiverLollipop">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".messaging.ui.block.NotificationBlockReceiver"/> <!-- Bkav QuangNDb service save contact -->
+        <!-- <service android:name=".contacts.BtalkContactSaveService" -->
+        <!-- android:exported="false"/> -->
+        <!-- <receiver -->
+        <!-- android:name=".test.TestReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="bkav.android.TEST_CONTACT_BTALK"> -->
+        <!-- </action> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <receiver
+            android:name=".receiver.SyncContactReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="bkav.android.SYNC_CONTACT"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.BtalkQuickResponseEditActivity"
+            android:label="@string/quick_response_edit_title"
+            android:parentActivityName="com.android.messaging.ui.conversation.ConversationActivity"
+            android:theme="@style/BugleTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.messaging.ui.conversation.ConversationActivity"/>
+        </activity>
+        <activity
+            android:name=".activities.BkavContactEditorAccountsChangedActivity"
+            android:exported="false"
+            android:theme="@style/ContactEditorAccountsChangedActivityTheme"
+            android:windowSoftInputMode="adjustResize"/> <!-- Bkav QuangNDb Trial mode -->
+        <receiver android:name=".esim.ActiveDefaultProfileReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="bkav.android.intent.action.ESIM_CHANGE" />
+                <action android:name="bkav.android.intent.action.GET_CODE_RESULT" />
+                <action android:name="bkav.android.intent.action.EVENT_BACK_PRESS" />
+                <action android:name="bkav.android.intent.action.EXIT_BTALK" />
+                <action android:name="bkav.android.intent.esim.action_UPDATE_PROFILE_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".esim.dialog_choose_sim.BtalkChooseSimDialogActivity"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="bkav.android.btalk.SHOW_DIALOG_CHOOSE_SIM"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+    <permission
+        android:name="bkav.android.dialer.database.READ_DATABASE"
+        android:label="Read Database"
+        android:protectionLevel="normal" />
+
+</manifest>

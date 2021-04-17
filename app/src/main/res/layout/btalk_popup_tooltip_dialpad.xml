@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/relMagicPadTooltip"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dip"
+              android:layout_marginRight="10dip"
+              android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@null"
+        android:paddingLeft="50dip"
+        android:src="@drawable/btalk_ic_tooltip_dialpad_center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="@color/btalk_orange_color"
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <TextView
+            android:id="@+id/tvMagicPadMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dip"
+            android:paddingRight="5dip"
+            android:paddingTop="10dip"
+            android:text="@string/bkav_tooltip_magicpad_message"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/divider_magicpad_tooltip"
+            android:layout_width="fill_parent"
+            android:layout_height="0.1dip"
+            android:layout_marginTop="5dip"
+            android:background="#D6D6D6"
+            android:paddingRight="5dip" />
+
+        <RelativeLayout
+            android:id="@+id/relMagicPadButton"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:paddingBottom="5dip"
+            android:paddingLeft="10dip"
+            android:paddingTop="5dip" >
+
+            <ImageView
+                android:id="@+id/ivNotShowAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:paddingBottom="5dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:paddingTop="5dip"
+                android:src="@drawable/btalk_ic_tooltip_unchecked" />
+
+            <TextView
+                android:id="@+id/tvNotShowAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ivNotShowAgain"
+                android:paddingLeft="3dip"
+                android:text="@string/btalk_tooltip_magicpad_not_show_again"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnOK"
+                android:layout_width="80dip"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="@string/btn_ok"
+                android:textColor="@drawable/btalk_magicpad_tooltip_button_ok_text"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

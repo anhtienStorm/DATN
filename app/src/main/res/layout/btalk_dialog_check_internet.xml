@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+AnhNDd: giao dien khi khong co ket noi internet-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_template"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btalk_title_dialog_height"
+        android:layout_gravity="center_vertical"
+        android:background="@color/btalk_color_dialog_title_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/alertTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/btalk_title_dialog_marginRight"
+            android:layout_marginLeft="@dimen/btalk_title_dialog_marginRight"
+            android:layout_marginRight="@dimen/btalk_title_dialog_marginRight"
+            android:layout_marginTop="@dimen/btalk_title_dialog_marginRight"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/bkav_about_eula_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/btalk_title_dialog_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        style="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/btalk_padding_message_dialog"
+        android:text="@string/dialog_check_internet_message"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonAccept"
+            style="@style/BkavButtonV2"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/btalk_button_dialog_margin"
+            android:layout_marginLeft="@dimen/btalk_button_dialog_margin"
+            android:layout_marginRight="@dimen/btalk_button_dialog_margin"
+            android:layout_marginTop="@dimen/btalk_button_dialog_margin"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="@string/accept" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            style="@style/BkavButtonV2Invert"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/btalk_button_dialog_margin"
+            android:layout_marginLeft="@dimen/btalk_button_dialog_margin"
+            android:layout_marginRight="@dimen/btalk_button_dialog_margin"
+            android:layout_marginTop="@dimen/btalk_button_dialog_margin"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="@string/cancel" />
+
+    </LinearLayout>
+
+</LinearLayout>

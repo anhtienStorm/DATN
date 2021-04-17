@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+AnhNDd: giao diện chính của btalk với drawer
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/content_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/navigation_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true" />
+
+            <!--Bkav TrungTh sua lai theo bkav Viewpager-->
+            <android.support.v4.view.BkavViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/tabs" />
+
+            <!--Bkav QuangNDb dong doan them view tren tabar lai-->
+            <View
+                android:id="@+id/divider_tabs"
+                style="@style/LineDividerStyle"
+                android:layout_above="@+id/tabs"
+                android:visibility="gone" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_height"
+                android:layout_above="@id/navigation_view"
+                app:tabBackground="@color/btalk_transparent_view"
+                app:tabRippleColor="@color/btalk_transparent_view"
+                app:tabGravity="fill"
+                app:tabIndicatorHeight="0dp"
+                app:tabMode="fixed"
+                app:tabPaddingEnd="0dp"
+                app:tabPaddingStart="0dp"
+                app:tabPaddingBottom="4dp"
+                app:tabSelectedTextColor="@color/btalk_ab_text_and_icon_selected_color"
+                app:tabTextColor="@color/color_text_tablayout" />
+
+        </RelativeLayout>
+
+        <!-- needed w/this id for EtsyBlur Lib to work -->
+        <com.ms_square.etsyblur.BlurringView
+            android:id="@id/blurring_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:downScaleFactor="2"
+            app:radius="12" />
+
+        <bkav.android.btalk.view.BtalkViewAnchorNav
+            android:id="@+id/anchor_nav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="@color/btalk_blur_setting"
+            android:visibility="gone" />
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/btalk_activity_nav_view"
+            android:layout_width="@dimen/btalk_width_navigation_view"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/btalk_drawer_background_color"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/btalk_nav_header_main"
+            app:itemBackground="@color/btalk_transparent_view"
+            app:itemIconTint="@color/btalk_white_bg"
+            app:itemTextColor="@color/btalk_white_bg"
+            app:menu="@menu/btalk_activity_main_drawer" />
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

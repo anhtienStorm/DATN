@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bkav.android.btalk.messaging.ui.conversation.BtalkSimSelectorView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="5dp"
+>
+    <!--QuangNDb bo BtalkSimListView vi khong can thiet-->
+    <ListView
+        android:id="@+id/sim_list"
+        android:layout_width="@dimen/bg_sim_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:visibility="gone" />
+
+</bkav.android.btalk.messaging.ui.conversation.BtalkSimSelectorView>

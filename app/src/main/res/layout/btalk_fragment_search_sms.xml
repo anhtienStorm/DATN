@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/btalk_actionbar_and_tabbar_bg_color">
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:background="@drawable/overfollow_button_bg"
+            android:paddingBottom="@dimen/medium_margin"
+            android:paddingEnd="@dimen/small_margin"
+            android:paddingStart="@dimen/small_margin"
+            android:paddingTop="@dimen/medium_margin"
+            android:src="@drawable/arrow_light_message"
+            android:tint="@color/btalk_ab_text_and_icon_normal_color"/>
+        <android.support.v7.widget.SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/back"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="@string/search_sms_hint">
+
+        </android.support.v7.widget.SearchView>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/white"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:scrollbarStyle="outsideOverlay"
+    >
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

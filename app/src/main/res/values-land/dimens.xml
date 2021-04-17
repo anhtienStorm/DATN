@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Anhdts kich thuoc icon anh giao dien search dialpad-->
+    <dimen name="btalk_avatar_icon_size">40dp</dimen>
+    <dimen name="margin_padding_photo_suggest">8dp</dimen>
+    <!--Anhdts  margin bottom suggest view dialpad-->
+    <dimen name="btalk_suggest_padding_bottom">6dp</dimen>
+
+    <!--Anhdts padding icon anh giao dien search dialpad-->
+    <dimen name="btalk_list_item_padding_top">8dp</dimen>
+    <dimen name="btalk_list_item_photo_size">@dimen/btalk_avatar_icon_size</dimen>
+    <dimen name="btalk_height_suggest_container">52dp</dimen>
+    <dimen name="btalk_dialpad_digits_padding_right">10dp</dimen>
+    <dimen name="btalk_margin_horizontal_digit">34dp</dimen>
+    <dimen name="btalk_dialpad_extra_digits_adjustable_text_size">18sp</dimen>
+    <dimen name="btalk_dialpad_digits_adjustable_text_size">24sp</dimen>
+    <!-- Anhdts custom item row contact search-->
+    <dimen name="btalk_list_item_view_height">58dp</dimen>
+    <dimen name="btalk_list_item_smart_padding_start">8dp</dimen>
+    <dimen name="btalk_list_item_padding_bottom">6dp</dimen>
+
+    <!--Anhdts Height of the floating action button -->
+    <dimen name="btalk_floating_action_button_height">48dp</dimen>
+    <!--Anhdts Height of the floating action two button -->
+    <dimen name="btalk_floating_action_two_button_height">40dp</dimen>
+    <!--Anhdts Width of the floating action button -->
+    <dimen name="btalk_floating_action_button_width">48dp</dimen>
+
+    <dimen name="btalk_floating_action_two_button_width">45dp</dimen>
+
+    <dimen name="margin_top_two_button_call">5dp</dimen>
+
+    <dimen name="margin_bottom_float_action_call">4dp</dimen>
+
+    <dimen name="btalk_message_padding_bottom">4dp</dimen>
+
+    <dimen name="blur_padding_bottom">0dp</dimen>
+
+    <dimen name="dialpad_key_numbers_default_size">30sp</dimen>
+
+    <dimen name="btalk_letter_star_padding_top">10dp</dimen>
+
+    <!--TrungTH padding cua dong text cuoi cung trong ban phim-->
+    <dimen name="btalk_letter_add_padding_top">14dp</dimen>
+
+    <dimen name="btalk_last_letter_padding_left">10dp</dimen>
+
+    <dimen name="btalk_letter_pound_padding_top">13dp</dimen>
+
+    <dimen name="btalk_dialpad_key_margin_bottom">9dp</dimen>
+
+    <!--Anhdts chieu cao cua tab-->
+    <dimen name="tab_height">42dip</dimen>
+
+    <dimen name="width_sim_line">100dp</dimen>
+
+    <dimen name="height_sim_line">35dp</dimen>
+
+    <dimen name="height_sim_icon">24dp</dimen>
+    <dimen name="margin_icon_sim">3dp</dimen>
+    <dimen name="margin_sim_row">5dp</dimen>
+
+    <!-- Anhdts textsize name suggest view-->
+    <dimen name="text_size_name_suggest">13sp</dimen>
+
+    <!-- Anhdts textsize suggest view-->
+    <dimen name="text_size_phone_suggest">13sp</dimen>
+
+    <dimen name="margin_bottom_container_two_button">4dp</dimen>
+
+    <dimen name="height_separate_two_button">14dp</dimen>
+
+</resources>

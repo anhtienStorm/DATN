@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Active -->
+    <item android:drawable="@drawable/bkav_button_bg_blue_pressed" android:state_enabled="true" android:state_focused="false" android:state_pressed="false" android:state_selected="true"/>
+    <!-- Inactive -->
+    <item android:drawable="@drawable/bkav_button_bg_blue_normal" android:state_enabled="true" android:state_focused="false" android:state_pressed="false" android:state_selected="false"/>
+    <!-- Pressed -->
+    <item android:drawable="@drawable/bkav_button_bg_blue_pressed" android:state_enabled="true" android:state_focused="false" android:state_pressed="true" android:state_selected="false"/>
+    <!-- disable -->
+    <item android:drawable="@drawable/bkav_button_bg_blue_normal" android:state_enabled="false" android:state_focused="false" android:state_pressed="false" android:state_selected="false"/>
+    <!-- focus -->
+    <item android:drawable="@drawable/bkav_button_bg_blue_pressed" android:state_enabled="true" android:state_focused="true" android:state_pressed="false" android:state_selected="false"/>
+
+</selector>

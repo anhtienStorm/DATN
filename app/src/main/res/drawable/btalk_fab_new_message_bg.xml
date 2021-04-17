@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb back ground cua nut them moi tin nhan, dung trong giao dien btalk_conversation_list_fragment-->
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/fab_new_message_static_shadow"/>
+    </item>
+    <item
+        android:bottom="@dimen/fab_padding_bottom"
+        android:left="2dp"
+        android:right="2dp">
+        <selector>
+            <item
+                android:state_pressed="true">
+                <shape
+                    android:shape="oval">
+                    <solid
+                        android:color="@color/btalk_fab_press_color"
+                    />
+                </shape>
+            </item>
+            <item>
+                <shape
+                    android:shape="oval">
+                    <solid
+                        android:color="@color/btalk_fab_button_bg_color"
+                    />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

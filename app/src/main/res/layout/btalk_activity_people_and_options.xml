@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    class="bkav.android.btalk.messaging.ui.conversationsettings.BtalkPeopleAndOptionsFragment"
+    android:id="@+id/people_and_options_fragment"
+    android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />

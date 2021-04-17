@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+AnhNDd: giao diện thông tin của nhóm
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btalk_white_bg">
+
+    <fragment
+        android:id="@+id/group_detail_fragment"
+        class="bkav.android.btalk.contacts.BtalkGroupDetailFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

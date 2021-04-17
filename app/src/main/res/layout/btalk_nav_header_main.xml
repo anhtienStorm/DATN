@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="30dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="?attr/list_item_padding_bottom"
+        android:paddingLeft="?attr/list_item_padding_left"
+        android:paddingRight="?attr/list_item_padding_right"
+        android:paddingTop="?attr/list_item_padding_top">
+
+        <ImageView
+            android:id="@+id/icon_setting_nav_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_settings_white_24dp"
+            android:tint="@color/btalk_white_bg"/>
+
+        <TextView
+            style="@android:style/TextAppearance.Material.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dip"
+            android:text="@string/btalk_title_nav_header"
+            android:textColor="@color/btalk_white_bg"/>
+    </LinearLayout>
+</RelativeLayout>

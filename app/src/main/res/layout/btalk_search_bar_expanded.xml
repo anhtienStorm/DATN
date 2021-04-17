@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+AnhNDd: giao diện search view-->
+<!-- HienDTk: sua lai chieu cao cua search view   -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/search_box_expanded"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bkav_actionbar_height_search_view"
+                android:background="@color/btalk_transparent_view"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+    <ImageButton
+        android:id="@+id/search_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="14dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/action_menu_back_from_search"
+        android:src="@drawable/ic_arrow_light_message_update"
+        android:tint="@color/btalk_ab_text_and_icon_normal_color"/>
+
+    <bkav.android.btalk.view.EditTextKeyListener
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_box_icon_size"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="22dp"
+        android:layout_toEndOf="@+id/search_back_button"
+        android:layout_toStartOf="@+id/search_close_button"
+        android:background="@android:color/transparent"
+        android:fontFamily="@string/search_font_family"
+        android:gravity="center_vertical"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textFilter"
+        android:singleLine="true"
+        android:textColor="@color/searchbox_text_color"
+        android:textColorHint="@color/color_hint_searchview"
+        android:textCursorDrawable="@drawable/searchedittext_custom_cursor"
+        android:textSize="@dimen/text_search_record_size"/>
+
+    <ImageView
+        android:id="@+id/search_close_button"
+        android:layout_width="@dimen/btalk_search_box_close_icon_size"
+        android:layout_height="@dimen/btalk_search_box_close_icon_size"
+        android:layout_toStartOf="@+id/search_add_contact"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/description_clear_search"
+        android:padding="@dimen/search_box_close_icon_padding"
+        android:src="@drawable/ic_btalk_remove_small"
+        />
+
+    <!--TrungTH Box ung ic add new contact -->
+    <ImageView
+        android:id="@+id/search_add_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="@dimen/btalk_padding_right_ic_actionbar"
+        android:src="@drawable/ic_add_new_blue"/>
+
+</RelativeLayout>

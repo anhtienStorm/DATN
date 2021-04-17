@@ -1,0 +1,1444 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+    <!--Bkav TrungTH text cho icon launcher-->
+    <string name="launcherDialer">ဖုန်း</string>
+    <string name="launcherMessage">စာတို</string>
+    <!--Bkav TrungTH ten cac tab-->
+    <string name="title_tab_phone">ဖုန်း</string>
+    <string name="title_tab_recents_call">မကြာမှီက</string>
+    <string name="title_tab_messages">စာတိုများ</string>
+    <string name="title_tab_contacts">ဆက်သွယ်မှု</string>
+    <string name="title_tab_setting_tab">အရောင်ပြောင်းပါ</string>
+    <!--Bkav QuangNDb noi dung text va button text cua view dat btalk lam pm tin nhan mac dinh-->
+    <string name="title_set_as_default_sms">စာတိုပို့ရန် ဘီတော့ အက်ပ်ကို ပုံသေအဖြစ်သတ်မှတ်ပါ </string>
+    <string name="title_change">ပြောင်းပါ</string>
+    <!--Bkav QuangNDb noi dung toast thong bao sau khi thay doi btalk lam pm nt mac dinh-->
+    <string name="notify_btalk_as_sms_default">ဘီတော့သည် စာတိုပို့ရန်ပုံသေ အက်ပ်ဖြစ်သည် </string>
+    <string name="notify_btalk_not_as_sms_default">ဘီတော့သည် စာတိုပို့ရန် ပုံသေ အက်ပ်မဟုတ်ပါ</string>
+    <!--Bkav QuangNDb cac text cua cac chuc nang trong menu cua moi conversation-->
+    <string name="menu_text_search_sms">စာတိုရှာရန်</string>
+    <string name="menu_text_attach_contact">တွဲထားသော အဆက်အသွယ်</string>
+    <string name="menu_text_add_subject">ခေါင်းစဉ်ထည့်ရန်</string>
+    <!--Bkav QuangNDb text label cua media chooser-->
+    <string name="media_chooser_emoticon">စိတ်နေစိတ်ထား</string>
+    <string name="media_chooser_contact">အဆက်အသွယ်</string>
+    <string name="media_chooser_location">တည်နေရာ</string>
+    <!--Bkav QuangNDb title cua menu search contact-->
+    <string name="contact_chooser_search_title">အဆက်အသွယ်ရှာရန်</string>
+
+    <!--Bkav QuangNDb String cua location map-->
+    <string name="link_map" translatable="false">%1$s\n%2$s\nhttps://maps.google.com/maps?q=%3$s,%4$s</string>
+    <string name="network_issue">ကွန်ယက် မဟုတ်ပါ</string>
+    <string name="gps_issue">ဂျီပီအက်စ် မရနိုင်ပါ</string>
+    <string name="default_info_title">ပုံသေတည်နေရာ</string>
+    <string name="default_info_snippet">တည်နေရာခွင့်ပြုချက် ပိတ်ထားသောကြောင့် နေရာများ မတွေ့ပါ</string>
+    <string name="btn_try_again">နောက်တစ်ကြိမ်ကြိုးစားပါ</string>
+    <!--Bkav QuangNDb invalid phone nunmber-->
+    <string name="invalid_contact">မမှန်သော အဆက်အသွယ်</string>
+    <!--Bkav QuangNDb ten self participant-->
+    <string name="messagelist_sender_self">ကျွနု်ပ်ကို</string>
+    <!--Bkav QuangNDb hint cua search view search sms-->
+    <string name="search_sms_hint">စာတိုရှာသည်</string>
+    <string name="hint_open_search">ဤနေရာတွင် ရှာထားသော စာတိုများပြသည်</string>
+    <string name="hint_not_found_message">စာတိုများမတွေ့ပါ</string>
+    <!--Bkav QuangNDb title tren dialog khi bam vao so dien thoai trong noi dung tin nhan-->
+    <string name="option_call">ခေါ်သည်</string>
+    <string name="option_text">စာတိုပို့သည်</string>
+    <string name="option_mail">အီးမေးလ်ပို့သည်</string>
+    <string name="option_add_contact">အဆက်အသွယ်ပေါင်းထည့်သည်</string>
+    <string name="option_copy">ကူးယူသည်</string>
+    <string name="option_edit">အိုင်အမ်အီး ဂဏန်းများဖွင့်သည်</string>
+    <!--Bkav QuangNDb option show avatar-->
+    <string name="option_show_avatar">စာတိုတစ်ခုအတွင်း အဗာတာကိုပြပါ</string>
+    <string name="option_show_details">စာတိုတစ်ခုအတွင်း အသေးစိတ်ပြပါ</string>
+    <string name="option_show_info_sim">ဆင်းမ်အချက်အလက်များပြပါ</string>
+    <string name="option_show_avatar_key" translatable="false">စာတိုတစ်ခုအတွင်း အဗာတာကိုပြပါ</string>
+    <string name="option_show_details_key" translatable="false">စာတိုတစ်ခုအတွင်း အသေးစိတ်ပြပါ</string>
+    <string name="option_show_info_sim_key" translatable="false">ဆင်းမ်အချက်အလက်များပြပါ</string>
+    <string name="option_symmetry_box_message_key" translatable="false">ခေါက်ချိုးညီ စာတိုသေတ္တာ</string>
+    <!--Bkav QuangNDb text toase has not connect 3g-->
+    <string name="toast_show_has_not_connect_3g">ဓာတ်ပုံနှင့် ဗွီဒီယိုများပို့ရန် ကျေးဇူးပြု၍အင်တာနက်ဖွင့်ပါ</string>
+    <!--QuangNDb action mark all read-->
+    <string name="action_mark_all_read">အားလုံးဖတ်ပြီး</string>
+    <string name="progress_mark_all_message">ဖတ်ပြီးအဖြစ် ပြုလုပ်နေသည်</string>
+    <string name="missing_storage_permission">ဖုန်းပြောစဉ်အသံသွင်းထားသော ဖိုင်ကို အမ်အမ်အက်စ် အဖြစ် ဖုန်းသိုလှောင်မှုအတွင်းသိမ်းရန် ဘီတော့အက်ပ်ကိုခွင့်ပြုပါ</string>
+    <string name="allow">ခွင့်ပြုသည်</string>
+    <!--     CALL LOG      -->
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo giay -->
+    <plurals name="recentCalls_timeInSeconds">
+        <item quantity="one">၁စက္ကန့်က</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>   စက္ကန့်က</item>
+    </plurals>
+
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo phut -->
+    <plurals name="recentCalls_timeInMinutes">
+        <item quantity="one">၁မိနစ်က</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>            မိနစ်က</item>
+    </plurals>
+
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo ngay -->
+
+    <!-- Anhdts Cac ngay trong tuan -->
+    <string name="day_of_week_long_sunday">တနင်္ဂနွေ</string>
+    <string name="day_of_week_long_monday">တနင်္လာ</string>
+    <string name="day_of_week_long_tuesday">အင်္ဂါ</string>
+    <string name="day_of_week_long_wednesday">ဗုဒ္ဓဟူး</string>
+    <string name="day_of_week_long_thursday">ကြာသပတေး</string>
+    <string name="day_of_week_long_friday">သောကြာ</string>
+    <string name="day_of_week_long_saturday">စနေ</string>
+    <string name="day_of_week_long_today">ယနေ့</string>
+
+    <!-- Anhdts su dung cho thanh chon hien thi tat ca cuoc goi hay chi cuoc goi nho -->
+    <string name="toolbar_recent_all_upper">အားလုံး</string>
+    <string name="toolbar_recent_missed_upper">လွဲချော်သော</string>
+
+    <!-- Anhdts title context menu cho item trong call log -->
+    <string name="action_add_contact">အဆက်အသွယ်ပေါင်းထည့်ပါ</string>
+    <string name="action_show_call_detail">ခေါ်ဆိုမှုများကြည့်ရန်</string>
+    <string name="action_show_all_call_detail">ခေါ်ဆိုမှုများအားလုံးကြည့်ရန်</string>
+    <string name="action_share_contact_via">အဆက်အသွယ်ကို မျှဝေမည်</string>
+    <string name="action_remove_in_call_log">ခေါ်ဆိုမှုများကို ဖျက်မည်</string>
+    <string name="action_clear_in_call_log">ဤနံပါတ်၏ ခေါ်ဆိုမှုအားလုံးကို ဖျက်မည်</string>
+    <string name="action_call_by_sim">ဆင်းမ်ဖြင့်ခေါ်ဆိုမှု %1$s &lt;%2$s&gt;</string>
+    <string name="dialog_phone_send_prohibited_message">ဤနံပါတ်ကိုခေါ်ဆို၍မရပါ</string>
+    <string name="toast_warn_cannot_send_message">မှားယွင်းနေသည်။ စာတိုပို့၍မရပါ။ စုပေါင်းခေါ်ဆိုမှုလက်ခံသူကို ထောက်ပံ့ပါ။</string>
+
+    <!--  Dilpad -->
+    <!-- Anhdts letter cua phim * -->
+    <string name="btalk_dialpad_star_letters">,</string>
+    <!-- Anhdts letter cua phim # -->
+    <string name="btalk_dialpad_pound_letters">;</string>
+    <!--Anhdts xoa nhat ky cuoc goi-->
+    <string name="recentCalls_deleteAll">မကြာခင်ကခေါ်ဆိုမှုများကို ရှင်းမည်</string>
+
+    <!--**************TOOLTIP******************-->
+    <!-- Anhdts text goi y dialpad-->
+    <string name="bkav_tooltip_magicpad_message">အကြံပေး၊ သို့ <b>အလျင်အမြန်ရှာဖွေမှုကို ဆောက်ရွက်ပါ</b> သက်မှတ်ထားသောအဆက်အသွယ်အတွက်, တူညီနေသည့်နံပါတ်ကိုနှိပ်ယုံဖြင့်<b>ပထမစာ</b> နံမည်၏၊ ဥပမာ \'၃ ၂ ၃\' -> \'ဒတ်\'</string>
+    <string name="btalk_tooltip_magicpad_not_show_again">နောက်တစ်ကြိမ်မပြပါ</string>
+    <string name="count_show_tooltip_dialpad">ရေတွက်သည်_ပြသည်_သင့်လျှော်သောကိရိယာ_ခေါ်ဆိုရန်နံပါတ်ပြား</string>
+    <string name="tooltip_pref_show_dialpad">ပြသည်_သင့်လျှော်သောကိရိယာ_ခေါ်ဆိုရန်နံပါတ်ပြား</string>
+    <string name="tooltip_times_use_message">ရေတွက်သည်_အသုံးပြုသည်_သင့်လျှော်သောကိရိယာ_စာတို</string>
+    <string name="tooltip_times_use_contact">အကြိမ်_အသုံးပြုသည်_သင့်လျှော်သောကိရိယာ_အဆက်အသွယ်</string>
+
+    <!--Bkav QuangNDb hint text compose view-->
+    <string name="btalk_compose_message_view_hint_text_multi_sim"><i>မှ ပေးပို့သည် %1$s</i></string>
+
+    <!--AnhNDd String trong nav drawer-->
+    <string name="btalk_title_nav_header">ဆက်တင်များ</string>
+    <!--Bkav QuangNDb text hint cua box go tin nhan-->
+    <string name="btalk_hint_compose_message_not_multi_sim"><i>စာတိုရိုက်ပါ</i></string>
+    <string name="btalk_notify_not_make_a_call">ပါဝင်သူများခြင်း သို့မဟုတ် ဖုန်းနံပါတ်မဟုတ်သောကြောင့် ခေါ်ဆို၍မရနိုင်ပါ</string>
+    <!--Bkav QuangNDb override string text cua source goc de thay noi dung toast thay doi sms app-->
+    <string name="requires_default_sms_app_to_send">ပုံသေစာတိုပေးပို့မှုအတွက် ဘီတော့ အက်ပ်ကိုသတ်မှတ်ပါ </string>
+    <string name="requires_default_sms_app">ပုံသေစာတိုပေးပို့မှုအတွက် အက်ပ်ရွေးပါ</string>
+
+    <!--*******************menu******************-->
+    <!-- Anhdts action shortcut menu-->
+    <string name="menu_label_new_message">စာတိုအသစ်</string>
+    <string name="menu_label_favorite">အနှစ်သက်ဆုံးများ</string>
+    <string name="menu_label_add_contact">အဆက်အသွယ် ထည့်ရန်</string>
+    <string name="description_show_more">အဆက်အသွယ်များ ပြပါ</string>
+
+    <!--Bkav QuangNDb text title ghi am cuoc goi den di-->
+    <string name="record_incoming_call">အဝင်ခေါ်ဆိုမှုများကို အသံသွင်းပါ</string>
+    <string name="record_outgoing_call">အထွက်ခေါ်ဆိုမှုများကို အသံသွင်းပါ</string>
+    <string name="notify_recoding_call">အသံသွင်းပြီးပါပြီ စာတိုသေတ္တာတွင် သိမ်းပါ</string>
+    <string name="notify_chooser_app_set_ringtone">ဤအဆက်အသွယ်၏ ဖုန်းမြည်သံအတွက် အက်ပ်ရွေးပါ</string>
+    <string name="notify_complete_set_ringtone">ဤအဆက်အသွယ်အတွက် ဖုန်းမြည်သံ သတ်မှတ်ပြီးပြီ</string>
+    <string name="notify_empty_contact_new_message">အဆက်အသွယ် မရှိပါ</string>
+    <string name="notify_empty_contact_find">အဆက်အသွယ်မတွေ့ပါ</string>
+
+    <!-- Anhdts thong bao danh ba trong khi cham vao danh ba de goi-->
+    <string name="toast_cannot_call_without_number">ဘာမှ မရှိပါ</string>
+    <!--Bkav QuangNDB text title dialog nhieu nguoi trong cuoc hoi thoai-->
+    <string name="touch_to_call">ခေါ်ဆိုရန်နှိပ်ပါ</string>
+    <string name="recentCalls_edit_call_log">ခေါ်ဆိုမှုမှတ်တမ်းကို ပြင်ဆင်မည်</string>
+
+    <!--Anhdts title tab merge-->
+    <string name="title_merge_by_name">အမည်တူများကို ပေါင်းမည်</string>
+    <string name="title_merge_by_phone">ဖုန်းနံပါတ်တူများကို ပေါင်းမည်</string>
+    <string name="title_merge_by_mail">မေးလ်တူများကို ပေါင်းမည်</string>
+
+    <!-- Anhdts setting dialer-->
+    <string name="sum_pref_open_app">အက်ပ်ပိတ်ပြီးသည့်အခါ တည်နေရာကိုသိမ်းမည်</string>
+    <string name="header_title_setting_open_app">အက်ပ်ဖွင့်ရန် ဆက်တင်များ</string>
+    <string name="sum_pref_call_button">ဆင်းမ် ၂ကဒ်အတွက် ခလုတ် ၂ခုပြပါ</string>
+
+    <string name="toast_copy_contact">အဆက်အသွယ်ကူးပြီးပြီ</string>
+    <string name="toast_delete_calls_complete">ခေါ်ဆိုမှုများဖျက်ပြီးပြီ</string>
+    <!-- Anhdts Title bar for all call detail screen -->
+    <string name="notify_not_permission">သိုလှောင်မှုအတွင်း သိမ်းဆည်းရန် ခွင့်မပြုပါ။ ဖုန်းခေါ်ဆိုအသံသွင်းထားမှုများကို စာတိုအဖြစ်သိမ်း၍မရပါ။ ခွင့်ပြုချက်ပြင်ဆင်ရန် ဆက်တင်သို့သွားပါ။</string>
+
+    <!-- Anhdts Title bar for all call detail screen -->
+    <string name="allCallDetailTitle">ခေါ်ဆိုမှုအသေးစိတ်အားလုံး</string>
+    <!-- Anhdts dialog sau khi nguoi dung deny cac quyen-->
+    <string name="message_request_permission"> ဤဆန်းသစ်မှုကိုဖွင့်ရန် အက်ပ်ဆက်တင်ကိုနှိပ်၍ ခွင့်ပြုမှုတွင် အဆက်အသွယ်ကို အသက်သွင်းပါ။ </string>
+    <string name="title_request_permission">အဆက်အသွယ်နှင့် ဖုန်းအခြေအနေကို အသုံးပြုရန် ဘီတော့ကိုခွင့်ပြုသည်</string>
+    <string name="positive_title_request_permission">အက်ပ်ဆက်တင်</string>
+    <string name="negative_title_request_permission">ယခုမဟုတ်ပါ</string>
+
+    <!-- Inform user of the names of permissions that are required to use the app -->
+    <string name="enable_permission_procedure">ခွင့်ပြုချက်များပြောင်းလဲရန် ဆက်တင်၊ အက်ပ်၊ ဘီတော့၊ ခွင့်ပြုချက်များ သို့အဆင့်ဆင့်သွားပါ။</string>
+    <string name="enable_permission_procedure_description">ခွင့်ပြုချက်များပြောင်းလည်းရန် ဆက်တင်၊ အက်ပ်၊ ဘီတော့၊ ခွင့်ပြုချက်များ သို့အဆင့်ဆင့်သွားပါ။</string>
+    <string name="required_permissions_promo">ဘီတော့က စာတို၊ ဖုန်း၊ အဆက်အသွယ်အတွက် ခွင့်ပြုမှုလိုသည်။</string>
+
+    <string name="enable_permission_audio">ဘီတော့ကို မိုက်ခရိုဖုန်းအသုံးပြုရန် ခွင့်ပြုပါ</string>
+    <string name="enable_permission_audio_summary">ဤဆန်းသစ်မှုကိုဖွင့်ရန် အက်ပ်ဆက်တင်ကိုနှိပ်၍ ခွင့်ပြုမှုတွင် မိုက်ခရိုဖုန်းကို အသက်သွင်းပါ။</string>
+
+    <string name="enable_permission_camera">ဘီတော့ကို ကင်မရာအသုံးပြုရန် ခွင့်ပြုပါ</string>
+    <string name="enable_permission_camera_summary"> ဤဆန်းသစ်မှုကိုဖွင့်ရန် အက်ပ်ဆက်တင်ကိုနှိပ်၍ ခွင့်ပြုမှုတွင် ကင်မရာကို အသက်သွင်းပါ။ </string>
+
+    <string name="enable_permission_gallery">ဘီတော့ကို သိုလှောင်မှုအသုံးပြုရန် ခွင့်ပြုပါ</string>
+    <string name="enable_permission_gallery_summary"> ဤဆန်းသစ်မှုကိုဖွင့်ရန် အက်ပ်ဆက်တင်ကိုနှိပ်၍ ခွင့်ပြုမှုတွင် သိုလှောင်မှုကို အသက်သွင်းပါ။ </string>
+    <string name="quick_response_title">အလျှင်မြန် တုန့်ပြန်မှု</string>
+    <string name="quick_response_edit_title">အလျှင်မြန် တုန့်ပြန်မှုကိုပြင်မည်</string>
+    <string name="quick_response_ok">အိုကေ</string>
+    <string name="quick_response_goodnight">ကောင်းသောညပါ</string>
+    <string name="quick_response_wait">ကျွန်ုပ်ကို ခနစောင့်ပါ</string>
+    <string name="quick_response_what_up">ဘာဖြစ်တာလဲ</string>
+    <string name="add_response_title">အလျှင်မြန်စာတို ပေါင်းထည့်မည်</string>
+    <string name="add_response_hint">စာသား</string>
+    <string name="notify_empty_response_content">တုန့်ပြန်သော စာသားသည် ဗလာ မဖြစ်ရ</string>
+
+    <string name="btalk_title_dialog_choose_number">နံပါတ်ရွေးပါ</string>
+    <string name="other_telephone_exchange">တယ်လီဖုန်း အိတ်ချိန်း</string>
+    <string name="police_text">ရဲစခန်း</string>
+    <string name="ambulance_text">လူနာတင်ယဉ်</string>
+    <string name="rescue_text">ကယ်ဆယ်ရေး</string>
+    <string name="firefighting_text">မီးသတ်</string>
+
+    <string name="display_name_date_format">\?ရက်စွဲ၊</string>
+
+    <string name="copy_done_suggest">ကူးပြီးပြီ</string>
+    <string name="dont_support_quick_response">ယခုမျက်နှာပြင်တွင် အလျှင်မြန်တုန့်ပြန်မှုပြရန် မထောက်ပံ့ပါ</string>
+    <string name="notify_max_support_quick_response">အလျှင်မြန်တုန့်ပြန်မှု ၅ခုသာထောက်ပံ့သည်</string>
+    <string name="action_share_more">ပို၍…</string>
+    <!-- Anhdts: action loc tin nhan va ghi am-->
+    <string name="action_filter_mms">အမ်အမ်အက်စ် စစ်ထုတ်မည်</string>
+    <string name="action_filter_audio">အသံသွင်းဖိုင်များကို စစ်ထုတ်မည်</string>
+    <string name="action_show_all_message">စာတိုအားလုံးပြပါ</string>
+    <string name="notify_use_number_zalo">ဘာမှမရှိပါ။ ဇာလိုအချက်အလက်ကို အသုံးပြုချင်ပါသလား</string>
+    <string name="tooltip_choose_sim">ဆင်းမ်ရွေးရန် နှိပ်ထားပါ</string>
+
+    <string name="label_ringtone">ဖုန်းမြည်သံ</string>
+    <string name="label_ringtone_message">စာတိုအသစ် မြည်သံ</string>
+
+    <string name="default_text">ပုံသေ</string>
+    <string name="pick_gallery_title">ပြခန်း</string>
+    <string name="pick_camera_title">ကင်မရာ</string>
+    <string name="pick_default_photo">ပုံသေ ဓာတ်ပုံ</string>
+    <string name="mute_conversation_title">ဤပြောစကားများအတွက် နော်တီပိတ်မည်</string>
+    <string name="toast_change_account">အဆက်အသွယ်ကို ဆင်းမ်တွင်မသိမ်းပါနှင့်။ အချက်အလက်များပြောင်းပြီး သို့မဟုတ် အကောင့်ပြောင်း၍ ပြန်လည်ကြိုးစားပါ။</string>
+
+    <string name="recentCalls_born_contact">အဆက်အသွယ် ပေါင်းထည့်ပါ</string>
+    <string name="confirm_convert_phone">ဖုန်းနံပါတ်အသွင်ပြောင်းမည် (%d အဆက်အသွယ်)</string>
+    <string name="converting">အသွင်ပြောင်းနေသည်</string>
+    <string name="convert_success">အသွင်ပြောင်းမှု အောင်မြင်သည်</string>
+    <string name="convert_phone">ဖုန်းနံပါတ်အသွင်ပြောင်းမည်</string>
+    <string name="bkav_about_eula_url">http://btalk.vn/m-termsofuseen</string>
+    <string name="menu_import">ထည့်သွင်းသော အဆက်အသွယ်များ</string>
+    <string name="menu_export">ထုတ်ယူသော အဆက်အသွယ်များ</string>
+    <string name="btalk_contactsFavoritesLabel">အနှစ်သက်ဆုံး</string>
+
+    <!-- Bkav QuangNDb them string vao day do khong extend duoc class goc -->
+    <string name="today">ယနေ့</string>
+    <string name="yesterday">မနေ့က</string>
+    <string name="notify_image_error">မမှန်သောပုံ</string>
+    <string name="uri_not_exits">မမှန်သောလမ်းကြောင်း</string>
+    <string name="notify_dont_support_type">မျှဝေသောခေါင်းစဉ်အမျိုးအစားကို မထောက်ပံ့ပါ</string>
+    <string name="notify_wait_conversation_init">စတင်လုပ်ဆောင်နေသည်</string>
+
+    <string name="removePhoto">ဓာတ်ပုံဖယ်ရှားမည်</string>
+
+    <string name="action_menu_add_new_contact_button">အဆက်အသွယ်အသစ် ပေါင်းထည့်မည်</string>
+    <string name="contact_editor_prompt_zero_accounts">သင့် အဆက်အသွယ်အသစ်ကို အရန်သိမ်းမည်မဟုတ်ပါ။ အွန်လိုင်းတွင် အရန်သိမ်းရန် အကောင့်တစ်ခု ပေါင်းထည့်မည်လား</string>
+    <string name="keep_local">ဒေသ ထိန်းသိမ်းသည်</string>
+    <string name="add_account">အကောင့်ပေါင်းထည့်သည်</string>
+    <string name="add_new_account">အကောင့်အသစ် ပေါင်းထည့်သည်</string>
+    <string name="compact_editor_account_selector_title">သိမ်းဆည်းနေသည်</string>
+    <string name="speed_dial_unassigned_dialog_message">နံပါတ်ကီးသို့ အမြန်ခေါ်ဆိုမှုအတွက် မသတ်မှတ်ထားပါ \'<xliff:g id="number">%s</xliff:g>\'. ယခုသတ်မှတ်ချင်ပါသလား </string>
+    <string name="speed_dial_unassigned_dialog_title">မသတ်မှတ်ထားသော သော့</string>
+    <string name="yes">လုပ်မည်</string>
+
+    <string name="no">မလုပ်ပါ</string>
+    <string name="input_number">ထည့်သွင်းသည့် နံပါတ်</string>
+    <string name="speed_dial_cancel">ဖျက်သည်</string>
+
+    <string name="speed_dial_ok">အိုကေ</string>
+    <string name="speed_dial_settings">အမြန်ခေါ်ဆိုမှုအပြင်အဆင်</string>
+
+    <string name="speed_dial_not_set">(မသတ်မှတ်ပါ)</string>
+
+    <string name="speed_dial_replace">အစားထိုးသည်</string>
+
+    <string name="speed_dial_delete">ဖျက်သည်</string>
+
+    <string name="menu_redirect_calls_to_vm">ခေါ်ဆိုမှုအားလုံး အသံမေးလ်သို့</string>
+    <string name="menu_set_ring_tone">ဖုန်းမြည်သံသတ်မှတ်မည်</string>
+    <string name="menu_joinAggregate">လင့်ခ်</string>
+    <string name="menu_save">သိမ်းဆည်းသည်</string>
+    <string name="menu_editContact">ပြင်ဆင်သည်</string>
+    <string name="menu_deleteContact">ဖျက်သည်</string>
+    <string name="edit_contact">အဆက်အသွယ် ပြင်ဆင်သည်</string>
+    <string name="menu_share">မျှဝေသည်</string>
+    <string name="menu_add_contact">အဆက်အသွယ်သို့ ပေါင်းထည့်သည်</string>
+    <string name="recent_card_title">လက်တလော</string>
+    <string name="contact_editor_prompt_multiple_accounts">အဆက်အသွယ်အသစ်အတွက် ပုံသေအကောင့်တစ်ခု ရွေးပါ</string>
+    <string name="contact_editor_title_new_contact">အဆက်အသွယ်အသစ်ပေါင်းထည့်သည်</string>
+    <string name="cancel_confirmation_dialog_message">သင့်ပြောင်းလဲမှုများကို ဖယ်ရှားပြီး ပြင်ဆင်နေခြင်းမှ ထွက်မည်လား</string>
+    <string name="cancel_confirmation_dialog_cancel_editing_button">ဖယ်ရှားသည်</string>
+    <string name="cancel_confirmation_dialog_keep_editing_button">ပြင်ဆင်နေမှုကို ထိန်းထားမည်</string>
+    <string name="header_entry_contact_list_adapter_header_title">အဆက်အသွယ်အသစ် ဖန်တီးမည်t</string>
+    <string name="compact_editor_more_fields">ပိုများသော နယ်ပယ်</string>
+    <string name="menu_select_all">"အာလုံးရွေးမည်"</string>
+    <string name="menu_select_none">"အားလုံးမရွေးပါ"</string>
+    <string name="btn_ok">အိုကေ</string>
+    <string name="btn_cancel">မလုပ်ပါ</string>
+    <string name="menu_blocked_numbers">ပိတ်ဆို့ထားသော နံပါတ်များ</string>
+    <string name="merge_contacts">"အဆက်အသွယ် ပေါင်းစပ်မည်"</string>
+    <string name="menu_settings" msgid="377929915873428211">ဆက်တင်များ</string>
+    <!--Bkav QuangNDb sua wrong font myanmar-->
+    <string name="profile_display_name">ကျွန်ုပ်ပရိုဖိုင်ကို တည်ဆောက်မည်</string>
+
+    <string name="quickcontact_add_phone_number">ဖုန်းနံပါတ် ပေါင်းထည့်ပါ</string>
+    <string name="quickcontact_add_email">အီးမေးလ် ပေါင်းထည့်ပါ</string>
+    <!--<string name="action_share_contact_via">အဆက်အသွယ် မျှဝေပါ</string>-->
+    <string name="single_delete_confirmation">ဤအဆက်အသွယ်ကို ဖျက်မည်လား</string>
+    <string name="batch_delete_confirmation">ရွေးချယ်ထားသော အဆက်အသွယ်များကို ဖျက်မည်လား</string>
+    <string name="local_profile_title">ပြည်တွင်းဖုန်း</string>
+    <string name="batch_delete_read_only_contact_confirmation">သင်၏ ဖတ်၍သာရသော အကောင့်မှ အဆက်အသွယ် ဖျက်လို့မရပါ၊ သို့သော် ၄င်းတို့ကိုဖွက်ထားလိမ့်မည်</string>
+
+    <string name="batch_delete_multiple_accounts_confirmation">ဖျက်မည့်အဆက်အသွယ်တွင်  အကောင့်များမှ အသေးစိတ်ပါရှိသည်။ ဖတ်၍သာရသော အကောင့်များမှ အသေးစိတ်ကို ဖွက်လိမ့်မည်၊ မဖျက်ပါ။</string>
+
+    <string name="multipleContactDeleteConfirmation">ဤအဆက်အသွယ်ကိုဖျက်ခြင်းက အကောင့်များမှ အသေးစိတ်ကို ဖျက်လိမ့်မည်။</string>
+
+    <string name="deleteConfirmation">ဒီနံပါတ်ကိုဖျက်ပြီးပါြပီ</string>
+
+    <string name="deleteConfirmation_positive_button">ဖျက်မည်</string>
+
+    <!--<string name="ringtone_title_sim1">ဆင်းမ် ၁ ဖုန်းမြည်သံ</string>-->
+    <!--<string name="ringtone_title_sim2">ဆင်းမ် ၂ ဖုန်းမြည်သံ</string>-->
+
+    <!--&lt;!&ndash; Anhdts setting tin nhan &ndash;&gt;-->
+    <!--<string name="option_show_audio_message">အသံစာတို ပြပါ</string>-->
+    <!--<string name="speed_dial_info_label">အမြန်ခေါ်ဆိုမှု</string>-->
+    <!--<string name="call_text_action">ခေါ်ဆိုသည်</string>-->
+    <!--<string name="no_phone_text_action">ဖုန်းမရှိပါ</string>-->
+    <!--<string name="option_show_phone_number">ဖုန်းနံပါတ် ပြပါ</string>-->
+    <!--<string name="notification_cancel_message">ဖျက်သိမ်းသည်</string>-->
+
+    <!-- Action that exports all contacts to SIM -->
+    <string name="export_to_sim">ဆင်းကတ်ထဲသို့ပို့ဆောင်သည်</string>
+    <string name="ringtone_title_sim1">ဆင်းကဒ် (၁) ဖုန်းမည်သံ</string>
+    <string name="ringtone_title_sim2">ဆင်းကဒ် (၂) ဖုန်းမည်သံ</string>
+    <!--Bkav QuangNDb string option show sdt trong danh ba-->
+    <string name="option_show_phone_number">ဖုန်းနံပါတ်ကိုပြပါ</string>
+
+    <!--Bkav TienNAb String chia se lien he bang nhieu cach-->
+    <!-- HienDTk: thay text tim kiem recoder khong co ket qua-->
+    <string name="call_log_recorder_all_empty">Can not find the recording file</string>
+    <string name="call_with_viber">Call with Viber</string>
+    <string name="call_with_zalo">Call with Zalo</string>
+
+    <!--Bkav HuyNQn String ghi am cuoc goi-->
+    <string name="delete_file_success">Delete file success</string>
+    <string name="delete_file_error">Delete file error</string>
+    <string name="button_pause">Pause</string>
+    <string name="button_play">Play</string>
+    <string name="button_exit">Exit</string>
+    <string name="play_call_recorder">Play call recorder</string>
+    <string name="call_recorder">Call Recorder</string>
+    <string name="choose_app">Choose app</string>
+    <string name="btalk_compose_message_view_hint_text_ask_before_send">Input Message</string>
+    <string name="string_copy_messager">Copied messager</string>
+
+    <string name="photo_view_count"><xliff:g id="current_pos">%1$d</xliff:g> ၏ <xliff:g id="count">%2$d</xliff:g></string>
+    <string name="failed">ပုံကိုမရနိုင်ပါ</string>
+    <string name="toast_text_copied">စာသားကိုကူးယူမယျ</string>
+    <string name="copy_text">ကလစ်ဘုတ်ဆီကို ကူးယူမယ်</string>
+    <string name="call_custom">ခေါ်ဆိုသည်        <xliff:g id="custom">%s</xliff:g>     </string>
+    <string name="call_home">အိမ်ကိုခေါ်ဆိုသည်</string>
+    <string name="call_mobile">မိုဘိုင်းကိုခေါ်ဆိုသည်</string>
+    <string name="call_work">အလုပ်ကိုခေါ်ဆိုသည်</string>
+    <string name="call_fax_work">အလုပ်၏ ဖက်စ် ကိုခေါ်သည်</string>
+    <string name="call_fax_home">အိမ်၏ ဖက်စ် ကိုခေါ်ဆိုသည်</string>
+    <string name="call_pager">ပေ့ချ်ကိုခေါ်ဆိုသည်</string>
+    <string name="call_other">ခေါ်ဆိုသည်</string>
+    <string name="call_callback">ပြန်လည်ခေါ်ဆိုသည်</string>
+    <string name="call_car">ကားခေါ်သည်</string>
+    <string name="call_company_main">ကုမ္ပဏီကိုခေါ်ဆိုသည်</string>
+    <string name="call_isdn">အိုင္အက္စ္ဒီအမ္ကိုေခၚဆိုသည္</string>
+    <string name="call_main">အဓိကခေါ်ဆိုသည်</string>
+    <string name="call_other_fax">ဖက်စ် ကိုခေါ်ဆိုသည်</string>
+    <string name="call_radio">ရေဒီယို ကိုခေါ်ဆိုသည်</string>
+    <string name="call_telex">တယ္လက္ကိုေခၚဆိုသည္</string>
+    <string name="call_tty_tdd">တီတီဝိုင္၊တီဒီဒီကိုေခၚဆိုသည္</string>
+    <string name="call_work_mobile">အလုပ်မိုဘိုင်းကိုခေါ်ဆိုသည်</string>
+    <string name="call_work_pager">အလုပ်ပေ့ချ်ကိုခေါ်ဆိုသည်</string>    <!-- Action string for calling an assistant phone number -->
+    <string name="call_assistant">ခေါ်ဆိုသည်        <xliff:g id="assistant">%s</xliff:g>     </string>
+    <string name="call_mms">အမ္အမ္အက္စ္ကိုေခၚသည္</string>
+    <string name="call_by_shortcut"><xliff:g id="contact_name">%s</xliff:g> ခေါ်ဆိုသည်</string>    <!-- Action string for sending an SMS to a custom phone number -->
+    <string name="sms_custom">စာသား        <xliff:g id="custom">%s</xliff:g>     </string>
+    <string name="sms_home">ပင်မစာမျက်နှာစာသား</string>
+    <string name="sms_mobile">မိုဘိုင္းဖုန္းစာသား</string>
+    <string name="sms_work">အလုပ္စာသား</string>
+    <string name="sms_fax_work">အလုပ်၏ ဖက်စ် ကိုစာရိုက်သည်</string>
+    <string name="sms_fax_home">အိမ်၏ဖက်စ်ကိုစာရိုက်သည်</string>
+    <string name="sms_pager">ပေချ်ကိုစာရိုက်သည်</string>
+    <string name="sms_other">စာသား</string>
+    <string name="sms_callback">ပြန်ခေါ်ရန်စာ</string>
+    <string name="sms_car">ကားခေါ်ရန်စာ</string>
+    <string name="sms_company_main">ကုမ္ပဏီကိုစာပို့သည်</string>
+    <string name="sms_isdn">အိုင်အက်စ်ဒီအမ်စာသား</string>
+    <string name="sms_main">အဓိကစာသား</string>
+    <string name="sms_other_fax">ဖက်စ်စာသား</string>
+    <string name="sms_radio">ရေဒီယိုစာသား</string>
+    <string name="sms_telex">တယ်လက်စာသား</string>
+    <string name="sms_tty_tdd">တီတီဝိုင်၊တီဒီဒီစာသား</string>
+    <string name="sms_work_mobile">အလုပ်မိုဘိုင်းကိုစာသား</string>
+    <string name="sms_work_pager">အလုပ်ပေချ်စာသား</string>    <!-- Action string for sending an SMS to an assistant phone number -->
+    <string name="sms_assistant">စာပို့သည်        <xliff:g id="assistant">%s</xliff:g>     </string>
+    <string name="sms_mms">အမ္အမ္အက္စ္စာသား</string>
+    <string name="sms_by_shortcut"><xliff:g id="contact_name">%s</xliff:g> စာတို </string>
+    <string name="description_video_call">ဗီဒီယိုကော်ခေါ်သည်</string>
+    <string name="clearFrequentsConfirmation_title">မကြာခဏခေါ်သောဆက်သွယ်ရန်နံပါတ်များကိုရှင်းလင်းမလား</string>    <!-- Confirmation dialog for clearing frequents. [CHAR LIMIT=NONE] -->
+    <string name="clearFrequentsConfirmation">သင်သည်မှတ်သားထားသောနံပါတ်များ၊ဖုန်းအက်ပလီကေးရှင်းများရှိ_x000D_
+မကြာခဏခေါ်ဆိုသောနံပါတ်များကိုရှင်းလင်းခြင်း၊အီးမေးလ်အက်ပလီကေးရှင်းကိုသင်နှစ်သက်သောလိပ်စာများကိုသိစေရန်လုပ်ဆောင်စေခြင်း</string>
+    <string name="clearFrequentsProgress_title">မကြာခဏခေါ်သောဆက်သွယ်ရန်နံပါတ်များကိုရှင်းလင်းနေသည်</string>
+    <string name="status_available">ရရှိသည်</string>
+    <string name="status_away">အမြဲတမ်း</string>
+    <string name="status_busy">အလုပ်ရှုပ်နေသည်</string>
+    <string name="contactsList">မှတ်သားထားသောနံပါတ်</string>
+    <string name="local_invisible_directory">အခြား</string>
+    <string name="directory_search_label">လမ်းညွှန်မှု</string>
+    <string name="directory_search_label_work">အလုပ်လမ်းညွှန်မှု</string>
+    <string name="local_search_label">စာချုပ်အားလုံး</string>
+    <string name="user_profile_contacts_list_header" msgid="9154761216179882405">ကျွန်ုပ်</string>
+    <string name="search_results_searching">ရှာဖွေသည်</string>
+    <string name="listFoundAllContactsZero">မှတ်သားထားသောနံပါတ်မရှိပါ</string>
+    <string name="description_quick_contact_for">လျှင်မြန်သောဆက်သွယ်ရန်နံပါတ် <xliff:g id="name">%1$s</xliff:g></string>
+    <string name="missing_name">အမည်မရှိ</string>
+    <string name="favoritesFrequentCalled">မကြာခဏခေါ်သည်</string>
+    <string name="favoritesFrequentContacted">မကြာဆက်သွယ်သည်</string>
+    <string name="description_view_contact_detail" msgid="2795575601596468581">ဆက်သွယ်ရန်နံပါတ်ကိုကြည့်သည်</string>
+    <string name="list_filter_phones">ဆက်သွယ်ရန်နံပါတ်များအားလုံး</string>
+    <string name="list_filter_phones_work">အလုပ်နှင့်ပတ်သတ်သော အဆက်သွယ်များ</string>
+    <string name="view_updates_from_group">တိုးမြှုင့်မှုကိုကြည့်သည်</string>
+    <string name="account_phone">ဖုန်းတမျိူတည်း</string>
+    <string name="nameLabelsGroup">အမည်</string>
+    <string name="nicknameLabelsGroup">အခြားအမည်</string>
+    <string name="full_name">အမည်</string>
+    <string name="name_given">ပထမအမည်စာလုံး</string>
+    <string name="name_family">နောက်ဆုံးအမည်စာလုံး</string>
+    <string name="name_prefix">အမည်၏အစ</string>
+    <string name="name_middle">အလယ်အမည်စာလုံး</string>
+    <string name="name_suffix">အမည်နောက်ဆက်တွဲ</string>
+    <string name="name_phonetic">အမည်အသံထွက်</string>
+    <string name="name_phonetic_given">ပထမအမည်စာလုံးအသံထွက်</string>
+    <string name="name_phonetic_middle">အလယ်အမည်စာလုံးအသံထွက်</string>
+    <string name="name_phonetic_family">နောက်ဆုံးအမည်စာလုံးအသံထွက်</string>
+    <string name="phoneLabelsGroup">ဖုန်း</string>
+    <string name="emailLabelsGroup">အီးမေးလ်</string>
+    <string name="postalLabelsGroup">လိပ်စာ</string>
+    <string name="imLabelsGroup">အိုင်အမ်</string>
+    <string name="organizationLabelsGroup">အဖွဲ့အစည်း</string>
+    <string name="relationLabelsGroup">ဆက်နွယ်မှု</string>
+    <string name="eventLabelsGroup">အထူးတလည်နေ့</string>
+    <string name="sms">စာတိုပို့ရန်စာရိုက်သည်</string>
+    <string name="postal_address">လိပ်စာ</string>
+    <string name="ghostData_company">ကုမ္ပဏီ</string>
+    <string name="ghostData_title">ခေါင်းစဉ်</string>
+    <string name="label_notes">မှတ်စု</string>
+    <string name="label_sip_address">အက်စ်အိုင်ပီ</string>
+    <string name="websiteLabelsGroup">ဝက်ဘ်ဆိုက်</string>
+    <string name="groupsLabel">အုပ်စု</string>
+    <string name="email_home">အီးမေးလ်ပင်မစာမျက်နှာ</string>
+    <string name="email_mobile">အီးမေးလ်မိုဘိုင်း</string>
+    <string name="email_work">အီးမေးလ်အလုပ်</string>
+    <string name="email_other">အီးမေးလ်</string>
+    <string name="email_custom">အီးမေးလ် <xliff:g id="custom">%s</xliff:g></string>
+    <string name="email">အီးမေးလ်</string>
+    <string name="postal_street">လမ်း</string>
+    <string name="postal_city">မြို့</string>
+    <string name="postal_region">ပြည်နယ်</string>
+    <string name="postal_postcode">ဇက်ကုပ်</string>
+    <string name="postal_country">နိုင်ငံ</string>
+    <string name="map_home">အိမ်လိပ်စာကြည့်သည်</string>
+    <string name="map_work">အလုပ်လိပ်စာကြည့်သည်</string>
+    <string name="map_other">လိပ်စာကြည့်သည်</string>
+    <string name="map_custom">ကြည့်သည် <xliff:g id="custom">%s</xliff:g> လိပ်စာ</string>
+    <string name="chat_aim">အေအိုင်အမ်ကိုသုံးပြီးစကားပြောသည်</string>
+    <string name="chat_msn">ဝင်းဒိုးကိုအသုံးပြုပြီးစကားပြောသည်</string>
+    <string name="chat_yahoo">ရာဟူးကိုသုံးပြီးစကားပြောသည်</string>
+    <string name="chat_skype">စပ်ကိုက်ကိုသုံးပြီးစကားပြောသည်</string>
+    <string name="chat_qq">ကြူကြူကိုသုံးပြီးစကားပြောသည်</string>
+    <string name="chat_gtalk">ဂူဂဲလ်ကိုသုံးပြီးစကားပြောသည်</string>
+    <string name="chat_icq">အိုင်စီကြူကိုသုံးပြီးစကားပြောသည်</string>
+    <string name="chat_jabber">ဂျာဘားကိုသုံးပြီးစကားပြောသည်</string>
+    <string name="chat">စကားပြောသည်</string>
+    <string name="expand_collapse_name_fields_description">နာမည်ဖိုင်များကို တိုးချဲ့သို့ ဖျက်သည်</string>    <!-- Content description for the expand or collapse phonetic name fields button. [CHAR LIMIT=100] -->
+    <string name="expand_collapse_phonetic_name_fields_description">အသံထွက်နာမည်ဖိုင်များကို တိုးချဲ့သို့ ဖျက်သည်</string>
+    <string name="list_filter_all_accounts">မှတ်သားထားသောနံပါတ်အားလုံး</string>
+    <string name="list_filter_all_starred">ကြယ်</string>
+    <string name="list_filter_customize">စိတ်တိုင်းကျ</string>
+    <string name="list_filter_single">မှတ်သားထားသောနံပါတ်</string>
+    <string name="display_ungrouped">အခြားမှတ်သားထားသောနံပါတ်အားလုံး</string>
+    <string name="display_all_contacts">မှတ်သားထားသောနံပါတ်အားလုံး</string>
+    <string name="menu_sync_remove">ထပ်တူညီအောင်လုပ်ပေးသောအုပ်စုများကိုဖယ်ရှားသည်</string>
+    <string name="dialog_sync_add">ထပ်တူညီအောင်လုပ်ပေးသောအုပ်စုများကိုထည့်သည်</string>
+    <string name="display_more_groups">နောက်ထပ်အုပ်စုများ</string>
+    <string name="display_warn_remove_ungrouped">ဖယ်ရှားသည် <xliff:g example="Starred" id="group">%s</xliff:g>အုပ်စုမဖွဲ့ထားသောမှတ်သားထားသောနံပါတ်များကိုထပ်တူညီအောင်လုပ်ခြင်းမှဖယ်_x000D_
+ရှားသည်</string>
+    <string name="savingDisplayGroups">ပြသခြင်းအတွက်ရွေးချယ်စရာများကိုသိမ်းသည်</string>
+    <string name="menu_done">ပြီးဆုံးသည်</string>
+    <string name="listAllContactsInAccount">မှတ်သားထားသောနံပါတ်များထဲ <xliff:g example="abc@gmail.com" id="name">%s</xliff:g></string>
+    <string name="listCustomView">မှတ်သားထားသောနံပါတ်များကိုစိတ်ကြိုက်ပုံစံဖြင့်းကြည့်သည်</string>
+    <string name="listSingleContact">မှတ်သားထားသောနံပါတ်တစ်ခု</string>
+    <string name="dialog_new_contact_account">အရေးကြီးသည့်မှတ်သားထားသောနံပါတ်တစ်ခုအဖြစ်သိမ်းရန်း</string>
+    <string name="import_from_sim">ဆင်းကတ်ထဲမှထည့်သွင်းသည်</string>
+    <string name="import_from_sim_summary">ဆင်းကတ်ထဲမှထည့်သွင်းသည် <xliff:g id="sim_name">^1</xliff:g> - <xliff:g id="sim_number">^2</xliff:g></string>
+    <string name="import_from_vcf_file" product="default">.vcf file ထဲမှ ထည့်သွင်းသည်</string>
+    <string name="cancel_import_confirmation_message">ထည့်သွင်းခြင်းကိုပ,ိဖျက်သည် <xliff:g example="import.vcf" id="filename">%s</xliff:g>?</string>
+    <string name="cancel_export_confirmation_message">ပို့ဆောင်ခြင်းကိုပယ်ဖျက်သည် <xliff:g example="export.vcf" id="filename">%s</xliff:g>?</string>
+    <string name="cancel_vcard_import_or_export_failed">ဗီကတ်ပို့ဆောင်ချင်း ထည့်သွင်းခြင်းများကို ပ,်ဖျက်လို့မရပါ</string>
+    <string name="fail_reason_unknown">အမည်မသိအမှား</string>
+    <string name="fail_reason_could_not_open_file">ဖွင့်လို့မရပါ<xliff:g id="file_name">%1$s</xliff:g>\": <xliff:g id="exact_reason">%2$s</xliff:g>.</string>
+    <string name="fail_reason_could_not_initialize_exporter">စတင်တင်ပို့လို့မရပါ<xliff:g id="exact_reason">%s</xliff:g>\".</string>
+    <string name="fail_reason_no_exportable_contact">အဆက်အသွယ်တင်ပို့ခြင်းမရှိပါ</string>
+    <string name="missing_required_permission">သင်လိုအပ်သောခွင့်ပြုချက်ကိုပိတ်ထားပြီးပါပြီ</string>
+    <string name="fail_reason_error_occurred_during_export">ပို့ဆောင်နေချိန်အတွင်းအမှားတစ်ခုဖြစ်သွားခဲ့သည်<xliff:g id="exact_reason">%s</xliff:g>\".</string>
+    <string name="fail_reason_io_error">အိုင်/အို အမှား</string>
+    <string name="fail_reason_low_memory_during_import">မှတ်ညဏ်မလောက်ပါ ဖိူင်သည်အလွန်ကြီးမားသည်</string>
+    <string name="fail_reason_not_supported">ပုံစံကိုထောက်ပံချင်းမရှိပါ</string>
+    <string name="exporting_vcard_finished_title">ထုတ်လုပ်မှုပြီးဆုံပါပြီ <xliff:g example="export.vcf" id="filename">%s</xliff:g>.</string>
+    <string name="exporting_vcard_finished_title_fallback">အဆက်အသွယ်ထုတ်လုပ်မှုပြီးဆုံးပါပြီ</string>
+    <string name="exporting_vcard_finished_toast">အဆက်အသွယ်ထုတ်လုပ်မှုပြီးဆုံးပါပြီ အဆက်အသွ,်များကိုမျှ‌‌ ‌ေ၀ရန် အသိပေးချက်ကိုနှိပ်ပါ</string>
+    <string name="touch_to_share_contacts">အဆက်အသွယ်များကို မျှ‌‌ ‌ေ၀ရန် နှိပ်ပါ</string>
+    <string name="exporting_vcard_canceled_title">ထုတ်လုပ်နေပါသည် <xliff:g example="export.vcf" id="filename">%s</xliff:g> ပယ်ဖျက်သည်</string>
+    <string name="exporting_contact_list_title">အဆက်အသွယ်အချက်အလက်ကိုတင်ပို့နေပါသည်</string>
+    <string name="exporting_contact_list_message">ဆက်သွယ်ရန်အချက်အလက်များကိုတင်ပို့နေပါသည်</string>
+    <string name="composer_failed_to_get_database_infomation">သတင်းအချက်အလက်များအားမရရှိနိုင်ပါ</string>
+    <string name="composer_has_no_exportable_contact">တင်ပို့နိုင်သည့်အဆက်အသွယ်များမရှိပါ သင်သည် သင်၏ဖုန်း‌ပေါ်ထဲမှာအဆက်အသွယ်ရှိပါက တချို့သောအချက်အလက်များကို ပံပိုးသူများကဖုန်းမှတင်ပို့ရန်ခွင့်မပြုပေ</string>
+    <string name="composer_not_initialized">အဆိုပါ ဗီကတ်‌ရေးသားသူသည် ကောင်းစွာမလုပ်နိုင်ခဲ့ပါ</string>
+    <string name="exporting_contact_failed_title">တင်ပို့၍မရပါ</string>
+    <string name="exporting_contact_failed_message">အဆက်အသွယ်အချက်အလက်များကိုတင်မပို့ထားပါ<xliff:g id="fail_reason">%s</xliff:g>\"</string>
+    <string name="importing_vcard_description">တင်သွင်းနေသည် <xliff:g example="Joe Due" id="name">%s</xliff:g></string>
+    <string name="reading_vcard_failed_title">ဗီကတ်အချက်အလက်များအားမဖတ်ရှုနိုင်ပါ</string>
+    <string name="importing_vcard_finished_title">ဗီကတ်တင်သွင်းခြင်းပြီးဆုံးပါပြီ <xliff:g example="import.vcf" id="filename">%s</xliff:g></string>
+    <string name="importing_vcard_canceled_title">တင်သွင်းနေသည် <xliff:g example="import.vcf" id="filename">%s</xliff:g> ပယ်ဖျက်သည်</string>
+    <string name="vcard_import_will_start_message"><xliff:g example="import.vcf" id="filename">%s</xliff:g> အဆိုပါ ဖိုင်ကိုမကြာမီ တင်သွင်းလိမ့်မည်</string>
+    <string name="vcard_import_request_rejected_message">ဗီကတ် တင်ပို့ခြင်းတောင်းဆိုချက်ကိုပယ်ချလိုက်ပါသည် ကျေးဇူးပြု၍နောက်တစ်ကြိမ်ထပ်မံကြိုးစားပါ</string>
+    <string name="contacts_export_will_start_message">အဆက်အသွယ်များကိုမကြာခင်တင်သွင်းလိမ့်မည်</string>
+    <string name="vcard_export_request_rejected_message">ဗီကတ် တင်သွင်းခြင်းတောင်းဆိုချက်ကိုပယ်ချလိုက်ပါသည် ကျေးဇူးပြု၍နောက်တစ်ကြိမ်ထပ်မံကြိုးစားပါ</string>
+    <string name="caching_vcard_message">ဗီကတ်ကိုမူလသိုလှောင်ရာနေရာအတွင်းခဏထိန်းသိမ်းထားမည်ဖြစ်သည် အမှန်တကယ်တင်သွင်းခြင်းကိုမကြာမီစတင်ပါဝောာ့မည်</string>
+    <string name="vcard_import_failed">ဗီကတ်တင်သွင်း၍မရပါ</string>
+    <string name="nfc_vcard_file_name">အမ်အက်ဖ်စီမှ အဆက်အသွယ်ကိုလက်ခံရှိသည်</string>
+    <string name="caching_vcard_title">ယာယီသိမ်းဆဲခြင်း</string>
+    <string name="progress_notifier_message">တင်သွင်းနေသည် <xliff:g id="current_number">%1$s</xliff:g>/<xliff:g id="total_number">%2$s</xliff:g>: <xliff:g example="Joe Due" id="name">%3$s</xliff:g></string>
+    <string name="export_to_vcf_file" product="default">ဗီစီအက်ဖ် ထဲသို့တင်ပို့နေသည်</string>
+    <string name="display_options_sort_list_by">အလိုက်စဥ်သည်</string>
+    <string name="display_options_sort_by_given_name">အစနာမည်</string>
+    <string name="display_options_sort_by_family_name">အဆုံးနာမည်</string>
+    <string name="display_options_view_names_as">အမည်ပုံစံt</string>
+    <string name="display_options_view_given_name_first">နာမည်၏အစကို အရင်</string>
+    <string name="display_options_view_family_name_first">နာမည်၏အဆုံးကိုအရင်</string>
+    <string name="default_editor_account">အဆက်အသွယ်အကောင့်သစ်များအတွက် ပုံမှန်အကောင့်</string>
+    <string name="setting_about">ဆက်သွယ်ရန်အကြောင်း</string>
+    <string name="activity_title_settings">ဆက်တင်</string>
+    <string name="share_favorite_contacts">အကြိုက်ဆုံးအဆက်အသွယ်များကို‌ေ၀မျှသည်</string>
+    <string name="share_contacts">အဆက်အသွယ်အကုန်လုံးကို‌‌‌ေ၀မျှသည်</string>
+    <string name="share_contacts_failure">အဆက်အသွယ်‌ေ၀မျှခြ်းမအောင်မြင်ပါ</string>
+    <string name="dialog_import_export">အဆက်အသွဃ်များကိုတင်ပို့/တင်သွင်းခြင်း</string>
+    <string name="dialog_import">အဆက်အသွယ်များကိုတင်ပို့ခြင်း</string>
+    <string name="share_error">ဤအဆက်အသွယ်ကိုမျှ‌ေ၀လို့မရပါ</string>
+    <string name="no_contact_to_share">အဆက်အသွယ်များကိုမျှ‌‌ေ၀ရန်မရှိပါ</string>
+    <string name="share_failed">အဆက်အသွယ်များနေပါသည် မျှ‌ေ၀မှုမအောင်မြင်ပါ</string>
+    <string name="menu_search">ရှာဖွေသည်</string>
+    <string name="menu_contacts_filter">မှတ်သားထားသောနံပါတ်ကိုပြသည်</string>
+    <string name="activity_title_contacts_filter">မှတ်သားထားသောနံပါတ်ကိုပြသည်</string>
+    <string name="custom_list_filter">စိတ်ကြိုက်မြင်ကွင်းကိုသတ်မှတ်ပါ</string>
+    <string name="hint_findContacts">မှတ်သားထားသောနံပတ်ကိုရှာဖွေသည်</string>
+    <string name="listTotalAllContactsZeroStarred">အကြိုက်ဆုံးမရှိပါ</string>
+    <string name="menu_clear_frequents">မကြာခဏရှင်းလင်းသည်</string>
+    <string name="menu_accounts">အကောင့်ကိုစီမံခန့်ခွဲသည် </string>
+    <string name="menu_import_export">တင်သွင်း/တင်ပို့</string>
+    <string name="tab_font_family">ဆန်ဆဲရစ်ဖ် </string>
+    <string name="contact_status_update_attribution">မှတဆင့် <xliff:g example="Google Talk" id="source">%1$s</xliff:g></string>
+    <string name="contact_status_update_attribution_with_date"><xliff:g example="3 hours ago" id="date">%1$s</xliff:g> မှတဆင့် <xliff:g example="Google Talk" id="source">%2$s</xliff:g></string>
+    <string name="label_groups">အုပ်စု</string>
+    <string name="exporting">တင်ပို့နေသည်</string>
+    <string name="reading_vcard_files"><xliff:g id="current_number">%1$s</xliff:g> ၏ <xliff:g id="total_number">%2$s</xliff:g> ဖိုင်</string>
+    <string name="progressdialog_cancel">ပယ်ဖျက်သည်</string>
+    <string name="export_to_sim_failed">တင်ပို့ခြင်းမအောင်မြင်ပါ <xliff:g id="insertCount">%d</xliff:g> အိုင်တမ် တင်ပို့နေသည်</string>
+    <string name="sim_contact_export_failed">တင်ပို့ခြင်းမအောင်မြင်ပါ, မှတ်သားထားသောနံပါတ် <xliff:g id="name">%1$s</xliff:g>, နံပါတ် <xliff:g id="number">%2$s</xliff:g>, အီးမေးလ် <xliff:g id="email">%3$s</xliff:g></string>
+    <string name="export_sim_card_full">ဆင်းကတ်ပြည့်နေပြီ <xliff:g id="insertCount">%d</xliff:g> အိုင်တမ် တင်ပို့နေသည်</string>
+    <string name="sim_card_full">အမှား, ဆင်းကတ်ပြည့်နေသည်</string>
+    <string name="export_finished">တင်ပို့ခြင်းပြီးဆုံးပါပြီ</string>
+    <string name="tag_too_long">အမှား, မှတ်သားထားသောနံပါတ်၏နာမည် ရှည်နေပါသည်</string>
+    <string name="sim_contacts_not_load">အမှား ဆင်းကဒ်ရှိမှတ်သားထားသောနံပါတ်များကိုပြီးပြည့်စုံစွာမရယူနိုင်သေး</string>
+    <string name="export_cancelled">တင်ပို့ခြင်းပယ်ဖျက်သည် <xliff:g id="insertCount">%s</xliff:g>အိုင်တမ် တင်ပို့နေသည်</string>
+    <string name="export_no_phone_or_email">တင်ပို့ခြင်းမအောင်မြင်ပါ <xliff:g id="name">%s</xliff:g>ဖုန်းနံပါတ် သိုမဟုတ်အီးမေးလိပ်စာ မရေးရသေးပါ</string>
+    <string name="import_from_sim_select">တင်သွင်းရန်ကတ်ကိုရွှေးချယ်ပါ</string>
+    <string name="deleteConfirmation_title">နံပါတ်ကိုဖျက်မှာလား</string>
+    <string name="copy_done">ကူးယူမှုပြီးဆုံး</string>
+    <string name="copy_failure">ကူးယူမှုမအောင်မြင်ပါ</string>
+    <string name="card_no_space">ကတ်ထဲတွင်နေရာလွတ်မရှိပါ၊ ကူးယူမှုမှတ်တမ်း မအောင်မြင်ပါ</string>
+    <string name="action_menu_back_from_search">ရှာဖွေမှုရပ်စဲသည်</string>
+    <string name="description_clear_search">ရှာဖွေမှုရှင်းလင်းသည်</string>
+    <string name="search_font_family">ဆန်ဆဲရစ်ဖ် </string>
+    <string name="select_account_dialog_title">အကောင့်</string>
+    <string name="set_default_account">အမြဲတမ်းခေါ်ဆိုမှုအတွက်ဒီကိုအသုံးပြုပါ</string>
+    <string name="select_phone_account_for_calls">ဖုန်းခေါ်ပါ</string>
+    <string name="call_with_a_note">မှတ်စုတစ်ခုဖြင့်ဖုန်းဆက်ပါ</string>
+    <string name="call_subject_hint">ခေါ်ဆိုမှုနှင့်အတူပို့ရန်မှတ်စုတစ်ခုရိုက်ထည့်ပါ</string>
+    <string name="send_and_call_button">ပို့ရန် &amp; ခေါ်ဆိုသည် </string>
+    <string name="about_build_version">တည်ဆောက်မှုဗားရှင်း</string>
+    <string name="about_open_source_licenses">အရင်းအမြစ်လိုင်စင်ကိုဖွင့်ပါ</string>
+    <string name="about_open_source_licenses_summary">အရင်းအမြစ်ဆော့၀ဲလ်၏အသေးစိတ်လိုင်စင်</string>
+    <string name="activity_title_licenses">အရင်းအမြစ်လိုင်စင်ကိုဖွင့်ပါ</string>
+    <string name="account_filter_view_checked"><xliff:g id="account_info">%s</xliff:g> စစ်ဆေးသည်</string>
+    <string name="account_filter_view_not_checked"><xliff:g id="account_info">%s</xliff:g> မစစ်ဆေးရသေးပါ</string>
+    <string name="description_search_video_call">ဗီဒီယိုခေါ်ဆိုရန်နေရာ</string>
+    <string name="contacts_file_provider_authority">ဘီေတာ့ပ္ေဒါ့ကြန္းအန္းဒြိဳက္ေဒါ့မွတ္သားထားေသာနံပါတ္မ်ားဖိုင္</string>
+    <string name="video_call">ဗီဒီယိုခေါ်ဆိုနေပါသည် ်</string>
+    <string name="video_call_dialog_ok">အိုကေ</string>
+    <string name="video_call_dialog_checkbox">ထပ်ပြီးသတိမပေးပါနဲ့</string>
+    <string name="video_call_message_on">ဗာရီဇွန်ကြိုးမဲ့ 4G ကွန်ရက်ကိုအသုံးပြုတဲ့အခါ ဗီဒီယိုခေါ်ဆိုမှု၏အသံအစိတ်အပိုင်းသည် သင်၏ငွေစရင်းတွင် အသံအသုံးပြုမှုစရိတ်အဖြစ်ပေါ်လာပါလိမ့်မည်, ဗီဒီယိုခေါ်ဆိုမှုအတွက်ကို ဒေတာအဖြစ်ငွေတောင်းခံလိမ့်မည်၊  ဗီဒီယိုခေါ်ဆိုမှုဖွင့်သောအခါ သင်၏ဖုန်းတွင်ဗီဒီယိုခေါ်ဆိုမှုရှိသည်ကိုအခြားသူများတွေမြင်နိုင်သည်</string>
+    <string name="video_call_message_off"> သင်၏ဆက်တင်ကိုပိတ်ထားပါက သင့်ဖုန်းသည်ဗီဒီယိုခေါ်ဆိုမှုပြုလုပ်နိုင်မည်မဟုတ်ပါ </string>
+    <string name="applicationLabel">ဖုန်း</string>
+    <string name="launcherActivityLabel">ဖုန်း</string>
+    <string name="launcherDialpadActivityLabel">ဖုန်းခေါ်ဆို</string>
+    <string name="callHistoryIconLabel">ဖုန်းခေါ်ဆိုမှုမှတ်တမ်း</string>
+    <string name="action_report_number">အတိအကျမရှိသောနံပါတ်ကိုသတင်းပို့သည်</string>
+    <string name="action_copy_number_text">နံပါတ်ပုံတူကူးသည်</string>
+    <string name="copy_transcript_text">မှတ်တမ်းကူးယူသည်</string>
+    <string name="action_block_number">ပိတ်ပင်ထားသောနံပါတ်</string>    <!-- Text for snackbar to undo blocking a number. [CHAR LIMIT=64] -->
+    <string name="snackbar_number_blocked">         <xliff:g id="number" example="(555) 555-5555">%1$s</xliff:g> ပိတ်ဆို့ထားပါသည်</string>
+    <string name="action_unblock_number">မပိတ်ပင်ထားသောနံပါတ်</string>    <!-- Text for snackbar to undo unblocking a number. [CHAR LIMIT=64] -->
+    <string name="snackbar_number_unblocked">        <xliff:g id="number" example="(555) 555-5555">%1$s</xliff:g>         မပိတ်ဆို့ထားပါ</string>
+    <string name="block_number_undo">ပယ်ဖျက်သည်</string>
+    <string name="call_details_delete">ဖျက်သိမ်းသည်</string>
+    <string name="action_edit_number_before_call">ဖုန်းမခေါ်ခင်နံပတ်အားပြန်လည်စီစစ်ခြင်း</string>
+    <string name="call_log_delete_all">ခေါ်ဆိုမှုမှတ်တမ်းအားရှင်းလင်းချင်း</string>
+    <string name="call_log_trash_voicemail">အသံမေးလ်ဖျက်သိမ်းခြင်း</string>
+    <string name="call_log_archive_voicemail">အသံမေးလ်မှတ်တမ်း</string>
+    <string name="call_log_share_voicemail">အသံမေးလ်မျှ‌‌ေ၀ခြင်း</string>
+    <string name="snackbar_voicemail_deleted">အသံမေးလ်ဖျက်သိမ်းခြင်း</string>
+    <string name="snackbar_voicemail_archived">အသံမေးလ်မှတ်တမ်း</string>
+    <string name="snackbar_voicemail_deleted_undo">ပယ်ဖျက်သည်</string>
+    <string name="snackbar_voicemail_archived_goto">ဂျီအိုတီအို မှတ်တမ်း</string>
+    <string name="clearCallLogConfirmation_title">ဖုန်းခေါ်ဆိုမှုမှတ်တမ်းကိုရှင်းမှာလား</string>
+    <string name="clearCallLogConfirmation">ဒါကသင်၏ဖုန်းခေါ်ဆိုမှုမှတ်တမ်းများကိုဖျက်ပစ်လိမ့်မည်</string>
+    <string name="clearCallLogProgress_title">ဖုန်းခေါ်ဆိုမှုမှတ်တမ်းကိုရှင်းလင်းနေသည်\,ယူ ၂၀၂၆</string>
+    <string name="userCallActivityLabel" product="default">ဖုန်း</string>
+    <string name="notification_missedCallTitle">မကိုင်မိသောအ၀င်ခေါ်ဆိုမှု</string>
+    <string name="notification_missedWorkCallTitle">မကိုင်မိသောအလုပ်အ၀င်ခေါ်ဆိုမှု</string>
+    <string name="notification_missedCallsTitle">မကိုင်မိသောအ၀င်ကောများ</string>
+    <string name="notification_missedCallsMsg"><xliff:g id="num_missed_calls">%s</xliff:g> မကိုင်မိသောအ၀င်ကောများ</string>
+    <string name="notification_missedCall_call_back">ပြန်ခေါ်ပါ</string>
+    <string name="notification_missedCall_message">စာတို</string>
+    <string name="notification_new_voicemail_ticker">အသံမေးလ်မှအသစ်၀င်လာသည်        <xliff:g id="caller">%1$s</xliff:g>     </string>
+    <string name="voicemail_playback_error">အသံမေးလ်ဖွင့်လို့မရပါ</string>
+    <string name="voicemail_fetching_content">အသံမေးလ် လုပ်ဒင်း \ ယူ၂၀၂၆</string>
+    <string name="voicemail_archiving_content">အသံမေးလ် ရယူသည် \ယူ၂၀၂၆</string>
+    <string name="voicemail_fetching_timout">အသံမေးလ်လုပ်ဒင်းလုပ်လို့မရပါ</string>
+    <string name="call_log_incoming_header">အ၀င်ခေါ်ဆိုမှုသီးသန့်</string>
+    <string name="call_log_outgoing_header">အထွက်ခေါ်ဆိုမှုသီးသန့်</string>
+    <string name="call_log_missed_header">မကိုင်မိသောအ၀င်ခေါ်ဆိုမှုသီးသန့်</string>
+    <string name="visual_voicemail_title">အမြင်အသံမေးလ်</string>    <!-- Promo card text for visual voicemail. -->
+    <string name="visual_voicemail_text">        နံပါတ်တစ်ခုကိုဖုန်းခေါ်စရာမလိုပဲသင်၏အသံမေးလ်ကိုမြင်နိုင်ကြားနိုင်သည်၊ ဒေတာအသုံးပြုကျသင့်ပါမည်     </string>
+    <string name="visual_voicemail_settings">အပြင်အဆင်</string>
+    <string name="voicemail_status_voicemail_not_available">အသံမေးလ်အဆင့်မြင့်တင်၍မရသေးပါ</string>
+    <string name="voicemail_status_messages_waiting">လုပ်ဒင်းလုပ်လို့မရသေးပါ၊ အသံမေးလ်အသစ်စောင့်ဆိုင်းနေသည်</string>
+    <string name="voicemail_status_configure_voicemail">သင်၏အသံမေးလ်အသစ်ကိုပြင်ဆင်ပါ</string>
+    <string name="voicemail_status_audio_not_available">မသံမရသေးပါ</string>
+    <string name="voicemail_status_action_configure">ပြင်ဆင်ခြင်း</string>
+    <string name="voicemail_status_action_call_server">အသံမေးလ်ခေါ်ဆိုခြင်း</string>    <!-- The counter for calls in a group and the date of the latest call as shown in the call log [CHAR LIMIT=15] -->
+    <string name="sms_disambig_title">နံပါတ်ရွှေးချယ်ခြင်း</string>
+    <string name="description_playback_speakerphone">စပီကာဖုန်းကို ဖွင့်ပါဒါမှမဟုတ်ပိတ်ပါ</string>
+    <string name="description_playback_seek">ပြန်ဖွင့်သည့်အနေအထားကိုရှာပါ</string>
+    <string name="action_menu_call_history_description">ဖုန်းခေါ်ဆိုမှုမှတ်တမ်း</string>
+    <string name="action_menu_overflow_description" msgid="2295659037509008453">အပြင်အဆင်များ</string>
+    <string name="action_menu_dialpad_button">ဖုန်းပတ်တ်</string>
+    <string name="menu_add_to_4g_conference_call">4Gခေါ်ဆိုမှုသို့ထည့်ပါ</string>
+    <string name="menu_4g_conference_call">4Gခေါ်ဆိုမှု</string>
+    <string name="add_2sec_pause">၂ စက္ကန့်ခနရပ်နားပါ</string>
+    <string name="add_wait">ခဏစောင့်ပါ</string>
+    <string name="dialer_settings_label">အပြင်အဆင်</string>
+    <string name="menu_newContact">မှတ်သားထားသောနံပါတ်အသစ်</string>
+    <string name="callDetailTitle">ဖုန်းခေါ်ဆိုမှုအသေးစိတ်အချက်အလက်</string>
+    <string name="toast_call_detail_error">အသေးစိတ်ချက်အလက်မရျိပါ</string>
+    <string name="dialer_useDtmfDialpad">ထိတွေ့သောခလုတ်ကိုအသုံးပြုပါ</string>
+    <string name="dialer_returnToInCallScreen">ဖုန်းပြန်ခေါ်နေပါသည်</string>
+    <string name="dialer_addAnotherCall">ဖုန်းခေါ်ဆိုမှုထည့်သည်</string>
+    <string name="type_incoming">အ၀င်ဖုန်းကောလ်</string>
+    <string name="type_outgoing">အထွက်ဖုန်းကောလ်</string>
+    <string name="type_missed">မကိုင်မိသောအ၀င်ခေါ်ဆိုမှု</string>
+    <string name="type_incoming_video">အ၀င်ဗီဒီယိုခေါ်ဆိုမှု</string>
+    <string name="type_outgoing_video">အထွက်ဗီဒီယိုခေါ်ဆိုမှု</string>
+    <string name="type_missed_video">မကိုင်မိသောအ၀င်ဗီဒီယိုခေါ်ဆိုမှု</string>
+    <string name="type_incoming_volte">အ၀င်4Gအသံခေါ်ဆိုမှု</string>
+    <string name="type_incoming_video_lte">အ၀င်4Gအသံခေါ်ဆိုမှု</string>
+    <string name="type_outgoing_volte">အထွက်4Gအသံခေါ်ဆိုမှု</string>
+    <string name="type_outgoing_video_lte">အထွက်4Gအသံခေါ်ဆိုမှု</string>
+    <string name="type_missed_volte">မကိုင်မိသော4Gအ၀င်ဗီဒီယိုခေါ်ဆိုမှု</string>
+    <string name="type_missed_video_lte">မကိုင်မိသော4Gအ၀င်ဗီဒီယိုခေါ်ဆိုမှု</string>
+    <string name="type_incoming_vowifi">အ၀င်၀ိုင်ဖိုင်အသံခေါ်ဆိုမှု</string>
+    <string name="type_incoming_video_wifi">အ၀င်၀ိုင်ဖိုင်အသံခေါ်ဆိုမှု</string>
+    <string name="type_outgoing_vowifi">အထွက်၀ိုင်ဖိုင်အသံခေါ်ဆိုမှု</string>
+    <string name="type_outgoing_video_wifi">အထွက်၀ိုင်ဖိုင်ဗီဒီယိုခေါ်ဆိုမှု</string>
+    <string name="type_missed_vowifi">မကိုင်မိသော၀ိုင်ဖိုင်အသံခေါ်ဆိုမှု</string>
+    <string name="type_missed_video_wifi">မကိုင်မိသော၀ိုင်ဖိုင်အ၀င်ဗီဒီယိုခေါ်ဆိုမှု</string>
+    <string name="type_voicemail">အသံမေးလ်</string>
+    <string name="type_rejected">ဖုန်းခေါ်ဆိုမှုကိုငြင်းဆိုသည်</string>
+    <string name="type_blocked">ဖုန်းခေါ်ဆိုမှုကိုပိတ်ဆို့ထားသည်</string>
+    <string name="description_contact_details">မှတ်ထားသောနံပါတ်အသေးစိတ်မှ <xliff:g id="nameOrNumber">%1$s</xliff:g></string>
+    <string name="description_num_calls"><xliff:g id="numberOfCalls">%1$s</xliff:g> ဖုန်းခေါ်ဆိုမှုများ</string>
+    <string name="description_start_voice_search">အသံဖြင့်ရှာဖွေသည်</string>
+    <string name="menu_callNumber">ဖုန်းခေါ်ဆိုသည် <xliff:g id="number">%s</xliff:g></string>
+    <string name="unknown">မသိသော</string>
+    <string name="voicemail">အသံမေးလ်</string>
+    <string name="private_num">ကိုယ်ပိုင်ဖုန်းနံပါတ်</string>
+    <string name="payphone">ပေးဖုန်း</string>
+    <string name="callDetailsShortDurationFormat"><xliff:g id="seconds" example="28">%s</xliff:g> စက္ကန့်</string>
+    <string name="callDetailsDurationFormat"><xliff:g id="minutes" example="42">%1$s</xliff:g> မိနစ် <xliff:g id="seconds" example="28">%2$s</xliff:g> စက္ကန့်</string>
+    <string name="voicemailCallLogDateTimeFormat"><xliff:g id="date" example="Jul 25, 2014">%1$s</xliff:g> မှာ <xliff:g id="time" example="2:49 PM">%2$s</xliff:g></string>
+    <string name="dialog_phone_call_prohibited_message" msgid="4313552620858880999">ဒီဖုန်းနံပါတ်ကိုခေါ်လို့မရပါ</string>
+    <string name="dialog_voicemail_not_ready_message">အသံမေးလ်ကိုပြန်လည်ပြင်ဆင်ရန် မီနူးသို့သွားပါ, &gt; ၈ျီတီအပြင်အဆင်</string>
+    <string name="dialog_voicemail_airplane_mode_message">အသံမေးလ်ခေါ်ဆိုရန်လေယဥ်ကိုပိတ်ပေးပါ</string>
+    <string name="imei">အိုင်အမ်အီးအိုင်</string>
+    <string name="meid">အမ်အီးအိုင်ဒီ</string>
+    <string name="simContacts_emptyLoading">ဆင်းကဒ်လုံးဒင်းလုပ်နေသည်\,ယူ ၂၀၂၆</string>
+    <string name="simContacts_title">ဆင်းကတ်တွင်မှတ်သားထားသောနံပါတ်များ</string>
+    <string name="add_contact_not_available">မှတ်သားထားသောနွပါတ်များအသုံးပြုသည် အပ်ပ် မရှိပါ</string>
+    <string name="voice_search_not_available">အသံဖြင့်ရှာဖွေလို့မရပါ</string>
+    <string name="activity_not_available">ဒီစက်ပစ္စည်းအတွက် အပ် မရှိပါ</string>
+    <string name="dialer_hint_find_contact">မှတ်ထားသောနံပါတ်ကိုရှာဖွေရန်</string>
+    <string name="block_number_search_hint">နံပါတ်အသစ်မှတ်ရန်နှင့်မှတ်ထားသောနံပါတ်ကိုရှာဖွေရန်။</string>
+    <string name="call_log_all_empty">ဖုန်းခေါ်ဆိုမှုမှတ်တမ်းတွင်ဘာမှမရှိပါ။</string>
+    <string name="call_log_all_empty_action">ဖုန်းခေါ်ဆိုပါ။</string>
+    <string name="call_log_missed_empty">သင့်တွင်မကိုင်မိသောဖုန်းအ၀င်ကောများမရှိပါ။</string>
+    <string name="call_log_voicemail_empty">သင်၏အသံမေးလ်ထဲတွင်ဘာမှမရှိပါ</string>
+    <string name="voicemail_archive_empty">အသံဖိုင်လက်ခံရရှိမှုမရှိပါ</string>
+    <string name="call_log_activity_title">ဖုန်းခေါ်ဆိုမှုမှတ်တမ်း</string>
+    <string name="voicemail_archive_activity_title">အသံဖိုင်ရရှိသည်</string>
+    <string name="call_log_all_title">အားလုံး</string>
+    <string name="call_log_missed_title">မကိုင်မိသော</string>
+    <string name="migrate_blocked_numbers_dialog_title">ရိုးရှင်းစွာပိတ်ဆို့ထားခြင်း</string>
+    <string name="migrate_blocked_numbers_dialog_message">သင်၏ဖုန်းကိုကာကွယ်ရန်ဖုန်းကိုပိတ်ဆို့မည့်နည်းလမ်းများကို ပြောင်းလဲရန်သိဖို့လို_x000D_
+သည်။သင်ပိတ်ဆို့ထားသောနံပါတ်သည်ဖုန်းခေါ်ဆိုခြင်းနှင့်စာတိုပေးပို့ခြင်းတို့ရပ်_x000D_
+သွားမည်ဖြစ်သည်</string>
+    <string name="migrate_blocked_numbers_dialog_allow_button">ခွင့်ပြုသည်</string>    <!-- Confirmation dialog title for blocking a number. [CHAR LIMIT=NONE] -->
+    <string name="block_number_confirmation_title">ပိတ်ပင်ထားသည်         <xliff:g id="number" example="(555) 555-5555">%1$s</xliff:g>?</string>
+    <string name="block_number_confirmation_message_vvm">        ဤနံပါတ်မှခေါ်ဆိုမှုကိုပိတ်ထားပြီးအသံစာကိုအလိုအလျှောက်ဖျက်ပစ်လိမ့်မည်     </string>
+    <string name="block_number_confirmation_message_no_vvm">        ဤနံပါတ်မှခေါ်ဆိုမှုများကိုပိတ်ဆို့ထားမည်ဖြစ်သော်လည်းခေါ်ဆိုသူသည်သင့်အား အသံမေးလ်မှထွက်ခွာနိုင်သည်    </string>
+    <string name="block_number_confirmation_message_new_filtering">        ဤနံပါတ်မှခေါ်ဆိုမှုများသို့မဟုတ်စာသားများကိုသင်လက်ခံရရှိလိမ့်မည်မဟုတ်ပါ     </string>
+    <string name="block_number_ok">ပိတ်ပင်ထားသည်</string>    <!-- Confirmation dialog for unblocking a number. [CHAR LIMIT=NONE] -->
+    <string name="unblock_number_confirmation_title">မပိတ်ပင်ထားပါ        <xliff:g id="number" example="(555) 555-5555">%1$s</xliff:g>?</string>
+    <string name="unblock_number_ok">မပိတ်ပင်ထားပါ</string>
+    <string name="tab_speed_dial">အမြန်ခေါ်ဆိုမှု</string>
+    <string name="tab_history">ဖုန်းခေါ်ဆိုမှုမှတ်တမ်း</string>
+    <string name="tab_all_contacts">မှတ်ထားသောနံပါတ်</string>
+    <string name="tab_voicemail">အသံမေးလ်</string>    <!-- Shortcut item used to call a number directly from search -->
+    <string name="search_shortcut_call_number">ဖုန်းခေါ်သည်        <xliff:g id="number">%s</xliff:g>     </string>
+    <string name="search_shortcut_create_new_contact">မှတ်ထားသောနံပါတ်အသစ်ထည့်ရန်</string>
+    <string name="search_shortcut_add_to_contact">မှတ်ထားသောနံပါတ်ထည့်ရန်</string>
+    <string name="search_shortcut_send_sms_message">စာတို့ပို့ရန်</string>
+    <string name="search_shortcut_make_video_call">ဗီဒီယိုခေါ်ဆိုသည်</string>
+    <string name="search_shortcut_block_number">ဖုန်နံပါတ်ကိုပိတ်စို့ထားသည်</string>
+    <string name="speed_dial_empty">သင်၏အမြန်ခေါ်ဆိုမှုတွင်ဘယ်သူမှမရှိပါ</string>
+    <string name="speed_dial_empty_add_favorite_action">အကြိုက်ဆုံးကိုထည့်ပါ</string>
+    <string name="all_contacts_empty">သင့်တွင်မှတ်ထားသောဖုန်းနံပါတ်မရှိပါ</string>
+    <string name="all_contacts_empty_add_contact_action">မှတ်ထားသောနံပါတ်ထည့်ရန်</string>
+    <string name="remove_contact">ဖယ်ရှားပါ</string>
+    <string name="call_log_action_video_call">ဗီဒီယိုခေါ်ဆိုသည်</string>
+    <string name="call_log_action_send_message">စာတိုပို့သည်</string>
+    <string name="call_log_action_details">ဖုန်းခေါ်ဆိုမှုအသေးစိတ်အချက်အလက်</string>
+    <string name="call_log_action_call">        ဖုန်းခေါ်ဆိုသည် <xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>     </string>
+    <string name="description_incoming_missed_call">မကိုင်မိလိုက်သောဖုန်းခေါ်ဆိုမှုမှ <xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>, <xliff:g id="typeOrLocation" example="Mobile">^2</xliff:g>, <xliff:g id="timeOfCall" example="2 min ago">^3</xliff:g>, <xliff:g id="phoneAccount" example="on SIM 1">^4</xliff:g>.</string>
+    <string name="description_incoming_answered_call">ဖြေကြားပြီးသောဖုန်းခေါ်ဆိုမှုမှ <xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>, <xliff:g id="typeOrLocation" example="Mobile">^2</xliff:g>, <xliff:g id="timeOfCall" example="2 min ago">^3</xliff:g>, <xliff:g id="phoneAccount" example="on SIM 1">^4</xliff:g>.</string>
+    <string name="description_unread_voicemail">မဖတ်ရသေးသောအသံမေးလ်မှ<xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>, <xliff:g id="typeOrLocation" example="Mobile">^2</xliff:g>, <xliff:g id="timeOfCall" example="2 min ago">^3</xliff:g>, <xliff:g id="phoneAccount" example="on SIM 1">^4</xliff:g>.</string>
+    <string name="description_read_voicemail">အသံမေးလ်မှ<xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>, <xliff:g id="typeOrLocation" example="Mobile">^2</xliff:g>, <xliff:g id="timeOfCall" example="2 min ago">^3</xliff:g>, <xliff:g id="phoneAccount" example="on SIM 1">^4</xliff:g>.</string>
+    <string name="description_outgoing_call">ဖုန်းခေါ်ဆိုပါ။<xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>, <xliff:g id="typeOrLocation" example="Mobile">^2</xliff:g>, <xliff:g id="timeOfCall" example="2 min ago">^3</xliff:g>, <xliff:g id="phoneAccount" example="on SIM 1">^4</xliff:g>.</string>
+    <string name="description_phone_account">အပေါ် <xliff:g id="phoneAccount" example="SIM 1">^1</xliff:g></string>
+    <string name="description_via_number">ဗီအိုင်အေ <xliff:g id="number" example="(555) 555-5555">%1$s</xliff:g></string>
+    <string name="call_log_via_number">ဗီအိုင်အေ <xliff:g id="number" example="(555) 555-5555">%1$s</xliff:g></string>
+    <string name="description_via_number_phone_account">အပေါ် <xliff:g id="phoneAccount" example="SIM 1">%1$s</xliff:g>ဗီအိုင်အေ <xliff:g id="number" example="(555) 555-5555">%2$s</xliff:g></string>
+    <string name="call_log_via_number_phone_account"><xliff:g id="phoneAccount" example="SIM 1">%1$s</xliff:g> ဗီအိုင်အေ <xliff:g id="number" example="(555) 555-5555">%2$s</xliff:g></string>
+    <string name="description_call_log_call_action">ဖုန်းခေါ်သည်</string>
+    <string name="description_call_action">        ဖုန်းခေါ်သည် <xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>     </string>
+    <string name="description_video_call_action">        ဗီဒီယိုခေါ်ဆိုသည် <xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>.     </string>
+    <string name="description_voicemail_action">        နားထောင််ပြီးသောအသံမေးလ်မှ <xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>     </string>
+    <string name="description_create_new_contact_action">        မှတ်ထားသောနံပါတ်ထည့်ရန်အတွက် <xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>     </string>
+    <string name="description_add_to_existing_contact_action">        ထည့်သွင်းသည် <xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g> လက်ရှိမှတ်သားထားပြီးသောနံပါတ်     </string>
+    <string name="description_details_action">        ဖုန်းခေါ်ဆိုမှုအသေးစိတ်အချက်အလက်အတွက် <xliff:g id="nameOrNumber" example="John Smith">^1</xliff:g>     </string>
+    <string name="call_log_header_today">ဒီနေ့</string>
+    <string name="call_log_header_yesterday">မနေ့က</string>
+    <string name="call_log_header_other">အဟောင်း</string>
+    <string name="voicemail_speaker_on">စပီကာကိုဖွင့်ပါ</string>
+    <string name="voicemail_speaker_off">စပီကာကိုပိတ်ပါ</string>
+    <string name="voicemail_play_start_pause">စတင်ပါ ဒါမှမဟုတ် ခနရပ်ပါ ပြန်ဖွင့်ပါ</string>
+    <string name="display_options_title">မျက်နှာပြင်ရုပ်ထွက်ကိုပြင်ဆင်ရန်</string>
+    <string name="sounds_and_vibration_title">အသံနှင့်တုန်ခါမှု</string>
+    <string name="accessibility_settings_title">အသုံးပြုခွင့်</string>
+    <string name="ringtone_title">ဖုန်းမြည်သံ</string>
+    <string name="vibrate_on_ring_title">ဖုန်းခေါ်ဆိုမှုအတွက်တုန်ခါသည်</string>
+    <string name="dtmf_tone_enable_title">ဖုန်းခေါ်ရာတွင်မည်သံ</string>
+    <string name="dtmf_tone_length_title">ဖုန်းခေါ်ရာတွင်မည်သံအရှည်</string>    <!-- Options displayed for the length of DTMF tone sounds. [CHAR LIMIT=40] -->
+    <string-array name="dtmf_tone_length_entries">      <item>သာမန်</item>      <item>ရှည်လျားသည်</item>     </string-array>
+    <string name="respond_via_sms_setting_title">လျှင်မြန်စွာတုံမြန်မှု</string>
+    <string name="call_settings_label">ဖုန်း‌ခေါ်ဆိုသည်</string>
+    <string name="manage_blocked_numbers_label">ဖုန်းခေါ်ဆိုမှုပိတ်ပင်ထားသည်</string>
+    <string name="blocked_numbers_disabled_emergency_header_label">       ဖုန်းခေါ်ဆိုမှုကိုခနပိတ်စို့ထားသည်    </string>
+    <string name="blocked_numbers_disabled_emergency_desc">သင်သည်အ‌ရေး‌ပေါ်၀န်ဆောင်မှုဖုန်းနံပါတ်ကိုဆက်သွယ်ထားသော‌ကြောင့်ဖုန်းခေါ်ဆိုမှုအား၄၈နာရီအတွင်းပိတ်ထားသည်။ ၄၈ နာရီကုန်ဆုံးသည်နှင့်တပြိုင်နက် ဒါဟာအလိုအလျောက်ဖြစ်လိမ့်မည်</string>
+    <string name="import_send_to_voicemail_numbers_label">ထည့်သွင်းထားသောနံပါတ်များ</string>
+    <string name="blocked_call_settings_import_description">အခြားအက်ပ်များမှတဆင့်အသံမေးလ်ကိုအလိုအလျောက်ပို့ရန်ခေါ်ဆိုသူတစ်ချို့ကိုသင်ယခင်ကမှတ်သားထားသည်။</string>
+    <string name="blocked_call_settings_view_numbers_button">နံပါတ်ကြည့်ရှုရန်</string>
+    <string name="blocked_call_settings_import_button">တင်သွင်းသည်</string>
+    <string name="send_to_voicemail_import_failed">တင်သွင်းမှုမအောင်မြင်ပါ</string>
+    <string name="voicemail_archive_failed">အသံမေးလ်ကိုရယူရန်မအောင်မြင်ပါ</string>
+    <string name="description_blocked_number_list_delete">မပိတ်ပင်ထားသောနံပါတ်</string>
+    <string name="addBlockedNumber">နံပါတ်ထည့်သွင်းသည်</string>
+    <string name="block_number_footer_message_vvm">      ဤနံပါတ်မှခေါ်ဆိုမှုများကိုပိတ်ထားပါသည် အသံမေးလ်များကိုလဲအလိုအလျှောက်ဖျက်ပြစ်မည်ဖြစ်သည်       </string>
+    <string name="block_number_footer_message_no_vvm">ဤနံပါတ်မှခေါ်ဆိုမှုများကိုပိတ်ထားလိမ့်မည် သို့သော်သင့်အားသူတို့၏အသံမေးလ်ကိုချန်ထားဆဲဖြစ်နိုင်ပါသည်</string>
+    <string name="block_list">ပိတ်ဆို့ထားသောနံပါတ်များ</string>
+    <string name="invalidNumber"><xliff:g id="number" example="(555) 555-5555">%1$s</xliff:g>         မမှန်ကန်ပါ</string>
+    <string name="alreadyBlocked"><xliff:g id="number" example="(555) 555-5555">%1$s</xliff:g>         ပိတ်ဆို့ပြီးသား</string>
+    <string name="call_blocking_disabled_notification_title">        ခေါ်ဆိုမှုကို၄၈နာရီအတွင်းပိတ်ဆို့ထားသည်     </string>
+    <string name="call_blocking_disabled_notification_text">        အရေးပေါ်ခေါ်ဆိုမှုကြောင့်ပိတ်ထားသည်     </string>
+    <string name="phone_account_settings_label">အကောင့်ကိုခေါ်ဆိုခြင်း</string>
+    <string name="permission_single_turn_on">ဖွင့်သည်</string>
+    <string name="permission_no_speeddial">အမြန်ခေါ်ဆိုမှုကိုအတည်ပြုရန်မှတ်သားထားသောဖုန်းန့ံပါတ်ခွင့်ပြုချက်ကိုဖွင့်ပါ</string>
+    <string name="permission_no_calllog">သင်၏ခေါ်ဆိုမှုမှတ်တမ်းကိုကြည့်ရန် မှတ်သားထားသောဖုန်းနံပါတ်‌နေရာကိုဖွင့်ပါ</string>
+    <string name="permission_no_contacts">သင်၏ဖုန်းနံပါတ်ကိုကြည့်ရန် မှတ်သားထားသောဖုန်းနံပါတ်‌နေရာကိုဖွင့်ပါ</string>
+    <string name="permission_no_search">သင်၏ဖုန်းနံပါတ်ကိုရှာဖွေရန်  မှတ်သားထားသောဖုန်းနံပါတ်‌နေရာကိုဖွင့်ပါ</string>
+    <string name="permission_place_call">ဖုန်းခေါ်ဆိုရန် ဖုန်းခွင့်ပြုချက်နေရာကိုဖွင့်ပါ</string>
+    <string name="toast_cannot_write_system_settings">ဖုန်းအက်ပ်သည် စနစ်များကိုပြင်ဆင်ရေးသားရန်ခွင့်ပြုချက်မရှိပါ</string>
+    <string name="call_log_show_all_slots">အိုကေ</string>
+    <string name="call_log_all_calls_header">ဆင်းကဒ်များ</string>
+    <string name="recentIncoming_empty">ခေါ်ဆိုမှုများ</string>
+    <string name="recentOutgoing_empty">သင့်တွင်အ၀င်ဖုန်းခေါ်ဆိုမှုများမရှိပါ</string>
+    <string name="recentCalls_empty">သင့်တွင်အထွက်ဖုန်းခေါ်ဆိုမှုများမရှိပါ</string>
+    <string name="calllog_search_hint">"ဖုန်းစရင်းရှာဖွေသည်"</string>
+    <string name="no_call_log">ဖုန်းစရင်းမရှိပါ</string>
+    <string name="clear">ရှင်းလင်းသည်</string>
+    <string name="toast_make_video_call_failed">ဗီဒီယိုခေါ်ဆိုမှုမပြုလုပ်နိုင်ပါ နံပါတ်မှားယွင်းနေပါသည်</string>
+    <string name="call_data_info_label">ဖုန်းခေါ်ဆိုမှု/ဒေတာအသုံးပြုမှုအချိန်</string>
+    <string name="call_data_info_description">အသံကောလ်အသုံးပြုမှုအချိန်နှင့် ဒေတာအသုံးပြုမှုအချိန်</string>
+    <string name="alert_call_over_wifi">ခေါ်ဆိုမှုများကို၀ိုင်ဖိုင်နှင့်အသုံးပြုမည်</string>
+    <string name="alert_call_no_cellular_coverage">ဆယ်လူလာကွန်ရက်မရှိပါ ခေါ်ဆိုရန် ရရှိနိုင်သည့် ၀ိုင်ဖိုင်နဲ့ချိတ်ဆက်ပါ</string>
+    <string name="alert_user_connect_to_wifi_for_call">ဖုန်းခေါ်ဆိုရန်၀ိုင်ဖိုင်နဲံချိတ်ဆက်ပါ</string>
+    <string name="alert_user_connect_to_wifi_for_call_text">ရရှိနိုင်သောကွန်ရက်များကိုကြည့်ရန်ဒီကိုနှိပ်ပါ</string>
+    <string name="missing_account_type">(အမျိုးအစားမရှိပါ)</string>
+    <string name="missing_account_name">(နာမည်မရှိပါ)</string>
+    <string name="header_title_setting_speed_dial">အမြန်ခေါ်ဆိုမှုအပြင်အဆင်</string>
+    <string name="action_filter_sms">SMSစစ်ထုတ်သည်</string>
+    <string name="title_call_recorder">ဖုန်းခေါ်ဆိုမှုကိုအသံဖမ်းသည်</string>
+    <string name="select_phone_number">ဖုန်းနံပါတ်ကို‌ရွှေးချယ်သည်</string>
+    <string name="bkav_qr_code_instruction">QRကုတ်ကိုစစ်ဆေးရန်အတွက် ကင်မရာကိုရွှေ့ပါ</string>
+    <string name="title_result_qr_code">စစ်ဆေးမှုရလဒ်</string>
+    <string name="qr_code_link">လင်ခ့် </string>
+    <string name="qr_code_how_open">Web browser တွင်ဖွင့်ပါ</string>
+    <string name="qr_code_yes">ဟုတ်တယ်</string>
+    <string name="qr_code_no">မဟုတ်ပါ</string>
+    <string name="qr_code_continue">ဆက်လက်၍</string>
+    <string name="mute_conversion_15_minutes">၁၅မိနစ်ကြာသည်</string>
+    <string name="mute_conversion_1_hour">၁နာရီကြာသည်</string>
+    <string name="mute_conversion_8_hour">၈နာရီကြာသည်</string>
+    <string name="mute_conversion_24_hour">၂၄နာရီကြာသည်</string>
+    <string name="mute_conversion_until_at_7h_50_am">ဖုန်းမြည်သံကိုမနက်၇နာရီ၅၀မိနစ်အထိ</string>
+    <string name="mute_conversion_until_turn_on">ပြန်ဖွင့်သည်အထိ</string>
+    <string name="message_enable_esim"> စပြီးသက်၀င်လာပြီ</string>
+    <string name="title_enable_esim">အီးဆင်းဒ်လုပ်နိုင်သည်</string>
+    <string name="action_call_by_sim_other">အခြားဆင်းကဒ်နဲ့ခေါ်ဆိုသည်</string>
+    <string name="action_view_call_log_recorder">ဖုန်းအသံဖမ်းထားသည်များကိုကြည့်ရှုမည်</string>
+    <string name="application_shortcut_has_been_created">အယ်ပလီကေးရှင်းလမ်းကြောင်းဖန်တီးထားသည်</string>
+    <string name="create_shortcut_application">အယ်ပလီကေးရှင်းလမ်းကြောင်းဖန်တီးထားသည်</string>
+    <string name="setting_title">အပြင်အဆင်</string>
+    <string name="setting_phone">ဖုန်း</string>
+    <string name="setting_message">စာတို</string>
+    <string name="setting_contact">မှတ်သားထားသောဖုန်းနံပါတ်</string>
+    <string name="no_ringtone">မဟုတ်ပါ</string>
+    <string name="app_name">ဗီကဒ်</string>
+    <string name="call_disambig_title">ဖုန်းခေါ်ဆိုမှုအသုံးပြုသည်</string>
+    <string name="make_primary">ဒီရွှေးချယ်မှုကိုသတိရပါ</string>
+    <string name="bkav_about_eula_title">သတ်မှတ်ချက်များ</string>
+    <string name="accept">လက်ခံသည်</string>
+    <string name="dialog_check_internet_message">ချိတ်ဆက်မှုအဆင်မပြေပါ။ကျေးဇူးပြု၍ သင်၏ နက်‌‌ေ၀ါ့အချက်အလက်ကိုစစ်ဆေးပါ</string>
+    <string name="quickContactActivityLabel">မှတ်ထားသောဖုန်းနံပါတ်များကိုကြည့်ရန်</string>
+    <string name="editContactActivityLabel">မှတ်ထားသောဖုန်းနံပါတ်များကိုပြင်ဆင်ရန်</string>
+    <string name="shortcutContact">မှတ်ထားသောဖုန်းနံပါတ်များ</string>
+    <string name="shortcutDialContact">တိုက်ရိုက်ခေါ်ဆိုမှု</string>
+    <string name="shortcutMessageContact">တိုက်ရိုက်စာတို</string>
+    <string name="shortcutActivityTitle">မှတ်ထားသောဖုန်းနံပါတ်ကို‌ရွှေးချယ်ပါ</string>
+    <string name="callShortcutActivityTitle">ဖုန်းခေါ်ဆိုရန်နံပါတ်ကိုရွှေးချယ်ပါ</string>
+    <string name="messageShortcutActivityTitle">စာတိုပို့ရန်နံပါတ်ကိုရွှေးချယ်ပါ</string>
+    <string name="contactInsertOrEditActivityTitle">မှတ်ထားသောဖုန်းနံပါတ်ထဲထည့်ရန်</string>
+    <string name="starredList">ကြယ်ပွင့်</string>
+    <string name="frequentList">မကြာခဏ</string>
+    <string name="strequentList">အကြိုက်ဆုံး</string>
+    <string name="editContactDescription">မှတ်ထားသောဖုန်းနံပါတ်များကိုပြင်ဆင်ရန်</string>
+    <string name="insertContactDescription">မှတ်ထားသောဖုန်းနံပါတ်အသစ်ပြုလုပ်ရန်</string>
+    <string name="menu_addStar">အကြိုက်ဆုံးကိုမှတ်သည်</string>
+    <string name="menu_removeStar">အကြိုက်ဆုံးမှပယ်ထုတ်သည်</string>
+    <string name="description_action_menu_remove_star">အကြိုက်ဆုံးများမှပယ်ထုတ်သည်</string>
+    <string name="description_action_menu_add_star">အကြိုက်ဆုံးကိုမှတ်သည်</string>
+    <string name="menu_change_photo">ဓာတ်ပုံပြောင်းသည်</string>
+    <string name="menu_create_contact_shortcut">ဟုန်းစခရင်နေ့ရာသို့</string>
+    <string name="menu_splitAggregate">မဆက်နွယ်သော</string>
+    <string name="menu_editGroup">ပြင်ဆင်သည်</string>
+    <string name="menu_deleteGroup">ဖျက်သည်</string>
+    <string name="menu_moveGroupMembers">အဖွဲ့လိုက်ရွှေ့သည်</string>
+    <string name="menu_new_contact_action_bar">မှတ်ထားသောဖုန်းနံပါတ်ထဲထည့်ရန်</string>
+    <string name="menu_new_group_action_bar">အဖွဲ့လိုက်ထည့်သည်</string>
+    <string name="splitConfirmation">မဆက်နွယ်သောဖုန်းအဆက်အသွယ်များကို ဖုန်းစရင်းများတွင်ထည့်သွင်းမှာလား</string>
+    <string name="splitConfirmation_positive_button">မဆက်နွယ်သော</string>
+    <string name="splitConfirmationWithPendingChanges">သင်လုပ်ပြီးသားပြောင်းလဲမှုကိုသိမ်းထားချင်ပါသလား မဆက်နွယ်သောဖုန်းအဆက်အသွယ်များကို ဖုန်းစရင်းများတွင်ထည့်သွင်းမှာလား</string>
+    <string name="splitConfirmationWithPendingChanges_positive_button">သိမ်းဆည်းခြင်းနှင့်မဆက်နွယ်သော</string>
+    <string name="joinConfirmation">သင်လုပ်ပြီးသားပြောင်းလဲမှုကိုသိမ်းထားပြီးရွှေးချယ်ထားသောအဆက်အသွယ်နှင့်ချိတ်ဆက်ပါ</string>
+    <string name="joinConfirmation_positive_button">  သိမ်းဆည်းသည် ဆက်နွယ်သည်</string>
+    <string name="titleJoinContactDataWith">ဆက်နွယ်ထားသောမှတ်ထားသည်ဖုန်းနံပါတ်</string>    <!-- Info blurb on the Link Contact screen [CHAR LIMIT=NONE]-->
+    <string name="blurbJoinContactDataWith">သင်ဆက်နွယ်လိုလျှင်မှတ်ထားသည့်ဖုန်းနံပါတ်ကိုရွှေးချယ်ပါ <xliff:g         id="name">%s</xliff:g>:</string>
+    <string name="separatorJoinAggregateSuggestions">မှတ်ထားသည့်ဖုန်းနံပါတ်ကိုအကြံပြုရန်</string>
+    <string name="separatorJoinAggregateAll">မှတ်သားထားသည်ဖုန်းနံပါတ်များ</string>
+    <string name="contactsJoinedMessage">မှတ်သားထားသောဖုန်းနံပါတ်ကိုဆက်နွယ်ရန်</string>
+    <string name="readOnlyContactWarning">သင့်ဖတ်ရန်သီးသန့်အကောင့်မှတ်သားထားသောနံပါတ်များမဖျက်နိုင်သော</string>
+    <string name="readOnlyContactWarning_positive_button">ဖျောက်သည်</string>
+    <string name="readOnlyContactDeleteConfirmation">ဖျက်တော့မည်မှတ်သားထားသောနံပါတ်တွင် အကောင့်ပေါင်းများစွာ၏အသေးစိတ်_x000D_</string>
+    <string name="batch_link_single_contact_warning">ဒီလင့်ကိုလုပ်ဆောင်လိုလျှင်အနည်းဆုံးဆက်သွယ်ရမည့်နံပါတ် ၂ ခုလိုသည်။</string>
+    <string name="batch_link_confirmation">ရွေးချယ်မှတ်သားထားသောနံပါတ်များကိုချိတ်ဆက်သည်</string>
+    <string name="batch_link_confirmation_positive_button">လင့်</string>
+    <string name="menu_discard">ပြောင်းလဲမှုကိုမလုပ်တော့ပါ</string>
+    <string name="invalidContactMessage">မှတ်သားထားသောနံပါတ်မရှိပါ</string>
+    <string name="createContactShortcutSuccessful_NoName">မှတ်သားထားသောနံပါတ်ကို ပင်မစာမျက်နှာသို့ထည့်သည်</string>
+    <string name="createContactShortcutSuccessful"><xliff:g id="name">%s</xliff:g> ပင်မစာမျက်နှာသို့ထည့်သည်</string>
+    <string name="pickerNewContactHeader">နံပါတ်အသစ်မှတ်သားမည်</string>
+    <string name="photoPickerNotFoundText" product="default">ဖုန်းတွင်ရုပ်ပုံမရနိုင်ပါ</string>
+    <string name="attach_photo_dialog_title">မှတ်သားထားသောနံပါတ်၏ဓာတ်ပုံ</string>
+    <string name="customLabelPickerTitle">စိတ်ကြိုက်အမည်တပ်သည်</string>
+    <string name="noContacts">မှတ်သားထားသောနံပါတ်မရှိပါ</string>
+    <string name="noGroups">အုပ်စုမရှိပါ</string>
+    <string name="noAccounts">အုပ်စပြုလုပ်ရန်အကောင့်လိုသည်</string>
+    <string name="emptyGroup"> ဤအုပ်စုတွင်လူမရှိပါ</string>
+    <string name="addPeopleToGroup">တခုခုထည့်လိုလျှင်ဤအုပ်စုကိုပြန်ပြင်ပါ</string>
+    <string name="savingContact">မှတ်သားထားသောနံပါတ်အားသိမ်းဆည်းခြင်း</string>
+    <string name="contactUnlinkedToast">မှတ်သားထားသောနံပါတ်အားချိတ်ဆက်မှုမလုပ်</string>
+    <string name="contactSavedToast">မှတ်သားထားသောနံပါတ်အားသိမ်းဆည်းပြီး</string>
+    <string name="contactSavedErrorToast">မှတ်သားထားသောနံပါတ်ပြောင်းလဲခြင်းကိုသိမ်းဆည်း၍မရပါ</string>
+    <string name="contactUnlinkErrorToast">မှတ်သားထားသောနံပါတ်အားချိတ်ဆက်မှုပြန်ရုတ်သိမ်း၍မရပါ</string>
+    <string name="contactJoinErrorToast">မှတ်သားထားသောနံပါတ်အားချိတ်ဆက်မှုမလုပ်နိုငပါ</string>
+    <string name="contactGenericErrorToast">နံပါတ်မှတ်သားရာတွင်အမှားရှိနေသည်။.</string>
+    <string name="contactPhotoSavedErrorToast">မှတ်သားထားသောနံပါတ်၏ဓာတ်ပုံအားသိမ်းဆည်း၍မရပါ</string>
+    <string name="number_anr_too_long">နံပါတ်အလွန်ရှည်သောအမှားရှိနေသည်</string>
+    <string name="email_address_too_long">အီးမေးလ်လိပ်စာအလွန်ရှည်လျားသောအမှားဖြစ်နေသည်</string>
+    <string name="invalid_phone_number">ဤနံပါတ်သည်မရနိုင်သောအမှားဖြစ်နေသည်</string>
+    <string name="no_phone_number_or_email">ကျေးဇူးပြုပြီးဖုန်းနံပါတ် သို့ အီးမေးလ်ဖြည့်ပါ</string>
+    <string name="importConfirmation_title">မှတ်သားထားသောနံပါတ်များ</string>
+    <string name="groupSavedToast">အုပ်စုကိုသိမ်းသည်</string>
+    <string name="groupSavedErrorToast">အုပ်စုတွင်ပြုလုပ်သောပြောင်းလဲမှုများကိုသိမ်းဆည်း၍မရပါ</string>
+    <string name="all_contacts_tab_label">အားလုံး</string>
+    <string name="favorites_tab_label">ဲကြိုက်နှစ်သက်သောအရာများ</string>
+    <string name="contacts_groups_label">အုပ်စုများ</string>
+    <string name="add_contact_dlg_message_fmt">ပေါင်းထည့်သည် <xliff:g id="email">%s</xliff:g>ဒီလင့်ကိုလုပ်ဆောင်လိုလျှင်အနည်းဆုံးဆက်သွယ်ရမည့်နံပါတ် ၂ ခုလိုသည်။</string>
+    <string name="description_contact_photo">မှတ်သားထားသောနံပါတ်ဓာတ်ပုံ</string>
+    <string name="quickcontact_transparent_view_description">ရှေ့က မျက်နှာပြင်ဆီသိုပြန်သွားရန်ကလစ်နှိပ်ပါ</string>
+    <string name="missing_app">ဤကိစ္စအားဆောင်ရွက်ရန်အပ်ပလီကေးရှင်းမရှိပါ</string>
+    <string name="menu_share_all">"အားလုံးကိုမျှဝေသည်"</string>
+    <string name="share_via">မှတ်သားထားသောနံပါတ်များအားမျှဝေပေးသည်</string>
+    <string name="dialog_new_group_account">အကောင့်မှအုပ်စုပြုလုပ်သည်</string>
+    <string name="title_move_members">အဖွဲ့ဝင်များကိုရွှေ့သည်</string>
+    <string name="message_move_members">အဖွဲ့ဝင်များကိုရွှေ့သည်</string>
+    <string name="message_can_not_move_members">အဖွဲ့ဝင်များကိုရွှေ့မရပါ</string>
+    <string name="audio_chat">အသံဖြင့်စကားပြောသည်</string>
+    <string name="video_chat">ဗီဒီယိုဖြင့်စကားပြောသည်</string>
+    <string name="account_type_format"><xliff:g id="source" example="Gmail">%1$s</xliff:g> မှတ်သားထားသောနံပါတ်</string>
+    <string name="google_account_type_format"><xliff:g id="source" example="Google">%1$s</xliff:g> အကောင့်</string>
+    <string name="contact_read_only">ဤအပလီကေးရှင်းမှပြင်၍မရပါ</string>
+    <string name="group_read_only">ဤစက်မှပြင်၍မရပါ</string>
+    <string name="take_photo">ဓာတ်ပုံရိုက်သည်</string>
+    <string name="take_new_photo">ဓာတ်ပုံအသစ်ရိုက်သည်</string>
+    <string name="pick_photo">ပုံရွေးသည်</string>
+    <string name="pick_new_photo">့ပုံအသစ်ရွေးချယ်သည်</string>
+    <string name="upgrade_in_progress">မှတ်သားထားသောနံပါတ်များကိုအဆင့်မြှင့်နေသည်။</string>
+    <string name="event_edit_field_hint_text">နေ့စွဲ</string>
+    <string name="group_edit_field_hint_text">အုပ်စုအမည်</string>
+    <string name="change_photo">ပြောင်းလဲသည်</string>
+    <string name="primary_photo">မူလဓာတ်ပုံ</string>
+    <string name="aggregation_suggestion_edit_dialog_message">ရွေးချယ်ထားသောမှတ်သားထားသည့်နံပါတ်အားပြင်ရန်နှိပ်မည်လား။သင်ဝင်ခဲ့သော_x000D_
+အချက်အလက်များကို ကူးယူထားလိမ့်မည်။</string>
+    <string name="contact_directory_description">လမ်းညွှန် <xliff:g id="type" example="Corporate Directory">%1$s</xliff:g></string>
+    <string name="menu_help">အကူအညီ ပြန်ပြောပြသည်</string>
+    <string name="non_phone_caption">ဖုန်းနံပါတ်</string>
+    <string name="non_phone_add_to_contacts">မှတ်သားထားသောနံပါတ်များထဲထည့်သည်</string>
+    <string name="activity_title_confirm_add_detail">မှတ်သားထားသောနံပါတ်ထဲထည့်သည်</string>
+    <string name="non_phone_close">ပိတ်သည်</string>
+    <string name="date_year_toggle">နှစ်အပါအဝင်</string>
+    <string name="contacts_unavailable_add_account">အကောင့်ထဲထည့်သည်</string>
+    <string name="contacts_unavailable_import_contacts">မှတ်သားထားသောနံပါတ်များကိုထည့်သွင်းသည်</string>
+    <string name="create_group_dialog_title">အုပ်စုအသစ်ပြုလုပ်သည်</string>
+    <string name="create_group_item_label">အုပ်စုအသစ်ပြုလုပ်သည်</string>    <!-- Confirmation message of the dialog that allows deletion of a contact group  [CHAR LIMIT=256] -->
+    <string name="delete_group_dialog_message">အုပ်စုကိုဖျက်သည်<xliff:g id="group_label" example="Friends">%1$s</xliff:g>\"?      (မှတ်သားထားသောနံပါတ်များသည်အလိုအလျောက်ပျက်သွားမည်မဟုတ်)     </string>
+    <string name="toast_join_with_empty_contact">အခြားတခုနှင့်မချိတ်ဆက်ခင် မှတ်သားထားသောနံပါတ်</string>
+    <string name="set_default">ပုံမှန်သို့လုပ်သည်</string>
+    <string name="clear_default">့ပုံမှန်ကိုရှင်းလင်းသည်</string>
+    <string name="enter_contact_name">လူနာမည်ရေးသည်</string>
+    <string name="group_name_hint">အုပ်စု၏နာမည်</string>
+    <string name="external_profile_title">ကျွန်ုပ်၏ <xliff:g id="external_source">%1$s</xliff:g> ကိုယ်ရေးအချက်လက်</string>
+    <string name="contact_editor_prompt_one_account">မှတ်သားထားသောနံပါတ်အသစ်များသိမ်းဆည်ရန် <xliff:g id="account_name">%1$s</xliff:g>.</string>
+    <string name="contact_editor_title_existing_contact">မှတ်သားထားသောနံပါတ်ကိုပြင်မည်</string>
+    <string name="select_all">အားလုံး</string>
+    <string name="unselect_all">အားလုံးကိုမရွေးချယ်ပါ</string>
+    <string name="search_bar_hint">မှတ်သားထားသောနံပါတ်များအားရှာဖွေသည်</string>
+    <string name="import_sim_contacts_title">ဆင်းကဒ်ထဲသို့ မှတ်သားထားသောနံပါတ်များထည့်သည်</string>
+    <string name="import_sim_contacts_message">ဆင်းကဒ်ထဲသို့ မှတ်သားထားသောနံပါတ်များထည့်နေသည်</string>
+    <string name="ContactMultiImportConfirmation">ဤမှတ်သားထားသောနံပါတ်များအားထည့်မည်</string>
+    <string name="import_finish">ထည့်သွင်းခြင်းပြီးဆုံးသည်</string>
+    <string name="import_stop">ထည့်သွင်းခြင်းရပ်တန့်သည်</string>
+    <string name="too_many_contacts_add_to_group">ထည့်သွင်းမည့်မှတ်သားထားသည်နံပါတ်များအလွန်များနေသည်။ လျော့သင့်သည် <xliff:g id="count">%d</xliff:g></string>
+    <string name="ContactMultiDeleteConfirmation">ဤမှတ်သားထားသောနံပါတ်များအားဖျက်မည်</string>
+    <string name="delete_contacts_title">မှတ်သားထားသောနံပါတ်များအားဖျက်သည်</string>
+    <string name="delete_contacts_message">မှတ်သားထားသောနံပါတ်များအားဖျက်နေသည်</string>
+    <string name="menu_export_database">အချက်အလက်ဖိုင်များအားပို့သည်</string>
+    <string name="expanding_entry_card_view_see_less">နည်းနည်းပဲကြည့်မည်</string>
+    <string name="expanding_entry_card_view_see_all">အားလုံးကိုကြည့်မည်</string>
+    <string name="about_card_title">အကြောင်း</string>
+    <string name="toast_making_personal_copy">ကိုယ်ရေးအချက်လက်များကူးယူမှုဖန်တီးသည်</string>
+    <string name="tomorrow">မနက်ဖြန်</string>
+    <string name="today_at_time_fmt">"ယနေ့တွင် <xliff:g id="time_interval">%s</xliff:g>"</string>
+    <string name="tomorrow_at_time_fmt">"မနက်ဖြန်တွင် <xliff:g id="time_interval">%s</xliff:g>"</string>
+    <string name="untitled_event">(အမည်မရှိသောပွဲ)</string>
+    <string name="date_time_set">တပ်ဆင်သည်</string>
+    <string name="header_im_entry">အိုုင်အမ်</string>
+    <string name="header_organization_entry">အဖွဲ့အစည်း</string>
+    <string name="header_nickname_entry">အခြားအမည်</string>
+    <string name="header_note_entry">မှတ်စု</string>
+    <string name="header_website_entry">ဝက်ပ်ဆိုက်</string>
+    <string name="header_event_entry">့ပွဲ</string>
+    <string name="header_relation_entry">ဆက်သွယ်မှု</string>
+    <string name="header_account_entry">အကောင့်</string>
+    <string name="header_name_entry">နာမည်</string>
+    <string name="header_email_entry">အီးမေးလ်</string>
+    <string name="header_phone_entry">ဖုန်း</string>
+    <string name="header_photo_entry">ဓာတ်ပုံ</string>
+    <string name="content_description_expand_editor">မှတ်သားထားသောနံပါတ်များပြင်သည့်အရာကိုချဲ့ရန်နှိပ်သည်</string>
+    <string name="content_description_collapse_editor">မှတ်သားထားသောနံပါတ်များပြင်သည့်အရာကိုပျက်စီးရန်နှိပ်သည်</string>
+    <string name="content_description_directions">တည်နေရာအတွက်လမ်းညွှန်</string>
+    <string name="content_description_recent_sms">မကြာသေးမီကစာတို <xliff:g id="message_body">%1$s</xliff:g>. <xliff:g id="phone_number">%2$s</xliff:g>. <xliff:g id="date">%3$s</xliff:g>. တုံ့ပြန်ရန်နှိပ်သည</string>
+    <string name="content_description_recent_call">မကြာသေးမီကခေါ်ဆိုမှု <xliff:g id="call_type">%1$s</xliff:g>. <xliff:g id="phone_number">%2$s</xliff:g>. <xliff:g id="date">%3$s</xliff:g>. ပြန်ခေါ်ရန်နှိပ်သည်</string>
+    <string name="message_from_you_prefix">သင်  <xliff:g id="sms_body">%s</xliff:g></string>
+    <string name="compact_editor_change_photo_content_description">ဓာတ်ပုံပြောင်းသည်</string>
+    <string name="compact_editor_failed_to_load">ပြင်ဆင်ခြင်းကိုဖွင့်လို့မရပါ</string>
+    <string name="compact_editor_account_selector_description">သို့သိမ်းနေသည် <xliff:g id="account_name">%s</xliff:g>အခြားအကောင့်တစ်ခုကိုရွေးချယ်ရန်နှစ်ချက်နှိပ်ပါ</string>
+    <string name="quickcontact_contacts_number"><xliff:g id="count">%d</xliff:g> မှတ်သားထားသောနံပါတ်များနှင့်ချိတ်ဆက်ခဲ့သည်</string>
+    <string name="menu_refresh">ပေါ့ပါးအောင်ပြန်လုပ်သည်</string>
+    <string name="quickcontact_suggestion_link_button">မှတ်သားထားသောနံပါတ်များနှင့်ချိတ်ဆက်သည်</string>
+    <string name="quickcontact_suggestion_cancel_button">ပယ်ဖျက်သည်</string>
+    <string name="suggestion_card_this_contact_title">ဤမှတ်သားထားသောနံပါတ်</string>
+    <string name="suggestion_card_duplicates_title">ထပ်နေခြင်းဖြစ်နိုင်သည်</string>
+    <string name="suggestion_card_help_message">ဤမှတ်သာထားသောနံပါတ်များသည်လူတစ်ယောက်ထဲကိုဖြစ်နိုင်သည်။ဃင်းတို့ကို_x005F_x000D_
+မှတ်သားထားသောနံပါတ်တစ်ခုထဲဖြစ်အောင်ချိတ်ဆက်ပါ</string>
+    <string name="take_a_photo_button">ဓာတ်ပုံရိုက်သည်</string>
+    <string name="all_photos_button">ဓာတ်ပုံရိုက်သည်</string>
+    <string name="photo_picker_title">ပုံရွေးသည်</string>
+    <string name="contact_from_account_name">မှ <xliff:g id="account_name">%s</xliff:g></string>
+    <string name="editor_delete_view_description">ဖျက်သည် <xliff:g id="data_type">%1$s </xliff:g><xliff:g id="data_kind">%2$s</xliff:g></string>
+    <string name="editor_delete_view_description_short">ဖျက်သည် <xliff:g id="data_kind">%s</xliff:g></string>
+    <string name="photo_view_description_not_checked">မှဓာတ်ပုံ <xliff:g id="account_type">%1$s </xliff:g><xliff:g id="user_name">%2$s </xliff:g>မစစ်ဆေးရသေး</string>
+    <string name="photo_view_description_checked">မှဓာတ်ပုံ <xliff:g id="account_type">%1$s </xliff:g><xliff:g id="user_name">%2$s </xliff:g>checked</string>
+    <string name="photo_view_description_not_checked_no_info">အမည်မသိသောအကောင့်မှဓာတ်ပုံကိုမစစ်ဆေးပါ</string>
+    <string name="photo_view_description_checked_no_info">အမည်မသိသောအကောင့်မှဓာတ်ပုံကိုစစ်ဆေးသည်</string>
+    <string name="locale_change_in_progress">ဘာသာစကားပြောင်းလည်းမှုနှင့်ကိုက်ညီအောင်မှတ်သားထားသောနံပါတ်များစာရင်း_x005F_x000D_
+ကိုလည်းပြောင်းလဲပေးနေသည်</string>
+    <string name="menu_copyTo">"ဆီသို့ကူးယူသည်"</string>
+    <string name="no_empty_email_in_usim">"အီးမေးလ်ပြည့်နေသည်တချို့သောမှတ်တမ်းများကူးခြင်းမလုပ်ဆောင်နိုင်ပါ "</string>
+    <string name="select_call_title">ခေါ်ဆိုပြီးသောနံပါတ်များကိုရွေးချယ်သည်</string>
+    <string name="delete_call_title">ခေါ်ဆိုပြီးသောနံပါတ်များကိုဖျက်သည်</string>
+    <string name="delete_call_message">ခေါ်ဆိုပြီးသောနံပါတ်များကိုဖျက်နေသည်</string>
+    <string name="delete_call_alert">ရွေးချယ်ထားသောခေါ်ဆိုပြီးနံပါတ်များကိုဖျက်ရန်သေချာပါသလား</string>
+    <string name="title_del_call">ဖျက်သည်</string>
+    <string name="multi_pick_recent_title">မကြာသေးမီ</string>
+    <string name="multi_pick_contacts_title">မှတ်သားထားသောနံပါတ်</string>
+    <string name="multi_pick_group_title">အုပ်စု</string>
+    <string name="contacts_selected">%d ရာခိုင်နှုန်းရွေးချယ်ပြီး</string>
+    <string name="summary_count_numbers">%s ရာခိုုင်နှုန်းနံပါတ်</string>
+    <string name="contact_info_text_as_name">အမည်:</string>
+    <string name="contact_info_text_as_phone">ဖုန်း:</string>
+    <string name="contact_info_text_as_email">အီးမေးလ်:</string>
+    <string name="search_menu_search">ရှာဖွေသည်</string>
+    <string name="clear_call_log_button_text">ရှင်းလင်းသည်</string>
+    <string name="too_many_contacts_to_merge_message">ထည့်သွင်းမည့်မှတ်သားထားသည်နံပါတ်များအလွန်များနေသည်။ လျော့သင့်သည် <xliff:g id="count">%d</xliff:g></string>
+    <string name="replace_number_title_1">ယခင်ကနံပါတ်ကိုအစားထိုးမည်</string>
+    <string name="replace_number_title_2">ယခင်ကနံပါတ်ကိုအစားထိုးမည်လား</string>
+    <string name="replace_button">အစားထိုးသည်</string>
+    <string name="merging_contacts">မှတ်သားထားသောနံပါတ်များကိုပေါင်းစည်းနေသည်</string>
+    <string name="searching_duplicated_contacts">ထပ်နေသောမှတ်သားထားသောနံပါတ်များကိုရှာဖွေသည်</string>
+    <string name="no_duplicated_contacts">ထပ်နေသောမှတ်သားထားသောနံပါတ်များမရှိပါ</string>
+    <string name="give_up_merging">မှတ်သားထားသောနံပါတ်များပေါင်းစည်းခြင်းကိုစွန့်လွှတ်သည်</string>
+    <string name="give_up">"စွန့်လွှတ်သည်"</string>
+    <string name="cancel">"ပယ်ဖျက်သည်"</string>
+    <string name="merge_complete">"ပေါင်းစည်းခြင်းပြီးဆုံးသည်"</string>
+    <string name="sim_email_full">"ဆင်ကဒ်အီးမေးလ်ပြည့်နေသည်"</string>
+    <string name="sim_anr_full">"ဆင်ကဒ်နံပါတ်ပြည့်နေသည်"</string>
+    <string name="merge_fail">"ပေါင်းစည်းခြင်းမလုပ်နိုင်ပါ"</string>
+    <string name="show_phone_number">ဖုန်းနံပါတ်ကိုပြသည်</string>
+    <string name="description_dialpad_back">ပြန်လည်လမ်းညွှန်သည်</string>
+    <string name="description_dialpad_overflow">ထပ်ရွေးချယ်စရာများ</string>
+    <string name="default_notification_description">့ပုံမှန်အသံ (<xliff:g id="default_sound_title">%1$s</xliff:g>)</string>
+    <string name="ringtone_silent">မရှိပါ</string>
+    <string name="ringtone_unknown">အမည်မသိဖုန်းမြည်သံ</string>
+    <string name="action_label">ပြန်ပို့သည်</string>
+    <string name="accessbility_suggestion_dropdown_opened">အကြံပြုထားသောမှတ်သားထားသည့်ဖုန်းနံပါတ်များဖွင့်သည်</string>
+    <string name="accessbility_suggestion_dropdown_closed">အကြံပြုချက်မရနိုင်ပါ</string>
+    <string name="dropdown_delete_button_desc">ဖယ်ရှားသည် <xliff:g id="contact">%s</xliff:g> လက်ခံရရှိသူမှ</string>
+    <string name="chips_action_copy">ကူးယူသည်</string>
+    <string name="chips_action_cancel">ပယ်ဖျက်သည်</string>
+    <string name="chips_permission_text">ွှအကြံပြုထားသည့်မှတ်သားထားသောနံပါတ်များကိုခွင့်ပြုသည်</string>
+    <string name="share_intent_label">စာတို</string>
+    <string name="share_intent_activity_label">ပြောထားသောစကားများကိုမှတ်သည်</string>
+    <string name="action_settings">စက်တင်များ</string>
+    <string name="sendButtonContentDescription">စာတိုပို့သည်</string>
+    <string name="attachMediaButtonContentDescription">တွဲဖိုင်ထည့်သည်</string>
+    <string name="next_with_arrow">နောက်နှင့်ဂျီတီ &gt;</string>
+    <string name="next">နောက်</string>
+    <string name="exit">ထွက်သည်</string>
+    <string name="settings_with_arrow">စက်တင်များနှင့်ဂျီတီ &gt;</string>
+    <string name="settings">စက်တင်များ</string>
+    <string name="contact_picker_all_contacts_tab_title">မှတ်သားထားသောနံပါတ်များအားလုံး</string>
+    <string name="contact_list_send_to_text">ဆီသို့ပို့သည် <xliff:g id="destination">%s</xliff:g></string>
+    <string name="mediapicker_cameraChooserDescription">ဓာတ်ပုံသို့ဗီဒီယို</string>
+    <string name="mediapicker_galleryChooserDescription">စက်မှပုံများကိုရွေးချယ်သည်</string>
+    <string name="mediapicker_audioChooserDescription">အသံသွင်းထားသည်</string>
+    <string name="mediapicker_gallery_title">ဓာတ်ပုံရွေးသည်</string>
+    <string name="mediapicker_gallery_item_selected_content_description">မီဒီယာကိုရွေးချယ်သည်</string>
+    <string name="mediapicker_gallery_item_unselected_content_description">မီဒီယာကိုရွေးချယ်ခြင်းကိုဖျက်သည်</string>
+    <string name="mediapicker_gallery_title_selection"><xliff:g id="count">%d</xliff:g> ရွေးချယ်သည်</string>
+    <string name="mediapicker_gallery_image_item_description">ပုံရိပ် <xliff:g id="date">%1$tB %1$te %1$tY %1$tl %1$tM %1$tp</xliff:g></string>
+    <string name="action_share">မျှဝေသည်</string>
+    <string name="posted_just_now">"ယခုတင်"</string>
+    <string name="posted_now">"ယခု"</string>
+    <string name="class_0_message_activity">စာတိုမရှိပါ</string>
+    <string name="save">သိမ်းသည်</string>
+    <string name="sms_storage_low_title">သိုလှောင်နိုင်သောနေရာမရှိပါ</string>
+    <string name="sms_storage_low_text">သင့်ဖုန်းတွင်နေရာမဆန့်သောကြောင့် စာတိုများပေးပို့ခြင်းရရှိခြင်းလုပ်ဆောင်နိုင်မည်_x005F_x000D_
+မဟုတ်</string>
+    <string name="sms_storage_low_notification_ticker">စာတို၏သိုလှောင်နိုင်သောနေရာလျော့နည်းနေသည်။ စာတိုများကိုဖျက်ပစ်ရန်လိုသည်</string>
+    <string name="enter_phone_number_title">သင့်ဖုန်းနံပါတ်ကိုအတည်ပြုပါ</string>
+    <string name="enter_phone_number_text">ဤတစ်ဆင့်တည်းဖြင့်စာတိုများသည်အုပ်စုကောင်းစွာရောက်ရှိအောင်ပို့ပေးသည်</string>
+    <string name="enter_phone_number_hint">ဖုန်းနံပါတ်</string>
+    <string name="delete_all_media">မီဒီယာနှင့်အတူစာတိုများကိုဖျက်သည်</string>
+    <string name="delete_oldest_messages">စာတိုအဟောင်းများကိုဖျက်သည် <xliff:g id="duration">%s</xliff:g></string>
+    <string name="ignore">လျစ်လျူရှုသည်</string>
+    <string name="delete_all_media_confirmation">မီဒီယာနှင့်အတူစာတိုများကိုဖျက်မှာလား?</string>
+    <string name="delete_oldest_messages_confirmation">စာတိုအဟောင်းများကိုဖျက်မှာလား <xliff:g id="duration">%s</xliff:g>?</string>
+    <string name="auto_delete_oldest_messages_confirmation">စာတိုအဟောင်းများကိုဖျက်မှာလား <xliff:g id="duration">%s</xliff:g> အလိုလျောက်ဖျက်မည်လား?</string>
+    <string name="incoming_text_sender_content_description"><xliff:g id="sender">%s</xliff:g> ပြောခဲ့သည်</string>
+    <string name="outgoing_text_sender_content_description">သင်ပြောခဲ့သည်</string>
+    <string name="incoming_sender_content_description">မှစာတို <xliff:g id="sender">%s</xliff:g></string>
+    <string name="outgoing_sender_content_description">သင်စာတိုပို့ခဲ့သည်</string>
+    <string name="message_status_sending">ပို့နေသည်&#8230;</string>
+    <string name="message_status_send_failed">မပို့ပါ။နောက်တကြိမ်ကြိုးစားရန်နှိပ်ပါ</string>
+    <string name="message_status_send_retrying">မပို့ပါ။နောက်တကြိမ်ကြိုးစားပါ&#8230;</string>
+    <string name="message_status_resend">ပြန်ပို့မည်သို့ဖျက်မည်</string>
+    <string name="message_status_send_failed_emergency_number">အရေးပေါ်ဝန်ဆောင်မှုအတွက်ကျေးဇူးပြုပြီးအသံခေါ်ဆိုမှုပြုလုပ်ပါ။သင့်စာတိုသည်_x005F_x000D_
+ဒီအချိန်တွင်ပို့လို့မရပါ</string>
+    <string name="message_title_manual_download">အမ်အမ်အက်စ်စာတိုအသစ်ကိုဒေါင်းလုတ်လုပ်သည်</string>
+    <string name="message_title_downloading">အမ်အမ်အက်စ်စာတိုအသစ်ကို</string>
+    <string name="message_title_download_failed">ဒေါင်းလုတ်လုပ်လို့မရပါ</string>
+    <string name="message_status_download_failed">နောက်ထပ်ကြိုးစားကြည့်ရန်နှိပ်ပါ</string>
+    <string name="message_status_download">ဒေါင်းလုတ်လုပ်ရန်နှိပ်ပါ</string>
+    <string name="message_status_download_action">ဒေါင်းလုတ်သို့ဖျက်မည်</string>
+    <string name="message_status_downloading">ဒေါင်းလုတ်လုပ်နေသည်&#8230;</string>
+    <string name="message_status_download_error">စာတိုသည်သက်တမ်းကုန်ဆုံးသွားသည် သို့ မရရှိနိုင်ပါ</string>
+    <string name="mms_info">အရွယ်စား: <xliff:g id="messageSize">%1$s</xliff:g>, သက်တမ်းကုန်ခြင်း: <xliff:g id="messageExpire">%2$s</xliff:g></string>
+    <string name="unknown_sender">အမည်မသိပို့သူ</string>
+    <string name="delivered_status_content_description">ပို့ပြီးသည်</string>
+    <string name="notification_send_failures_line1_singular">စာတိုမရောက်ပါ</string>
+    <string name="notification_send_failures_line1_plural">တချို့သောစာတိုများသည်စာတိုအဖြစ်မပို့နိုင်ပါ</string>
+    <string name="notification_download_failures_line1_singular">စာတိုကိုဒေါင်းလုတ်လုပ်လို့မရပါ</string>
+    <string name="notification_download_failures_line1_plural">တချို့သောစာတိုများသည်စာတိုအဖြစ်မပို့နိုင်ပါ</string>
+    <string name="notification_emergency_send_failure_line1">ဆီသို့စာတို <xliff:g id="number">%1$s</xliff:g> မပို့ပါ</string>    <!-- Notification content when emergency SMS fails to send -->
+    <string name="notification_emergency_send_failure_line2">        အရေးပေါ်ဝန်ဆောင်မှုအတွက်ကျေးဇူးပြုပြီးအသံခေါ်ဆိုမှုပြုလုပ်ပါ။သင့်စာတိုသည်_x005F_x000D_
+ဒီအချိန်တွင်ပို့လို့မရပါ       <xliff:g id="number">%1$s</xliff:g> ဒီအချိန်တွင်ပို့လို့မရပါ     </string>
+    <string name="camera_error_opening">ကင်မရာမရပါ</string>
+    <string name="camera_error_unknown">ကင်မရာမရပါ</string>
+    <string name="camera_error_video_init_fail">ဗီဒီယိုရိုက်ကူးလို့မရပါ</string>
+    <string name="camera_error_storage_fail">မီဒီယာကိုသိမ်းလို့မရပါ</string>
+    <string name="camera_error_failure_taking_picture">ဓာတ်ပုံရိုက်လို့မရပါ</string>
+    <string name="back">နောက်ဘက်သို့</string>
+    <string name="action_menu_show_archived">ဖျောက်ထားသည်</string>
+    <string name="action_delete">ဖျက်သည်</string>
+    <string name="action_archive">ဖျောက်ထားသည်</string>
+    <string name="action_unarchive">ဖျောက်ထားခြင်းကိုပယ်ဖျက်သည်</string>
+    <string name="action_notification_off">သတိပေးချက်ပိတ်သည်</string>
+    <string name="action_notification_on">သတိပေးချက်ဖွင့်သည်</string>
+    <string name="action_download">ဒေါင်းလုတ်လုပ်သည်</string>
+    <string name="action_send">ပို့သည်</string>
+    <string name="action_delete_message">ဖျက်သည်</string>
+    <string name="delete_message_confirmation_dialog_title">ဤစာတိုကိုဖျက်မှားလား?</string>
+    <string name="delete_message_confirmation_dialog_text">ဤလုပ်ဆောင်ချက်မပြီးနိုင်ပါ</string>
+    <string name="delete_message_confirmation_button">ဖျက်သည်</string>
+    <string name="delete_conversation_confirmation_button">ဖျက်သည်</string>
+    <string name="delete_conversation_decline_button">ပယ်ဖျက်သည်</string>
+    <string name="recipient_hint">သို့</string>
+    <string name="action_multiselect">ပုံအမျိုးမျိုးရွေးချယ်သည်</string>
+    <string name="action_confirm_multiselect">ရွေးချယ်မှုကိုအတည်ပြုသည်</string>
+    <string name="audio_recording_start_failed">အသံမသွင်းနိုင်ပါ၊ထပ်မံကြိုးစားကြည့်ပါ</string>
+    <string name="audio_recording_replay_failed">အသံကိုမဖွင့်နိုင်ပါ။ထပ်မံကြိုးစားကြည့်ပါ</string>
+    <string name="audio_recording_error"> အသံမသိမ်းနိုင်ပါ၊ထပ်မံကြိုးစားကြည့်ပါ</string>
+    <string name="audio_picker_hint_text">နှိပ်ပြီးအမ်ပီယာကိုင်ထားသည်</string>
+    <string name="notification_picture">ရုပ်ပုံ</string>
+    <string name="notification_audio">အသံကလစ်</string>
+    <string name="notification_video">ဗီဒီယိုကလစ်</string>
+    <string name="notification_vcard">မှတ်သားထားသောနံပါတ်များကဒ်</string>
+    <string name="notification_download_mms">ဒေါင်းလုတ်လုပ်သည်</string>
+    <string name="notification_reply_via_sms">စာတိုစနစ်နှင့်ပြန်စာပို့သည်</string>
+    <string name="notification_reply_via_mms">အမ်အမ်အက်စ်စာတိုစနစ်နှင့်ပြန်စာပို့သည်</string>
+    <string name="notification_reply_prompt">ပြန်ပြောသည်</string>
+    <string name="unknown_self_participant">ကျွန်ုပ်</string>
+    <string name="blocked_toast_message">မှတ်သားထားသောနံပါတ်ကိုပိတ်ပင်သည်</string>
+    <string name="unblocked_toast_message">မှတ်သားထားသောနံပါတ်ကိုပိတ်ပင်ခြင်းကိုရုတ်သိမ်းသည်</string>
+    <string name="archived_toast_message"><xliff:g id="count">%d</xliff:g> ဖျောက်ထားသည်</string>
+    <string name="unarchived_toast_message"><xliff:g id="count">%d</xliff:g> ဖျောက်ထားခြင်းကိုပယ်ဖျက်သည်</string>
+    <string name="notification_off_toast_message">သတိပေးချက်ပိတ်သည်</string>
+    <string name="notification_on_toast_message">သတိပေးချက်ဖွင့်သည်</string>
+    <string name="toast_after_setting_default_sms_app_for_message_send">အားလုံးစီစဉ်ပြီးပြီ။နောက်တစ်ကြိမ်ပို့ရန်နှိပ်ပါ</string>
+    <string name="toast_after_setting_default_sms_app">စာတိုပို့ခြင်းကိုပုံမှန်စာတိုပို့သည့်အက်ပလီကေးရှင်းဖြင့်ပြုလုပ်ထားခြင်းအောင်မြင်သည်</string>
+    <string name="audio_attachment_content_description">တွဲထားသောအသံဖိုင်ကိုဖွင့်သည်</string>
+    <string name="audio_play_content_description">တွဲထားသောအသံဖိုင်ကိုဖွင့်သည်</string>
+    <string name="audio_pause_content_description">ခဏရပ်သည်</string>
+    <string name="incoming_message_announcement">မှစာတို <xliff:g id="sender">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>.</string>
+    <string name="one_on_one_incoming_failed_message_prefix">မှစာတိုမအောင်မြင်ပါ <xliff:g id="sender">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>. အချိန်: <xliff:g id="time">%3$s</xliff:g>.</string>
+    <string name="one_on_one_outgoing_draft_message_prefix">ဆီသို့စာတိုမပို့နိုင်ပါ <xliff:g id="contact">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>. အချိန်: <xliff:g id="time">%3$s</xliff:g>.</string>
+    <string name="one_on_one_outgoing_sending_message_prefix">ဆီသို့စာတိုပို့နေသည် <xliff:g id="contact">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>. အချိန်: <xliff:g id="time">%3$s</xliff:g>.</string>
+    <string name="one_on_one_outgoing_successful_message_prefix">ဆီသို့စာတို <xliff:g id="contact">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>. အချိန်: <xliff:g id="time">%3$s</xliff:g>.</string>
+    <string name="group_incoming_failed_message_prefix">မှစာတိုမအောင်မြင်ပါ<xliff:g id="sender">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>. အချိန်: <xliff:g id="time">%3$s</xliff:g>. <xliff:g id="groupInfo">%4$s</xliff:g>.</string>
+    <string name="group_outgoing_draft_message_prefix">ဆီသို့စာတိုမပို့နိုင်ပါ <xliff:g id="group">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>. အချိန်: <xliff:g id="time">%3$s</xliff:g>.</string>
+    <string name="group_outgoing_sending_message_prefix">သို့စာတိုမအောင်မြင်ပါ <xliff:g id="group">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>. အချိန်: <xliff:g id="time">%3$s</xliff:g>.</string>
+    <string name="group_outgoing_successful_message_prefix">ဆီသို့စာတို <xliff:g id="group">%1$s</xliff:g>: <xliff:g id="message">%2$s</xliff:g>. အချိန်: <xliff:g id="time">%3$s</xliff:g>.</string>
+    <string name="failed_message_content_description">စာတိုမအောင်မြင်ပါ။ထပ်မံကြိုးစားသည်</string>
+    <string name="delete_subject_content_description">အကြောင်းအရာကိုဖျက်သည်</string>
+    <string name="camera_switch_to_video_mode">ဗီဒီယိုရိုက်သည်</string>
+    <string name="camera_switch_to_still_mode">ပုံရိပ်ကိုရိုက်ကူးနေဆဲ</string>
+    <string name="camera_take_picture">့ဓာတ်ပုံရိုက်သည်</string>
+    <string name="camera_start_recording">ဗီဒီယိုကိုစတင်မှတ်တမ်းတင်သည်</string>
+    <string name="camera_switch_full_screen">ကင်မရာမျက်နှာပြင်ပြည့်ဖြစ်ရန်နှိပ်သည်</string>
+    <string name="camera_switch_camera_facing">ရှေ့နှင့်နောက်ကင်မရာနှစ်ခုကြားနှိပ်သည်</string>
+    <string name="camera_stop_recording">မှတ်တမ်းတင်ခြင်းကိုရပ်ပြီးဗီဒီယိုကိုတွဲထည့်သည်</string>
+    <string name="camera_cancel_recording">ဗီဒီယိုကိုမှတ်တမ်းတင်ခြင်းပိတ်သည်</string>
+    <string name="photo_view_activity_title">ဓာတ်ပုံကိုစာတိုအဖြစ်ပို့သည်</string>
+    <string name="attachment_file_description">အမ်အမ်အက်စ်စာတိုဖိုင်တွဲကိုသိမ်းသည်</string>
+    <string name="settings_activity_title">စက်တင်</string>
+    <string name="archived_activity_title">ဖျောက်ထားသည်</string>
+    <string name="mms_messaging_category_pref_title">အမ်အမ်အက်စ်စာတိုစနစ်</string>
+    <string name="advanced_category_pref_title">ကောင်းမွန်သော</string>
+    <string name="debug_category_pref_title">ဖယ်ရှားသည်</string>
+    <string name="notifications_enabled_pref_title">သတိပေးချက်များ</string>
+    <string name="notification_sound_pref_title">အသံ</string>
+    <string name="silent_ringtone">အသံဖျောက်ထားသည်</string>
+    <string name="notification_vibrate_pref_title">တုန်ခါသည်</string>
+    <string name="delivery_reports_pref_title">စာတိုစနစ်ပိုဆောင်မှုမှတ်တမ်း</string>
+    <string name="delivery_reports_pref_summary">ပိုလိုက်သောစာတိုများ၏ပို့ဆောင်မှုမှတ်တမ်းတောင်းခံခြင်း</string>
+    <string name="auto_retrieve_mms_pref_title">အလိုလျောက်ဖျောက်ထားသည်</string>
+    <string name="auto_retrieve_mms_pref_summary">အလိုလျောက်အမ်အမ်အက်စာတိုများကိုဖျောက်ထားသည်</string>
+    <string name="auto_retrieve_mms_when_roaming_pref_title">အခြားကွန်ရက်သို့ပြောင်းပြီးအလိုလျောက်ဖျောက်ထားသည်</string>
+    <string name="auto_retrieve_mms_when_roaming_pref_summary">အမ်အမ်အက်စာတိုကိုအခြားကွန်ရက်သို့ပြောင်းစဉ်အလိုလျောက်ဖျောက်ထားသည်</string>
+    <string name="group_mms_pref_title">အုပ်စုလိုက်စာတိုပို့ခြင်း</string>
+    <string name="sms_disabled_pref_title">ပုံမှန်စာတိုပို့ အက်ပလီကေးရှင်း</string>
+    <string name="sms_enabled_pref_title">ပုံမှန်စာတိုပို့ အက်ပလီကေးရှင်း</string>
+    <string name="mms_phone_number_pref_title">သင့်ဖုန်းနံပါတ်</string>
+    <string name="unknown_phone_number_pref_display_value">အမည်မသိ</string>
+    <string name="send_sound_pref_title">စာတိုထွက်သွားသည့်အသံ</string>
+    <string name="dump_sms_pref_title">မလိုအပ်ပဲစုပုံနေသောစာတိုများ</string>
+    <string name="dump_sms_pref_summary">မလိုအပ်ပဲစုပုံနေသောစာတိုများမျအချက်လက်များကိုပြင်ပသိုလှောင်ထားသောဖိုင်သို့</string>
+    <string name="dump_mms_pref_title">မလိုအပ်ပဲစုပုံနေသောအမ်အမ်အက်စ်စာတိုများ</string>
+    <string name="dump_mms_pref_summary">မလိုအပ်ပဲစုပုံနေသောစာတိုများမျအချက်လက်များကိုပြင်ပသိုလှောင်ထားသောဖိုင်သို့</string>
+    <string name="wireless_alerts_title">ကြိုးမဲ့အချက်ပေးစနစ်များ</string>
+    <string name="message_context_menu_copy_text">စာသားကိုကူးယူသည်</string>
+    <string name="message_context_menu_view_details">အသေးစိတ်ကြည့်သည်</string>
+    <string name="message_context_menu_forward_message">ရှေ့သို့</string>
+    <string name="message_details_title">စာတိုအသေးစိတ်</string>
+    <string name="message_type_label">စာရိုက်သည်</string>
+    <string name="text_message">စာတိုမှစာသား</string>
+    <string name="multimedia_message">မီဒီယာပေါင်စုံစာတို</string>
+    <string name="from_label">မှ</string>
+    <string name="to_address_label">သို့</string>
+    <string name="sent_label">ပို့ခဲ့သည်</string>
+    <string name="received_label">လက်ခံရရှိသည်</string>
+    <string name="subject_label">အကြောင်းအရာ </string>
+    <string name="message_size_label">အရွယ်စား</string>
+    <string name="priority_label">ဦးစားပေး</string>
+    <string name="sim_label">ဆင်းကဒ်</string>
+    <string name="priority_high">မြင့်သော</string>
+    <string name="priority_normal">ပုံမှန်</string>
+    <string name="priority_low">နိမ့်သော</string>
+    <string name="sim_slot_identifier">ဆင်းကဒ် <xliff:g id="sim_slot_number">%s</xliff:g></string>
+    <string name="hidden_sender_address">ပို့သူလိပ်စာကိုဖျောက်ထားသည်</string>
+    <string name="cant_send_message_while_loading_attachments">တွဲပို့မည့်အရာကိုလုတ်ဒင်းလုပ်နေလျှင်စာတိုပို့လို့မရပါ</string>
+    <string name="cant_send_message_without_active_subscription">ကွန်ရက်သည်အဆင်သင့်မဖြစ်သေးပါ။ထပ်မံကြိုးစားကြည့်ပါ</string>
+    <string name="chips_text_delete_button_content_description">စာသားကိုဖျက်သည်</string>
+    <string name="numeric_text_keyboard_toggle_button_content_description">ဝင်လာသည့်စာသားနှင့်နံပါတ်များအကြားနှိပ်သည်</string>
+    <string name="add_more_participants_button_content_description">ပါဝင်သူထပ်ထည့်သည်</string>
+    <string name="confrim_participants_button_content_description">ပါဝင်သူများအတည်ပြုသည်</string>
+    <string name="start_new_conversation">စကားပြောခြင်းအသစ်စသည်</string>
+    <string name="gallery_checkbox_content_description">ဤအရာကိုရွေးချယ်သည်</string>
+    <string name="video_thumbnail_view_play_button_content_description">ဗီဒီယိုကိုဖွင့်သည်</string>
+    <string name="action_people_and_options">လူနှင့်</string>
+    <string name="action_debug_options">ဖယ်ရှားသည်</string>
+    <string name="people_and_options_activity_title">လူနှင့်အမ်ပီယာ၊ရွေးချယ်စရာ</string>
+    <string name="general_settings_title">ယေဘူယျ</string>
+    <string name="participant_list_title">ဤစကားပြောခန်းမှလူများ</string>
+    <string name="action_call">ဖုန်းခေါ်သည်</string>
+    <string name="compose_message_view_hint_text">စာတိုပို့သည်</string>
+    <string name="compose_message_view_hint_text_multi_sim">စာတိုပို့သည်&lt;br/&gt;&lt;small&gt;from <xliff:g id="sim_name">%s</xliff:g>&lt;/small&gt;</string>
+    <string name="menu_license">လိုင်စင်အရင်းမြစ်ကိုဖွင့်သည်</string>
+    <string name="notifications_enabled_conversation_pref_title">သတိပေးချက်များ</string>
+    <string name="mms_attachment_limit_reached">တွဲ့ပို့ရမည့်အရာများကန့်သတ်ထားသည့်ပမာဏကိုရောက်ရှိသည်</string>
+    <string name="add_contact_confirmation_dialog_title">မှတ်သားထားသောနံပါတ်များသိုထည့်မည်လား?</string>
+    <string name="add_contact_confirmation">မှတ်သားထားသောနံပါတ်များသိုထည့်သည်</string>
+    <string name="compose_message_view_subject_hint_text">အကြောင်းအရာ</string>
+    <string name="conversation_message_view_subject_text">အကြောင်းအရာ</string>
+    <string name="loading_vcard">မှတ်သားထားသောနံပါတ်ကဒ်ကိုလုတ်ဒင်းလုပ်သည်</string>
+    <string name="failed_loading_vcard">မှတ်သားထားသောနံပါတ်ကဒ်ကိုလုတ်ဒင်းလုပ်လို့မရပါ</string>
+    <string name="vcard_tap_hint">မှတ်သားထားသောနံပါတ်ကဒ်ကိုကြည့်သည်</string>
+    <string name="vcard_detail_activity_title">မှတ်သားထားသောနံပါတ်ကဒ်</string>
+    <string name="vcard_detail_birthday_label">မွေးနေ့</string>
+    <string name="vcard_detail_notes_label">မှတ်စု</string>
+    <string name="forward_message_activity_title">စာတိုရှေ့သို</string>
+    <string name="sms_disabled">စာတိုစနစ်မရနိုင်ပါ</string>
+    <string name="requires_default_sms_change_button">ပြောင်းလဲသည်</string>
+    <string name="no_preferred_sim_selected">စာတိုပို့ခြင်းအတွက်ရွေးချယ်ထားသောဆင်းကဒ်မရှိပါ</string>
+    <string name="requires_sms_permissions_message">ဤအက်ပလီကေးရှင်းကိုဖုန်းပိုင်ရှင်ကခွင့်မပြုပါ</string>
+    <string name="requires_sms_permissions_close_button">အိုကေ</string>
+    <string name="too_many_participants">စကားပြောခန်းတွင်ပါဝင်သူအလွန်များနေသည်</string>
+    <string name="camera_media_failure">ကင်မရာမှပုံကိုယူလို့မရပါ</string>
+    <string name="conversation_list_item_view_draft_message">အကြမ်း</string>
+    <string name="conversation_list_empty_text">သင်စကားပြောခန်းကိုစသည်နှင့်တပြိုင်နက်ဒီမှာအစဉ်လိုက်မြင်ရမည်ဖြစ်သည်</string>
+    <string name="archived_conversation_list_empty_text">ဒီနေရာမှပေါ်နေသောစကားပြောခန်းများကိုဖျောက်ထားမည်</string>
+    <string name="conversation_list_first_sync_text">စကားပြောခြင်းကိုလုတ်ဒင်းလုပ်နေသည်&#8230;</string>
+    <string name="conversation_list_snippet_picture">ရုပ်ပုံ</string>
+    <string name="conversation_list_snippet_audio_clip">အသံကလစ်</string>
+    <string name="conversation_list_snippet_video">ဗီဒီယို</string>
+    <string name="conversation_list_snippet_vcard">မှတ်သားထားသောနံပါတ်ကဒ်</string>
+    <string name="mms_text">အမ်အမ်အက်စ်</string>
+    <string name="snack_bar_undo">နောက်သို့ပြန်သွားသည်</string>
+    <string name="snack_bar_retry">ထပ်မံကြိုစားကြည့်သည်</string>
+    <string name="contact_list_empty_text">စာတိုအသစ်စရန်မှတ်သားထားသောအမည်သို့ဖုန်းနံပါတ်သို့ဝင်သည်</string>
+    <string name="action_block">ပိတ်ပင်သည်</string>
+    <string name="block_contact_title">ပိတ်ပင်သည် <xliff:g id="destination">%s</xliff:g></string>
+    <string name="unblock_contact_title">ပိတ်ပင်ခြင်းကိုရုတ်သိမ်းသည် <xliff:g id="destination">%s</xliff:g></string>
+    <string name="block_confirmation_title">ပိတ်ပင်သည် <xliff:g id="destination">%s</xliff:g>?</string>
+    <string name="block_confirmation_message">ဤနံပါတ်မှစာတိုများကိုသက်လက်ခံရရှိမည်ဖြစ်သော်လည်းသတိပေးခြင်းပြုလုပ်တော့_x005F_x000D_
+မည်မဟုတ်ပါ။ဤစကားပြောခန်းကိုဖျောက်ထားလိမ့်မည်</string>
+    <string name="blocked_contacts_title">မှတ်သားထားသောနံပါတ်များကိုပိတ်ပင်သည်</string>
+    <string name="tap_to_unblock_message">ပိတ်ပင်ခြင်းကိုရုတ်သိမ်းသည်</string>
+    <string name="pick_image_from_document_library_content_description">ဖိုင်အစုဝေးမှပုံကိုရွေးချယ်သည်</string>
+    <string name="sending_message">စာတိုပို့နေသည်</string>
+    <string name="send_message_success">စာတိုပို့ခဲ့သည်</string>
+    <string name="send_message_failure_no_data">ဆယ်လူလာဒေတာကိုပိတ်သည်။သင့်ဆက်တင်ကိုစစ်ကြည့်ပါ</string>
+    <string name="send_message_failure_airplane_mode">လေယဉ်ပျံသန်းသည့်မုဒ်ကိုဖွင့်ထားလျှင်စာတိုကိုပို့လို့မရပါ</string>
+    <string name="send_message_failure">စာတိုမပို့နိုင်ပါ</string>
+    <string name="download_message_success">စာတိုကိုဒေါင်းလုတ်လုပ်ခဲ့သည်</string>
+    <string name="download_message_failure_no_data">ဆယ်လူလာဒေတာကိုပိတ်သည်။သင့်ဆက်တင်ကိုစစ်ကြည့်ပါ</string>
+    <string name="download_message_failure_airplane_mode">လေယဉ်ပျံသန်းသည့်မုဒ်ကိုဖွင့်ထားလျှင်စာတိုကိုဒေါင်းလုတ်လုပ်လို့မရပါ</string>
+    <string name="download_message_failure">စာတိုကိုဒေါင်းလုတ်မရပါ</string>
+    <string name="content_description_for_number_zero">သုည</string>
+    <string name="content_description_for_number_one">တစ်</string>
+    <string name="content_description_for_number_two">နှစ်</string>
+    <string name="content_description_for_number_three">သုံး</string>
+    <string name="content_description_for_number_four">လေး</string>
+    <string name="content_description_for_number_five">ငါး</string>
+    <string name="content_description_for_number_six">ခြောက်</string>
+    <string name="content_description_for_number_seven">ခုနစ်</string>
+    <string name="content_description_for_number_eight">ရှစ်</string>
+    <string name="content_description_for_number_nine">ကိုး</string>
+    <string name="carrier_send_error">စာတိုကိုဖြင့်မပို့နိုင်ပါ <xliff:g id="carrierName">%1$s</xliff:g>, အမှား <xliff:g id="errorCode">%2$d</xliff:g></string>
+    <string name="carrier_send_error_unknown_carrier">အမည်မသိသယ်ဆောင်မှုဖြင့်စာတိုကိုပို့မရပါ<xliff:g id="errorCode">%1$d</xliff:g></string>
+    <string name="message_fwd">ရှေ့သို့: <xliff:g id="subject">%s</xliff:g></string>
+    <string name="mms_failure_outgoing_service">စာတိုကိုပို့မရပါ။နပ်ဝက်တွင်ဝန်ဆောင်မှုသည်အသက်ဝင်ခြင်းမရှိပါ</string>
+    <string name="mms_failure_outgoing_address">စာတိုပို့မရပါ လိပ်စာ၏အကွာဝေးမရနိုင်ပါ</string>
+    <string name="mms_failure_outgoing_corrupt">စာတိုပို့မရပါ စာတိုသည်မရနိုင်ပါ</string>
+    <string name="mms_failure_outgoing_content">စာတိုပို့မရပါ စာတိုတွင်ထောက်ပံ့ပေးခြင်းမပြုသောအကြောင်းအရာပါဝင်နေသည်</string>
+    <string name="mms_failure_outgoing_unsupported">စာတိုပို့မရပါ စာတိုသည်ထောက်ပံ့ပေးခြင်းမပြုသောစာတိုဖြစ်နေသည်</string>
+    <string name="mms_failure_outgoing_too_large">စာတိုပို့မရပါအလွန်ရှည်သည်</string>
+    <string name="in_conversation_notify_new_message_text">စာတိုအသစ်</string>
+    <string name="in_conversation_notify_new_message_action">ကြည့်သည်</string>
+    <string name="message_image_content_description">့ပုံ </string>
+    <string name="activity_not_found_message">သင့်တော်သောအက်ပလီကေးရှင်းကိုမတွေ့ပါ</string>
+    <string name="chips_delete_content_description">လက်ခံရရှိသူကိုဖယ်ရှားသည်</string>
+    <string name="share_new_message">စာတိုအသစ်</string>
+    <string name="share_cancel">ပယ်ဖျက်သည်</string>
+    <string name="apn_edit">ရရှိနိုင်သောအမှတ်များကိုပြင်ဆင်သည်</string>
+    <string name="apn_not_set">မတပ်ဆင်ရသေး</string>
+    <string name="apn_name">အမည်</string>
+    <string name="apn_mmsc">အမ်အမ်အက်စ်စီ</string>
+    <string name="apn_mms_proxy">အမ်အမ်အက်စ် ကိုယ်စားလှယ်</string>
+    <string name="apn_mms_port">အမ်အမ်အက်စ်စာပို့စနစ်</string>
+    <string name="apn_mcc">အမ်စီစီ</string>
+    <string name="apn_mnc">အမ်အန်စီ</string>
+    <string name="menu_delete_apn">အေပီအန်ကိုဖျက်သည်</string>
+    <string name="menu_new_apn">အေပီအန်အသစ်</string>
+    <string name="menu_save_apn">သိမ်းသည်</string>
+    <string name="menu_discard_apn_change">ပယ်ဖျက်သည်</string>
+    <string name="error_apn_name_empty">အမည်နေရာတွင်ဘာမှမရှိလို့မရပါ</string>
+    <string name="error_mcc_not3">အမ်အမ်စီနေရာတွင်ဂဏန်းသုံးလုံးရှိရမည်</string>
+    <string name="error_mnc_not23">အမ်အန်စီနေရာတွင်ဂဏန်းနှစ်လုံးသို့သုံးလုံးရှိရမည်</string>
+    <string name="restore_default_apn">ပုံမှန်အေပီအန်ဆက်တင်ကိုပြန်သိုလှောင်ခြင်း</string>
+    <string name="menu_restore_default_apn">ပုံမှန်အဖြစ်ပြန်ဆင်သည်</string>
+    <string name="restore_default_apn_completed">ပုံမှန်အေပီအန်ဆက်တင်ကိုပြန်သိုလှောင်ခြင်းပြီးဆုံးသည်</string>
+    <string name="untitled_apn">ခေါင်းစဉ်မရှိ</string>
+    <string name="sms_apns_title">နာမည်အမှတ်များကိုရရှိသည်</string>
+    <string name="apn_settings">အေပီအန်များ</string>
+    <string name="apn_settings_not_available">အေပီအန်များ</string>
+    <string name="copy_to_clipboard_dialog_title">ကလစ်ဘုတ်သို့ကူးယူသည်</string>
+    <string name="copy_to_clipboard">ကူးယူသည်</string>
+    <string name="incoming_sim_name_text">သို့ <xliff:g id="sim_name">%s</xliff:g></string>
+    <string name="general_settings">ယေဘူယျ</string>
+    <string name="advanced_settings">ကောင်းမွန်သော</string>
+    <string name="general_settings_activity_title">ယေဘူယျဆက်တင်</string>
+    <string name="advanced_settings_activity_title">ကောင်းမွန်သောဆက်တင်</string>
+    <string name="sim_specific_settings">\"<xliff:g id="sim_name">%s</xliff:g>\" ဆင်းကဒ်</string>
+    <string name="disable_group_mms">အက်ဆမ်အက်စာတိုကိုလက်ခံရရှိသူများထံသီးခြားစီပို့သည်။သင်တစ်ယောက်ထဲသာ_x005F_x000D_
+ပြန်စာရရှိမည်</string>
+    <string name="enable_group_mms">အမ်အမ်အက်စာတိုတစ်စောင်ကိုလက်ခံရရှိသူအားလုံးထံပို့သည်</string>
+    <string name="sim_settings_unknown_number">အမည်မသိနံပါတ်</string>
+    <string name="secondary_user_new_message_title">စာတိုအသစ်</string>
+    <string name="secondary_user_new_message_ticker">စာတိုအသစ်</string>
+    <string name="sim_selector_button_content_description">ဆင်းကဒ်ရွေးချယ်သူ</string>
+    <string name="sim_selector_button_content_description_with_selection"><xliff:g id="sim">%1$s</xliff:g> ရွေးချယ်ထားသောဆင်းကဒ်ရွေးချယ်သူ</string>
+    <string name="send_button_long_click_description_no_sim_selector">အကြောင်းအရာကိုပြင်ဆင်သည်</string>
+    <string name="send_button_long_click_description_with_sim_selector">ဆင်းကဒ်ရွေးချယ်သည်သို့ အကြောင်းအရာကိုပြင်ဆင်သည်</string>
+    <string name="audio_record_view_content_description">နှိပ်ပြီးအသံကိုသွင်းသည်</string>
+    <string name="widget_new_conversation_content_description">စကားပြောခန်းအသစ်စသည်</string>
+    <string name="widget_title_content_description">စာတို</string>
+    <string name="widget_conversation_list_content_description">စကားပြောခန်းစာရင်း</string>
+    <string name="loading_conversations">စကားပြောခန်းကိုလုတ်ဒင်းလုပ်သည်</string>
+    <string name="loading_messages">စာတိုကိုလုတ်ဒင်းလုပ်သည်</string>
+    <string name="view_more_conversations">နောက်ထပ်စကားပြောခန်းများကိုကြည့်သည်</string>
+    <string name="view_more_messages">နောက်ထပ်စာတိုများကိုကြည့်သည်</string>
+    <string name="conversation_deleted">စကားပြောခန်းကိုဖျက်သည်</string>
+    <string name="tap_to_configure">စကားပြောခန်းကိုဖျက်သည်။ စာတိုစကားပြောခန်းအမျိုးမျိူးကိုပြရန်နှိပ်သည်</string>
+    <string name="update_destination_blocked">ပိတ်ပင်သည်</string>
+    <string name="update_destination_unblocked">ပိတ်ပင်ခြင်းကိုရုတ်သိမ်းသည်</string>
+    <string name="db_full">သိုလှောင်နိုင်သောနေရာနည်းနေသည်။တချိူ့သောအချက်လက်များပျောက်ဆုံးနိုင်သည်</string>
+    <string name="attachment_chooser_activity_title">တွဲမည့်အရာများကိုရွေးချယ်သည်</string>
+    <string name="action_confirm_selection">ရွေးချယ်ခြင်းကိုအတည်ပြုသည်</string>
+    <string name="attachment_chooser_selection"><xliff:g id="count">%d</xliff:g> ရွေးချယ်သည်</string>
+    <string name="attachment_limit_reached_dialog_message_when_composing">တွဲမည့်အရာများတစ်ခုသို့ပိုပြီးဖယ်ရှားပါ။ထို့နောက်ထပ်မံကြိုးစားကြည့်ပါ</string>
+    <string name="attachment_limit_reached_dialog_message_when_sending">သင့်စာတိုကိုပို့ကြည့်နိုင်သည်။သို့သော် သင်တွဲထားသောအရာများတစ်ခုသို့ တစ်ခုထက်_x005F_x000D_
+ပိုပြီးမဖယ်ရှားလျှင်ပို့လို့ရမည်မဟုတ်ပါ</string>
+    <string name="video_attachment_limit_exceeded_when_sending">စာတိုတစ်စောင်ကိုဗီဒီယိုတစ်ခုသာထည့်ပို့နိုင်သည်။အခြားသောဗီဒီယိုများကိုဖယ်ပြီးထပ်_x005F_x000D_
+မံကြိုးစားကြည့်ပါ</string>
+    <string name="attachment_load_failed_dialog_message">စာတိုသည်တွဲထားသောအရာကိုမဖြည်နိုင်ပါ</string>
+    <string name="attachment_limit_reached_send_anyway">ဘာပဲဖြစ်ဖြစ်ပို့သည်</string>
+    <string name="conversation_creation_failure">စကားပြောခန်းကိုမစတင်နိုင်ပါ</string>
+    <string name="selected_sim_content_message"><xliff:g id="selected_sim">%s</xliff:g> ရွေးချယ်သည်</string>
+    <string name="work_directory_display_name">အလုပ်နှင့်ပတ်သတ်သော အဆက်သွယ်များ</string>
+    <string name="notification_cancel_message">ဖတ်ရန်မှတ်သားသည်</string>
+    <string name="hide_message_text">စာတိုအသစ်ရှိသည်</string>
+    <string name="action_select_all">အားလုံးကိုရွေးချယ်သည်</string>
+    <string name="action_un_select_all">အားလုံးကိုရွေးချယ်ခြင်းမပြု</string>
+
+    <string name="delete_files_success">Delete %1$d files success</string>
+</resources>
+

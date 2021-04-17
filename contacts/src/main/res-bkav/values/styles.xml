@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--AnhNDd: style text cho phần các chữ cái trên đầu của itemview contact.-->
+    <style name="BtalkSectionHeaderStyle" parent="@android:style/TextAppearance.Large">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/bkav_date_section_text</item>
+        <!--<item name="android:fontFamily">sans-serif-medium</item>-->
+    </style>
+
+    <!--AnhNDd: style nut checkbox-->
+    <style name="BkavCheckBox">
+        <item name="android:button">@drawable/bkav_btn_check</item>
+    </style>
+
+    <!-- AnhNDd: Style Button trong dialog terms of use -->
+    <style name="BkavButtonV2">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">@dimen/bkav_button_height</item>
+        <item name="android:background">@drawable/bkav_button_bg_orange</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/bkav_button_text_selector_v2</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- AnhNDd: Style Button V2 doi nguoc lai trang thai cua nut -->
+    <style name="BkavButtonV2Invert">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">@dimen/bkav_button_height</item>
+        <item name="android:background">@drawable/bkav_button_bg_blue</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/bkav_button_text_selector_v2</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

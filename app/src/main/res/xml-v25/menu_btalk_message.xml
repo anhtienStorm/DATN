@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Anhdts shortcut cho icon message launcher-->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="new_message"
+        android:enabled="true"
+        android:icon="@drawable/menu_create_message"
+        android:shortcutShortLabel="@string/menu_label_new_message"
+        android:shortcutLongLabel="@string/menu_label_new_message"
+        android:shortcutDisabledMessage="@string/menu_label_new_message">
+        <intent
+            android:action="android.intent.action.SENDTO"
+            android:targetPackage="bkav.android.btalk"
+            android:targetClass="bkav.android.btalk.messaging.ui.conversation.BtalkConversationActivity" />
+        <!-- If your shortcut is associated with multiple intents, include them
+             here. The last intent in the list determines what the user sees when
+             they launch this shortcut. -->
+        <categories android:name="android.shortcut.btalk_new_message" />
+    </shortcut>
+    <!-- Specify more shortcuts here. -->
+</shortcuts>
+
+

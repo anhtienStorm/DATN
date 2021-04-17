@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+AnhNDd: giao diện dialog hiển thị khi lựa chọn contact có hơn 1 số điện thoại
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_template"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btalk_title_dialog_height"
+        android:layout_gravity="center_vertical"
+        android:background="@color/btalk_white_opacity_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/alertTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/btalk_title_dialog_marginLeft"
+            android:layout_marginRight="@dimen/btalk_title_dialog_marginRight"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/btalk_title_dialog_choose_number"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/btalk_title_dialog_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <View
+        android:id="@+id/line_bot"
+        style="@style/LineDividerStyle"
+    />
+
+    <LinearLayout
+        android:id="@+id/content_area_linear_layout_chose_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/medium_margin">
+
+        <CheckBox
+            android:id="@+id/setPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/make_primary"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>

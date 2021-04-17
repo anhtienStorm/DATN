@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion project.ANDROID_COMPILE_SDK_VERSION
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+    defaultConfig {
+        minSdkVersion project.ANDROID_MIN_SDK_VERSION
+        targetSdkVersion project.ANDROID_TARGET_SDK_VERSION
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:support-v13:${project.supportPackageVersion}"
+    implementation "com.android.support:recyclerview-v7:${project.supportPackageVersion}"
+    implementation "com.android.support:cardview-v7:${project.supportPackageVersion}"
+    implementation "com.android.support:design:${project.supportPackageVersion}"
+    implementation "com.android.support:support-annotations:${project.supportPackageVersion}"
+    implementation 'org.jetbrains:annotations-java5:15.0'
+    implementation 'com.google.guava:guava:19.0'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.2.0'
+    implementation 'com.googlecode.libphonenumber:geocoder:2.1'
+    implementation 'net.jcip:jcip-annotations:1.0'
+    implementation project(path: ':common')
+    implementation project(path: ':phone-common')
+    implementation project(':contacts-common')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}

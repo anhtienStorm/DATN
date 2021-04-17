@@ -1,0 +1,806 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Bkav TrungTh: custom font cho text view, chua check ky xem co dung hay khong-->
+
+    <!-- Anhdts style fast scroll cho text va thanh truot be lai-->
+    <style name="FastScrollTheme" parent="@android:style/Widget.Material.FastScroll">
+        <item name="android:textSize">@dimen/btalk_text_size_fast_scroll_popup</item>
+    </style>
+
+    <!-- Bkav TrungTH - copy Theme cua Contact sang, sua thanh NoActionBar vi se ko su dung actionbar-->
+    <!--Bkav QuangNDb doi ten Theme de khong bi trung voi theme trong thu vien nua-->
+    <style name="BtalkPeopleTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name="android:homeAsUpIndicator">@drawable/ic_back_arrow</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- Style for the overflow button in the actionbar. -->
+        <item name="android:actionModeCloseDrawable">@drawable/ic_close_lt</item>
+        <item name="android:fastScrollStyle">@style/FastScrollTheme</item>
+        <item name="android:fastScrollThumbDrawable">@drawable/btalk_fastscroll_thumb</item>
+        <item name="android:fastScrollTrackDrawable">@null</item>
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <item name="android:windowBackground">
+            @color/btalk_actionbar_and_tabbar_bg_no_transparent_color
+        </item>
+        <item name="android:colorPrimaryDark">@color/primary_color_dark</item>
+        <item name="android:colorPrimary">@color/primary_color</item>
+        <item name="android:colorAccent">@color/accent_color</item>
+        <item name="list_item_height">?android:attr/listPreferredItemHeight</item>
+        <item name="activated_background">@drawable/list_item_activated_background</item>
+        <item name="section_header_background">@drawable/list_title_holo</item>
+        <item name="list_section_header_height">24dip</item>
+        <item name="list_item_padding_top">
+            @dimen/contact_browser_list_item_padding_top_or_bottom
+        </item>
+        <item name="list_item_padding_right">32dp</item>
+        <item name="list_item_padding_bottom">
+            @dimen/contact_browser_list_item_padding_top_or_bottom
+        </item>
+        <item name="list_item_padding_left">16dip</item>
+        <item name="list_item_gap_between_image_and_text">
+            @dimen/contact_browser_list_item_gap_between_image_and_text
+        </item>
+        <item name="list_item_gap_between_label_and_data">5dip</item>
+        <item name="list_item_presence_icon_margin">4dip</item>
+        <item name="list_item_presence_icon_size">16dip</item>
+        <item name="list_item_photo_size">@dimen/conversation_list_image_preview_size</item>
+        <item name="list_item_profile_photo_size">70dip</item>
+        <item name="list_item_prefix_highlight_color">@color/people_app_theme_color</item>
+        <item name="list_item_background_color">@color/btalk_transparent_view</item>
+        <item name="list_item_header_text_color">@color/people_app_theme_color</item>
+        <item name="list_item_header_text_size">14sp</item>
+        <item name="list_item_header_height">30dip</item>
+        <item name="list_item_data_width_weight">5</item>
+        <item name="list_item_label_width_weight">3</item>
+        <item name="list_item_header_text_indent">8dip</item>
+        <item name="contact_browser_list_padding_left">0dip</item>
+        <item name="contact_browser_list_padding_right">0dip</item>
+        <!-- Anhdts doi tu color/primary -->
+        <item name="contact_browser_background">@android:color/white</item>
+        <item name="list_item_text_indent">@dimen/contact_browser_list_item_text_indent</item>
+        <!-- Favorites -->
+        <item name="favorites_padding_bottom">0dip</item>
+        <!-- CallLog -->
+        <item name="call_log_primary_text_color">@color/dialtacts_primary_text_color</item>
+        <item name="call_log_primary_background_color">#000000</item>
+        <item name="call_log_secondary_text_color">@color/dialtacts_secondary_text_color</item>
+        <item name="call_log_secondary_background_color">#333333</item>
+        <item name="call_log_header_color">#33b5e5</item>
+        <item name="useWallpaperForBackground">true</item>
+        <item name="statusBarIsTransparent">false</item>
+        <item name="windowBackground">@drawable/bg_sms</item>
+        <item name="blurDownScaleFactor">6</item>
+        <item name="blurRadius">@integer/btalk_blur_radius</item>
+        <item name="alphaActionBar">1</item>
+        <item name="alphaToolBar">1</item>
+        <item name="alphaAllView">@dimen/btalk_alpha_for_all_view</item>
+
+        <item name="android:alertDialogTheme">@style/BtalkContactsAlertDialogTheme</item>
+        <item name="android:overlapAnchor">true</item>
+        <item name="list_item_video_call_icon_size">32dip</item>
+    </style>
+
+
+    <!-- Anhdts style doi mau header contextmenu -->
+    <style name="BtalkContactsAlertDialogTheme" parent="@android:style/Theme.Material.Light.Dialog">
+        <item name="android:colorAccent">@color/bkav_date_section_text</item>
+        <item name="android:overlapAnchor">true</item>
+        <item name="contact_browser_background">@android:color/white</item>
+    </style>
+
+    <!-- Application theme. -->
+    <!--Bkav QuangNDb custom lai theme cua phan nhan tin de status ba trung mau voi btalk-->
+    <!--Bkav QuangNDb sua lai mau primary_color va primary_dark_color thanh mau trang co alpha-->
+    <style name="BugleTheme" parent="BugleBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:dropDownListViewStyle">@style/DropDownListViewStyle</item>
+        <item name="colorPrimary">@color/btalk_actionbar_and_tabbar_bg_no_transparent_color</item>
+        <item name="colorPrimaryDark">@color/actionbar_setting_color</item>
+        <item name="colorAccent">@color/bkav_date_section_text</item>
+        <item name="android:textColorHighlight">@color/primary_color_dark</item>
+        <item name="actionBarStyle">@style/BugleActionBar</item>
+        <item name="actionOverflowButtonStyle">@style/BtalkOverflowActionButton</item>
+<!--        HienDTk: update icon back-->
+        <item name="homeAsUpIndicator">@drawable/ic_arrow_light_message_update</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_light_message_update</item>
+        <item name="apnPreferenceStyle">@style/ApnPreference</item>
+        <!--Bkav TienNAb bo set chieu cao cua actionbar-->
+        <!--<item name="actionBarSize">@dimen/bkav_actionbar_height</item>-->
+    </style>
+
+    <style name="BugleActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <!--Bkav TienNAb bo set chieu cao cua actionbar-->
+        <!--<item name="height">@dimen/action_bar_height</item>-->
+        <item name="displayOptions">showTitle</item>
+        <item name="titleTextStyle">@style/BugleActionBarTitleTextStyle</item>
+    </style>
+
+    <!--Bkav QuangNDb them style BtalkOverflowActionButton de custom lai nut overflow-->
+    <style name="BtalkOverflowActionButton" parent="@style/Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_btalk_overflow</item>
+    </style>
+    <!--bkav_actionbar_ic_more_normal-->
+    <!--Bkav QuangNDb them 1 so thuoc tinh cua theme de khong bi loi khi add fragment vao-->
+    <!--Bkav QuangNDb doi parent theme thanh Theme.AppCompat.Light de ca hieu ung khi bam vao cac nut doi thanh mau toi de nhin hon-->
+    <style name="BugleBaseTheme" parent="Theme.AppCompat.Light">
+        <item name="contact_browser_list_padding_left">0dip</item>
+        <item name="contact_browser_list_padding_right">0dip</item>
+        <item name="contact_browser_background">@color/background_primary</item>
+        <item name="list_item_padding_top">
+            @dimen/contact_browser_list_item_padding_top_or_bottom
+        </item>
+        <item name="list_item_gap_between_label_and_data">5dip</item>
+        <item name="list_item_presence_icon_margin">4dip</item>
+        <item name="list_item_presence_icon_size">16dip</item>
+        <item name="list_item_photo_size">@dimen/contact_browser_list_item_photo_size</item>
+        <item name="list_item_profile_photo_size">70dip</item>
+        <item name="list_item_prefix_highlight_color">@color/people_app_theme_color</item>
+        <item name="list_item_background_color">@color/btalk_transparent_view</item>
+        <item name="list_item_header_text_color">@color/people_app_theme_color</item>
+        <item name="list_item_header_text_size">14sp</item>
+        <item name="list_item_header_height">30dip</item>
+        <item name="list_item_data_width_weight">5</item>
+        <item name="list_item_label_width_weight">3</item>
+        <item name="list_item_header_text_indent">8dip</item>
+        <item name="list_item_height">?android:attr/listPreferredItemHeight</item>
+        <item name="list_section_header_height">24dip</item>
+        <item name="activated_background">@drawable/list_item_activated_background</item>
+        <item name="section_header_background">@drawable/list_title_holo</item>
+        <item name="list_item_padding_right">32dp</item>
+        <item name="list_item_padding_bottom">
+            @dimen/contact_browser_list_item_padding_top_or_bottom
+        </item>
+        <item name="list_item_padding_left">16dip</item>
+        <item name="list_item_gap_between_image_and_text">
+            @dimen/contact_browser_list_item_gap_between_image_and_text
+        </item>
+        <item name="list_item_name_text_color">@color/contact_list_name_text_color</item>
+        <item name="list_item_name_text_size">16sp</item>
+        <item name="list_item_text_indent">@dimen/contact_browser_list_item_text_indent</item>
+        <item name="list_item_text_offset_top">-2dp</item>
+        <item name="list_item_video_call_icon_size">32dip</item>
+        <item name="list_item_video_call_icon_margin">8dip</item>
+        <item name="useWallpaperForBackground">true</item>
+        <item name="alphaAllView">@dimen/btalk_alpha_for_all_view</item>
+        <item name="blurDownScaleFactor">6</item>
+        <item name="blurRadius">@integer/btalk_blur_radius</item>
+        <item name="statusBarIsTransparent">true</item>
+        <!--Bkav TienNAb bo set chieu cao cua actionbar-->
+        <!--<item name="actionBarSize">@dimen/bkav_actionbar_height</item>-->
+
+        <!--<item name="android:windowLightStatusBar" tools:targetApi="23">true</item>-->
+
+    </style>
+    <!--<item name="android:requiresFadingEdge">vertical</item>-->
+    <!--<item name="android:fadingEdgeLength">10dp</item>-->
+
+    <!--Bkav QuangNDb theme noactionbar cua conversationactivity-->
+    <style name="BugleTheme.ConversationActivity.NoActionBar">
+        <item name="actionOverflowButtonStyle">@style/BtalkOverflowActionButtonLight</item>
+        <!--<item name="homeAsUpIndicator">@drawable/ic_arrow_back_light</item>-->
+<!--        HienDTk: update icon back-->
+        <item name="homeAsUpIndicator">@drawable/ic_arrow_light_message_update</item>
+        <item name="android:textColorHighlight">@color/blocked_number_accent_color</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_light_message_update</item>
+        <item name="android:toolbarStyle">@style/BtalkBugleToolbar</item>
+        <item name="android:titleTextStyle">@style/BugleToolbarTitleTextStyle</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:contentInsetStart">0dp</item>
+
+        <!-- Anhdts sua loi back bi cham-->
+        <!--<item name="android:windowFrame">@null</item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <item name="android:windowIsFloating">false</item>
+        <!-- Anhdts tren 8 bi loi xoay ngang -->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+    </style>
+
+    <style name="BtalkBugleToolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:titleTextStyle">@style/BugleToolbarTitleTextStyle</item>
+        <item name="titleTextAppearance">@style/BugleToolbarTitleTextStyle</item>
+        <item name="titleTextStyle">@style/BugleToolbarTitleTextStyle</item>
+    </style>
+    <!--Bkav QuangNDb them actionbar light cua conversationfragment-->
+
+    <!--Bkav QuangNDb ghi de lai theme cua actionbar de doi mau chu-->
+    <style name="BugleToolbarTitleTextStyle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/btalk_ab_text_and_icon_normal_color</item>
+        <item name="android:textSize">@dimen/conversation_fragment_action_bar_text_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <!--Bkav QuangNDb ghi de lai theme cua actionbar de doi mau chu-->
+
+    <!--Bkav QuangNDb them style BtalkOverflowActionButton de custom lai nut overflow-->
+    <style name="BtalkOverflowActionButtonLight" parent="@style/Widget.AppCompat.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_btalk_overflow</item>
+    </style>
+
+
+    <!--Bkav QuangNDb ghi de lai theme cua actionbar de doi mau chu-->
+    <style name="BugleActionBarTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/btalk_ab_text_and_icon_normal_color</item>
+        <item name="android:textSize">@dimen/conversation_fragment_action_bar_text_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <style name="BugleTheme.SettingsActivity" parent="BugleTheme">
+        <item name="android:textSize">@dimen/settings_list_text_size</item>
+        <item name="colorPrimary">@color/actionbar_setting_color_dialer</item>
+        <item name="colorPrimaryDark">@color/actionbar_setting_color_dialer</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+
+    <!--Bkav QuangNDb ghi de lai style cua box soan tin nhan(composeMessageEdit text)-->
+    <style name="ConversationComposeSendText">
+        <item name="android:textColor">@color/compose_send_text_color</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:textSize">@dimen/conversation_compose_send_text_size</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:paddingLeft">@dimen/compose_message_text_box_padding_side</item>
+        <item name="android:paddingRight">@dimen/compose_message_text_box_padding_side</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:background">@null</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:inputType">
+            textShortMessage|textAutoCorrect|textCapSentences|textMultiLine
+        </item>
+    </style>
+
+    <!--Bkav QuangNDb: override lai style cua edit text nhap contact khi tao 1 conversation-->
+    <!--<style name="RecipientEditTextView">-->
+    <!--<item name="android:textSize">@dimen/recipient_edit_text_size</item>-->
+    <!--<item name="android:textColor">@color/btalk_ab_text_and_icon_normal_color</item>-->
+    <!--<item name="android:fontFamily">sans-serif</item>-->
+    <!--<item name="android:paddingLeft">4dp</item>-->
+    <!--<item name="android:paddingRight">4dp</item>-->
+    <!--</style>-->
+
+    <!--Bkav QuangNDb: override lai style cua edit text nhap contact khi tao 1 conversation-->
+    <style name="BtalkRecipientEditTextView">
+        <item name="android:textSize">@dimen/recipient_edit_text_size</item>
+        <item name="android:textColor">@color/btalk_ab_text_and_icon_normal_color</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+    </style>
+
+    <!--Bkav QuangNDb style cua layout subject-->
+    <style name="SubjectViewStyle">
+        <item name="android:paddingLeft">@dimen/attachment_width</item>
+        <item name="android:paddingRight">57dp</item>
+    </style>
+
+    <!--AnhNDd: style trong select nhieu contact-->
+    <style name="BtalkContactPickerTheme" parent="@style/ContactPickerTheme">
+<!--        HienDTk: update icon back-->
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_light_message_update</item>
+        <item name="colorPrimary">@color/btalk_actionbar_and_tabbar_bg_no_transparent_color</item>
+        <item name="colorPrimaryDark">@color/btalk_actionbar_and_tabbar_bg_no_transparent_color
+        </item>
+        <item name="colorAccent">@color/blocked_number_accent_color</item>
+        <item name="android:textColorHighlight">@color/primary_color_dark</item>
+        <item name="android:actionModeCloseDrawable">@drawable/ic_btalk_remove_small</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:actionBarStyle">@style/BtalkContactsPickerActionBarStyle</item>
+    </style>
+
+    <style name="BtalkContactsPickerActionBarStyle" parent="@style/ContactsPickerActionBarStyle">
+        <item name="android:background">@color/btalk_actionbar_and_tabbar_bg_no_transparent_color
+        </item>
+        <item name="android:titleTextStyle">@style/BtalkContactsActionBarTitleText</item>
+        <item name="android:backgroundStacked">
+            @color/btalk_actionbar_and_tabbar_bg_no_transparent_color
+        </item>
+        <item name="android:elevation">0dp</item>
+        <!-- Empty icon -->
+        <item name="android:icon">@android:color/transparent</item>
+    </style>
+
+    <style name="BtalkContactPickerSearchTheme" parent="@style/ContactPickerSearchTheme">
+        <item name="android:textColorPrimary">@color/btalk_ab_text_and_icon_normal_color</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:colorControlActivated">@color/blocked_number_accent_color</item>
+        <item name="colorAccent">@color/blocked_number_accent_color</item>
+        <item name="android:colorControlNormal">@color/btalk_ab_text_and_icon_normal_color</item>
+    </style>
+
+
+    <!--<item name="android:textColorHint">@color/compose_contact_faint_text</item>-->
+
+
+    <!--******************* DialpadView ***********************-->
+
+    <!-- Anhdts style hang phim duoi cung tren dialpad-->
+
+    <!-- Anhdts ki tu * trong button star dialpad-->
+
+    <!-- Anhdts ki tu phu tren button # trong dialpad-->
+
+    <!-- Anhdts ki tu phu tren button * trong dialpad-->
+
+    <!-- Anhdts theme dialpad -->
+    <style name="DialpadBkav">
+        <item name="dialpad_text_color">@color/dialpad_digits_text_color</item>
+        <item name="dialpad_text_color_primary">@color/btalk_dialpad_primary_text_color</item>
+        <item name="dialpad_text_color_secondary">@color/btalk_ab_text_and_icon_normal_color</item>
+        <item name="dialpad_icon_tint">@color/btalk_ab_text_and_icon_normal_color</item>
+        <item name="dialpad_voicemail_tint">@color/dialpad_voicemail_tint</item>
+        <item name="dialpad_background">@color/btalk_color_for_dialpad</item>
+    </style>
+
+    <!-- Anhdts style text action goi dien nhan tin dialpad -->
+
+    <!-- Anhdts style button nhan tin them danh ba -->
+
+    <!-- Anhdts khoang trong toi nui goi-->
+
+    <!-- Anhdts style phim chu tren dialpad -->
+
+    <!--Anhdts style cho cac activity phia contacts-->
+    <style name="BtalkContactTheme" parent="@style/PeopleTheme">
+        <item name="android:actionBarStyle">@style/BtalkEditorActionBarStyle</item>
+<!--        HienDTk: update icon back-->
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_light_message_update</item>
+        <item name="android:actionOverflowButtonStyle">@style/BtalkContactsActionBarOverflowQP
+        </item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <!--<item name="android:actionBarSize">@dimen/bkav_actionbar_height</item>-->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:checkedTextViewStyle">@style/BtalkCheckedTextViewStyle</item>
+        <item name="colorPrimaryDark">@color/btalk_actionbar_setting</item>
+        <item name="android:statusBarColor">@color/btalk_actionbar_setting</item>
+    </style>
+
+    <style name="BtalkEditorActivityTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <item name="android:navigationBarColor">@color/card_margin_color</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:checkedTextViewStyle">@style/BtalkCheckedTextViewStyle</item>
+        <item name="colorPrimaryDark">@color/btalk_actionbar_setting</item>
+        <item name="android:actionBarStyle">@style/ContactsActionBarStyle</item>
+        <!--  Drawable for the back button -->
+        <item name="android:homeAsUpIndicator">@drawable/ic_back_arrow</item>
+        <!-- Style for the overflow button in the actionbar. -->
+        <item name="android:actionOverflowButtonStyle">@style/ContactsActionBarOverflowQP</item>
+        <item name="android:actionModeCloseDrawable">@drawable/ic_close_lt</item>
+        <item name="android:fastScrollThumbDrawable">@drawable/fastscroll_thumb</item>
+        <item name="android:fastScrollTrackDrawable">@null</item>
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <item name="android:windowBackground">@color/background_primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_color_dark</item>
+        <item name="android:colorPrimary">@color/primary_color</item>
+        <item name="android:colorAccent">@color/primary_color</item>
+        <item name="android:alertDialogTheme">@style/ContactsAlertDialogTheme</item>
+        <item name="list_item_height">?android:attr/listPreferredItemHeight</item>
+        <item name="activated_background">@drawable/list_item_activated_background</item>
+        <item name="section_header_background">@drawable/list_title_holo</item>
+        <item name="list_section_header_height">24dip</item>
+        <item name="list_item_padding_top">
+            @dimen/contact_browser_list_item_padding_top_or_bottom
+        </item>
+        <item name="list_item_padding_right">32dp</item>
+        <item name="list_item_padding_bottom">
+            @dimen/contact_browser_list_item_padding_top_or_bottom
+        </item>
+        <item name="list_item_padding_left">16dip</item>
+        <item name="list_item_gap_between_image_and_text">
+            @dimen/contact_browser_list_item_gap_between_image_and_text
+        </item>
+        <item name="list_item_gap_between_label_and_data">5dip</item>
+        <item name="list_item_presence_icon_margin">4dip</item>
+        <item name="list_item_presence_icon_size">16dip</item>
+        <item name="list_item_photo_size">@dimen/contact_browser_list_item_photo_size</item>
+        <item name="list_item_profile_photo_size">70dip</item>
+        <item name="list_item_prefix_highlight_color">@color/people_app_theme_color</item>
+        <item name="list_item_background_color">@color/list_item_pinned_header_color</item>
+        <item name="list_item_header_text_color">@color/people_app_theme_color</item>
+        <item name="list_item_header_text_size">14sp</item>
+        <item name="list_item_header_height">30dip</item>
+        <item name="list_item_data_width_weight">5</item>
+        <item name="list_item_label_width_weight">3</item>
+        <item name="list_item_header_text_indent">8dip</item>
+        <item name="contact_browser_list_padding_left">0dip</item>
+        <item name="contact_browser_list_padding_right">0dip</item>
+        <item name="contact_browser_background">@color/background_primary</item>
+        <item name="list_item_text_indent">@dimen/contact_browser_list_item_text_indent</item>
+        <!-- Favorites -->
+        <item name="favorites_padding_bottom">0dip</item>
+    </style>
+
+
+    <style name="BtalkMultiSelectActivityTheme" parent="@style/PeopleTheme">
+        <item name="android:actionBarStyle">@style/BtalkEditorActionBarStyle</item>
+<!--        HienDTk: update icon back-->
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_light_message_update</item>
+        <item name="android:actionOverflowButtonStyle">@style/BtalkContactsActionBarOverflowQP
+        </item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <!--Bkav TienNAb bo set chieu cao cua actionbar-->
+        <!--<item name="android:actionBarSize">@dimen/bkav_actionbar_height</item>-->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:checkedTextViewStyle">@style/BtalkCheckedTextViewStyle</item>
+        <item name="colorPrimaryDark">@color/btalk_actionbar_setting</item>
+        <item name="android:statusBarColor">@color/btalk_actionbar_setting</item>
+    </style>
+
+    <!--AnhNDd style cho actionbar editcontacts-->
+    <style name="BtalkEditorActionBarStyle" parent="@android:style/Widget.Material.ActionBar">
+        <!--<item name="android:background">@color/btalk_actionbar_and_tabbar_bg_color</item>-->
+        <!--AnhNDd: đổi thành trong suốt-->
+        <item name="android:background">@color/btalk_actionbar_setting</item>
+        <item name="android:titleTextStyle">@style/BtalkContactsActionBarTitleText</item>
+        <item name="android:elevation">0dp</item>
+        <!--<item name="android:height">@dimen/bkav_actionbar_height</item>-->
+        <!--<item name="android:icon">@style/BtalkEditorActionBarIconStyle</item>-->
+    </style>
+
+    <!--AnhNDd: style cho radiobutton-->
+    <style name="BtalkCheckedTextViewStyle" parent="@android:style/Widget.Material.CheckedTextView">
+    </style>
+
+    <!--AnhNDd: style cho tiêu đề ở actionbar-->
+    <style name="BtalkContactsActionBarTitleText" parent="ContactsActionBarTitleText">
+        <item name="android:textColor">@color/btalk_ab_text_and_icon_normal_color</item>
+        <item name="android:textSize">@dimen/conversation_fragment_action_bar_text_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <!--AnhNDd: style cho icon tren actionbar edit contact-->
+
+    <style name="FadingEdgeForListView">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">0dp</item>
+        <item name="android:cacheColorHint">@color/btalk_listview_bg_color</item>
+    </style>
+
+    <style name="LineDividerStyle">
+        <item name="android:background">@color/btalk_line_divider_color</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <!-- anhdts -->
+
+    <!-- anhdts -->
+
+    <!-- Anhdts -->
+
+    <!-- Anhdts style phim chu tren dialpad -->
+
+    <style name="BtalkDialpadKeyButtonStyle">
+        <item name="android:soundEffectsEnabled">false</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minHeight">@dimen/btalk_dialpad_key_height</item>
+        <item name="blur_padding_bottom">@dimen/blur_padding_bottom</item>
+        <item name="android:textColor">?attr/dialpad_text_color_secondary</item>
+        <item name="android:textSize">@dimen/btalk_dialpad_key_letters_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/btalk_ripple_dialpad</item>
+<!--        <item name="android:foreground">@drawable/btalk_ripple_dialpad</item>-->
+    </style>
+
+    <style name="BtalkDialpadKeyButtonStyleOver">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:focusable">true</item>
+<!--        <item name="android:background">@drawable/btalk_ripple_dialpad</item>-->
+    </style>
+
+    <!--Bkav TienNAb: style background layout over dialpad-->
+    <style name="BtalkDialpadKeyButtonStyleOverBackGround">
+        <item name="android:layout_width">@dimen/dialpad_overlay_width</item>
+        <item name="android:layout_height">@dimen/dialpad_overlay_height</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <!--AnhNDd: style cho overflow button tren actionbar edit contact-->
+    <style name="BtalkContactsActionBarOverflowQP" parent="ContactsActionBarOverflowQP">
+        <item name="android:tint">@drawable/default_icon_tint</item>
+    </style>
+
+    <!--TrungTh customize theo text letter-->
+    <!-- Anhdts -->
+    <style name="BtalkLetterDialpadKeyNumberStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/dialpad_key_numbers_size</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">@dimen/btalk_dialpad_key_margin_bottom</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="BtalkLetterSmsDialpadLayoutStyle">
+        <item name="android:soundEffectsEnabled">false</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minHeight">@dimen/btalk_dialpad_key_height</item>
+        <item name="android:background">@drawable/btn_dialpad_key</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- Anhdts style phim chu tren dialpad -->
+
+    <!-- Anhdts style phim dac biet *#, dialpad -->
+
+    <!-- Anhdts style text action goi dien nhan tin dialpad -->
+    <style name="BtalkLetterSmsDialpadActionSmsStyle">
+        <item name="blur_padding_bottom">15dp</item>
+        <item name="android:textColor">@color/btalk_dialpad_action_send_color</item>
+        <item name="android:textSize">@dimen/dialpad_action_letters_size</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/btalk_color_for_dialpad</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:layout_gravity">bottom</item>
+    </style>
+
+    <!-- Anhdts style text action goi dien nhan tin dialpad -->
+
+    <!-- Anhdts style man hinh cuoc goi chi tiet-->
+    <style name="BtalkBaseActivityTheme" parent="BtalkDialtactsThemeWithoutActionBarOverlay">
+        <item name="android:windowBackground">@color/background_dialer_results</item>
+        <!-- CallLog -->
+        <item name="call_log_primary_background_color">#FFFFFF</item>
+        <item name="call_log_secondary_background_color">#FFFFFF</item>
+        <item name="call_log_header_color">#FFFFFF</item>
+        <!-- VoicemailStatus -->
+        <item name="call_log_voicemail_status_height">48dip</item>
+        <item name="call_log_voicemail_status_background_color">#262626</item>
+        <item name="call_log_voicemail_status_text_color">#888888</item>
+        <item name="call_log_voicemail_status_action_text_color">#33b5e5</item>
+        <item name="android:actionOverflowButtonStyle">@style/DialtactsActionBarOverflowWhite</item>
+    </style>
+
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background" tools:ignore="NewApi">@color/accent_color</item>
+        <item name="background">@color/accent_color</item>
+        <item name="titleTextStyle">@style/BtalkContactsActionBarTitleText</item>
+        <item name="android:titleTextStyle">@style/BtalkContactsActionBarTitleText</item>
+    </style>
+
+    <!-- Anhdts style giao dien chi tiet lich su cuoc goi-->
+    <style name="BtalkDialtactsThemeWithoutActionBarOverlay" parent="Theme.AppCompat.Light">
+
+        <item name="android:actionBarStyle" tools:ignore="NewApi">@style/MyActionBar</item>
+
+        <item name="titleTextColor">@color/btalk_ab_text_and_icon_normal_color</item>
+<!--        HienDTk: update icon back-->
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_light_message_update</item>
+        <item name="subtitleTextColor">@color/btalk_ab_text_and_icon_normal_color</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:statusBarColor">@color/status_bar_detail_call_log</item>
+        <item name="android:actionOverflowButtonStyle">@style/DialtactsActionBarOverflowWhite</item>
+        <item name="windowActionBarOverlay">false</item>
+        <item name="actionOverflowButtonStyle">@style/DialtactsActionBarOverflowWhite</item>
+        <item name="android:textColorPrimary">@color/dialtacts_primary_text_color</item>
+        <item name="android:textColorSecondary">@color/dialtacts_secondary_text_color</item>
+
+        <!-- Styles that require AppCompat compatibility, remember to update both sets -->
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
+
+        <!-- Style for the overflow button in the actionbar. -->
+
+        <!--  Drawable for the back button -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <item name="android:overlapAnchor">true</item>
+        <item name="android:alertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="activated_background">@drawable/list_item_activated_background</item>
+        <item name="section_header_background">@drawable/list_title_holo</item>
+        <item name="list_section_header_height">32dip</item>
+        <item name="list_item_padding_top">12dp</item>
+        <item name="list_item_padding_right">24dp</item>
+        <item name="list_item_padding_bottom">12dp</item>
+        <item name="list_item_padding_left">16dp</item>
+        <item name="list_item_gap_between_image_and_text">
+            @dimen/contact_browser_list_item_gap_between_image_and_text
+        </item>
+        <item name="list_item_gap_between_label_and_data">8dip</item>
+        <item name="list_item_presence_icon_margin">4dip</item>
+        <item name="list_item_presence_icon_size">16dip</item>
+        <item name="list_item_photo_size">@dimen/contact_browser_list_item_photo_size</item>
+        <item name="list_item_profile_photo_size">70dip</item>
+        <item name="list_item_prefix_highlight_color">@color/people_app_theme_color</item>
+        <item name="list_item_background_color">@color/background_dialer_light</item>
+        <item name="list_item_header_text_indent">8dip</item>
+        <item name="list_item_header_text_color">@color/dialtacts_secondary_text_color</item>
+        <item name="list_item_header_text_size">14sp</item>
+        <item name="list_item_header_height">30dip</item>
+        <item name="list_item_data_width_weight">5</item>
+        <item name="list_item_label_width_weight">3</item>
+        <item name="contact_browser_list_padding_left">0dp</item>
+        <item name="contact_browser_list_padding_right">0dp</item>
+        <item name="contact_browser_background">@color/background_dialer_results</item>
+        <item name="list_item_name_text_color">@color/contact_list_name_text_color</item>
+        <item name="list_item_name_text_size">16sp</item>
+        <item name="list_item_text_indent">@dimen/contact_browser_list_item_text_indent</item>
+        <item name="list_item_text_offset_top">-2dp</item>
+        <!-- CallLog -->
+        <item name="call_log_primary_text_color">@color/dialtacts_primary_text_color</item>
+        <item name="call_log_primary_background_color">#000000</item>
+        <item name="call_log_secondary_text_color">@color/dialtacts_secondary_text_color</item>
+        <item name="call_log_secondary_background_color">#333333</item>
+        <item name="call_log_header_color">#33b5e5</item>
+        <!-- VoicemailStatus -->
+        <item name="call_log_voicemail_status_height">48dip</item>
+        <item name="call_log_voicemail_status_background_color">#262626</item>
+        <item name="call_log_voicemail_status_text_color">#888888</item>
+        <item name="call_log_voicemail_status_action_text_color">#33b5e5</item>
+        <!-- Favorites -->
+        <item name="favorites_padding_bottom">?android:attr/actionBarSize</item>
+
+        <item name="android:colorPrimary">@color/accent_color</item>
+        <item name="android:colorPrimaryDark">@color/accent_color</item>
+
+        <item name="dialpad_key_button_touch_tint">@color/dialer_dialpad_touch_tint</item>
+        <item name="android:colorControlActivated">@color/dialer_theme_color</item>
+        <item name="android:colorButtonNormal">@color/dialer_theme_color</item>
+        <item name="android:textAppearanceButton">@style/DialerButtonTextStyle</item>
+
+        <!-- Video call icon -->
+        <item name="list_item_video_call_icon_size">32dip</item>
+        <item name="list_item_video_call_icon_margin">8dip</item>
+    </style>
+
+    <style name="Icon">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:textColor">@color/workspace_icon_text_color</item>
+        <item name="android:shadowRadius">2.0</item>
+        <item name="android:shadowColor">#B0000000</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="Icon.DeepShortcut">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:elevation">@dimen/deep_shortcuts_elevation</item>
+        <item name="android:paddingStart">@dimen/bg_pill_height_no_icon</item>
+        <item name="android:paddingEnd">@dimen/deep_shortcut_padding_end</item>
+        <item name="android:drawablePadding">@dimen/deep_shortcut_drawable_padding</item>
+        <item name="android:textColor">#FF212121</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+    <!--<item name="android:drawableEnd">@drawable/deep_shortcuts_drag_handle</item>-->
+
+
+    <!-- Anhdts style giao dien quay so nhanh-->
+    <style name="BtalkSpeedDialtactsTheme" parent="SpeedDialtactsTheme">
+<!--        HienDTk: update icon back-->
+        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_light_message_update</item>
+        <item name="android:colorPrimary">@color/actionbar_setting_color</item>
+        <item name="android:colorPrimaryDark">@color/actionbar_setting_color</item>
+        <item name="android:actionBarStyle">@style/BtalkActionBarSpeed</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:contentInsetStart">0dp</item>
+        <!--Bkav TienNAb bo set chieu cao cua actionbar-->
+        <!--<item name="android:actionBarSize">@dimen/action_bar_height</item>-->
+    </style>
+
+    <style name="BtalkActionBarSpeed" parent="BtalkEditorActionBarStyle">
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:background">@color/actionbar_setting_color</item>
+        <!--Bkav TienNAb bo set chieu cao cua actionbar-->
+        <!--<item name="android:height">@dimen/action_bar_height</item>-->
+    </style>
+
+    <style name="CustomAnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/animation_show_speed</item>
+        <item name="android:activityOpenExitAnimation">@anim/animation_hide_speed</item>
+    </style>
+
+    <!-- Anhdts style icon trong chinh sua lien he-->
+    <style name="BtalkEditKindIconStyle">
+        <item name="android:layout_width">27dp</item>
+        <item name="android:layout_height">27dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_marginStart">17dp</item>
+        <!-- We want 32dp of padding between these icon's and EditText's. Since EditText's have
+            4dp of starting padding built in, we set this as 28dp. -->
+        <item name="android:layout_marginEnd">14dp</item>
+        <item name="android:layout_marginTop">13dp</item>
+    </style>
+
+    <style name="BtalkEditSelectorIconStyle">
+        <item name="android:layout_width">27dp</item>
+        <item name="android:layout_height">27dp</item>
+        <item name="android:layout_marginStart">14dp</item>
+        <!-- We want 32dp of padding between these icon's and EditText's. Since EditText's have
+            4dp of starting padding built in, we set this as 28dp. -->
+        <item name="android:layout_marginEnd">17dp</item>
+        <item name="android:layout_marginTop">@dimen/editor_kind_icon_top_margin</item>
+    </style>
+
+    <style name="BtalkSpinnerButtonStyle" parent="@android:style/Widget.Material.Spinner">
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:background">@drawable/icon_dropdown</item>
+    </style>
+
+    <!--Bkav TienNAb: Tao them style cho truong ngay sinh trong phan chinh sua lien he-->
+    <style name="BtalkSpinnerForFieldDateStyle" parent="@android:style/Widget.Material.Spinner">
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:background">@drawable/icon_dropdown_for_field_date</item>
+    </style>
+
+    <style name="RadioButtonChoose">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_spinner</item>
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+        <item name="android:layout_marginStart">@dimen/small_margin</item>
+    </style>
+
+    <!--Anhdts style quickactivity -->
+    <style name="Theme.BtalkQuickContact" parent="@style/PeopleTheme">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <!-- We need to use a light ripple behind ActionBar items in order for them to
+             be visible when using some of the darker ActionBar tints -->
+        <item name="android:actionBarItemBackground">@drawable/item_background_material_borderless_dark</item>
+    </style>
+
+    <style name="AppTheme.CallsBlockedOnlyBms" parent="Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

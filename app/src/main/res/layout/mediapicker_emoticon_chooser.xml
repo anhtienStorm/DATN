@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bkav.android.btalk.messaging.ui.mediapicker.emoticon.EmoticonView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btalk_actionbar_and_tabbar_bg_no_transparent_color"
+    android:orientation="vertical">
+    <!--android:background="@color/bkav_emoticon_bg_color"-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_emoticon"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+</bkav.android.btalk.messaging.ui.mediapicker.emoticon.EmoticonView>

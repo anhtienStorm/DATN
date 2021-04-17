@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pinned_header_list_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btalk_white_bg"
+    android:orientation="vertical">
+
+    <!-- Shown only when an Account filter is set.
+     - paddingTop should be here to show "shade" effect correctly. -->
+    <include layout="@layout/account_filter_header" />
+
+    <!--AnhNDd:Frame layout chua list cac contacts-->
+    <FrameLayout
+        android:id="@+id/btalk_content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btalk_frame_tool"
+        android:layout_weight="1">
+
+        <!--<include layout="@layout/contact_list_card" />-->
+
+        <view
+            android:id="@android:id/list"
+            style="@style/FadingEdgeForListView"
+            class="bkav.android.btalk.contacts.BtalkPinnedHeaderListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="?attr/contact_browser_list_padding_right"
+            android:layout_marginLeft="?attr/contact_browser_list_padding_left"
+            android:layout_marginRight="?attr/contact_browser_list_padding_right"
+            android:layout_marginStart="?attr/contact_browser_list_padding_left"
+            android:background="@color/btalk_white_bg"
+            android:clipToPadding="false"
+            android:fastScrollEnabled="true"
+            android:paddingTop="?attr/list_item_padding_top" />
+
+        <ProgressBar
+            android:id="@+id/search_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

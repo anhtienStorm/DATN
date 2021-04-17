@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb giao dien cua item sim-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorControlHighlight"/>
+            <corners android:radius="24dp"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#CCCCCC"/>
+            <corners android:radius="24dp"/>
+        </shape>
+    </item>
+    <item android:state_focused="false"
+          android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white"/>
+            <corners android:radius="24dp"/>
+        </shape>
+    </item>
+
+</selector>

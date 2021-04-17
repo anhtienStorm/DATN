@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bkav.android.btalk.mutilsim.BtalkSimLineChooser
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/width_sim_line"
+    android:layout_height="@dimen/height_sim_line"
+    android:layout_marginEnd="@dimen/margin_sim_row"
+    android:layout_marginStart="@dimen/margin_sim_row"
+    android:background="@drawable/background_ripple_corner"
+    android:clickable="true"
+    android:elevation="@dimen/margin_sim_row"
+    android:focusable="true">
+
+    <!--android:background="@drawable/background_circle"-->
+
+    <ImageView
+        android:id="@+id/sim_icon"
+        android:layout_width="@dimen/height_sim_icon"
+        android:layout_height="@dimen/height_sim_icon"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/margin_icon_sim"
+        android:padding="@dimen/padding_icon_sim"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/sim_icon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sim_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/size_text_name_choose_sim"/>
+
+        <TextView
+            android:id="@+id/sim_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:textSize="@dimen/size_text_phone_choose_sim"/>
+    </LinearLayout>
+    <!--<TextView-->
+    <!--android:id="@+id/sim_phone"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:layout_below="@id/sim_name"-->
+    <!--android:layout_toEndOf="@id/sim_icon"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:textSize="@dimen/size_text_phone_choose_sim"-->
+    <!--android:layout_height="@dimen/height_sim_name_line"/>-->
+</bkav.android.btalk.mutilsim.BtalkSimLineChooser>

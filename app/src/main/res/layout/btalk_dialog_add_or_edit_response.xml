@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp"
+    android:paddingTop="8dp">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quick_response_title"
+        android:textColor="@android:color/black"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="@dimen/conversation_fragment_action_bar_text_size"
+        android:textStyle="bold"
+        android:visibility="visible"
+    />
+    <EditText
+        android:id="@+id/response"
+        android:inputType="textCapSentences|textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="8"
+        android:maxLines="5"
+        android:minLines="1"
+        android:background="@android:color/transparent"
+        android:paddingTop="10dp"
+        android:paddingBottom="2dp"
+        android:hint="@string/add_response_hint"/>
+    <View
+        android:id="@+id/line_bot"
+        style="@style/LineDividerStyle"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:paddingBottom="10dp"
+    />
+</LinearLayout>

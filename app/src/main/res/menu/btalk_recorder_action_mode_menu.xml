@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appcompat="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_show_num_item"
+        android:orderInCategory="200"
+        android:title="@string/action_menu_show_archived"
+        appcompat:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_select_all_item"
+        android:orderInCategory="300"
+        android:title="@string/select_all"
+        appcompat:showAsAction="never"/>
+    <item
+        android:id="@+id/action_unselect_all_item"
+        android:orderInCategory="300"
+        android:title="@string/unselect_all"
+        appcompat:showAsAction="never"/>
+
+</menu>

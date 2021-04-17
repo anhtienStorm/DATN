@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+  android:layout_height="match_parent">
+<!--TienNAb: Chinh lai giao dien cho giong ben danh ba-->
+  <TextView
+    android:id="@+id/fastscroller_bubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="end"
+    android:background="@drawable/calllog_fast_scroller_bubble" android:gravity="center" android:textColor="@color/fast_scroller_text_color" android:textSize="@dimen/fast_scroller_text_size" android:visibility="visible"
+    tools:text="A" android:minWidth="@dimen/fast_scroller_text_view_min_width" android:minHeight="@dimen/fast_scroller_text_view_min_height" />
+
+  <ImageView
+    android:id="@+id/fastscroller_handle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:paddingStart="@dimen/fast_scroller_image_view_padding" android:paddingLeft="@dimen/fast_scroller_image_view_padding" android:src="@drawable/calllog_fast_scroller_handle" tools:ignore="RtlSymmetry" />
+
+</merge>

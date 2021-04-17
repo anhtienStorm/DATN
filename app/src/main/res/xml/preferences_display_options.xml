@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="two_call_button"
+        android:summary="@string/sum_pref_call_button"/>
+
+    <!--Bkav TienNAb: bo chuc cai dat mau tab giong voi mau nen-->
+    <!--<CheckBoxPreference
+        android:defaultValue="false"
+        android:key="pref_is_light_tab_bar"
+        android:summary="@string/sum_change_color_tab"/>-->
+</PreferenceScreen>

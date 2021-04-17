@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb item search -->
+
+<FrameLayout
+    android:id="@+id/swipeableContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no">
+    <LinearLayout
+        android:id="@+id/swipeableContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clipToPadding="false"
+        android:duplicateParentState="true"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/btalk_list_item_padding_top_bot"
+        android:paddingTop="@dimen/btalk_list_item_padding_top_bot"
+    >
+
+        <bkav.android.btalk.messaging.ui.BtalkContactPhotoView
+            android:id="@+id/conversation_icon"
+            android:layout_width="@dimen/conversation_list_contact_icon_size"
+            android:layout_height="@dimen/conversation_list_contact_icon_size"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"
+            android:layout_marginStart="@dimen/btalk_list_item_padding_start"
+            android:layout_marginEnd="@dimen/btalk_list_item_padding_start"
+        />
+
+        <!-- The conversation name, message preview, etc -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/conversation_name"
+                style="@style/ConversationListItemViewConversationNameStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="sans-serif"
+                android:paddingBottom="@dimen/btalk_list_item_text_first_padding_bot"
+                android:singleLine="true"
+                android:textColor="@color/btalk_primary_text_color"
+                android:textSize="@dimen/conversation_name_text_size"/>
+
+            <TextView
+                android:id="@+id/conversation_snippet"
+                style="@style/ConversationListItemViewTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/covnersation_snippet_text_color"
+                android:textSize="@dimen/snippet_text_size_new"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:paddingEnd="39dp"
+            android:textColor="@color/covnersation_timestamp_text_color"
+            android:textSize="@dimen/timestamp_text_size"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/conversation_timestamp"
+        style="@style/ConversationListItemViewTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:paddingEnd="@dimen/btalk_list_item_padding_end"
+        android:paddingTop="@dimen/btalk_list_item_padding_top_bot"
+        android:textColor="@color/covnersation_timestamp_text_color"
+        android:textSize="@dimen/timestamp_text_size"/>
+</FrameLayout>

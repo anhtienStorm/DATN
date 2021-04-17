@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Bkav QuangNDb - Ky tu khi chon emoticon -->
+    <string-array name="btalk_list_icon_texts" translatable="false">
+        <item>:))</item>
+        <!-- 0: Laughing -->
+        <item>:((</item>
+        <!-- 1: Crying -->
+        <item>:)</item>
+        <!-- 2: Happy -->
+        <item>:(</item>
+        <!-- 3: Sad -->
+        <item>:D</item>
+        <!-- 4: Big grin -->
+        <item>:X</item>
+        <!-- 5: Love struck -->
+        <item>;))</item>
+        <!-- 6: Hee hee -->
+        <item>:P</item>
+        <!-- 7: Tongue -->
+        <item>:O)</item>
+        <!-- 8: Clown -->
+        <item>X(</item>
+        <!-- 9: Angry -->
+        <item>:\"&gt;</item>
+        <!-- 10: Blushing -->
+        <item>B-)</item>
+        <!-- 11: Cool -->
+        <item>B-(</item>
+        <!-- 12: Feelig beat up -->
+        <item>&lt;:P</item>
+        <!-- 13: Party -->
+        <item>:&amp;</item>
+        <!-- 14: Sick -->
+        <item>:-S</item>
+        <!-- 15: Worried -->
+        <item>I-)</item>
+        <!-- 16: Sleepy -->
+        <item>O:-)</item>
+        <!-- 17: Angel -->
+        <item>:O</item>
+        <!-- 18: Surprise -->
+        <item>:-$</item>
+        <!-- 19: Don't tell anyone -->
+        <item>;)</item>
+        <!-- 20: Winking -->
+        <item>&amp;-)</item>
+        <!-- 21: Hypnotized -->
+        <item>:-?</item>
+        <!-- 22: Thinking -->
+        <item>:-*</item>
+        <!-- 23: Kiss -->
+        <item>=p~</item>
+        <!-- 24: drooling -->
+        <item>[-(</item>
+        <!-- 25: no_talking -->
+        <item>:|</item>
+        <!-- 26: straight_face -->
+        <item>:></item>
+        <!-- 27: smug -->
+        <item>=((</item>
+        <!-- 28: lovesick -->
+        <item>:-w</item>
+        <!-- 29: waiting -->
+    </string-array>
+
+    <!-- Bkav QuangNDb - Ky tu khi chon emoticon -->
+    <integer-array name="btalk_list_unicode_emoji" translatable="false">
+        <item>0x263a</item>
+        <item>0x1f60a</item>
+        <item>0x1f600</item>
+        <item>0x1f601</item>
+        <item>0x1f602</item>
+        <item>0x1f603</item>
+        <item>0x1f604</item>
+        <item>0x1f605</item>
+        <item>0x1f606</item>
+        <item>0x1f607</item>
+        <item>0x1f608</item>
+        <item>0x1f609</item>
+        <item>0x1f62f</item>
+        <item>0x1f610</item>
+        <item>0x1f611</item>
+        <item>0x1f615</item>
+        <item>0x1f620</item>
+        <item>0x1f62c</item>
+        <item>0x1f621</item>
+        <item>0x1f622</item>
+        <item>0x1f634</item>
+        <item>0x1f62e</item>
+        <item>0x1f623</item>
+        <item>0x1f624</item>
+        <item>0x1f625</item>
+        <item>0x1f626</item>
+        <item>0x1f627</item>
+        <item>0x1f628</item>
+        <item>0x1f629</item>
+        <item>0x1f630</item>
+        <item>0x1f61f</item>
+        <item>0x1f631</item>
+        <item>0x1f632</item>
+        <item>0x1f633</item>
+        <item>0x1f635</item>
+        <item>0x1f636</item>
+        <item>0x1f637</item>
+        <item>0x1f61e</item>
+        <item>0x1f612</item>
+        <item>0x1f60d</item>
+        <item>0x1f61b</item>
+        <item>0x1f61c</item>
+        <item>0x1f61d</item>
+        <item>0x1f60b</item>
+        <item>0x1f617</item>
+        <item>0x1f619</item>
+        <item>0x1f618</item>
+        <item>0x1f61a</item>
+        <item>0x1f60e</item>
+        <item>0x1f62d</item>
+        <item>0x1f60c</item>
+        <item>0x1f616</item>
+        <item>0x1f614</item>
+        <item>0x1f62a</item>
+        <item>0x1f60f</item>
+        <item>0x1f613</item>
+        <item>0x1f62b</item>
+
+    </integer-array>
+
+    <!--Bkav QuangNDb list id res cua cac emoticon-->
+    <integer-array name="btalk_list_icon_id">
+        <item>@drawable/emoji1</item>
+        <item>@drawable/emoji2</item>
+        <item>@drawable/emoji3</item>
+        <item>@drawable/emoji4</item>
+        <item>@drawable/emoji5</item>
+        <item>@drawable/emoji6</item>
+        <item>@drawable/emoji7</item>
+        <item>@drawable/emoji8</item>
+        <item>@drawable/emoji9</item>
+        <item>@drawable/emoji10</item>
+        <item>@drawable/emoji11</item>
+        <item>@drawable/emoji12</item>
+        <item>@drawable/emoji13</item>
+        <item>@drawable/emoji14</item>
+        <item>@drawable/emoji15</item>
+        <item>@drawable/emoji16</item>
+        <item>@drawable/emoji17</item>
+        <item>@drawable/emoji18</item>
+        <item>@drawable/emoji19</item>
+        <item>@drawable/emoji20</item>
+        <item>@drawable/emoji21</item>
+        <item>@drawable/emoji22</item>
+        <item>@drawable/emoji23</item>
+        <item>@drawable/emoji24</item>
+        <item>@drawable/emoji25</item>
+        <item>@drawable/emoji26</item>
+        <item>@drawable/emoji27</item>
+        <item>@drawable/emoji28</item>
+        <item>@drawable/emoji29</item>
+        <item>@drawable/emoji30</item>
+        <item>@drawable/emoji31</item>
+        <item>@drawable/emoji32</item>
+        <item>@drawable/emoji33</item>
+        <item>@drawable/emoji34</item>
+        <item>@drawable/emoji35</item>
+        <item>@drawable/emoji36</item>
+        <item>@drawable/emoji37</item>
+        <item>@drawable/emoji38</item>
+        <item>@drawable/emoji39</item>
+        <item>@drawable/emoji40</item>
+        <item>@drawable/emoji41</item>
+        <item>@drawable/emoji42</item>
+        <item>@drawable/emoji43</item>
+        <item>@drawable/emoji44</item>
+        <item>@drawable/emoji45</item>
+        <item>@drawable/emoji46</item>
+        <item>@drawable/emoji47</item>
+        <item>@drawable/emoji48</item>
+        <item>@drawable/emoji49</item>
+        <item>@drawable/emoji50</item>
+        <item>@drawable/emoji51</item>
+        <item>@drawable/emoji52</item>
+        <item>@drawable/emoji53</item>
+        <item>@drawable/emoji54</item>
+        <item>@drawable/emoji55</item>
+        <item>@drawable/emoji56</item>
+        <item>@drawable/emoji57</item>
+    </integer-array>
+    <!--QuangNDb template quick reply-->
+    <string-array name="quick_reply_template">
+        <item>@string/quick_response_what_up</item>
+        <item>@string/quick_response_wait</item>
+        <item>@string/quick_response_goodnight</item>
+        <item>@string/quick_response_ok</item>
+    </string-array>
+    <!--<item>@string/quick_response_Hello</item>-->
+    <!--<item>@string/quick_response_call_later</item>-->
+    <!--<item>@string/quick_response_thanks</item>-->
+    <!--<item>@string/quick_response_i_do</item>-->
+    <!--<item>@string/quick_response_thanks</item>-->
+</resources>

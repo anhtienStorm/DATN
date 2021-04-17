@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb doi mau actionbar thanh mau trang co alpha-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bkav_actionbar_height"
+                android:background="@color/btalk_transparent_view">
+    <!--@color/btalk_actionbar_and_tabbar_bg_color-->
+
+    <TextView
+        android:id="@+id/title_tab_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/large_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/title_tab_contacts"
+        android:textSize="@dimen/title_tab_text_size_max"
+        android:textColor="@color/color_tab_contacts" />
+
+    <TextView
+        android:id="@+id/big_title_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/large_margin"
+        android:text="@string/title_tab_contacts"
+        android:visibility="gone"
+        android:textSize="26sp"
+        android:textColor="@color/color_tab_contacts"/>
+
+    <!--BKav TrungTh Test: sua tam mau actionbar theo y anh HoangNT -->
+    <ImageView
+        android:id="@+id/action_filter_favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:layout_toStartOf="@+id/action_more_tool"
+        android:paddingTop="1dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:src="@drawable/ic_favorite_blue" />
+    <!--TrungTH Box ung ic add new contact -->
+    <ImageView
+        android:id="@+id/action_add_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/action_filter_favorites"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:src="@drawable/ic_add_new_blue" />
+
+    <!-- Bkav HaiKH đồng bộ icon action_more_tool với các tab khác -->
+    <ImageView
+        android:id="@+id/action_more_tool"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="15dip"
+        android:paddingRight="@dimen/btalk_padding_right_ic_actionbar"
+        android:layout_marginEnd="@dimen/size_5dp"
+        android:src="@drawable/ic_more_new"
+        android:tint="@drawable/default_icon_tint"/>
+
+</RelativeLayout>

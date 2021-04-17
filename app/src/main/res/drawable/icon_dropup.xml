@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list android:opacity="transparent">
+            <item android:height="15dp" android:gravity="center"
+                  android:start="20dp" android:end="20dp">
+                <bitmap  android:src="@drawable/ic_hide_list_contact" android:gravity="left"/>
+            </item>
+        </layer-list>
+    </item>
+</selector>

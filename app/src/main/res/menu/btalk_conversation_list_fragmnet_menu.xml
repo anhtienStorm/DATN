@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNdb custom lai menu cua source goc-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:appcompat="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_show_archived"
+        android:orderInCategory="200"
+        android:title="@string/action_menu_show_archived"
+        appcompat:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_show_blocked_contacts"
+        android:orderInCategory="300"
+        android:title="@string/blocked_contacts_title"
+        appcompat:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_mark_all_read"
+        android:orderInCategory="400"
+        android:title="@string/action_mark_all_read"
+        appcompat:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="500"
+        android:title="@string/action_settings"
+        appcompat:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bkav_contact_name_text_color">#4e4e4e</color>
+    <color name="btalk_color_list_common_divider">#dfdfdf</color>
+    <color name="bkav_date_section_text">#EA5D30</color>
+
+    <!--AnhNDd:  Mau nen cua background actionbar -->
+    <color name="btalk_color_bg_actionbar">#EA5D30</color>
+
+    <!--BKav TrungTh Test: them vao sua tam theo y anh HoangNT -->
+    <!--<color name="btalk_color_bg_actionbar_contacts">@android:color/darker_gray</color>-->
+    <!--AnhNDd: thay mau nen tool bar-->
+    <!--AnhNDd: Mau nen phan tieu de cua dialog -->
+    <color name="btalk_color_dialog_title_bg">#f15b25</color>
+
+    <!-- AnhNDd: mau cua button Text separator -->
+
+    <!-- AnhNDd Mau cua button Text V2 -->
+    <color name="button_text_color_v2_pressed">#ffffff</color>
+    <color name="button_text_color_v2_normal">#ffffff</color>
+    <color name="button_text_color_v2_disabled">#ffffff</color>
+
+    <!--Bkav TrungTH Test-->
+
+    <!--AnhNDd: mau trang voi transparent 90%-->
+
+    <!--Bkav TienNAb them background transparent-->
+    <color name="transparent">#00ffffff</color>
+</resources>

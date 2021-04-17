@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bkav.android.btalk.messaging.ui.conversation.BtalkSimSelectorItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/bg_sim_width"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:clipToPadding="false"
+    android:gravity="end"
+    android:orientation="vertical"
+>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_sim_bg"
+        android:clipToPadding="false"
+        android:elevation="1dp"
+        android:paddingBottom="4dp"
+        android:paddingEnd="7dp"
+        android:paddingStart="12dp"
+        android:paddingTop="4dp">
+        <LinearLayout
+            android:id="@+id/details_container"
+            style="@style/SimSelectorItemLinearLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/SimSelectorItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/details"
+                style="@style/SimSelectorItemDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <bkav.android.btalk.messaging.custom_view.BtalkSimIconView
+            android:id="@+id/sim_icon"
+            android:layout_width="@dimen/icon_compose_contact_message_size"
+            android:layout_height="@dimen/icon_compose_contact_message_size"
+            android:clickable="false"
+            android:elevation="3dp"
+            android:importantForAccessibility="no"
+            android:visibility="visible"
+            app:iconSizeBtalk="normal"
+            app:reveal="true"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@android:color/transparent"
+    />
+
+
+</bkav.android.btalk.messaging.ui.conversation.BtalkSimSelectorItemView>

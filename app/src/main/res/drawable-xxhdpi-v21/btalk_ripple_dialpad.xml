@@ -1,0 +1,3 @@
+<!-- Anhdts doi mau background hieu ung cham cho cac nut trong view dialpad-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="?android:attr/colorControlHighlight" />

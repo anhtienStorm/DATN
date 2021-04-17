@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bkav.android.btalk.messaging.ui.cutomview.BtalkPickerComposeMessageView
+    android:id="@+id/message_compose_view_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:windowSoftInputMode="adjustResize">
+
+    <!-- Note it may seem off to have the layout_weight="1" on the compose bar and attachment view
+     when it's the media picker that expands, but this is correct because weight also works when
+     there's not enough space.  Any views with positive weights will be shrunk to make space.
+     When the media picker goes full screen, it fills the parent, leaving no room for the compose
+     bar -->
+    <!--<View style="@style/LineDividerStyle"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+        <View style="@style/LineDividerStyle"/>
+        <!--android:background="@color/btalk_color_compose_bg"-->
+
+        <View
+            android:id="@+id/top_margin"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"/>
+
+        <include android:id="@+id/attachment_draft_view"
+                 style="@style/ComposeMessageViewDraftViewStyle"
+                 layout="@layout/btalk_attchment_preview"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_marginBottom="4dp"
+                 android:layout_weight="1"
+                 android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/subject_view"
+            style="@style/SubjectViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/compose_message_subject_bottom_padding"
+            android:paddingTop="@dimen/compose_message_subject_top_padding"
+            android:visibility="gone">
+
+            <com.android.messaging.ui.PlainTextEditText
+                android:id="@+id/compose_subject_text"
+                style="@style/ConversationComposeSubjectText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/compose_message_view_subject_hint_text"
+                android:imeOptions="flagNoExtractUi"
+                android:textColor="@color/btalk_color_text_compose"
+                android:textColorHint="@color/btalk_color_text_compose_hint"/>
+            <!--android:background="@drawable/subject_editor_bubble"-->
+
+            <ImageButton
+                android:id="@+id/delete_subject_button"
+                style="@style/AttachmentPreviewCloseButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/delete_subject_content_description"
+                android:src="@drawable/ic_remove_light"
+                android:translationY="@dimen/compose_message_subject_cancel_top_offset"/>
+        </RelativeLayout>
+
+        <!-- Holds all views that create the actual compose box -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal">
+
+            <!-- Contains compose message bubble and character counter for SMS which should be left
+            aligned -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Contains media button and compose message bubble whose centers should be
+                vertically aligned -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/attach_media_button"
+                        style="@style/ComposeMessageViewAttachMediaButtonStyle"
+                        android:layout_width="@dimen/icon_compose_contact_message_size"
+                        android:layout_height="@dimen/icon_compose_contact_message_size"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="@string/attachMediaButtonContentDescription"
+                        android:paddingBottom="@dimen/common_margin"
+                        android:paddingTop="@dimen/common_margin"
+                        android:background="@drawable/overfollow_button_bg"
+                        android:tint="@color/emoticon_tint"
+                        android:src="@drawable/bkav_ic_add_attachment_normal"/>
+                    <!--<View android:layout_width="1px"-->
+                    <!--android:layout_marginStart="@dimen/medium_margin"-->
+                    <!--android:layout_marginEnd="@dimen/medium_margin"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_height="@dimen/icon_compose_contact_message_size"-->
+                    <!--android:background="@color/btalk_attach_color"/>-->
+                    <!--android:background="@drawable/msg_bubble_input"-->
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1">
+                        <bkav.android.btalk.messaging.ui.BtalkComposeEditText
+                            android:id="@+id/compose_message_text"
+                            style="@style/ConversationComposeSendText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_centerInParent="true"
+                            android:layout_toStartOf="@+id/img_add_emoticon"
+                            android:imeOptions="actionSend|flagNoEnterAction|flagNoExtractUi"
+                            android:textColor="@color/btalk_color_text_compose"
+                            android:textColorHint="@color/btalk_color_text_compose_hint"
+                            android:windowSoftInputMode="adjustResize">
+                            <requestFocus/>
+                        </bkav.android.btalk.messaging.ui.BtalkComposeEditText>
+                        <ImageView
+                            android:id="@+id/img_add_emoticon"
+                            android:layout_width="@dimen/icon_compose_contact_message_size"
+                            android:layout_height="@dimen/icon_compose_contact_message_size"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:padding="6dp"
+                            android:src="@drawable/btalk_ic_emoticon"
+                            android:tint="@color/emoticon_tint"/>
+                        <!--android:background="@drawable/overfollow_button_bg"-->
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:id="@+id/layout_send"
+                            style="@style/ComposeMessageViewFrameLayoutStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top">
+                            <bkav.android.btalk.messaging.custom_view.BtalkSimIconView
+                                android:id="@+id/self_send_icon"
+                                android:layout_width="@dimen/icon_compose_contact_message_size"
+                                android:layout_height="@dimen/icon_compose_contact_message_size"
+                                android:clickable="true"
+                                android:importantForAccessibility="no"
+                                app:iconSizeBtalk="normal"
+                                android:visibility="visible"
+                                app:reveal="true"/>
+                            <bkav.android.btalk.messaging.util.ImageButtonSendCustom
+                                android:id="@+id/send_message_button"
+                                android:layout_width="@dimen/icon_compose_contact_message_size"
+                                android:layout_height="@dimen/icon_compose_contact_message_size"
+                                android:background="@drawable/overfollow_button_bg"
+                                android:contentDescription="@string/sendButtonContentDescription"
+                                android:src="@drawable/bkav_send_internet"
+                                android:tint="@color/btalk_orange_color"
+                                android:visibility="visible"/>
+                        </FrameLayout>
+                        <!--android:background="@drawable/send_arrow_background"-->
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/mms_indicator"
+                    style="@style/MmsIndicatorStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/mms_text"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/char_counter"
+                    style="@style/MmsIndicatorStyle"
+                    android:textColor="@android:color/black"
+                    android:layout_width="@dimen/Char_counter"
+                    android:layout_gravity="end"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <View
+            android:id="@+id/bot_margin"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/mediapicker_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"/>
+
+</bkav.android.btalk.messaging.ui.cutomview.BtalkPickerComposeMessageView>

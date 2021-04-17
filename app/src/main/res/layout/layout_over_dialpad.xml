@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layer_touch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/container_suggest"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dialpad_side_padding"
+    android:paddingTop="@dimen/dialpad_top_padding"
+    android:paddingEnd="@dimen/dialpad_side_padding"
+    android:paddingBottom="@dimen/container_message_action_height">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/size_10dp"
+        android:paddingTop="@dimen/dialpad_key_padding_top"
+        android:paddingRight="@dimen/size_10dp"
+        android:paddingBottom="@dimen/dialpad_key_padding_bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/one"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/two"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/three"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/four"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/five"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/six"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/seven"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/eight"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/nine"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/star"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver"
+                android:contentDescription="@string/dialpad_star_number">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/zero"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+
+            <bkav.android.btalk.view.OverlayButton
+                android:id="@+id/pound"
+                android:gravity="center"
+                style="@style/BtalkDialpadKeyButtonStyleOver"
+                android:contentDescription="@string/dialpad_pound_number">
+
+                <View
+                    style="@style/BtalkDialpadKeyButtonStyleOverBackGround"/>
+
+            </bkav.android.btalk.view.OverlayButton>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

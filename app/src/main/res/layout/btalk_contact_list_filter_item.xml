@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><!-- AnhNDd: view cua tung item trong hien thi danh ba
+-->
+
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+    class="com.android.contacts.common.list.ContactListFilterView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/contact_filter_item_min_height"
+    android:paddingTop="?attr/list_item_padding_top">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/btalk_contact_filter_icon_size"
+        android:layout_height="@dimen/btalk_contact_filter_icon_size"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dip"
+        android:layout_marginStart="16dip"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/accountType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/accountUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-3dip"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="?android:attr/textColorTertiary" />
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginTop="1dip"
+        android:clickable="false"
+        android:buttonTint="@color/single_choice_state_list"/>
+</view>

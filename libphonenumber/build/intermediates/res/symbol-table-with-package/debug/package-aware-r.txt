@@ -1,0 +1,2 @@
+com.bkav.libphonenumber
+string app_name

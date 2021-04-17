@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginStart="@dimen/large_margin">
+
+        <RadioGroup
+            android:id="@+id/radio_group_mute_cvs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/very_small_margin"
+            android:layoutDirection="rtl"
+            android:textAlignment="textStart">
+
+            <RadioButton
+                style="@style/RadioButtonChoose"
+                android:id="@+id/block_15_minutes"
+                android:text="@string/mute_conversion_15_minutes"/>
+
+            <RadioButton
+                style="@style/RadioButtonChoose"
+                android:id="@+id/block_1_hour"
+                android:text="@string/mute_conversion_1_hour"/>
+
+            <RadioButton
+                style="@style/RadioButtonChoose"
+                android:id="@+id/block_8_hours"
+                android:text="@string/mute_conversion_8_hour"/>
+
+            <RadioButton
+                style="@style/RadioButtonChoose"
+                android:id="@+id/block_24_hours"
+                android:text="@string/mute_conversion_24_hour"/>
+
+            <RadioButton
+                style="@style/RadioButtonChoose"
+                android:id="@+id/block_to_tomorrow"
+                android:text="@string/mute_conversion_until_at_7h_50_am"/>
+
+            <RadioButton
+                style="@style/RadioButtonChoose"
+                android:id="@+id/block_until_back"
+                android:checked="true"
+                android:text="@string/mute_conversion_until_turn_on"/>
+        </RadioGroup>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:text="@string/btn_ok"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/btn_ok"
+            android:background="@null"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:text="@string/btn_cancel"/>
+    </RelativeLayout>
+</LinearLayout>

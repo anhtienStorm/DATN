@@ -1,0 +1,5 @@
+<!--AnhNDd: mau cua radio button-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:color="@color/btalk_ab_text_and_icon_selected_color"></item>
+    <item android:state_checked="false" android:color="@color/btalk_ab_text_and_icon_normal_color"></item>
+</selector>

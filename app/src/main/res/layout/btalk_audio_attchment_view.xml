@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--BKAV QuangNDb layout cua BtalkAttchmentView-->
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <bkav.android.btalk.messaging.ui.BtalkAudioAttachmentPlayPauseButton
+        android:id="@+id/play_pause_button"
+        style="@style/AudioAttachmentViewPlayPauseButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/audio_play_content_description"
+            android:src="@drawable/ic_audio_play"/>
+
+        <ImageView
+            android:id="@+id/pause_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/audio_pause_content_description"
+            android:src="@drawable/ic_audio_pause"/>
+    </bkav.android.btalk.messaging.ui.BtalkAudioAttachmentPlayPauseButton>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+        <com.android.messaging.ui.mediapicker.PausableChronometer
+            android:id="@+id/timer"
+            style="@style/AudioAttachmentTimerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingEnd="10dp"
+            android:layout_marginEnd="0dp"
+        />
+        <bkav.android.btalk.messaging.ui.cutomview.BtalkPlaybackSeekbar
+            android:id="@+id/seekbar"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center"
+            android:progress="0"
+        />
+
+    </LinearLayout>
+</merge>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--AnhNDd: Thêm setting Thiết lập hồ sơ-->
+    <com.android.contacts.common.preference.SortOrderPreference
+        android:dialogTitle="@string/display_options_sort_list_by"
+        android:icon="@null"
+        android:key="sortOrder"
+        android:title="@string/display_options_sort_list_by" />
+
+    <com.android.contacts.common.preference.DisplayOrderPreference
+        android:dialogTitle="@string/display_options_view_names_as"
+        android:icon="@null"
+        android:key="displayOrder"
+        android:title="@string/display_options_view_names_as" />
+
+    <!--Anhdts tuy chon hien thi so dien thoai-->
+    <SwitchPreference
+        android:defaultValue="false"
+        android:icon="@null"
+        android:key="@string/show_phone_number"
+        android:title="@string/option_show_phone_number"
+        />
+
+    <com.android.contacts.common.preference.DefaultAccountPreference
+        android:dialogTitle="@string/default_editor_account"
+        android:icon="@null"
+        android:key="accounts"
+        android:title="@string/default_editor_account" />
+
+    <Preference
+        android:icon="@null"
+        android:key="profile"
+        android:title="@string/profile_display_name" />
+
+    <Preference
+        android:icon="@null"
+        android:key="about"
+        android:order="@integer/about_contacts_order_number"
+        android:title="@string/setting_about" />
+
+</PreferenceScreen>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<bkav.android.btalk.contacts.editcontact.BtalkCompactPhotoEditorView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/photo_editor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal">
+
+    <com.android.contacts.widget.QuickContactImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:id="@+id/photo_icon_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"/>
+
+    <View
+        android:id="@+id/photo_touch_intercept_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_background_material_dark"
+        android:contentDescription="@string/compact_editor_change_photo_content_description"
+        android:focusable="true"/>
+
+    <!-- Overlays/gradients that can be used to make white text/buttons visible -->
+    <View
+        android:id="@+id/title_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+
+    <View
+        android:id="@+id/action_bar_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"/>
+
+    <LinearLayout
+        android:id="@+id/content_action_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_header_edit_contact"
+        android:layout_marginEnd="6dp"
+        android:gravity="start|bottom"
+        android:paddingStart="6dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/take_photo_from_app"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/medium_margin"
+            android:paddingTop="@dimen/large_margin">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:src="@drawable/icon_image_choose_default"
+                android:tint="@color/btalk_white_bg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="roboto-thin"
+                android:maxLines="1"
+                android:text="@string/pick_default_photo"
+                android:textColor="@color/btalk_white_bg"
+                android:textSize="@dimen/text_header_edit_contact"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/take_photo_from_gallery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/medium_margin"
+            android:paddingTop="@dimen/large_margin">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_gallery"
+                android:tint="@color/btalk_white_bg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="roboto-thin"
+                android:text="@string/pick_gallery_title"
+                android:textColor="@color/btalk_white_bg"
+                android:textSize="@dimen/text_header_edit_contact"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/take_photo_from_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/medium_margin"
+            android:paddingTop="@dimen/large_margin">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:src="@drawable/icon_take_image_camera"
+                android:tint="@color/btalk_white_bg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="roboto-thin"
+                android:text="@string/pick_camera_title"
+                android:textColor="@color/btalk_white_bg"
+                android:textSize="@dimen/text_header_edit_contact"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</bkav.android.btalk.contacts.editcontact.BtalkCompactPhotoEditorView>

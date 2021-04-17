@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/height_container_suggest"
+              style="@style/BtalkContactsAlertDialogTheme"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btalk_avatar_icon_size"
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <QuickContactBadge
+            android:id="@+id/header_menu_contact_photo"
+            android:layout_width="@dimen/btalk_avatar_icon_size"
+            android:layout_height="@dimen/btalk_avatar_icon_size"
+            android:focusable="true"
+            android:nextFocusRight="@id/header_container"/>
+
+        <TextView
+            android:id="@+id/header_menu_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:maxLines="1"
+            android:textColor="@color/bkav_date_section_text"
+            android:textSize="@dimen/text_size_suggest_number"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/call_detail_footer_icon_tint"/>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+AnhNDd: menu các item trong nav ở btalk activity chính
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_setting_phones"
+            android:icon="@drawable/ic_tab_phones"
+            android:title="@string/title_tab_phone" />
+        <item
+            android:id="@+id/nav_setting_messages"
+            android:icon="@drawable/ic_tab_messages"
+            android:title="@string/title_tab_messages" />
+        <item
+            android:id="@+id/nav_setting_contacts"
+            android:icon="@drawable/ic_big_icon_tab_contacts"
+            android:title="@string/title_tab_contacts" />
+        <!--Bkav QuangNDb them setting de doi mau tab-->
+        <!--QuangNDb an change mau tab di-->
+        <item
+            android:id="@+id/nav_setting_tab"
+            android:icon="@drawable/ic_create_24dp"
+            android:visible="false"
+            android:title="@string/title_tab_setting_tab"/>
+    </group>
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb menu cua class BtalkContactSelectionActivity-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_btalk_search"
+        android:title="@string/menu_search"
+        android:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_close"
+        android:icon="@drawable/ic_btalk_remove_small"
+        android:showAsAction="always" />
+</menu>

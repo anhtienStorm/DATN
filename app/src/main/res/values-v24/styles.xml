@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Anhdts style fast scroll cho text va thanh truot be lai-->
+    <style name="FastScrollTheme" parent="@android:style/Widget.Material.FastScroll">
+        <item name="android:textSize">@dimen/btalk_text_size_fast_scroll_popup</item>
+    </style>
+
+    <style name="BugleTheme.SettingsActivity" parent="BugleTheme">
+        <item name="android:textSize">@dimen/settings_list_text_size</item>
+        <item name="colorPrimary">@color/actionbar_setting_color</item>
+        <item name="colorPrimaryDark">@color/actionbar_setting_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="BtalkPeopleTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name="android:homeAsUpIndicator">@drawable/ic_back_arrow</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- Style for the overflow button in the actionbar. -->
+        <item name="android:actionModeCloseDrawable">@drawable/ic_close_lt</item>
+        <item name="android:fastScrollStyle">@style/FastScrollTheme</item>
+        <item name="android:fastScrollThumbDrawable">@drawable/btalk_fastscroll_thumb</item>
+        <item name="android:fastScrollTrackDrawable">@null</item>
+        <item name="android:textColorPrimary">@color/primary_text_color</item>
+        <item name="android:textColorSecondary">@color/secondary_text_color</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:listViewStyle">@style/ListViewStyle</item>
+        <item name="android:windowBackground">
+            @color/btalk_actionbar_and_tabbar_bg_no_transparent_color
+        </item>
+        <item name="android:colorPrimaryDark">@color/primary_color_dark</item>
+        <item name="android:colorPrimary">@color/primary_color</item>
+        <item name="android:colorAccent">@color/accent_color</item>
+        <item name="list_item_height">?android:attr/listPreferredItemHeight</item>
+        <item name="activated_background">@drawable/list_item_activated_background</item>
+        <item name="section_header_background">@drawable/list_title_holo</item>
+        <item name="list_section_header_height">24dip</item>
+        <item name="list_item_padding_top">
+            @dimen/contact_browser_list_item_padding_top_or_bottom
+        </item>
+        <item name="list_item_padding_right">32dp</item>
+        <item name="list_item_padding_bottom">
+            @dimen/contact_browser_list_item_padding_top_or_bottom
+        </item>
+        <item name="list_item_padding_left">16dip</item>
+        <item name="list_item_gap_between_image_and_text">
+            @dimen/contact_browser_list_item_gap_between_image_and_text
+        </item>
+        <item name="list_item_gap_between_label_and_data">5dip</item>
+        <item name="list_item_presence_icon_margin">4dip</item>
+        <item name="list_item_presence_icon_size">16dip</item>
+        <item name="list_item_photo_size">@dimen/conversation_list_image_preview_size</item>
+        <item name="list_item_profile_photo_size">70dip</item>
+        <item name="list_item_prefix_highlight_color">@color/people_app_theme_color</item>
+        <item name="list_item_background_color">@color/btalk_transparent_view</item>
+        <item name="list_item_header_text_color">@color/people_app_theme_color</item>
+        <item name="list_item_header_text_size">14sp</item>
+        <item name="list_item_header_height">30dip</item>
+        <item name="list_item_data_width_weight">5</item>
+        <item name="list_item_label_width_weight">3</item>
+        <item name="list_item_header_text_indent">8dip</item>
+        <item name="contact_browser_list_padding_left">0dip</item>
+        <item name="contact_browser_list_padding_right">0dip</item>
+        <!-- Anhdts doi tu color/primary -->
+        <item name="contact_browser_background">@android:color/white</item>
+        <item name="list_item_text_indent">@dimen/contact_browser_list_item_text_indent</item>
+        <!-- Favorites -->
+        <item name="favorites_padding_bottom">0dip</item>
+        <!-- CallLog -->
+        <item name="call_log_primary_text_color">@color/dialtacts_primary_text_color</item>
+        <item name="call_log_primary_background_color">#000000</item>
+        <item name="call_log_secondary_text_color">@color/dialtacts_secondary_text_color</item>
+        <item name="call_log_secondary_background_color">#333333</item>
+        <item name="call_log_header_color">#33b5e5</item>
+        <item name="useWallpaperForBackground">true</item>
+        <item name="statusBarIsTransparent">false</item>
+        <item name="windowBackground">@drawable/bg_sms</item>
+        <item name="blurDownScaleFactor">6</item>
+        <item name="blurRadius">@integer/btalk_blur_radius</item>
+        <item name="alphaActionBar">1</item>
+        <item name="alphaToolBar">1</item>
+        <item name="alphaAllView">@dimen/btalk_alpha_for_all_view</item>
+
+        <item name="android:alertDialogTheme">@style/BtalkContactsAlertDialogTheme</item>
+        <item name="android:overlapAnchor">true</item>
+        <item name="list_item_video_call_icon_size">32dip</item>
+    </style>
+</resources>

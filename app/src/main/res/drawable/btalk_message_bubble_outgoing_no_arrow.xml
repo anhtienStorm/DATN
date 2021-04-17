@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb drawables cu outgoing message, dung o class BtalkConversationDrawables-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/white" />
+    <corners android:radius="15dp" />
+</shape>

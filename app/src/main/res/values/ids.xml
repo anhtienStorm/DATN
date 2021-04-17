@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editors_name" type="id"/>
+    <item name="action_set_rington" type="id"/>
+    <item name="action_set_ringmess" type="id"/>
+    <item name="action_set_default_sim" type="id"/>
+</resources>

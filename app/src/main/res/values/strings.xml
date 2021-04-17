@@ -1,0 +1,335 @@
+<resources xmlns:tools="http://schemas.android.com/tools"
+     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+     tools:ignore="MissingTranslation">
+    <string name="app_name">Btalk</string>
+    <!--Bkav TrungTH text cho icon launcher-->
+    <string name="launcherDialer">Phone</string>
+    <string name="launcherMessage">Message</string>
+    <!--Bkav TrungTH ten cac tab-->
+    <string name="title_tab_phone">Phone</string>
+    <string name="title_tab_recents_call">Recents</string>
+    <string name="title_tab_messages">Messages</string>
+    <string name="title_tab_contacts">Contacts</string>
+    <string name="title_tab_setting_tab">Change color tab</string>
+    <!--Bkav QuangNDb noi dung text va button text cua view dat btalk lam pm tin nhan mac dinh-->
+    <string name="title_set_as_default_sms">To send sms, set Btalk as the default SMS app</string>
+    <string name="title_change">Change</string>
+    <!--Bkav QuangNDb noi dung toast thong bao sau khi thay doi btalk lam pm nt mac dinh-->
+    <string name="notify_btalk_as_sms_default">Btalk as the default SMS app</string>
+    <string name="notify_btalk_not_as_sms_default">Btalk not as the default SMS app</string>
+    <!--Bkav QuangNDb cac text cua cac chuc nang trong menu cua moi conversation-->
+    <string name="menu_text_search_sms">Search sms</string>
+    <string name="menu_text_attach_contact">Attach contact</string>
+    <string name="menu_text_add_subject">Add subject</string>
+    <!--Bkav QuangNDb text label cua media chooser-->
+    <string name="media_chooser_emoticon">Emoticon</string>
+    <string name="media_chooser_contact">Contact</string>
+    <string name="media_chooser_location">Location</string>
+    <!--Bkav QuangNDb title cua menu search contact-->
+    <string name="contact_chooser_search_title">Search contact</string>
+    <string name="split_number_date">\u0020\u0020-\u0020\u0020</string>
+
+    <!--Bkav QuangNDb String cua location map-->
+    <string name="link_map" translatable="false">%1$s\n%2$s\nhttps://maps.google.com/maps?q=%3$s,%4$s</string>
+    <string name="network_issue">Not networking</string>
+    <string name="gps_issue">Not GPS avariable</string>
+    <string name="default_info_title">Default Location</string>
+    <string name="default_info_snippet">No places found, because location permission is disabled.</string>
+    <string name="btn_try_again">Try again!</string>
+    <!--Bkav QuangNDb invalid phone nunmber-->
+    <string name="invalid_contact">Invalid contact</string>
+    <!--Bkav QuangNDb ten self participant-->
+    <string name="messagelist_sender_self">Me</string>
+    <!--Bkav QuangNDb hint cua search view search sms-->
+    <string name="search_sms_hint">Search message</string>
+    <string name="hint_open_search">All message search appear here!</string>
+    <string name="hint_not_found_message">Not found messages!</string>
+    <!--Bkav QuangNDb title tren dialog khi bam vao so dien thoai trong noi dung tin nhan-->
+    <string name="option_call">Call</string>
+    <string name="option_text">Send message</string>
+    <string name="option_mail">Send email</string>
+    <string name="option_add_contact">Add contact</string>
+    <string name="option_copy">Copy</string>
+    <string name="option_edit">Open digit ime</string>
+    <!--Bkav QuangNDb option show avatar-->
+    <string name="option_show_avatar">Show avatar in a message</string>
+    <string name="option_show_details">Show details in a message</string>
+    <string name="option_show_info_sim">Show information sim of a conversation</string>
+    <string name="option_show_avatar_key" translatable="false">show_avatar_in_message</string>
+    <string name="option_show_details_key" translatable="false">show_details_in_message</string>
+    <string name="option_show_info_sim_key" translatable="false">show_info_sim_in_conversation</string>
+    <string name="option_symmetry_box_message_key" translatable="false">symmetry_box_message</string>
+    <!--Bkav QuangNDb text toase has not connect 3g-->
+    <string name="toast_show_has_not_connect_3g">Please turn on mobile data to send MMS message!</string>
+    <!--QuangNDb action mark all read-->
+    <string name="action_mark_all_read">Mark all as read</string>
+    <string name="progress_mark_all_message">Marking as read all messages</string>
+    <string name="missing_storage_permission">You have a recorded call, to save it as mms message, please allow Btalk to access the device\'s memory.</string>
+    <string name="allow">Allow</string>
+    <!--     CALL LOG      -->
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo giay -->
+    <plurals name="recentCalls_timeInSeconds">
+        <item quantity="one">1 sec ago</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>    secs ago</item>
+    </plurals>
+
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo phut -->
+    <plurals name="recentCalls_timeInMinutes">
+        <item quantity="one">1 min ago</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>            mins ago</item>
+    </plurals>
+
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo ngay -->
+
+    <!-- Anhdts Cac ngay trong tuan -->
+    <string name="day_of_week_long_sunday">Sunday</string>
+    <string name="day_of_week_long_monday">Monday</string>
+    <string name="day_of_week_long_tuesday">Tuesday</string>
+    <string name="day_of_week_long_wednesday">Wednesday</string>
+    <string name="day_of_week_long_thursday">Thursday</string>
+    <string name="day_of_week_long_friday">Friday</string>
+    <string name="day_of_week_long_saturday">Saturday</string>
+    <string name="day_of_week_long_today">Today</string>
+
+    <!-- Anhdts su dung cho thanh chon hien thi tat ca cuoc goi hay chi cuoc goi nho -->
+    <string name="toolbar_recent_all_upper">All</string>
+    <string name="toolbar_recent_missed_upper">Missed</string>
+
+    <!-- Anhdts title context menu cho item trong call log -->
+    <string name="action_add_contact">Add contact</string>
+    <string name="action_show_call_detail">View call logs</string>
+    <string name="action_show_all_call_detail">View contact\'s call logs</string>
+    <string name="action_share_contact_via">Share contact via</string>
+    <string name="action_remove_in_call_log">Delete call log</string>
+    <string name="action_clear_in_call_log">Delete all logs of this number</string>
+    <string name="action_call_by_sim">Call by SIM %1$s &lt;%2$s&gt;</string>
+    <string name="dialog_phone_send_prohibited_message">Can\'t call this number</string>
+    <string name="toast_warn_cannot_send_message">Error: Cannot send message.  Please provide conference recipients.</string>
+
+    <!--  Dilpad -->
+    <!-- Anhdts letter cua phim * -->
+    <string name="btalk_dialpad_star_letters">,</string>
+    <!-- Anhdts letter cua phim # -->
+    <string name="btalk_dialpad_pound_letters">;</string>
+    <!--Anhdts xoa nhat ky cuoc goi-->
+    <string name="recentCalls_deleteAll">Clear recents</string>
+
+    <!--**************TOOLTIP******************-->
+    <!-- Anhdts text goi y dialpad-->
+    <string name="bkav_tooltip_magicpad_message">Tips: To <b>perform quick search</b> for desired contact, just press the number corresponding to <b>the first letter</b> of the name, e.g \'3 2 3\' -> \'Dad\'</string>
+    <string name="btalk_tooltip_magicpad_not_show_again">Not show again</string>
+    <string name="count_show_tooltip_dialpad">count_show_tooltip_dialpad</string>
+    <string name="tooltip_pref_show_dialpad">show_tooltip_dialpad</string>
+    <string name="tooltip_times_use_message">count_use_tooltip_message</string>
+    <string name="tooltip_times_use_contact">times_use_tooltip_contact</string>
+
+    <!--Bkav QuangNDb hint text compose view-->
+    <string name="btalk_compose_message_view_hint_text_multi_sim"><i>Send from %1$s</i></string>
+
+    <!--AnhNDd String trong nav drawer-->
+    <string name="btalk_title_nav_header">Settings</string>
+    <!--Bkav QuangNDb text hint cua box go tin nhan-->
+    <string name="btalk_hint_compose_message_not_multi_sim"><i>Typing your message</i></string>
+    <string name="btalk_notify_not_make_a_call">Can\'t make a call because too many participants or not phone number</string>
+    <!--Bkav QuangNDb override string text cua source goc de thay noi dung toast thay doi sms app-->
+    <string name="requires_default_sms_app_to_send">To send, set Btalk as the default SMS app</string>
+    <string name="requires_default_sms_app">Set Messaging as the default SMS app</string>
+
+    <!--*******************menu******************-->
+    <!-- Anhdts action shortcut menu-->
+    <string name="menu_label_new_message">New message</string>
+    <string name="menu_label_favorite">Favorites</string>
+    <string name="menu_label_add_contact">Add contact</string>
+    <string name="description_show_more">Show more contact</string>
+
+    <!--Bkav QuangNDb text title ghi am cuoc goi den di-->
+    <string name="record_incoming_call">Record incoming call</string>
+    <string name="record_outgoing_call">Record outgoing call</string>
+    <string name="notify_recoding_call">The call is recorded and saved in message box</string>
+    <string name="notify_chooser_app_set_ringtone">Pick app to set ringtone for this contact</string>
+    <string name="notify_complete_set_ringtone">This contact seted ringtone</string>
+    <string name="notify_empty_contact_new_message">Contact is empty</string>
+    <string name="notify_empty_contact_find">No contact found</string>
+
+    <!-- Anhdts thong bao danh ba trong khi cham vao danh ba de goi-->
+    <string name="toast_cannot_call_without_number">Info empty</string>
+    <!--Bkav QuangNDB text title dialog nhieu nguoi trong cuoc hoi thoai-->
+    <string name="touch_to_call">Touch to call</string>
+    <string name="recentCalls_edit_call_log">Edit call log</string>
+
+    <!--Anhdts title tab merge-->
+    <string name="title_merge_by_name">Merge by name</string>
+    <string name="title_merge_by_phone">Merge by phone</string>
+    <string name="title_merge_by_mail">Merge by mail</string>
+
+    <!-- Anhdts setting dialer-->
+    <string name="sum_pref_open_app">Save tab position when app exit</string>
+    <string name="header_title_setting_open_app">App opening settings</string>
+    <string name="sum_pref_call_button">Display 2 call buttons for 2 simcards</string>
+
+    <!--Bkav TienNAb: them string header speed dial-->
+    <string name="header_title_setting_speed_dial">Speed Dial Settings</string>
+
+    <string name="toast_copy_contact">Have copied the contacts</string>
+    <string name="toast_delete_calls_complete"> calls have removed</string>
+    <!-- Anhdts Title bar for all call detail screen -->
+    <string name="notify_not_permission">Application has not been granted access to storage. Call recording will not be saved as a message. To change permissions go to Settings> Applications> Btalk> Permissions</string>
+
+    <!-- Anhdts Title bar for all call detail screen -->
+    <string name="allCallDetailTitle">All call details</string>
+    <!-- Anhdts dialog sau khi nguoi dung deny cac quyen-->
+    <string name="message_request_permission">To enable this feature, press on APP SETTINGS below and activate Contacts, Phone in Permissions.</string>
+    <string name="title_request_permission">Allow Btalk to use Contacts, Phone state</string>
+    <string name="positive_title_request_permission">APP SETTINGS</string>
+    <string name="negative_title_request_permission">NOT NOW</string>
+
+    <!-- Inform user of the names of permissions that are required to use the app -->
+    <string name="enable_permission_procedure">You can change permissions in Settings > Apps > Btalk > Permissions.</string>
+    <string name="enable_permission_procedure_description">You can change permissions in Settings, Apps, Btalk, Permissions.</string>
+    <string name="required_permissions_promo">Btalk needs permission to SMS, Phone and Contacts.</string>
+
+    <string name="enable_permission_audio">Allow Btalk to use Microphone</string>
+    <string name="enable_permission_audio_summary">To enable this feature, press on APP SETTINGS below and activate Microphone in Permissions.</string>
+
+    <string name="enable_permission_camera">Allow Btalk to use Camera</string>
+    <string name="enable_permission_camera_summary">To enable this feature, press on APP SETTINGS below and activate Camera in Permissions.</string>
+
+    <string name="enable_permission_gallery">Allow Btalk to use Phone storage</string>
+    <string name="enable_permission_gallery_summary">To enable this feature, press on APP SETTINGS below and activate Storage in Permissions.</string>
+    <string name="quick_response_title">Quick Response</string>
+    <string name="quick_response_edit_title">Edit quick responses</string>
+    <string name="quick_response_ok">OK</string>
+    <string name="quick_response_goodnight">GoodNight!</string>
+    <string name="quick_response_wait">Wait for me a few minutes.</string>
+    <string name="quick_response_what_up">What\'s up?</string>
+    <string name="add_response_title">Add quick message</string>
+    <string name="add_response_hint">Content</string>
+    <string name="notify_empty_response_content">Response content can\'t empty!</string>
+
+    <string name="btalk_title_dialog_choose_number">Choose number</string>
+    <string name="other_telephone_exchange">Telephone Exchange</string>
+    <string name="police_text">Police</string>
+    <string name="ambulance_text">Ambulance</string>
+    <string name="rescue_text">Rescue</string>
+    <string name="firefighting_text">Firefighting</string>
+
+    <string name="display_name_date_format">\?DATE:</string>
+
+    <string name="copy_done_suggest">Copy done!</string>
+    <string name="dont_support_quick_response">Don\'t support show quick response in screen current mode</string>
+    <string name="notify_max_support_quick_response">Only up to 5 quick responses are supported</string>
+    <string name="action_share_more">More…</string>
+    <!-- Anhdts: action loc tin nhan va ghi am-->
+    <string name="action_filter_mms">Filter MMS</string>
+    <string name="action_filter_audio">Filter recording file</string>
+    <!--Bkav TienNAb: action loc tin nhan van ban-->
+    <string name="action_filter_sms">Filter SMS</string>
+
+    <string name="action_show_all_message">Show all messages</string>
+    <string name="notify_use_number_zalo">Info empty. Do you want use Zalo information?</string>
+    <string name="tooltip_choose_sim">Long click to choose Sim</string>
+
+    <string name="label_ringtone">Ringtone</string>
+    <string name="label_ringtone_message">New message sound</string>
+
+    <string name="default_text">Default</string>
+    <string name="pick_gallery_title">Gallery</string>
+    <string name="pick_camera_title">Camera</string>
+    <string name="pick_default_photo">Default photo</string>
+    <string name="mute_conversation_title">Mute notifications for this conversation</string>
+    <string name="toast_change_account">Don\'t save contact in Sim. Change information or account and try again.</string>
+
+    <string name="recentCalls_born_contact">Add contact</string>
+    <string name="confirm_convert_phone">Convert phone number (%d contact)</string>
+    <string name="converting">Converting</string>
+    <string name="convert_success">Convert success</string>
+    <string name="convert_phone">Convert phone number</string>
+
+    <!--Bkav QuangNDb string lien quan den ringtone cho tung sim-->
+    <string name="ringtone_preference_key_sim2" translatable="false">preference_key_sim2</string>
+    <string name="ringtone_preference_key_sim1" translatable="false">preference_key_sim1</string>
+    <string name="ringtone_title_sim1">Sim 1 ringtone</string>
+    <string name="ringtone_title_sim2">Sim 2 ringtone</string>
+
+    <!--Bkav HuyNQn ten cho call recorder-->
+    <string name="title_call_recorder">Call recording</string>
+    <!--Bkav HuyNqn String khong tim duoc so dien thoai cua contact-->
+    <!--Bkav HuyNqn String title dialog cua contact co nhieu so dien thoai-->
+    <string name="select_phone_number">Select phone number</string>
+
+    <!--Bkav HuyNQn String QrCode-->
+    <string name="bkav_qr_code_instruction">Move camera to QR code area for scanning</string>
+    <string name="title_result_qr_code">Scan result</string>
+    <string name="qr_code_link">Link: </string>
+    <string name="qr_code_how_open">. Open in web browser??</string>
+    <string name="qr_code_yes">Yes</string>
+    <string name="qr_code_no">No</string>
+    <string name="qr_code_continue">Continue</string>
+
+    <!--Bkav HuyNQN String Mute_conversation-->
+    <string name="mute_conversion_15_minutes">For 15 Minutes</string>
+    <string name="mute_conversion_1_hour">For 1 Hour</string>
+    <string name="mute_conversion_8_hour">For 8 Hour</string>
+    <string name="mute_conversion_24_hour">For 24 Hour</string>
+    <string name="mute_conversion_until_at_7h_50_am">Until alarm at 7:50 AM</string>
+    <string name="mute_conversion_until_turn_on">Until I turn it back on</string>
+
+    <string name="message_enable_esim"> is being activated.</string>
+    <string name="title_enable_esim">Esim enable</string>
+    <string name="action_call_by_sim_other">Call by SIM other</string>
+    <string name="action_view_call_log_recorder">View call log recorder</string>
+    <string name="application_shortcut_has_been_created">Application shortcut has been created</string>
+    <string name="create_shortcut_application">Create application shortcuts</string>
+    <!-- HienDTk: thay text tim kiem recoder khong co ket qua-->
+    <string name="call_log_recorder_all_empty">Can not find the recording file</string>
+    <string name="call_with_viber">Call with Viber</string>
+    <string name="call_with_zalo">Call with Zalo</string>
+
+    <!--Bkav TienNAb String setting menu-->
+    <string name="setting_title">Settings</string>
+    <string name="setting_phone">Phone</string>
+    <string name="setting_message">Message</string>
+    <string name="setting_contact">Contact</string>
+
+    <!--Bkav QuangNDb title khong set ringtone-->
+    <string name="no_ringtone">No</string>
+
+    <!--Bkav HuyNQn String ghi am cuoc goi-->
+    <string name="time_seek_bar_start">00:00</string>
+    <string name="delete_file_success">Delete file success</string>
+    <string name="delete_file_error">Delete file error</string>
+    <string name="button_pause">Pause</string>
+    <string name="button_play">Play</string>
+    <string name="button_exit">Exit</string>
+    <string name="play_call_recorder">Play call recorder</string>
+    <string name="call_recorder">Call Recorder</string>
+    <string name="choose_app">Choose app</string>
+    <string name="delete_files_success">Delete %1$d files success</string>
+
+    <!--Bkav TienNAb String hien thi khi khong co lien he nao-->
+    <string name="string_empty_recycler_view">No Contact</string>
+
+    <!--Bkav TienNAb String copy sdt trong tab calllog-->
+    <string name="string_copy_number_contact">Copied Contact</string>
+
+    <!--Bkav QuangNDb sua text status message sending.. thanh khong co gi-->
+    <string name="message_status_send_retrying_or_sending">""</string>
+    <string name="btalk_compose_message_view_hint_text_ask_before_send">Input Message</string>
+
+    <string name="toast_change_account_error_vn_character">Save contact Vietnamese with accents on the SIM with limited characters, please reduce the characters or write unsigned to be able to save on the SIM card</string>
+    <string name="toast_change_account_error_max_character">Contact name is longer than the allowed limit of the SIM card, please reduce the characters to be able to save on the SIM</string>
+    <string name="string_copy_messager">Copied messager</string>
+    <!-- HienDTk: them text xoa lien he trong callog-->
+    <string name="delete_callog"> <xliff:g id="count">%d</xliff:g> the call has been deleted."</string>
+
+    <!--HuyNQn them lua chon chan so dien thoai theo logic chi chan ben BMS-->
+    <string name="block_phone_number_only_bms_title">Call blocking</string>
+    <string name="text_block_phone_number">You won\'t receive calls or texts from blocked numbers.</string>
+    <string name="add_number_phone_blocked">Add Number</string>
+    <string name="text_block">Block</string>
+    <string name="text_unblock">Unblock</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_has_blocked_number">Has blocked <xliff:g id="count">%s</xliff:g></string>
+    <string name="action_report_spam_to_bms">Report spam</string>
+    <string name="text_notification_report_spam">Spam call report sent</string>
+</resources>

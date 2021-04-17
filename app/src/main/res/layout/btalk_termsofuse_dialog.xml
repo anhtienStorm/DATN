@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+AnhNDd: Dieu khoan xu dung-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_template"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btalk_title_dialog_height"
+        android:layout_gravity="center_vertical"
+        android:background="@color/btalk_color_dialog_title_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/btalk_title_dialog_marginRight"
+            android:layout_marginLeft="@dimen/btalk_title_dialog_marginRight"
+            android:layout_marginTop="@dimen/btalk_title_dialog_marginRight"
+            android:src="@drawable/ic_phone_launcher" />
+
+        <TextView
+            android:id="@+id/alertTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/btalk_title_dialog_marginRight"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/bkav_about_eula_title"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/btalk_title_dialog_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="300dip"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/wvEula"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonAccept"
+            style="@style/BkavButtonV2"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="@string/accept">
+
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

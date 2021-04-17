@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Anhdts view suggest:-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/btalk_color_for_dialpad"
+                android:clickable="true"
+                android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/suggested_contact_photo"
+        android:layout_width="@dimen/btalk_list_item_photo_size"
+        android:layout_height="@dimen/btalk_list_item_photo_size"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/btalk_suggest_padding_bottom"
+        android:layout_marginStart="@dimen/margin_padding_photo_suggest"
+        android:layout_marginTop="13dp"/>
+
+
+    <ImageButton
+        android:id="@+id/show_more_contact"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/btn_dialpad_key"
+        android:clickable="true"
+        android:contentDescription="@string/description_show_more"
+        android:gravity="center"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_show_list_contact"
+        android:state_enabled="false"
+        android:tint="@color/btalk_ab_text_and_icon_normal_color"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_toStartOf="@id/show_more_contact"
+        android:layout_toEndOf="@id/suggested_contact_photo"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/suggested_contact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center|start"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_name_suggest"/>
+
+        <TextView
+            android:id="@+id/suggested_contact_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center|start"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_phone_suggest"
+            android:visibility="invisible"/>
+    </LinearLayout>
+</RelativeLayout>

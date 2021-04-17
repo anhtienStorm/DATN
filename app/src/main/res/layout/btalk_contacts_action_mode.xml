@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+AnhNDd: Giao diện hiển thị đã lựa chọn bao nhieu contact.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navigation_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/expand_more_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|end"
+            android:src="@drawable/expand_more"
+            android:tint="@drawable/call_log_recorder_select_icon_tint"/>
+
+        <Button
+            android:id="@+id/selection_menu"
+            style="?android:attr/actionButtonStyle"
+            android:layout_width="@dimen/action_bar_select_button_width"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:divider="?android:attr/listDividerAlertDialog"
+            android:gravity="center_vertical|left"
+            android:paddingEnd="@dimen/action_bar_select_button_padding_end"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceLargePopupMenu"
+            android:textColor="@color/white"
+            android:tint="@drawable/default_icon_tint"
+            />
+    </FrameLayout>
+</LinearLayout>

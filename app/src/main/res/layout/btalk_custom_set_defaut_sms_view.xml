@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb: giao dien thay doi btalk lam phan mem nhan tin mac dinh,
+ duoc dung lam 1 phan giao dien cua lop BtalkListConversationFragmentList-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/common_margin"
+    android:paddingBottom="@dimen/common_margin"
+    android:paddingStart="@dimen/semi_margin"
+    android:paddingEnd="@dimen/semi_margin"
+    android:background="@color/btalk_color_bg_actionbar">
+    <TextView
+        android:id="@+id/text_defult"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/common_margin"
+        android:layout_height="wrap_content"
+        android:text="@string/title_set_as_default_sms"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/actionbar_text_size"
+    />
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/text_defult"
+        android:backgroundTint="#2195c1"
+        android:textAllCaps="false"
+        android:layout_alignParentEnd="true"
+        android:text="@string/title_change"/>
+</RelativeLayout>

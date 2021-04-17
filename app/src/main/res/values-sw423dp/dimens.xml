@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Anhdts chieu cao thanh call va missed -->
+    <!--HaiKH: chỉnh sửa chiều cao của toolbar phù hợp khi chia đôi màn hình-->
+    <dimen name="bkav_actionbar_height">55dip</dimen>
+    <!-- HienDTk: sua lai chieu cao cua search view   -->
+    <dimen name="bkav_actionbar_height_search_view">32dip</dimen>
+
+    <dimen name="floating_action_button_small_margin_bottom_start">490dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end">745dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_start_has_navigation_bar">443dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end_has_navigation_bar">698dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_start_forward_message_activity">463dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end_forward_message_activity">718dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_start_forward_message_activity_has_navigation_bar">414dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end_forward_message_activity_has_navigation_bar">668dp</dimen>
+
+    <!-- Bkav HaiKH - Fix bug BOS-3201- Start-->
+    <!-- Các trường hợp hiển thị của floating button BL01-->
+    <dimen name="floating_action_button_small_margin_bottom_start_bl01">560dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end_bl01">830dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_start_has_navigation_bar_bl01">513dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end_has_navigation_bar_bl01">780dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_start_forward_message_activity_bl01">530dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end_forward_message_activity_bl01">790dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_start_forward_message_activity_has_navigation_bar_bl01">484dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end_forward_message_activity_has_navigation_bar_bl01">758dp</dimen>
+    <!-- Bkav HaiKH - Fix bug BOS-3201- End -->
+</resources>

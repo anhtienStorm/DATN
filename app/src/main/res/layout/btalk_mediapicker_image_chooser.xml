@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <bkav.android.btalk.messaging.ui.mediapicker.gallery.BtalkGalleryGridView
+        android:id="@+id/gallery_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="6dp"
+        android:columnWidth="@dimen/gallery_image_cell_size"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="6dp"
+        android:horizontalSpacing="6dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:clipToPadding="false"
+        android:background="@android:color/white" />
+    <!-- This view will hide all other views if the required permission is not granted -->
+    <LinearLayout
+        android:id="@+id/missing_permission_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/enable_permission_procedure_description"
+            android:gravity="center"
+            android:text="@string/enable_permission_gallery"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/enable_permission_procedure_description"
+            android:gravity="center"
+            android:text="@string/enable_permission_gallery_summary"
+        />
+        <Button
+            android:id="@+id/btn_app_setting_view"
+            android:text="@string/positive_title_request_permission"
+            android:background="@null"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</FrameLayout>

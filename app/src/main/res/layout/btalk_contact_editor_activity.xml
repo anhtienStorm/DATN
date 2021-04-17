@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rootLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/semi_margin"
+        android:background="#00000000"/>
+
+    <ImageView
+        android:id="@+id/action_home_up"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@id/toolbar"
+        android:paddingEnd="@dimen/semi_margin"
+        android:paddingStart="@dimen/semi_margin"
+        android:paddingTop="@dimen/small_margin"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_back_arrow"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/title_quick_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/toolbar"
+        android:layout_alignTop="@id/toolbar"
+        android:layout_marginStart="@dimen/semi_margin"
+        android:layout_toEndOf="@id/action_home_up"
+        android:gravity="center_vertical"
+        android:textColor="@color/btalk_white_bg"
+        android:textSize="20sp"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_avatar_picker"
+        android:layout_width="match_parent"
+        android:background="@color/btalk_white_bg"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

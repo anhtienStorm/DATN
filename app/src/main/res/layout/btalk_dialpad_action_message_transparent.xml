@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/send_message_action"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="invisible">
+
+    <!--HuyNQn xoa dong code android:text="@string/action_send_message"-->
+    <!--cho giong voi thiet ke moi-->
+    <bkav.android.btalk.fragments.dialpad.BtalkDialpadLetterTextViewBlur
+        style="@style/BtalkLetterSmsDialpadActionSmsStyle"
+        android:fontFamily="sans-serif-light"
+        android:textSize="8sp"
+        app:blur_padding_bottom="@dimen/btalk_message_padding_bottom"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/height_separate_two_button"
+        android:scaleType="fitCenter"
+        android:src="@drawable/btalk_ic_message_phone_gsm"
+        android:tint="@color/color_button_message_and_button_delete"/>
+
+</RelativeLayout>

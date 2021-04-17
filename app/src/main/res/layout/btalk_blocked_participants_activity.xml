@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QUangNDb fragment cua BtalkBlockParticipantActivity-->
+<fragment
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    class="bkav.android.btalk.messaging.ui.BtalkBlockedParticipantsFragment"
+    android:id="@+id/blocked_participants_fragment"
+    android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" />

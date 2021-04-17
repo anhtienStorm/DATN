@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QUangNDb layout cua activity BtalkSearchActivity-->
+<fragment
+    android:id="@+id/search_fragment"
+    android:name="bkav.android.btalk.messaging.ui.searchSms.SearchFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+/>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2015 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<!--BKAV QuangNDb copy tu source goc sang de custom lai view cua lop BtalkConversationFragment-->
+<!--Bkav QuangNDb doi mau back ground sang mau trang alpha-->
+<RelativeLayout
+    android:id="@+id/view_group"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btalk_conversation_fragment_bg"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:weightSum="1.0">
+    <!--android:background="@color/btalk_color_conversation_bg"-->
+    <bkav.android.btalk.view.BtalkSimLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <!-- This FrameLayout will take all available height (excluding media picker)
+        but setting height to 0dp causes it not to shrink properly in KK, so a height of match_parent
+        works equally well -->
+        <!--Bkav QUangNDB them vach ke giua actionbar va content-->
+        <View
+            android:id="@+id/line_bot"
+            style="@style/LineDividerStyle"
+            android:visibility="visible"
+        />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <!-- Message list -->
+            <!--Bkav QuangNDb bo hieu ung khi scroll di khi doi theme-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:listSelector="@android:color/transparent"
+                android:paddingBottom="27dp"
+            />
+
+            <LinearLayout
+                android:id="@+id/emptyView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <TextView
+                    android:layout_marginTop="@dimen/marginTop_listempty"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/hint_not_found_message"/>
+            </LinearLayout>
+
+            <!--android:fadingEdgeLength="10dp"-->
+            <!--android:requiresFadingEdge="vertical"-->
+
+            <View
+                android:id="@+id/action_bar_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="top"
+                android:alpha="0"
+                android:background="@drawable/btalk_action_bar_divider_gradient"
+                android:importantForAccessibility="no"
+                android:visibility="gone"/>
+            <!--android:layout_height="30dp"-->
+
+            <View
+                android:id="@+id/conversation_compose_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:alpha="0"
+                android:background="@drawable/conversation_compose_divider_gradient"
+                android:importantForAccessibility="no"
+                android:visibility="gone"/>
+            <!--android:layout_height="4dp"-->
+
+            <include android:id="@+id/sim_selector"
+                     layout="@layout/btalk_sim_selector_view"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:visibility="gone"/>
+
+            <!--HuyNQn them reycyclevie hien thi danh sach esim-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_esim"
+                android:visibility="gone"
+                android:paddingEnd="@dimen/size_5dp"
+                android:layout_gravity="bottom|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+        </FrameLayout>
+
+        <!-- Attachments to send, compose message view, media picker. -->
+        <include
+            android:id="@+id/message_compose_view_container"
+            layout="@layout/btalk_compose_message_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </bkav.android.btalk.view.BtalkSimLinearLayout>
+
+</RelativeLayout>

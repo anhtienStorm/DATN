@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.messaging.ui.ImeDetectFrameLayout
+    android:id="@+id/conversation_and_compose_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/conversation_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+    />
+
+    <FrameLayout
+        android:id="@+id/contact_picker_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+    />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bkav_actionbar_height"
+        android:background="@color/btalk_color_conversation_bg"
+        app:contentInsetEnd="70dp"
+        app:contentInsetRight="70dp">
+    </android.support.v7.widget.Toolbar>
+</com.android.messaging.ui.ImeDetectFrameLayout>

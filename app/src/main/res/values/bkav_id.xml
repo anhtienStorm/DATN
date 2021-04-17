@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="context_menu_show_call_detail" />
+    <item type="id" name="context_menu_show_all_call_detail" />
+    <item type="id" name="context_menu_share_contact_via" />
+    <item type="id" name="context_menu_remove_in_call_log" />
+    <item type="id" name="context_menu_clear_in_call_log" />
+    <item type="id" name="context_menu_call_by_other_sim" />
+    <item type="id" name="context_menu_add_contact" />
+</resources>

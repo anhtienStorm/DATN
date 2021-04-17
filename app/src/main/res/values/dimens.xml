@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Bkav TrungTh chieu cao cua tab-->
+    <dimen name="tab_height">48dip</dimen>
+    <!--Bkav TrungTh: cac gia tri cua text tren tab-->
+    <dimen name="tab_text_size">10sp</dimen>
+    <!--Bkav QuangNdb: text_size cua action bar neu custom-->
+    <dimen name="actionbar_text_size">16sp</dimen>
+    <!--BKav QuangNDb: textsize cua conversation_name dung trong conversation list item-->
+    <dimen name="conversation_name_text_size">15sp</dimen>
+    <!--Bkav TienNAb: sua lai text size cua message_text 14sp->16sp-->
+    <dimen name="conversation_message_text_size">16sp</dimen>
+    <!--Bkav QuangNDb: textsize cua timestamp trong conversation list item-->
+    <dimen name="timestamp_text_size">10sp</dimen>
+    <!--Bkav QuangNDb: cac margin cua cac view(dung chung neu phu hop)-->
+    <dimen name="large_margin">20dp</dimen>
+    <dimen name="medium_margin">10dp</dimen>
+    <dimen name="small_margin">6dp</dimen>
+    <dimen name="tiny_margin">1dp</dimen>
+    <dimen name="very_small_margin">4dp</dimen>
+    <dimen name="medium_small_margin">3dp</dimen>
+    <dimen name="semi_margin">15dp</dimen>
+    <dimen name="common_margin">5dp</dimen>
+    <!--Bkav QuangNDb: height cua view set btalk lam phan mem nhan tin mac dinh-->
+    <!--Bkav QuangNDb: size cua icon va image preview conversation list item-->
+    <dimen name="conversation_list_image_preview_size">32dp</dimen>
+    <dimen name="conversation_list_contact_icon_size">48dp</dimen>
+    <!--Bkav QuangNdb: size cua icon message contact view-->
+    <dimen name="contact_photo_size">40dp</dimen>
+    <!--Bkav QuangNDb: size cua emoticon photo-->
+    <dimen name="emoticon_photo_size">30dp</dimen>
+    <!--Bkav QuangNDb: width cua view left, right trong thanh header tin nhan-->
+    <!--Bkav QuangNDb: height cua view left, right trong thanh header tin nhan-->
+
+    <!--Bkav QuangNDbP: kich thuoc cua icon so sim-->
+    <dimen name="sim_icon_size">15dp</dimen>
+    <!--Bkav QuangNDb: text size cua snipet text va failed text-->
+    <!--Bkav QuangNDb: text size cua time status -->
+    <dimen name="status_message_text_size">13sp</dimen>
+    <!--size cua line mini-->
+    <!--Bkav QuangNDb width cua attachment icon-->
+    <dimen name="attachment_width">40dp</dimen>
+    <!--Bkav QuangNDb size cua icon trong box soan tin nhan-->
+    <dimen name="icon_compose_contact_message_size">35dp</dimen>
+    <!--Bkav QuangNDb min width cua message box-->
+    <dimen name="min_width_message_box">42dp</dimen>
+<!--    Bkav QuangNDb sua chua giong thiet ke-->
+    <dimen name="text_message_box_left_right_padding">11dp</dimen>
+    <dimen name="text_message_box_right_padding">3dp</dimen>
+    <dimen name="text_message_box_top_bot_padding">7dp</dimen>
+<!--    Bkav quangndb sua theo thiet ke-->
+    <dimen name="text_message_box_top_padding">7dp</dimen>
+
+    <!--QuangNDb khoang cach thua cua box tin nhan-->
+    <!--Bkav QuangNDb them textsize snippet list new-->
+    <dimen name="snippet_text_size_new">13sp</dimen>
+    <!--Bkav QuangNDb padding top and left cua bg header-->
+    <dimen name="bg_time_header_padding_top">6dp</dimen>
+    <dimen name="bg_time_header_padding_left">27dp</dimen>
+
+    <dimen name="action_bar_height">@dimen/bkav_actionbar_height</dimen>
+    <!--Bkav QuangNDb khoang cach giua 2 tin nhan lien nhau(cung nguoi gui)-->
+    <!--Bkav QuangNDb giam khoang cach giua 2 tin nhan xuong 1/2-->
+    <!--Bkav QuangNDb giam khoang cach giua 2 tin nhan xuong con 2dp-->
+    <dimen name="btalk_padding_cluster_message">2dp</dimen>
+    <!--Bkav QuangNDb co chu tren action bar conversation fragment-->
+    <dimen name="conversation_fragment_action_bar_text_size">18sp</dimen>
+    <!--Bkav QuangNDb chip size cua box contact tren message picker cho nho lai vi sua actionbar 40dp-->
+
+    <!--Bkav QuangNDb padding top or bot cua 1 tin nhan-->
+    <dimen name="message_padding_top_default">13dp</dimen>
+    <!--Bkav QuangNDb ratio co chu cua sim trong noi dung tin nhan-->
+    <item name="sim_identifier_to_tile_ratio_small" type="dimen">50%</item>
+    <item name="sim_identifier_to_tile_ratio_medium" type="dimen">40%</item>
+
+    <!--*************CallLog*************-->
+    <!--Anhdts kich thuoc avata -->
+    <!--Anhdts chieu cao thanh call va missed -->
+    <!--HaiKH: chỉnh sửa chiều cao của toolbar phù hợp khi chia đôi màn hình-->
+    <dimen name="bkav_actionbar_height">48dip</dimen>
+    <!-- HienDTk: sua lai chieu cao cua search view   -->
+    <dimen name="bkav_actionbar_height_search_view">32dip</dimen>
+    <dimen name="btalk_actionbar_picker_height">56dip</dimen>
+    <!--Anhdts margin thanh phan cach -->
+
+    <!--*********************Dialpad**************************-->
+    <!--Anhdts khoang cach giua so va cac ki tu ,; *-->
+    <!--Anhdts textsize cac ki tu dac biet-->
+    <!--Anhdts textsize dau ,-->
+    <!--Anhdts dung phim so lam diem neo cho ki tu dac biet, margin bottom -->
+    <!--Anhdts size text action nhan tin dialpad-->
+    <dimen name="dialpad_action_letters_size">10sp</dimen>
+    <!--Anhdts size text action nhan tin dialpad-->
+    <!--Anhdts Height of the floating action button -->
+    <dimen name="btalk_floating_action_button_height">73dp</dimen>
+    <!--Anhdts Height of the floating two action button -->
+    <dimen name="btalk_floating_action_two_button_height">42dp</dimen>
+    <!--Anhdts Width of the floating action button -->
+    <dimen name="btalk_floating_action_button_width">73dp</dimen>
+    <!--Anhdts  Bottom margin of the floating action button -->
+    <!--Anhdts  Bottom margin of the dialpadView -->
+    <!--Anhdts  padding tu label ngay toi phan content item call log -->
+    <dimen name="btalk_call_log_day_group_padding_bottom">2dp</dimen>
+    <dimen name="btalk_call_log_day_group_padding_top">9dp</dimen>
+    <!--Anhdts text size hang phim chu tren dialpad-->
+    <dimen name="btalk_dialpad_key_letters_size">13sp</dimen>
+
+    <!--Anhdts  margin bottom suggest view dialpad-->
+    <dimen name="btalk_suggest_padding_bottom">4dp</dimen>
+
+    <!--Bkav QuangNDb khoang cach cua tab list cac item message, call log-->
+    <dimen name="btalk_list_item_padding_top_bot">19dp</dimen>
+    <dimen name="btalk_list_item_padding_start">10dp</dimen>
+    <dimen name="btalk_list_item_padding_end">13dp</dimen>
+    <dimen name="btalk_list_item_icon_margin_end">10dp</dimen>
+    <dimen name="btalk_list_item_text_first_padding_bot">7dp</dimen>
+    <!-- Bkav TrungTh kich thuoc cua avatar -->
+    <dimen name="btalk_avatar_icon_size">48dp</dimen>
+    <!-- Bkav TrungTh chieu cao doan mo phan cach giua actionbar  -->
+    <!-- Anhdts textsize suggest view-->
+    <dimen name="text_size_phone_suggest">15sp</dimen>
+
+    <!-- Anhdts textsize name suggest view-->
+    <dimen name="text_size_name_suggest">15sp</dimen>
+
+    <!-- Anhdts margin view contact dau tien-->
+
+    <!-- Anhdts custom item row contact search-->
+    <dimen name="btalk_list_item_view_height">85dp</dimen>
+    <dimen name="btalk_list_item_photo_size">@dimen/btalk_avatar_icon_size</dimen>
+    <!-- Anhdts margin phot-->
+    <dimen name="btalk_list_item_photo_padding_top">12dp</dimen>
+    <!--HienDTk: sua lai padding top de fix loi BOS-2509 - Start -->
+    <dimen name="btalk_list_item_padding_top">12dp</dimen>
+    <!--HienDTk: sua lai padding top de fix loi BOS-2509 - End -->
+    <dimen name="btalk_list_item_padding_bottom">10dp</dimen>
+    <dimen name="btalk_list_item_smart_padding_start">16dp</dimen>
+
+
+    <dimen name="margin_padding_photo_suggest">16dp</dimen>
+
+    <dimen name="text_size_suggest_number">22sp</dimen>
+    <dimen name="height_container_suggest">112dp</dimen>
+    <dimen name="padding_text_number_dialpad">40dp</dimen>
+    <!-- Anhdts chieu cao o digit -->
+    <!-- Anhdts textSize digit -->
+    <dimen name="btalk_dialpad_digits_adjustable_text_size">33sp</dimen>
+    <!-- Anhdts textSize digit khi hien nguoi co 2 so dien thoai-->
+    <dimen name="btalk_dialpad_extra_digits_adjustable_text_size">25sp</dimen>
+    <item name="btalk_alpha_for_all_view" format="float" type="dimen">0.9</item>
+    <!-- Anhdts padding right icon xoa -->
+    <dimen name="btalk_dialpad_digits_padding_right">16dp</dimen>
+    <!-- Anhdts text size dau, o phim * -->
+    <dimen name="text_size_star_letter">20sp</dimen>
+    <!-- Anhdts chieu cao container digits -->
+    <dimen name="btalk_dialpad_digits_adjustable_height">82dp</dimen>
+    <!-- Anhdts padding bottom icon tin nhan -->
+    <dimen name="btalk_message_padding_bottom">28dp</dimen>
+    <dimen name="btalk_last_star_letter_padding_left">8dp</dimen>
+    <dimen name="btalk_height_suggest_container">75dp</dimen>
+    <dimen name="btalk_last_letter_padding_left">14dp</dimen>
+<!--    HienDTk: fix loi nhap sdt tren tab dien thoai khong duoc can giua-->
+    <dimen name="btalk_margin_horizontal_digit">73dp</dimen>
+
+    <dimen name="btalk_text_size_suggest_extra_contact_phone">12sp</dimen>
+    <dimen name="btalk_text_size_suggest_extra_contact_name">14sp</dimen>
+    <dimen name="btalk_padding_container_digits">26dp</dimen>
+
+    <!--Anhdts: text size cho popup Indexer listView tab contact-->
+    <dimen name="btalk_text_size_fast_scroll_popup">22sp</dimen>
+
+    <!--=========================Thu muc cua ANHNDD==================-->
+    <!--AnhNDd: chiều cao của fadeEdge-->
+    <dimen name="fadeEdge_length">30dp</dimen>
+
+    <!--AnhNDd: khich thuoc cua icon o danh ba hien thi-->
+    <dimen name="btalk_contact_filter_icon_size">48dip</dimen>
+
+    <!--AnhNDd: chiều cao của list item trong danh bạ-->
+
+    <!--AnhNDd: text size trong contact-->
+    <dimen name="btalk_list_item_contact_text_size">16sp</dimen>
+
+    <!--AnhNDd: padding trai, phai cua item contact-->
+    <dimen name="btalk_list_item_contact_padding_left">17dp</dimen>
+
+    <!--AnhNDd: size của icon trong contact-->
+    <dimen name="btalk_list_item_contact_photo_size">48dp</dimen>
+
+    <!--AnhNDd: padding bottom de khi cuon xuong thi khong bi che-->
+
+    <!--AnhNDd: kich thuoc cua icon back trong view search-->
+
+    <!--AnhNDd: khoang cách giữa photoview và textview trong danh bạ-->
+    <dimen name="btalk_contact_browser_list_item_gap_between_image_and_text">10dp</dimen>
+    <dimen name="btalk_dialpad_key_height">50dp</dimen>
+
+    <!--AnhNDd: padding cua textview o tablayout-->
+    <dimen name="tab_text_padding_top">1dp</dimen>
+
+    <!--AnhNDd: padding top cua tab icon8-->
+    <dimen name="tab_icon_padding_top">7dp</dimen>
+    <!--TrungTH kich thuoc cua phan edittext search ben tren voi giao dien ban phim so -->
+    <!--TrungTH padding cua dong text cuoi cung trong ban phim-->
+    <dimen name="btalk_letter_add_padding_top">18dp</dimen>
+    <!--TrungTH padding cua dong text cuoi cung trong ban phim-->
+    <!--pADING Cua fab-->
+    <dimen name="btalk_fab_bottom_margin">26dp</dimen>
+    <!-- TrungTH khoang cach de detect xem co hien thi giao dien goi nhanh khong-->
+    <dimen name="btalk_scroll_height">16dp</dimen>
+    <dimen name="btalk_width_navigation_view">223dp</dimen>
+    <dimen name="text_search_size">16sp</dimen>
+    <dimen name="height_sim_line">50dp</dimen>
+    <dimen name="width_sim_line">160dp</dimen>
+    <dimen name="height_sim_icon">30dp</dimen>
+    <dimen name="margin_icon_sim">5dp</dimen>
+    <dimen name="margin_sim_row">10dp</dimen>
+    <dimen name="size_text_name_choose_sim">12sp</dimen>
+    <dimen name="size_text_phone_choose_sim">14sp</dimen>
+
+    <dimen name="sim_spacing_row">4dp</dimen>
+
+    <!-- Call-log icons' margin. e.g. Outgoing, Incoming, Missing-->
+    <dimen name="btalk_call_log_icon_margin">7dp</dimen>
+
+    <!-- Anhdts canh tam giac-->
+    <dimen name="size_triangle_sim">10dp</dimen>
+    <dimen name="size_triangle_tooltip">5dp</dimen>
+
+    <dimen name="margin_bottom_float_action_call">25dp</dimen>
+
+    <dimen name="blur_padding_bottom">5dp</dimen>
+
+    <dimen name="btalk_letter_star_padding_top">13dp</dimen>
+    <dimen name="btalk_letter_pound_padding_top">17dp</dimen>
+
+    <dimen name="btalk_dialpad_key_margin_bottom">-3dp</dimen>
+    <dimen name="btalk_width_frequent_show_more">56dp</dimen>
+    <dimen name="btalk_fastscroll_track_width">4dp</dimen>
+    <dimen name="btalk_call_log_list_item_primary_action_dimen">44dp</dimen>
+    <dimen name="text_size_spinner">16sp</dimen>
+    <dimen name="padding_icon_sim">4dp</dimen> <!--6 > 4-->
+    <dimen name="bkav_suggest_icon_height">53dp</dimen>
+    <dimen name="bkav_suggest_height">66dp</dimen>
+    <dimen name="btalk_floating_action_two_button_width">75dp</dimen>
+    <dimen name="margin_top_two_button_call">15dp</dimen>
+    <dimen name="btalk_padding_left_icon_suggest_smart">10dp</dimen>
+
+    <!--=========================END ANHNDD==========================-->
+
+    <dimen name="status_bar_height">25dp</dimen>
+    <!-- QuangNHe: deep shortcut dimen -->
+    <dimen name="deep_shortcuts_start_drag_threshold">16dp</dimen>
+    <dimen name="deep_shortcut_icon_size">45dp</dimen>
+    <dimen name="deep_shortcut_padding_start">6dp</dimen>
+    <dimen name="deep_shortcut_padding_end">16dp</dimen>
+    <dimen name="deep_shortcut_drawable_padding">8dp</dimen>
+    <dimen name="deep_shortcut_drag_handle_size">16dp</dimen>
+    <dimen name="deep_shortcuts_arrow_width">10dp</dimen>
+    <dimen name="deep_shortcuts_arrow_height">8dp</dimen>
+    <dimen name="deep_shortcuts_arrow_vertical_offset">-2dp</dimen>
+    <!-- deep_shortcut_padding_start + deep_shortcut_icon_size / 2 - deep_shortcuts_arrow_width / 2-->
+    <!-- Note that this works for right-aligned shortcuts, too, because
+         deep_shortcut_padding_end + deep_shortcut_drag_handle_size / 2 - deep_shortcuts_arrow_width / 2
+         also happens to equal 19dp-->
+    <dimen name="deep_shortcuts_arrow_horizontal_offset">19dp</dimen>
+
+    <!-- Deep shortcuts -->
+    <dimen name="deep_shortcuts_elevation">9dp</dimen>
+    <dimen name="bg_pill_width">208dp</dimen>
+    <dimen name="bg_pill_height">48dp</dimen>
+    <dimen name="bg_pill_height_no_icon">16dp</dimen>
+    <dimen name="bg_pill_radius">24dp</dimen>
+    <dimen name="deep_shortcuts_spacing">4dp</dimen>
+    <dimen name="anchor_view_fake_height">64dp</dimen>
+    <dimen name="margin_start_text_two_button">8dp</dimen>
+    <dimen name="margin_bottom_container_two_button">32dp</dimen>
+    <dimen name="height_separate_two_button">18dp</dimen>
+    <dimen name="btalk_search_box_close_icon_size">56dp</dimen>
+
+    <dimen name="suggest_popup_max_size">24sp</dimen>
+    <dimen name="suggest_popup_min_size">12sp</dimen>
+    <dimen name="bg_sim_width">144dp</dimen>
+    <dimen name="size_icon_sim_popup">7dp</dimen>
+    <dimen name="size_icon_sim_dial">11dp</dimen>
+    <dimen name="size_icon_sim_quickcontact">6dp</dimen>
+    <dimen name="btalk_expanding_entry_card_item_icon_height">32dp</dimen>
+    <dimen name="margin_header_edit_contact">7dp</dimen>
+    <dimen name="text_header_edit_contact">10sp</dimen>
+    <dimen name="btalk_editor_min_line_item_height">52dp</dimen>
+    <dimen name="width_dialog_block_notify">280dp</dimen>
+    <dimen name="icon_sim_padding">2px</dimen>
+    <dimen name="icon_sim_radius">4px</dimen>
+    <dimen name="height_confirm_button">65dp</dimen>
+
+    <!--HuyNQn cac kich thuoc trong btalk_call_log_recoder_fragment-->
+    <dimen name="text_search_record_size">15sp</dimen>
+    <dimen name="searchview_margin_left_right">1dp</dimen>
+    <dimen name="searchview_height">34dp</dimen>
+    <dimen name="imageview_search_margin_top">9dp</dimen>
+    <dimen name="recycleview_margin_top">10dp</dimen>
+
+    <!--HuyNQn cac kich thuoc trong btalk_call_log_recoder_list_item-->
+    <dimen name="progressbar_height">24dp</dimen>
+    <dimen name="layout_height_customview">54dp</dimen>
+
+    <!--HuyNQn them kich khi them nut nhan tin va mut goi trong contact_item-->
+    <dimen name="button_call_magin_buttom_message">28dp</dimen>
+    <dimen name="buttom_message_magin_text_name">7dp</dimen>
+
+    <dimen name="btalk_margin_top_container_digits">31dp</dimen>
+
+    <dimen name="button_call_witdh">27dp</dimen>
+    <dimen name="button_call_height">44dp</dimen>
+
+    <!--Bkav TienNAb sua lai padding theo thiet ke moi-->
+    <dimen name="list_esim_one_call_button_side_padding">154dp</dimen>
+    <dimen name="list_esim_two_call_button_side_padding">149.67dp</dimen>
+    <dimen name="esim_display_name_text_size">12sp</dimen>
+    <dimen name="esim_phone_number_text_size">10sp</dimen>
+
+    <!--Bkav TienNAb Them cac kinh thuoc cua Message Header View-->
+    <dimen name="message_header_view_start_margin_right">65dp</dimen>
+    <dimen name="message_header_view_end_margin_right">43dp</dimen>
+    <dimen name="message_header_view_start_margin_bottom">0dp</dimen>
+
+    <!--Bkav TienNAb Them cac kinh thuoc cua CallLog Header View-->
+    <dimen name="calllog_header_view_start_margin_right">72dp</dimen>
+    <dimen name="calllog_header_view_end_margin_right">44dp</dimen>
+    <dimen name="calllog_header_view_start_margin_bottom">5dp</dimen>
+
+    <!--Bkav TienNAb Them cac kich thuoc cua Contact Header View-->
+    <dimen name="contact_header_view_start_margin_bottom">0dp</dimen>
+    <dimen name="contact_header_view_start_margin_right">62dip</dimen>
+    <dimen name="contact_header_view_end_margin_right">36dip</dimen>
+
+    <!--Bkav TienNAb Them size cho tieu de cua cac tab-->
+    <dimen name="title_tab_text_size_max">25sp</dimen>
+    <dimen name="title_tab_text_size_min">20sp</dimen>
+
+    <!--Bkav TienNAb them chieu cao cua appbar layout-->
+    <dimen name="appbar_layout_height">288dp</dimen>
+
+    <!--Bkav TienNAb Them cac kich thuoc cua giao dien setting menu-->
+    <dimen name="setting_menu_height">260dp</dimen>
+    <dimen name="setting_menu_width">200dp</dimen>
+    <dimen name="icon_size">22dp</dimen>
+    <dimen name="setting_text_size">17sp</dimen>
+    <dimen name="setting_title_text_size">19sp</dimen>
+    <dimen name="margin_left_icon">28dp</dimen>
+    <dimen name="margin_left_text">15dp</dimen>
+
+    <!--Bkav TienNAb them cac kich thuoc cua ban phim-->
+    <dimen name="container_message_action_height">87dp</dimen>
+    <dimen name="dialpad_key_padding_top">8dp</dimen>
+    <dimen name="dialpad_key_padding_bottom">28dp</dimen>
+    <dimen name="dialpad_floating_action_button_container_margin_bottom">24dp</dimen>
+    <dimen name="btalk_margin_space_top_dialpad_view">12dp</dimen>
+    <dimen name="text_dialpad_key_padding_bottom">12dp</dimen>
+    <dimen name="text_dialpad_key_pound_and_zero_padding_bottom">9.5dp</dimen>
+    <dimen name="text_dialpad_key_star_padding_bottom">12.5dp</dimen>
+    <dimen name="text_dialpad_key_zero_padding_bottom">10dp</dimen>
+    <dimen name="text_dialpad_key_text_size">10sp</dimen>
+    <dimen name="text_dialpad_key_pound_and_zero_text_size">13sp</dimen>
+    <dimen name="text_dialpad_key_star_text_size">15sp</dimen>
+    <dimen name="dialpad_key_number_margin_bottom">-6dp</dimen>
+    <dimen name="dialpad_key_number_star_margin_bottom">-34dp</dimen>
+    <dimen name="dialpad_key_number_zero_margin_bottom">-11dp</dimen>
+    <dimen name="dialpad_key_number_pound_margin_bottom">-9dp</dimen>
+    <dimen name="dialpad_button_size">70dp</dimen>
+    <dimen name="dialpad_side_padding">18dp</dimen>
+    <dimen name="dialpad_top_padding">12dp</dimen>
+
+    <!--Bkav TienNAb kich thuoc cua ripple khi click vao ban phim-->
+    <dimen name="dialpad_overlay_width">55dp</dimen>
+    <dimen name="dialpad_overlay_height">42dp</dimen>
+
+    <!--Bkav TienNAb kich thuoc dialog click mail va click phone number-->
+    <dimen name="click_phone_number_and_click_mail_width">289dp</dimen>
+
+    <dimen name="Char_counter">50dp</dimen>
+
+    <!--Bkav TienNAb kich thuoc empty view danh ba-->
+    <dimen name="empty_view_text_size">22sp</dimen>
+    <dimen name="empty_view_margin_top">35dp</dimen>
+
+    <!--Bkav TienNAb kich thuoc floating action button-->
+    <dimen name="floating_action_button_small_size">35dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_start">363dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end">625dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_start_forward_message_activity">334dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end_forward_message_activity">595dp</dimen>
+    <!--Bkav TienNAb them kich thuoc khi bat navigation bar-->
+    <dimen name="floating_action_button_small_margin_bottom_start_has_navigation_bar">316dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end_has_navigation_bar">578dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_start_forward_message_activity_has_navigation_bar">287dp</dimen>
+    <dimen name="floating_action_button_small_margin_bottom_end_forward_message_activity_has_navigation_bar">548dp</dimen>
+
+    <dimen name="floating_action_button_small_margin_right_start">16dp</dimen>
+    <dimen name="floating_action_button_small_margin_right_end">40dp</dimen>
+    <dimen name="floating_action_button_size">50dp</dimen>
+    <dimen name="floating_action_button_margin_right_start">40dp</dimen>
+    <dimen name="floating_action_button_margin_right_end">16dp</dimen>
+    <dimen name="floating_action_button_margin_bottom_start">50dp</dimen>
+    <dimen name="floating_action_button_margin_bottom_end">26dp</dimen>
+    <!--    HienDTk: margin top cua empty view tim kiem tin nhan-->
+    <dimen name="marginTop_listempty">20dp</dimen>
+<!--    Bkav ToanNTe: margin cho so dien thoai goi y-->
+    <dimen name="margin_extra_phone">58dp</dimen>
+</resources>

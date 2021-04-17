@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list android:opacity="transparent">
+            <item android:height="30dp" android:width="62dp" android:gravity="end|center_vertical">
+                <!--Bkav TienNAb thay doi gravity cua icon-->
+                <bitmap  android:src="@drawable/ic_show_list_contact" android:gravity="center"/>
+            </item>
+        </layer-list>
+    </item>
+</selector>

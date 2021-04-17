@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Copyright (C) 2015 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<!--BKAV QuangNDb copy code goc sang de sua vi custom lai 2 lop view-->
+<!--la BtalkConversationListItemView va BtalkContactIconView-->
+<bkav.android.btalk.messaging.ui.conversationlist.BtalkConversationListItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/btalk_transparent_view">
+
+    <FrameLayout
+        android:id="@+id/swipeableContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no">
+
+        <LinearLayout
+            android:id="@+id/swipeableContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clipToPadding="false"
+            android:duplicateParentState="true"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/btalk_list_item_padding_top_bot"
+            android:paddingBottom="@dimen/btalk_list_item_padding_top_bot">
+
+            <!-- Contact avatar on the left side of the view -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:paddingStart="@dimen/btalk_list_item_padding_start"
+                android:paddingEnd="@dimen/btalk_list_item_padding_start">
+
+                <bkav.android.btalk.messaging.ui.BtalkContactPhotoView
+                    android:id="@+id/conversation_icon"
+                    android:layout_width="@dimen/conversation_list_contact_icon_size"
+                    android:layout_height="@dimen/conversation_list_contact_icon_size"
+                    android:background="@android:color/transparent"
+                    android:clickable="true"
+                    android:contentDescription="@null"
+                    android:importantForAccessibility="no" />
+
+                <ImageView
+                    android:id="@+id/conversation_checkmark"
+                    android:layout_width="@dimen/conversation_list_contact_icon_size"
+                    android:layout_height="@dimen/conversation_list_contact_icon_size"
+                    android:background="@android:color/transparent"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_checkmark_circle_blue"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/conversation_failed_status_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@null"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_failed_status_red"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <!-- The conversation name, message preview, etc -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+                <!--style="@style/ConversationListItemViewPaddingStyle"-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal">
+                    <!-- Bkav HaiKH - Fix bug BOS-2927- Start-->
+                    <!-- Thay layout_weight từ 1 sang 5  -->
+                    <!-- Bkav HaiKH - Fix bug BOS-2927- End-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:background="@android:color/transparent">
+
+                        <ImageView
+                            android:id="@+id/conversation_notification_bell"
+                            style="@style/ConversationListNotificationBellPaddingStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="@null"
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_notifications_off_small_light"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/conversation_name"
+                            style="@style/ConversationListItemViewConversationNameStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:ellipsize="end"
+                            android:fontFamily="sans-serif"
+                            android:singleLine="true"
+                            android:textColor="@color/btalk_primary_text_color"
+                            android:textSize="@dimen/conversation_name_text_size" />
+                    </LinearLayout>
+                    <!-- Bkav HaiKH - Fix bug BOS-2927- Start-->
+                    <!-- Thêm LinearLayout-->
+                    <!-- Bkav HaiKH - Fix bug BOS-2927- End-->
+<!--                    Bkav ToanNTe fix BOS-2671 icon túi xách chèn lên thời gian-->
+                        <ImageView
+                            android:paddingTop="@dimen/btalk_list_item_text_first_padding_bot"
+                            android:id="@+id/work_profile_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@android:color/transparent"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_work_profile"
+                            android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/conversation_snippet"
+                    style="@style/ConversationListItemViewTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="1"
+                    android:textColor="@color/covnersation_snippet_text_color"
+                    android:textSize="@dimen/snippet_text_size_new" />
+            </LinearLayout>
+
+            <bkav.android.btalk.messaging.custom_view.BtalkSimIconView
+                android:id="@+id/icon_sim"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_gravity="bottom"
+                android:importantForAccessibility="no"
+                android:layout_marginBottom="@dimen/very_small_margin"
+                android:paddingStart="@dimen/very_small_margin"
+                android:paddingEnd="@dimen/very_small_margin"
+                android:visibility="visible"
+                app:iconSizeBtalk="small"
+                app:reveal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:paddingEnd="14dp"
+                android:textColor="@color/covnersation_timestamp_text_color"
+                android:textSize="@dimen/timestamp_text_size" />
+
+
+            <!-- The attachment preview on the right side of the view -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:visibility="gone">
+
+                <com.android.messaging.ui.AsyncImageView
+                    android:id="@+id/conversation_image_preview"
+                    style="@style/ConversationListItemViewPaddingStyle"
+                    android:layout_width="@dimen/conversation_list_image_preview_size"
+                    android:layout_height="@dimen/conversation_list_image_preview_size"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/message_image_content_description"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:cornerRadius="@dimen/conversation_list_image_preview_corner_radius" />
+                <!--<com.android.messaging.ui.AudioAttachmentView-->
+                <!--android:id="@+id/audio_attachment_view"-->
+                <!--android:layout_width="@dimen/conversation_list_image_preview_size"-->
+                <!--android:layout_height="@dimen/conversation_list_image_preview_size"-->
+                <!--android:background="@android:color/transparent"-->
+                <!--android:visibility="gone"-->
+                <!--app:layoutMode="subcompact"/>-->
+            </FrameLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/conversation_timestamp"
+            style="@style/ConversationListItemViewTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:paddingTop="@dimen/btalk_list_item_padding_top_bot"
+            android:paddingEnd="@dimen/btalk_list_item_padding_end"
+            android:textColor="@color/covnersation_timestamp_text_color"
+            android:textSize="@dimen/timestamp_text_size" />
+    </FrameLayout>
+</bkav.android.btalk.messaging.ui.conversationlist.BtalkConversationListItemView>

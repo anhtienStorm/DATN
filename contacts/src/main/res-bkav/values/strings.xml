@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="call_disambig_title">Call using</string>
+    <string name="make_primary">Remember this choice</string>
+    <string name="bkav_about_eula_title">Terms of use</string>
+    <string name="accept">Accept</string>
+    <string name="bkav_about_eula_url">http://btalk.vn/m-termsofuseen</string>
+    <string name="dialog_check_internet_message">Connection failed! Please check your network status.</string>
+    <string name="menu_import">Import contacts</string>
+    <string name="menu_export">Export contacts</string>
+    <string name="btalk_contactsFavoritesLabel">Favorite</string>
+    <string name="convert_phone">Convert phone number</string>
+</resources>

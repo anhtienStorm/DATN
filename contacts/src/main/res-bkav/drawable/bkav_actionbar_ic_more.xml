@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Active -->
+    <item android:drawable="@drawable/bkav_actionbar_ic_more_focus" android:state_enabled="true" android:state_focused="false" android:state_pressed="true" android:state_selected="false"/>
+    <!-- Inactive -->
+    <item android:drawable="@drawable/bkav_actionbar_ic_more_normal" android:state_enabled="true" android:state_focused="false" android:state_pressed="false" android:state_selected="false"/>
+
+</selector>

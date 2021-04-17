@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb: giao dien custom action mode de di chuyen vi tri duoc,
+ duoc dung lam 1 phan giao dien cua lop BtalkListConversationFragmentList-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_action_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bkav_actionbar_height"
+    android:background="@color/action_mode_message_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <!--Bkav TienNAb: them moi lien he trai,phai voi cac view khac fix loi hien thi khi de kich thuoc hien thi max-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/action_archive"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/action_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:background="@drawable/overfollow_button_bg"
+            android:padding="@dimen/medium_margin"
+            android:src="@drawable/btalk_ic_action_mode_cancel"/>
+        <include layout="@layout/btalk_contacts_action_mode"/>
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/action_archive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/action_delete"
+        android:background="@drawable/overfollow_button_bg"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/btalk_ic_action_mode_archive_new"/>
+
+    <ImageButton
+        android:id="@+id/action_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/action_notification_off"
+        android:background="@drawable/overfollow_button_bg"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/btalk_ic_action_mode_delete_new"/>
+
+    <ImageButton
+        android:id="@+id/action_notification_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/action_notification_on"
+        android:background="@drawable/overfollow_button_bg"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/btalk_ic_action_mode_notification_off_new"/>
+
+    <ImageButton
+        android:id="@+id/action_notification_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/action_add_contact"
+        android:background="@drawable/overfollow_button_bg"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/btalk_ic_action_mode_notification_on_new"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/action_add_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/action_block"
+        android:background="@drawable/overfollow_button_bg"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/btalk_ic_action_mode_add_contact_new"/>
+
+    <ImageButton
+        android:id="@+id/action_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/overfollow_button_bg"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/btalk_ic_action_mode_block_new"/>
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Bkav QuangNDb fix loi wrong font myanmar-->
+    <!-- Activity title when the user is selecting a contact.  [CHAR LIMIT=128] -->
+    <string name="contactPickerActivityTitle">ဆက္သြယ္မူတစ္ခုေရြးခ်ယ္ပါ</string>
+</resources>

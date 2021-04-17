@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb xml luu cac hang so cua app-->
+<resources>
+    <!--Bkav QuangNDb them them bien mac dinh gui cho nhieu nguoi la mms(true) hay la sms(false) -->
+    <bool name="btalk_group_mms_pref_default" translatable="false">false</bool>
+</resources>

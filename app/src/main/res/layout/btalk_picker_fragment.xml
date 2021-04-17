@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb: file layout cua class BtalkContactPickerFragment-->
+<RelativeLayout
+    android:id="@+id/parent_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/btalk_picker_fragment_color"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:weightSum="1.0">
+    <bkav.android.btalk.view.BtalkSimPickerLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <FrameLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+            </FrameLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:listSelector="@android:color/transparent"
+                android:paddingBottom="27dp"
+                android:visibility="visible"
+            />
+            <include android:id="@+id/sim_selector"
+                     layout="@layout/btalk_sim_selector_view"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:visibility="gone"/>
+            <!--HuyNQn them reycyclevie hien thi danh sach esim-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_esim"
+                android:visibility="gone"
+                android:layout_gravity="bottom|end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+        </FrameLayout>
+        <!-- Attachments to send, compose message view, media picker. -->
+        <include
+            android:id="@+id/message_compose_view_container"
+            layout="@layout/btalk_picker_compose_message_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </bkav.android.btalk.view.BtalkSimPickerLinearLayout>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Anhdts so cot trong giao dien yeu thich-->
+    <integer name="btalk_contact_tile_column_count_in_favorites">2</integer>
+    <integer name="btalk_blur_radius">25</integer>
+    <integer name="config_sim_line_open_duration">220</integer>
+    <integer name="config_sim_arrow_open_duration">80</integer>
+    <integer name="config_sim_line_open_stagger">40</integer>
+    <integer name="config_sim_line_close_duration">150</integer>
+    <integer name="config_sim_arrow_close_duration">80</integer>
+    <integer name="config_sim_line_close_stagger">20</integer>
+</resources>

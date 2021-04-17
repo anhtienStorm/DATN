@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/parent_view"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              >
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:paddingBottom="8dp"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="8dp">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:layout_centerVertical="true"
+                  android:text="@string/quick_response_title"
+                  android:textColor="@android:color/black"
+                  android:textSize="@dimen/text_search_size"
+                  android:textStyle="bold"
+        />
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/btn_add_response"
+            android:layout_width="@dimen/icon_compose_contact_message_size"
+            android:layout_height="@dimen/icon_compose_contact_message_size"
+            android:tint="@color/emoticon_tint"
+            android:background="@drawable/overfollow_button_bg"
+            android:src="@drawable/bkav_ic_add_attachment_normal"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+   />
+</LinearLayout>

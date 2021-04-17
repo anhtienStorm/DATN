@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+AnhNDd: giao dien searchview trong lua chon nhieu contac
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dip"
+    android:layout_height="0dip">
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <requestFocus />
+    </View>
+
+    <EditText
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:fontFamily="@string/search_font_family"
+        android:gravity="center_vertical"
+        android:imeOptions="flagNoExtractUi"
+        android:inputType="textFilter"
+        android:singleLine="true"
+        android:textColor="@color/searchbox_text_color"
+        android:textColorHint="@color/searchbox_hint_text_color"
+        android:textCursorDrawable="@drawable/searchedittext_custom_cursor"
+        android:textSize="@dimen/bkav_line1_text_size" />
+
+</FrameLayout>

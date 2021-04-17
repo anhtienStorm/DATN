@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml:1:1-4:12
+INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml:1:1-4:12
+	package
+		ADDED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml:2:11-44
+		INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+		INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml:1:11-69
+uses-sdk
+INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+		ADDED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+		INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+		ADDED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml
+		INJECTED from /media/quangndb/RomSSD/BkavProject/Btalk2/libphonenumber/src/main/AndroidManifest.xml

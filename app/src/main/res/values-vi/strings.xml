@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Btalk</string>
+    <!--Bkav TrungTH text cho icon launcher-->
+    <string name="launcherDialer">Điện thoại</string>
+    <string name="launcherMessage">Tin nhắn</string>
+    <!--Bkav TrungTH ten cac tab-->
+    <string name="title_tab_phone">Điện thoại</string>
+    <string name="title_tab_recents_call">Gần đây</string>
+    <string name="title_tab_messages">Tin nhắn</string>
+    <string name="title_tab_contacts">Danh bạ</string>
+    <string name="title_tab_setting_tab">Đổi màu tab</string>
+    <!--Bkav QuangNDb noi dung text va button text cua view dat btalk lam pm tin nhan mac dinh-->
+    <string name="title_set_as_default_sms">Để gửi tin nhắn hãy đặt Btalk là ứng dụng nhắn tin SMS mặc định</string>
+    <string name="title_change">Thay đổi</string>
+    <!--Bkav QuangNDb noi dung toast thong bao sau khi thay doi btalk lam pm nt mac dinh-->
+    <string name="notify_btalk_as_sms_default">Btalk đã được đặt làm ứng dụng nhắn tin mặc định</string>
+    <string name="notify_btalk_not_as_sms_default">Btalk chưa được đặt làm ứng dụng nhắn tin mặc định</string>
+    <!--Bkav QuangNDb cac text cua cac chuc nang trong menu cua moi conversation-->
+    <string name="menu_text_search_sms">Tìm kiếm tin nhắn</string>
+    <string name="menu_text_attach_contact">Đính kèm liên hệ</string>
+    <string name="menu_text_add_subject">Thêm chủ đề</string>
+    <!--Bkav QuangNDb text label cua media chooser-->
+    <string name="media_chooser_emoticon">Biểu tượng</string>
+    <string name="media_chooser_contact">Danh bạ</string>
+    <string name="media_chooser_location">Vị trí</string>
+    <!--Bkav QuangNDb title cua menu search contact-->
+    <string name="contact_chooser_search_title">Tìm kiếm danh bạ</string>
+    <!--Bkav QuangNDb String cua location map-->
+    <string name="network_issue">Không có kết nối internet!</string>
+    <string name="gps_issue">Chưa bật GPS!</string>
+    <string name="default_info_title">Vị trí mặc định</string>
+    <string name="default_info_snippet">Không tìm thấy place, do không có quyền truy cập vị trí</string>
+    <string name="btn_try_again">Thử lại!</string>
+    <!--Bkav QuangNDb invalid phone nunmber-->
+    <string name="invalid_contact">Liên hệ không hợp lệ</string>
+    <!--Bkav QuangNDb ten self participant-->
+    <string name="messagelist_sender_self">Tôi</string>
+    <!--Bkav QuangNDb hint cua search view search sms-->
+    <string name="search_sms_hint">Tìm kiếm tin nhắn</string>
+    <string name="hint_open_search">Các tin nhắn tìm kiếm sẽ xuất hiện ở đây!</string>
+    <string name="hint_not_found_message">Không tìm thấy tin nhắn!</string>
+    <!--Bkav QuangNDb title tren dialog khi bam vao so dien thoai trong noi dung tin nhan-->
+    <string name="option_call">Gọi điện</string>
+    <string name="option_text">Gửi tin nhắn</string>
+    <string name="option_mail">Gửi email</string>
+    <string name="option_add_contact">Thêm liên hệ</string>
+    <string name="option_copy">Sao chép</string>
+    <string name="option_edit">Mở bàn phím số</string>
+    <!--Bkav QuangNDb option show avatar-->
+    <string name="option_show_avatar">Hiện avatar ở mỗi tin nhắn</string>
+    <string name="option_show_details">Hiện thông tin chi tiết ở mỗi tin nhắn</string>
+    <string name="option_show_info_sim">Hiện thông tin sim của cuộc hội thoại</string>
+    <!--Bkav QuangNDb text toase has not connect 3g-->
+    <string name="toast_show_has_not_connect_3g">Hãy bật dữ liệu di động để gửi tin nhắn đa phương tiện!</string>
+    <!--QuangNDb action mark all read-->
+    <string name="action_mark_all_read">Đánh dấu tất cả đã đọc</string>
+    <string name="progress_mark_all_message">Đang đánh dấu đã đọc</string>
+    <string name="missing_storage_permission">Bạn có cuộc gọi đã được ghi âm. Để lưu lại thành tin nhắn mms. Hãy cho phép Btalk có thể truy cập bộ nhớ của thiết bị.</string>
+    <string name="allow">Cho phép</string>
+
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo giay -->
+    <plurals name="recentCalls_timeInSeconds">
+        <item quantity="one">1 giây trước</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>            giây trước</item>
+    </plurals>
+
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo phut -->
+    <plurals name="recentCalls_timeInMinutes">
+        <item quantity="one">1 phút trước</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g>            phút trước</item>
+    </plurals>
+
+    <!-- Anhdts Thoi gian dien ra cuoc goi trong tab recents tinh theo ngay -->
+
+    <!-- Anhdts Cac ngay trong tuan -->
+    <string name="day_of_week_long_today">Hôm nay</string>
+    <string name="day_of_week_long_sunday">Chủ nhật</string>
+    <string name="day_of_week_long_monday">Thứ hai</string>
+    <string name="day_of_week_long_tuesday">Thứ ba</string>
+    <string name="day_of_week_long_wednesday">Thứ tư</string>
+    <string name="day_of_week_long_thursday">Thứ năm</string>
+    <string name="day_of_week_long_friday">Thứ sáu</string>
+    <string name="day_of_week_long_saturday">Thứ bảy</string>
+
+    <!-- Anhdts tab chon cuoc goi nho va tat ca cuoc goi -->
+    <string name="toolbar_recent_all_upper">Tất cả</string>
+    <string name="toolbar_recent_missed_upper">Gọi nhỡ</string>
+
+    <!-- Anhdts title context menu cho item trong call log -->
+    <string name="action_add_contact">Thêm liên hệ</string>
+    <string name="action_show_call_detail">Xem nhật ký cuộc gọi</string>
+    <string name="action_show_all_call_detail">Xem toàn bộ nhật ký cuộc gọi</string>
+    <string name="action_share_contact_via">Chia sẻ liên hệ qua</string>
+    <string name="action_remove_in_call_log">Xóa khỏi nhật ký cuộc gọi</string>
+    <string name="action_clear_in_call_log">Xóa toàn bộ trong nhật ký</string>
+    <string name="action_call_by_sim">Gọi bằng SIM %1$s &lt;%2$s&gt;</string>
+
+    <!-- Anhdts dialpad thong bao khong the nhan tin toi so-->
+    <string name="dialog_phone_send_prohibited_message">Không thể nhắn tin tới số này</string>
+    <!-- Anhdts toast trong action nhan tin cua dialpad-->
+    <string name="toast_warn_cannot_send_message">Lỗi: Không thể gửi tin nh ắn. Vui lòng cung cấp dịch vụ tương thích.</string>
+    <!--Anhdts xoa nhat ky cuoc goi-->
+    <string name="recentCalls_deleteAll">Xóa nhật ký</string>
+    <string name="recentCalls_edit_call_log">Chỉnh sửa nhật ký</string>
+    <string name="recentCalls_born_contact">Thêm danh bạ</string>
+
+    <!--**************TOOLTIP******************-->
+    <!-- Anhdts text goi y dialpad-->
+    <string name="bkav_tooltip_magicpad_message">Gợi ý: Để <b>tìm nhanh</b> Người cần liên lạc,\n bạn bấm phím số ứng với <b>chữ cái đầu</b> của tên. Ví dụ \'2 6 4\' -&gt; \'Anh\'</string>
+    <string name="btalk_tooltip_magicpad_not_show_again">Không hiện lại</string>
+    <!--Bkav QuangNDb hint text compose view-->
+    <string name="btalk_compose_message_view_hint_text_multi_sim"><i>Gửi từ %1$s</i></string>
+
+    <!--AnhNDd String trong nav drawer-->
+    <string name="btalk_title_nav_header">Cài đặt</string>
+    <!--Bkav QuangNDb text hint cua box go tin nhan-->
+    <string name="btalk_hint_compose_message_not_multi_sim"><i>Gõ nội dung tin nhắn</i></string>
+    <string name="btalk_notify_not_make_a_call">Không thể thực hiện cuộc gọi do có nhiều người hoặc không phải số điện thoại hợp lệ</string>
+    <!--Bkav QuangNDb override string text cua source goc de thay noi dung toast thay doi sms app-->
+    <string name="requires_default_sms_app_to_send">Để gửi, hãy đặt Btalk làm ứng dụng SMS mặc định</string>
+    <string name="requires_default_sms_app">Đặt Btalk làm ứng dụng nhắn tin mặc định</string>
+
+    <!--*******************menu******************-->
+    <!-- Anhdts action shortcut menu-->
+    <string name="menu_label_new_message">Soạn tin nhắn</string>
+    <string name="menu_label_favorite">Danh sách ưa thích</string>
+    <string name="menu_label_add_contact">Thêm liên hệ</string>
+
+    <!--AnhNDd: -->
+    <string name="contacts_selected">%d được chọn</string>
+
+    <!--AnhNDd: các string ở contact chưa được dịch sang tiếng việt-->
+    <string name="menu_moveGroupMembers">Di chuyển thành viên nhóm</string>
+    <string name="contactSavedToSimCardError">Lỗi, Lưu vào thẻ SIM bị lỗi.</string>
+    <string name="number_anr_too_long">Lỗi, Số quá dài.</string>
+    <string name="email_address_too_long">Lỗi, Địa chỉ Email quá dài</string>
+    <string name="sim_card_full">Lỗi, Thẻ Sim đã đầy.</string>
+    <string name="tag_too_long">Lỗi, tên liên hệ quá dài.</string>
+    <string name="invalid_phone_number">Lỗi, Số không hợp lệ.</string>
+    <string name="no_phone_number_or_email">Vui lòng chèn số điện thoại hoặc địa chỉ email.</string>
+    <string name="importConfirmation_title">Nhập liên hệ?</string>
+    <string name="contacts_groups_label">Các nhóm</string>
+    <string name="title_move_members">Di chuyển thành viên</string>
+    <string name="message_move_members">Di chuyển thành viên ...</string>
+    <string name="message_can_not_move_members">Không thể di chuyển thành viên</string>
+    <string name="select_all">"Chọn tất cả"</string>
+    <string name="btn_ok">Chấp nhận</string>
+    <string name="btn_cancel">Hủy</string>
+    <string name="search_bar_hint">Tìm kiếm địa chỉ liên hệ</string>
+    <string name="deleteConfirmation_title">Xóa liên lạc?</string>
+    <string name="import_sim_contacts_title">Nhập địa chỉ liên lạc trên SIM</string>
+    <string name="import_sim_contacts_message">Nhập địa chỉ liên lạc trên SIM ...</string>
+    <string name="ContactMultiImportConfirmation">Những địa chỉ liên lạc này sẽ được nhập.</string>
+    <string name="import_finish">"Nhập xong"</string>
+    <string name="import_stop">"Nhập liên hệ đã dừng lại"</string>
+    <string name="too_many_contacts_add_to_group">Quá nhiều địa chỉ liên hệ, cần ít hơn <xliff:g id="count">%d</xliff:g></string>
+    <string name="ContactMultiDeleteConfirmation">Các địa chỉ liên hệ này sẽ bị xóa.</string>
+    <string name="delete_contacts_title">Xóa Danh sách liên hệ</string>
+    <string name="delete_contacts_message">Xóa Danh sách liên hệ ...</string>
+    <string name="menu_refresh">Làm mới</string>
+    <string name="video_call">Cuộc gọi video</string>
+    <string name="menu_copyTo">"Sao chép vào "</string>
+    <string name="no_empty_email_in_usim">"Email đầy, một số bản ghi bản ghi không thành công "</string>
+    <string name="voicemail">Thư thoại</string>
+    <string name="select_call_title">Chọn nhật ký cuộc gọi</string>
+    <string name="delete_call_title">Xóa nhật ký cuộc gọi</string>
+    <string name="delete_call_message">Xóa nhật ký cuộc gọi ...</string>
+    <string name="delete_call_alert">Chắc chắn xóa các bản ghi cuộc gọi được chọn?</string>
+    <string name="title_del_call">Xóa</string>
+    <string name="multi_pick_recent_title">MỚI</string>
+    <string name="multi_pick_contacts_title">LIÊN HỆ</string>
+    <string name="multi_pick_group_title">NHÓM</string>
+    <string name="summary_count_numbers">%s số lượng</string>
+    <string name="contact_info_text_as_name">Tên:</string>
+    <string name="contact_info_text_as_phone">Số điện thoại:</string>
+    <string name="search_menu_search">Tìm kiếm</string>
+    <string name="clear_call_log_button_text">XÓA</string>
+    <string name="unknown">Không xác định</string>
+    <string name="private_num">Số cá nhân</string>
+    <string name="payphone">Điện thoại</string>
+    <string name="too_many_contacts_to_merge_message">Quá nhiều địa chỉ liên lạc, nên nhỏ hơn <xliff:g id="count">%d</xliff:g></string>
+    <string name="replace_number_title_1">Thay thế số trước đó</string>
+    <string name="replace_number_title_2">Thay thế số trước đó?</string>
+    <string name="replace_button">THAY THẾ</string>
+    <string name="merge_contacts">"Hợp nhất địa chỉ liên hệ"</string>
+    <string name="merging_contacts">"Đang hợp nhất địa chỉ liên lạc"</string>
+    <string name="searching_duplicated_contacts">"Tìm kiếm địa chỉ liên hệ bị trùng lặp"</string>
+    <string name="no_duplicated_contacts">"Không có địa chỉ liên hệ trùng lặp"</string>
+    <!-- Bkav HaiKH: message khi merge không có tài khoản-->
+    <string name="please_add_account_for_merge">"Vui lòng thêm tài khoản chủ sở hữu để hợp nhất liên hệ"</string>
+    <string name="give_up_merging">"Từ bỏ hợp nhất liên hệ?"</string>
+    <string name="give_up">"Từ bỏ"</string>
+    <string name="cancel">Hủy</string>
+    <string name="merge_complete">"Hợp nhất hoàn thành."</string>
+    <string name="sim_email_full">Email trên thẻ SIM đã đầy."</string>
+    <string name="sim_anr_full">"Liên hệ trên thẻ SIM đã đầy."</string>
+    <string name="merge_fail">"Kết hợp thất bại."</string>
+    <!-- Action that exports all contacts to SIM -->
+    <string name="export_to_sim">Xuất sang thẻ SIM</string>
+
+    <!--Bkav QuangNDb text title ghi am cuoc goi den di-->
+    <string name="record_incoming_call">Cuộc gọi đến được ghi âm</string>
+    <string name="record_outgoing_call">Cuộc gọi đi được ghi âm</string>
+    <string name="notify_recoding_call">Cuộc gọi đã được ghi âm và được lưu trong hộp thư</string>
+
+    <string name="notify_chooser_app_set_ringtone">Chọn ứng dụng thay đổi nhạc chuông cho liên hệ</string>
+    <string name="notify_complete_set_ringtone">Liên hệ đã được đổi nhạc chuông thành công</string>
+    <string name="notify_empty_contact_new_message">Danh bạ hiện tại đang trống</string>
+    <string name="notify_empty_contact_find">Không tìm thấy liên hệ!</string>
+    <!-- Anhdts thong bao danh ba trong khi cham vao danh ba de goi-->
+    <string name="toast_cannot_call_without_number">Liên hệ trống</string>
+
+    <!--Bkav QuangNDB text title dialog nhieu nguoi trong cuoc hoi thoai-->
+    <string name="touch_to_call">Chạm để gọi</string>
+    <string name="title_merge_by_name">Hợp nhất theo tên</string>
+    <string name="title_merge_by_phone">Hợp nhất theo số điện thoại</string>
+    <string name="title_merge_by_mail">Hợp nhất theo địa chỉ Mail</string>
+    <string name="toast_copy_contact">Đã sao chép các liên hệ</string>
+    <string name="toast_delete_calls_complete">cuộc gọi đã được xóa</string>
+    <!-- Anhdts Title bar for all call detail screen -->
+    <string name="notify_not_permission">Ứng dụng chưa được cấp quyền truy cập bộ nhớ. File ghi âm cuộc gọi sẽ không được lưu dưới dạng tin nhắn. Để thay đổi quyền vào Cài đặt > Ứng dụng > Btalk > Quyền</string>
+    <!-- Anhdts Title bar for all call detail screen -->
+    <string name="allCallDetailTitle">Danh sách tất cả cuộc gọi</string>
+    <!-- Anhdts dialog sau khi nguoi dung deny cac quyen-->
+    <string name="message_request_permission">Để bật tính năng này, bấm vào CÀI ĐẶT bên dưới, và kích hoạt Danh bạ, Điện thoại trong menu Quyền</string>
+    <string name="title_request_permission">Cho phép Btalk sử dụng Danh bạ, Cuộc gọi</string>
+    <string name="positive_title_request_permission">CÀI ĐẶT</string>
+    <string name="negative_title_request_permission">KHÔNG PHẢI LÚC NÀY</string>
+
+    <string name="enable_permission_procedure" msgid="2778471831376319587">"Bạn có thể thay đổi các quyền trong Cài đặt &gt; Ứng dụng &gt; Btalk &gt; Quyền."</string>
+    <string name="enable_permission_procedure_description" msgid="8672121020793945630">"Bạn có thể thay đổi các quyền trong Cài đặt, Ứng dụng, Btalk, Quyền."</string>
+    <string name="required_permissions_promo" msgid="3898014894175251590">"Btalk cần quyền truy cập vào SMS, Điện thoại và Danh bạ."</string>
+
+    <string name="enable_permission_audio">Cho phép Btalk sử dụng Micrô</string>
+    <string name="enable_permission_audio_summary">Để bật tính năng này, bấm vào CÀI ĐẶT bên dưới và kích hoạt Micrô trong menu Quyền.</string>
+    <string name="enable_permission_camera">Cho phép Btalk sử dụng Máy ảnh</string>
+    <string name="enable_permission_camera_summary">Để bật tính năng này, bấm vào CÀI ĐẶT bên dưới và kích hoạt Máy ảnh trong menu Quyền.</string>
+    <string name="enable_permission_gallery">Cho phép Btalk sử dụng Bộ nhớ điện thoại</string>
+    <string name="enable_permission_gallery_summary">Để bật tính năng này, bấm vào CÀI ĐẶT bên dưới và kích hoạt Lưu trữ trong menu Quyền.</string>
+    <string name="quick_response_title">Phản hồi nhanh</string>
+    <string name="quick_response_edit_title">Chỉnh sửa phản hồi nhanh</string>
+    <string name="quick_response_ok">OK</string>
+    <string name="quick_response_goodnight">Chúc ngủ ngon!</string>
+    <string name="quick_response_wait">Đợi một chút.</string>
+    <string name="quick_response_what_up">Có chuyện gì vậy?</string>
+    <string name="add_response_title">Thêm tin nhắn nhanh</string>
+    <string name="add_response_hint">Nội dung</string>
+    <string name="notify_empty_response_content">Nội dung phản hồi không được trống!</string>
+    <string name="btalk_title_dialog_choose_number">Chọn số</string>
+    <string name="other_telephone_exchange">Tổng đài</string>
+
+    <string name="police_text">Cảnh sát</string>
+    <string name="ambulance_text">Cứu thương</string>
+    <string name="rescue_text">Cứu nạn</string>
+    <string name="firefighting_text">Cứu hỏa</string>
+
+    <string name="copy_done_suggest">Đã sao chép liên hệ!</string>
+    <string name="dont_support_quick_response">Không hỗ trợ hiển thị phản hồi nhanh trong chế độ màn hình hiện tại</string>
+    <string name="notify_max_support_quick_response">Chỉ hỗ trợ tối đa 5 phản hồi nhanh</string>
+    <string name="action_filter_mms">Lọc tin nhắn MMS</string>
+    <string name="action_filter_audio">Lọc tệp ghi âm</string>
+
+    <!--Bkav TienNAb: action loc tin nhan van ban-->
+    <string name="action_filter_sms">Lọc tin nhắn SMS</string>
+
+    <string name="action_show_all_message">Hiển thị tất cả tin nhắn</string>
+    <string name="notify_use_number_zalo">Liên hệ trống. Bạn có muốn sử dụng thông tin Zalo thực hiện hành động?</string>
+    <string name="tooltip_choose_sim">Chạm và giữ để chọn Sim</string>
+    <string name="label_ringtone">Nhạc chuông</string>
+    <string name="label_ringtone_message">Âm báo tin nhắn</string>
+    <string name="default_text">Mặc định</string>
+    <string name="pick_gallery_title">Bộ sưu tập</string>
+    <string name="pick_camera_title">Chụp ảnh</string>
+    <string name="pick_default_photo">Ảnh có sẵn</string>
+    <string name="mute_conversation_title">Tắt thông báo cho cuộc trò chuyện này</string>
+    <string name="toast_change_account">Không lưu được liên hệ vào Sim do tên liên hệ quá dài hoặc lỗi sim. Bạn vui lòng sửa thông tin hoặc lưu sang tài khoản khác</string>
+    <string name="confirm_convert_phone">Chuyển đổi liên hệ (%d được chọn)</string>
+    <string name="converting">Đang chuyển đổi</string>
+    <string name="convert_success">Chuyển đổi thành công</string>
+    <string name="convert_phone">Đổi đầu số điện thoại</string>
+
+
+    <!--Bkav QuangNDb string lien quan den ringtone cho tung sim-->
+    <string name="ringtone_title_sim1">Nhạc chuông Sim 1</string>
+    <string name="ringtone_title_sim2">Nhạc chuông Sim 2</string>
+
+    <!--Bkav HuyNQn ten cho call recorder-->
+    <string name="title_call_recorder">Ghi âm cuộc gọi</string>
+
+    <!--Bkav HuyNqn String khong tim duoc so dien thoai cua contact-->
+
+    <!--Bkav HuyNqn String title dialog cua contact co nhieu so dien thoai-->
+    <string name="select_phone_number">Chọn số điện thoại</string>
+
+    <!--Bkav HuyNQn String QrCode-->
+    <string name="bkav_qr_code_instruction">Di chuyển camera đến khu vực mã QR để quét</string>
+    <string name="title_result_qr_code">Kết quả quét</string>
+    <string name="qr_code_link">Đường dẫn: </string>
+    <string name="qr_code_how_open">. Mở trong trình duyệt??</string>
+    <string name="qr_code_yes">Đồng ý</string>
+    <string name="qr_code_no">Không</string>
+    <string name="qr_code_continue">Tiếp tục</string>
+
+
+    <!--Bkav HuyNQN String Mute_conversation-->
+    <string name="mute_conversion_15_minutes">Trong 15 phút</string>
+    <string name="mute_conversion_1_hour">Trong 1 giờ</string>
+    <string name="mute_conversion_8_hour">Trong 8 giờ</string>
+    <string name="mute_conversion_24_hour">Trong 24 giờ</string>
+    <string name="mute_conversion_until_at_7h_50_am">Cho tới 7:50 sáng</string>
+    <string name="mute_conversion_until_turn_on">Cho tới khi bật lại</string>
+
+    <string name="message_enable_esim"> đang được kích hoạt</string>
+    <string name="title_enable_esim">Bật esim</string>
+    <string name="action_call_by_sim_other">Gọi bằng SIM khác</string>
+    <string name="action_view_call_log_recorder">Xem nhật ký ghi âm cuộc gọi</string>
+    <string name="application_shortcut_has_been_created">Lối tắt ứng dụng đã được tạo!</string>
+    <string name="create_shortcut_application">Tạo lối tắt ứng dụng</string>
+
+    <!--Bkav TienNAb String chia se lien he bang nhieu cach-->
+    <string name="action_share_more">Khác…</string>
+    <!--HienDTk: thay text khong tim thay file ghi am khi dang search-->
+    <string name="call_log_recorder_all_empty">Không tìm thấy file ghi âm</string>
+    <string name="call_with_viber">Gọi qua Viber</string>
+    <string name="call_with_zalo">Gọi qua Zalo</string>
+    <!--    Bkav QuangNDb title khong set ringtone-->
+    <string name="no_ringtone">Không</string>
+
+    <!--Bkav TienNAb String setting menu-->
+    <string name="setting_title">Cài đặt</string>
+    <string name="setting_phone">Điện thoại</string>
+    <string name="setting_message">Tin nhắn</string>
+    <string name="setting_contact">Danh bạ</string>
+
+    <!--Bkav HuyNQn String ghi am cuoc goi-->
+    <string name="delete_file_success">Xóa tệp tin thành công</string>
+    <string name="delete_file_error">Xóa tệp tin bị lỗi</string>
+    <string name="button_pause">Tạm dừng</string>
+    <string name="button_play">Phát</string>
+    <string name="button_exit">Thoát</string>
+    <string name="play_call_recorder">Phát ghi âm cuộc gọi</string>
+    <string name="call_recorder">Ghi âm cuộc gọi</string>
+    <string name="choose_app">Lựa chọn ứng dụng</string>
+
+    <!--Bkav TienNAb String hien thi khi khong co lien he nao-->
+    <string name="string_empty_recycler_view">Không có địa chỉ liên hệ nào</string>
+
+    <!--Bkav TienNAb String copy sdt trong tab calllog-->
+    <string name="string_copy_number_contact">Đã sao chép liên hệ</string>
+
+    <string name="unselect_all">Bỏ chọn tất cả</string>
+    <string name="btalk_compose_message_view_hint_text_ask_before_send">Nhập tin nhắn</string>
+
+    <string name="toast_change_account_error_vn_character">Lưu liên hệ Tiếng Việt có dấu trên SIM bị giới hạn kí tự, bạn vui lòng giảm bớt kí tự hoặc viết không dấu để có thể lưu trên thẻ SIM</string>
+    <string name="toast_change_account_error_max_character">Tên liên hệ dài quá giới hạn cho phép của thẻ SIM, bạn vui lòng loại bỏ bớt kí tự để có thể lưu lại trên SIM</string>
+    <string name="string_copy_messager">Đã sao chép nội dung tin nhắn</string>
+    <!-- HienDTk: them text xoa lien he trong callog-->
+    <string name="delete_callog"> <xliff:g id="count">%d</xliff:g> cuộc gọi đã được xóa.</string>
+
+    <!--HuyNQn them lua chon chan so dien thoai theo logic chi chan ben BMS-->
+    <string name="block_phone_number_only_bms_title">Chặn cuộc gọi</string>
+    <string name="text_block_phone_number">Bạn sẽ không nhận được cuộc gọi hoặc tin nhắn từ các số bị chặn.</string>
+    <string name="add_number_phone_blocked">Thêm số điện thoại</string>
+    <string name="text_block">Chặn</string>
+    <string name="text_unblock">Bỏ Chặn</string>
+    <string name="text_cancel">Hủy</string>
+    <string name="text_has_blocked_number">Đã chặn <xliff:g id="count">%s</xliff:g></string>
+    <string name="action_report_spam_to_bms">Báo cáo cuộc gọi rác</string>
+    <string name="text_notification_report_spam">Đã gửi báo cáo cuộc gọi rác</string>
+
+    <string name="delete_files_success">Xóa %1$d ghi âm cuộc gọi thành công</string>
+</resources>

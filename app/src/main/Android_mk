@@ -1,0 +1,157 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := $(call all-java-files-under, java) \
+    $(call all-java-files-under, ../../../contacts/src/main/java) \
+    $(call all-java-files-under, ../../../photofilterssdk/src/main/java) \
+    $(call all-java-files-under, ../../../messaging/src/main/java) \
+    $(call all-java-files-under, ../../../photoviewer/src/main/java) \
+    $(call all-java-files-under, ../../../common/src/main/java) \
+    $(call all-java-files-under, ../../../photoviewer/appcompat/src) \
+    $(call all-java-files-under, ../../../chips/src/main/java) \
+    $(call all-java-files-under, ../../../vcard/src/main/java) \
+    $(call all-java-files-under, ../../../libBlur/src/main/java) \
+    $(call all-java-files-under, ../../../contacts-common/src/main/java) \
+    $(call all-java-files-under, ../../../phone-common/src/main/java) \
+    $(call all-java-files-under, ../../../dialer/src/main/java) \
+    $(call all-java-files-under, ../../../bkavlibbluractivity/src/main/java) \
+    $(call all-java-files-under, ../../../contacts-common/src-Wrapper)
+
+LOCAL_SRC_FILES += src/org/codeaurora/presenceserv/IPresenceService.aidl \
+                   src/org/codeaurora/presenceserv/IPresenceServiceCB.aidl
+
+LOCAL_MODULE_TAGS := optional
+LOCAL_PACKAGE_NAME := Btalk
+
+LOCAL_OVERRIDES_PACKAGES := Contacts Mms
+
+#LOCAL_PROGUARD_FLAG_FILES := proguard.flags
+
+LOCAL_STATIC_JAVA_LIBRARIES := \
+    android-support-v4 \
+    android-support-v13 \
+    android-support-v7-palette \
+    android-support-v7-recyclerview \
+    android-support-v7-appcompat \
+    android-support-v7-cardview \
+    android-support-design \
+    android-common \
+    guava \
+    libphonenumber \
+    android-common-framesequence \
+    android-support-v8-renderscript \
+    btalk-lib-play-services-base \
+    btalk-lib-play-services-basement \
+    btalk-lib-play-services-location \
+    btalk-lib-play-services-maps \
+    btalk-lib-play-services-places \
+    org.apache.http.legacy \
+    gson \
+    btalk-lifecycle-runtime
+
+
+LOCAL_JNI_SHARED_LIBRARIES := libNativeImageProcessor
+
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_JAVA_LIBRARIES := telephony-common
+
+LOCAL_SDK_VERSION := current
+LOCAL_MIN_SDK_VERSION := 21
+LOCAL_DX_FLAGS := --multi-dex
+LOCAL_JACK_FLAGS := --multi-dex native
+
+LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res \
+    $(LOCAL_PATH)/../../../contacts/src/main/res \
+    $(LOCAL_PATH)/../../../contacts/src/main/res-bkav \
+    $(LOCAL_PATH)/../../../contacts/src/main/res-aosp \
+    $(LOCAL_PATH)/../../../photofilterssdk/src/main/res \
+    $(LOCAL_PATH)/../../../messaging/src/main/res \
+    $(LOCAL_PATH)/../../../chips/src/main/res \
+    $(LOCAL_PATH)/../../../photoviewer/src/main/res \
+    $(LOCAL_PATH)/../../../photoviewer/appcompat/res \
+    $(LOCAL_PATH)/../../../dialer/src/main/res \
+    $(LOCAL_PATH)/../../../libBlur/src/main/res \
+    $(LOCAL_PATH)/../../../contacts-common/src/main/res \
+    $(LOCAL_PATH)/../../../contacts-common/src/main/res-bkav \
+    $(LOCAL_PATH)/../../../phone-common/src/main/res \
+    $(LOCAL_PATH)/../../../bkavlibbluractivity/src/main/res \
+    frameworks/support/v7/appcompat/res \
+    frameworks/support/v7/recyclerview/res \
+    frameworks/support/v7/cardview/res \
+    frameworks/support/design/res \
+    $(LOCAL_PATH)/libs/play-services-base/res \
+    $(LOCAL_PATH)/libs/play-services-basement/res \
+    $(LOCAL_PATH)/libs/play-services-maps/res \
+    $(LOCAL_PATH)/libs/play-services-places/res
+    
+LOCAL_FULL_LIBS_MANIFEST_FILES := $(LOCAL_PATH)/../../../contacts/src/main/AndroidManifest.xml \
+    $(LOCAL_PATH)/../../../messaging/src/main/AndroidManifest.xml \
+    $(LOCAL_PATH)/../../../dialer/src/main/AndroidManifest.xml 
+
+LOCAL_PROGUARD_ENABLED := disabled
+
+ifdef TARGET_BUILD_APPS
+    LOCAL_JNI_SHARED_LIBRARIES := libframesequence libgiftranscode
+else
+    LOCAL_REQUIRED_MODULES:= libframesequence libgiftranscode
+endif
+
+LOCAL_AAPT_FLAGS := --auto-add-overlay
+LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.appcompat
+LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.recyclerview
+LOCAL_AAPT_FLAGS += --extra-packages android.support.v7.cardview
+LOCAL_AAPT_FLAGS += --extra-packages android.support.design
+LOCAL_AAPT_FLAGS += --extra-packages com.android.contacts.common
+LOCAL_AAPT_FLAGS += --extra-packages com.android.phone.common
+LOCAL_AAPT_FLAGS += --extra-packages com.android.contacts
+LOCAL_AAPT_FLAGS += --extra-packages bkav.android.blur.activity
+LOCAL_AAPT_FLAGS += --extra-packages com.ms_square.etsyblur
+LOCAL_AAPT_FLAGS += --extra-packages com.android.dialer
+LOCAL_AAPT_FLAGS += --extra-packages com.android.messaging
+LOCAL_AAPT_FLAGS += --extra-packages com.android.vcard
+LOCAL_AAPT_FLAGS += --extra-packages com.android.ex.photo
+LOCAL_AAPT_FLAGS += --extra-packages com.android.ex.chips
+LOCAL_AAPT_FLAGS += --extra-packages com.zomato.photofilters
+LOCAL_AAPT_FLAGS += --extra-packages com.google.android.gms.base
+LOCAL_AAPT_FLAGS += --extra-packages com.google.android.gms
+LOCAL_AAPT_FLAGS += --extra-packages com.google.android.gms.location
+LOCAL_AAPT_FLAGS += --extra-packages com.google.android.gms.maps
+
+include $(BUILD_PACKAGE)
+
+##################################################
+include $(CLEAR_VARS)
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := gson:libs/gson-2.7.jar
+include $(BUILD_MULTI_PREBUILT)
+
+##################################################
+include $(CLEAR_VARS)
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := btalk-lib-play-services-base:libs/play-services-base/classes.jar
+include $(BUILD_MULTI_PREBUILT)
+
+##################################################
+include $(CLEAR_VARS)
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := btalk-lib-play-services-basement:libs/play-services-basement/classes.jar
+include $(BUILD_MULTI_PREBUILT)
+
+##################################################
+include $(CLEAR_VARS)
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := btalk-lib-play-services-location:libs/play-services-location/classes.jar
+include $(BUILD_MULTI_PREBUILT)
+
+##################################################
+include $(CLEAR_VARS)
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := btalk-lib-play-services-maps:libs/play-services-maps/classes.jar
+include $(BUILD_MULTI_PREBUILT)
+
+##################################################
+include $(CLEAR_VARS)
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := btalk-lib-play-services-places:libs/play-services-places/classes.jar
+include $(BUILD_MULTI_PREBUILT)
+
+##################################################
+include $(CLEAR_VARS)
+LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := btalk-lifecycle-runtime:libs/lifecycle-runtime.jar
+include $(BUILD_MULTI_PREBUILT)
+

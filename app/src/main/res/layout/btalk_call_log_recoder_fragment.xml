@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".calllog.recoder.BtalkCallLogRecoderFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+            <bkav.android.btalk.calllog.recoder.BtalkCallLogRecorderCustomActionModeView
+                android:background="@color/action_mode_color"
+                android:id="@+id/btalk_action_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:visibility="gone"
+                android:paddingTop="38dp"
+                />
+            <FrameLayout
+                android:paddingTop="38dp"
+                android:layout_toLeftOf="@+id/imb_over_flow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp">
+
+                <android.support.v7.widget.SearchView
+                    android:id="@+id/search_call_log_recoder"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/searchview_height"
+                    android:layout_marginLeft="@dimen/searchview_margin_left_right"
+                    android:layout_marginRight="@dimen/searchview_margin_left_right"
+                    android:background="@drawable/background_search_call_log_recoder"
+                    android:baselineAligned="false"
+                    android:iconifiedByDefault="false"
+                    android:visibility="visible"
+                    app:searchIcon="@drawable/btalk_ic_search_light"/>
+
+                <ImageView
+                    android:id="@+id/search_recoder_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/margin_top_two_button_call"
+                    android:layout_marginTop="@dimen/imageview_search_margin_top"
+                    android:src="@drawable/btalk_ic_search_call_log_recoder"/>
+            </FrameLayout>
+
+            <!--Bkav HuyNQn tam thoi GONE nut imb_over_flow di-->
+            <ImageButton
+                android:id="@+id/imb_over_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/overfollow_button_bg"
+                android:paddingBottom="@dimen/medium_margin"
+                android:paddingEnd="@dimen/semi_margin"
+                android:paddingStart="@dimen/semi_margin"
+                android:paddingTop="@dimen/medium_margin"
+                android:tint="@color/btalk_ab_text_and_icon_normal_color"
+                android:visibility="gone"
+                app:srcCompat="@drawable/bkav_actionbar_ic_more"/>
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/recycleview_margin_top"
+            android:layout_weight="1">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <com.android.dialer.widget.EmptyContentView
+            android:id="@+id/empty_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <!--Bkav HuyNQn them detailview play recorder-->
+        <RelativeLayout
+            android:id="@+id/layout_play_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_25dp"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:layout_marginRight="@dimen/layout_height_image_button_delete"
+            android:layout_marginTop="@dimen/size_10dp">
+
+            <ImageButton android:id="@+id/btn_pause_or_play"
+                         android:layout_width="@dimen/detail_call_recorder_image_size"
+                         android:layout_height="@dimen/detail_call_recorder_image_size"
+                         android:layout_alignParentEnd="true"
+                         android:layout_marginTop="@dimen/size_5dp"
+                         android:background="?android:attr/selectableItemBackgroundBorderless"
+                         android:src="@drawable/ic_play_recoder"/>
+
+            <RelativeLayout android:id="@+id/LayoutDetai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            android:layout_marginRight="@dimen/recycleview_margin_top"
+                            android:layout_toLeftOf="@id/btn_pause_or_play">
+
+                <TextView android:id="@+id/text_name"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:textColor="@color/contact_list_name_text_color"
+                          android:textSize="@dimen/detail_call_recorder_text_size"/>
+
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@id/text_name">
+
+                    <TextView android:id="@+id/text_time_curent"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="@dimen/size_5dp"
+                              android:text="--:--"
+                              android:textColor="@color/contact_list_name_text_color"
+                              android:textSize="@dimen/detail_call_recorder_text_size"/>
+
+                    <SeekBar android:id="@+id/seek_bar"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_below="@id/text_name"
+                             android:layout_marginTop="@dimen/size_5dp"
+                             android:layout_toRightOf="@id/text_time_curent"
+                             android:layout_weight="1"
+                             android:progressTint="@color/seekbar_progress_orange"
+                             android:thumbTint="@color/seekbar_progress_orange"/>
+
+                    <TextView android:id="@+id/text_time_duration"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_below="@id/text_name"
+                              android:layout_marginTop="@dimen/size_5dp"
+                              android:layout_toRightOf="@id/seek_bar"
+                              android:text="--:--"
+                              android:textColor="@color/contact_list_name_text_color"
+                              android:textSize="@dimen/detail_call_recorder_text_size"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

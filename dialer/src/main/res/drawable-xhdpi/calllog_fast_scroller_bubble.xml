@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TienNAb: Chinh lai giao dien cho giong ben danh ba-->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetRight="@dimen/fast_scroller_bubble_inset">
+  <shape
+      android:shape="rectangle"
+      android:tint="@color/fast_scroller_bubble_background">
+    <corners
+        android:topLeftRadius="@dimen/fast_scroller_bubble_radius"
+        android:topRightRadius="@dimen/fast_scroller_bubble_radius"
+        android:bottomLeftRadius="@dimen/fast_scroller_bubble_radius" />
+    <padding
+        android:left="@dimen/fast_scroller_bubble_padding"
+        android:right="@dimen/fast_scroller_bubble_padding" />
+    <solid android:color="@color/white" />
+  </shape>
+</inset>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav QuangNDb sua mau icon menu cua lop BtalkConversationFragment-->
+<bitmap
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/ic_phone_small_light"
+    android:tint="@color/btalk_ab_text_and_icon_normal_color"/>

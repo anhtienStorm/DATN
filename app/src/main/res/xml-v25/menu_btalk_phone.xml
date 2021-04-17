@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Anhdts shortcut cho icon phone launcher-->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="compose_phone_favorite"
+        android:enabled="true"
+        android:icon="@drawable/menu_show_favorite"
+        android:shortcutShortLabel="@string/menu_label_favorite"
+        android:shortcutLongLabel="@string/menu_label_favorite"
+        android:shortcutDisabledMessage="@string/menu_label_favorite">
+        <intent
+            android:action="com.android.contacts.action.LIST_STARRED"
+            android:targetPackage="bkav.android.btalk"
+            android:targetClass="bkav.android.btalk.activities.BtalkActivity" />
+        <categories android:name="android.shortcut.btalk_phone_favorite" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="compose_new_contact"
+        android:enabled="true"
+        android:icon="@drawable/menu_add_contact"
+        android:shortcutShortLabel="@string/menu_label_add_contact"
+        android:shortcutLongLabel="@string/menu_label_add_contact"
+        android:shortcutDisabledMessage="@string/menu_label_add_contact">
+        <intent
+            android:action="android.intent.action.INSERT"
+            android:targetPackage="bkav.android.btalk"
+            android:targetClass="bkav.android.btalk.contacts.BtalkCompactContactEditorActivity" />
+        <categories android:name="android.shortcut.btalk_add_contact" />
+    </shortcut>
+</shortcuts>
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="call_disambig_title">Sử dụng cuộc gọi</string>
+    <string name="make_primary">Nhớ lựa chọn này</string>
+    <string name="bkav_about_eula_title">Điều khoản sử dụng</string>
+    <string name="accept">Chấp nhận</string>
+    <string name="cancel">Hủy bỏ</string>
+    <string name="bkav_about_eula_url">http://btalk.vn/m-termsOfUse</string>
+    <string name="dialog_check_internet_message">Kết nối bị lỗi! Xin vui lòng kiểm tra lại kết nối mạng.</string>
+    <string name="menu_import">Nhập danh bạ</string>
+    <string name="menu_export">Xuất danh bạ</string>
+    <string name="btalk_contactsFavoritesLabel">Yêu thích</string>
+    <string name="convert_phone">Đổi đầu số điện thoại</string>
+</resources>

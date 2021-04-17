@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Bkav HuyNqn view nay them vao giao dien ghi am cuoc goi-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_action_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bkav_actionbar_height"
+    android:background="@color/action_mode_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+    <!--Bkav TienNAb: them moi lien he trai,phai voi cac view khac fix loi hien thi khi de kich thuoc hien thi max-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/action_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:background="@drawable/overfollow_button_bg"
+            android:padding="@dimen/medium_margin"
+            android:src="@drawable/btalk_ic_action_mode_cancel"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/expand_more_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|end"
+                android:src="@drawable/expand_more"
+                android:tint="@drawable/call_log_recorder_select_icon_tint"/>
+
+            <Button
+                android:id="@+id/selection_menu"
+                style="?android:attr/actionButtonStyle"
+                android:layout_width="@dimen/action_bar_select_button_width"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:divider="?android:attr/listDividerAlertDialog"
+                android:gravity="center_vertical|left"
+                android:paddingEnd="@dimen/action_bar_select_button_padding_end"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceLargePopupMenu"
+                android:textColor="@color/white"
+                android:tint="@drawable/default_icon_tint"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/action_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/action_delete"
+        android:background="@drawable/overfollow_button_bg"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/btalk_ic_action_mode_share_new"/>
+
+    <ImageButton
+        android:id="@+id/action_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/overfollow_button_bg"
+        android:padding="@dimen/medium_margin"
+        android:src="@drawable/btalk_ic_action_mode_delete_new"/>
+</RelativeLayout>

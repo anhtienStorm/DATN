@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- State when a row is being pressed, but hasn't yet been activated (finger down) -->
+    <item android:color="@color/btalk_ab_text_and_icon_selected_color" android:state_focused="true"/>
+    <item android:color="@color/btalk_ab_text_and_icon_selected_color" android:state_pressed="true"/>
+    <item android:color="@color/btalk_ab_text_and_icon_selected_color" android:state_selected="true"/>
+
+    <item android:color="@color/white"/>
+</selector>

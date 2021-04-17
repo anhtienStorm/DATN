@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <declare-styleable name="BackgroundBlurStyle">
+        <attr name="backgroundBlurStyle" format="reference"/>
+    </declare-styleable>
+    <!--BKav TrungTH dinh nghia cac att moi cho giao dienj blur-->
+    <!--useWallpaperForBackground xac dinh xem co dung wallpaper lam hinh nen ko, mac dinh la true, trong Config-->
+    <!--windowBackground: truong hop ko su dung hinh nen thi day la hinh nen nguoi dung tu dua vao-->
+    <!--overLayStatusBar xac dinh xem co de hinh nen full len ca stusbar hay ko mac dinh la true-->
+    <!--blurRadius cho viec blur, mac dinh la 25-->
+    <!--blurDownScaleFactor cho viec blur, mac dinh la 25-->
+    <!--alphaAllView do trong cua hinh nen-->
+    <declare-styleable name="BackgroundBlurView">
+        <attr name="useWallpaperForBackground" format="boolean"/>
+        <attr name="windowBackground" format="reference"/>
+        <attr name="statusBarIsTransparent" format="boolean"/>
+        <attr name="blurFilterColor" format="color"/>
+        <attr name="blurFilterDepth" format="integer"/>
+        <attr name="blurRadius" format="integer"/>
+        <attr name="blurDownScaleFactor" format="integer"/>
+        <attr name="alphaActionBar" format="float"/>
+        <attr name="alphaToolBar" format="float"/>
+        <attr name="alphaAllView" format="float"/>
+    </declare-styleable>
+
+</resources>

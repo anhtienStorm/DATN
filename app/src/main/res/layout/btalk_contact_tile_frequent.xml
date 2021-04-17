@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ AnhNDd: giao dien list contact thuong xuyen lien he o tab yeu thich
+-->
+<view xmlns:android="http://schemas.android.com/apk/res/android"
+      class="com.android.contacts.common.list.ContactTileFrequentView"
+      android:background="?android:attr/selectableItemBackground"
+      android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center_vertical">
+
+        <view
+            class="com.android.contacts.common.widget.LayoutSuppressingImageView"
+            android:id="@+id/contact_tile_image"
+            android:layout_width="@dimen/btalk_list_item_contact_photo_size"
+            android:layout_height="@dimen/btalk_list_item_contact_photo_size"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/contact_browser_list_item_padding_top_or_bottom"
+            android:layout_marginEnd="@dimen/btalk_list_item_contact_padding_left"
+            android:layout_marginTop="@dimen/contact_browser_list_item_padding_top_or_bottom"
+            android:clickable="true"
+            android:scaleType="centerCrop"/>
+        <!-- Anhdts them icon hien thi chi tiet danh ba-->
+        <ImageView
+            android:id="@+id/contact_tile_show_detail"
+            android:layout_width="@dimen/btalk_width_frequent_show_more"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bkav_view_contact"/>
+
+        <TextView
+            android:id="@+id/contact_tile_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/contact_browser_list_item_padding_top_or_bottom"
+            android:layout_marginTop="@dimen/contact_browser_list_item_padding_top_or_bottom"
+            android:layout_toEndOf="@id/contact_tile_image"
+            android:layout_toStartOf="@id/contact_tile_show_detail"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:fadingEdgeLength="3dip"
+            android:fontFamily="sans-serif"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/contact_browser_list_item_text_size"/>
+
+    </RelativeLayout>
+
+</view>

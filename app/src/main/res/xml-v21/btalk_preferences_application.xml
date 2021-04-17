@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bkav QuangNDb giao dien setting dung trong BtalkApplicationSettings -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--  default SMS -->
+    <PreferenceScreen
+        android:key="@string/sms_disabled_pref_key"
+        android:persistent="false"
+        android:title="@string/sms_disabled_pref_title">
+        <intent
+            android:action="android.provider.Telephony.ACTION_CHANGE_DEFAULT">
+            <extra android:name="package" android:value="bkav.android.btalk"/>
+        </intent>
+    </PreferenceScreen>
+    <!--  default SMS -->
+    <PreferenceScreen
+        android:key="@string/sms_enabled_pref_key"
+        android:persistent="false"
+        android:title="@string/sms_enabled_pref_title">
+        <intent
+            android:action="android.settings.WIRELESS_SETTINGS">
+        </intent>
+    </PreferenceScreen>
+    <!--Sound-->
+    <SwitchPreference
+        android:defaultValue="@bool/send_sound_pref_default"
+        android:key="@string/send_sound_pref_key"
+        android:persistent="true"
+        android:title="@string/send_sound_pref_title"/>
+    <!--Notification-->
+    <SwitchPreference
+        android:defaultValue="@bool/notifications_enabled_pref_default"
+        android:disableDependentsState="false"
+        android:key="@string/notifications_enabled_pref_key"
+        android:persistent="true"
+        android:title="@string/notifications_enabled_pref_title"/>
+    <!--Ringtone-->
+    <RingtonePreference
+        android:defaultValue=""
+        android:dependency="@string/notifications_enabled_pref_key"
+        android:key="@string/notification_sound_pref_key"
+        android:persistent="true"
+        android:ringtoneType="notification"
+        android:showDefault="true"
+        android:showSilent="true"
+        android:title="@string/notification_sound_pref_title"/>
+    <!--Vibrate-->
+    <SwitchPreference
+        android:defaultValue="@bool/notification_vibration_pref_default"
+        android:dependency="@string/notifications_enabled_pref_key"
+        android:key="@string/notification_vibration_pref_key"
+        android:persistent="true"
+        android:title="@string/notification_vibrate_pref_title"/>
+    <!--Delivery report-->
+    <SwitchPreference
+        android:defaultValue="@bool/delivery_reports_pref_default"
+        android:key="@string/delivery_reports_pref_key"
+        android:summary="@string/delivery_reports_pref_summary"
+        android:title="@string/delivery_reports_pref_title"/>
+    <!--is show avatar message-->
+    <SwitchPreference
+        android:defaultValue="@bool/show_avatar_pref_default"
+        android:key="@string/option_show_avatar_key"
+        android:title="@string/option_show_avatar"
+    />
+
+    <!--is show details message-->
+    <SwitchPreference
+        android:defaultValue="@bool/show_details_pref_default"
+        android:key="@string/option_show_details_key"
+        android:title="@string/option_show_details"
+    />
+
+    <!--is show info sim conversation-->
+    <SwitchPreference
+        android:defaultValue="@bool/show_info_sim_conversation"
+        android:key="@string/option_show_info_sim_key"
+        android:title="@string/option_show_info_sim"
+    />
+
+    <!--Advance-->
+    <PreferenceScreen
+        android:key="@string/advanced_pref_key"
+        android:title="@string/advanced_settings"/>
+
+    <!--Debug mode-->
+    <PreferenceCategory
+        android:key="@string/debug_pref_key"
+        android:title="@string/debug_category_pref_title">
+
+        <SwitchPreference
+            android:defaultValue="@bool/dump_sms_pref_default"
+            android:key="@string/dump_sms_pref_key"
+            android:summary="@string/dump_sms_pref_summary"
+            android:title="@string/dump_sms_pref_title"/>
+
+        <SwitchPreference
+            android:defaultValue="@bool/dump_mms_pref_default"
+            android:key="@string/dump_mms_pref_key"
+            android:summary="@string/dump_mms_pref_summary"
+            android:title="@string/dump_mms_pref_title"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
