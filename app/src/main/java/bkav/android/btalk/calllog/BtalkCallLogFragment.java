@@ -443,7 +443,7 @@ public class BtalkCallLogFragment extends CallLogFragment implements View.OnClic
         super.onResume();
         // Bkav TrungTh goi ham thong bao da vao onResume de bao da load xong fragment nay
         if (getActivity() != null && getActivity() instanceof BtalkActivity) {
-            ((BtalkActivity) getActivity()).justFinishLoadingTab();
+//            ((BtalkActivity) getActivity()).justFinishLoadingTab();
         }
         if (mIsSearchMode) {
             mSearchView.setSelected(true);
@@ -466,7 +466,7 @@ public class BtalkCallLogFragment extends CallLogFragment implements View.OnClic
     @Override
     protected void showDialpad(Activity activity) {
         if (getActivity() != null && getActivity() instanceof BtalkActivity) {
-            ((BtalkActivity) getActivity()).setCurrentTab(BtalkActivity.TAB_PHONE_INDEX);
+//            ((BtalkActivity) getActivity()).setCurrentTab(BtalkActivity.TAB_PHONE_INDEX);
         }
     }
 
@@ -671,7 +671,7 @@ public class BtalkCallLogFragment extends CallLogFragment implements View.OnClic
             }
             mQueryString = queryString.toString();
             mSmartDialSearchFragment.setQueryString(mQueryString);
-            ((BtalkActivity) getActivity()).querySmartContact(mQueryString, BtalkCallLogFragment.this);
+//            ((BtalkActivity) getActivity()).querySmartContact(mQueryString, BtalkCallLogFragment.this);
             mClearSearchView.setVisibility(
                     TextUtils.isEmpty(queryString) ? View.GONE : View.VISIBLE);
         }

@@ -102,7 +102,7 @@ public class BtalkPhoneCallDetailsHelper extends PhoneCallDetailsHelper {
             if (!details.isRead) {
                 views.nameView.setTypeface(BtalkTypefaces.sRobotoBoldFont);
                 if (mContext instanceof BtalkActivity) {
-                    ((BtalkActivity) mContext).setReadMissCall();
+//                    ((BtalkActivity) mContext).setReadMissCall();
                 }
             } else {
                 views.nameView.setTypeface(Typeface.SANS_SERIF);

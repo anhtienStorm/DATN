@@ -79,7 +79,7 @@ public class BtalkDialerDatabaseHelper extends DialerDatabaseHelper implements P
         mMap = new LatinSmartDialMap();
         mExchangeUtils = new TelephoneExchangeUtils(context);
         if (context instanceof BtalkActivity) {
-            ((BtalkActivity) context).setOnQueryCompleteListener(this);
+//            ((BtalkActivity) context).setOnQueryCompleteListener(this);
         }
         mContactListFilterController = ContactListFilterController.getInstance(context);
         mContactListFilterController.checkFilterValidity(false);

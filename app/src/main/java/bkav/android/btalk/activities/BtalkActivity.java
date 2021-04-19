@@ -138,10 +138,10 @@ import static bkav.android.btalk.trial_mode.TrialModeUtils.IS_TRIAL_MODE_PREF_KE
  */
 
 public class BtalkActivity extends TransactionSafeActivity implements
-        ConversationListFragment.ConversationListFragmentHost, DialpadFragment.HostInterface,
-        SearchFragment.HostInterface, OnListFragmentScrolledListener,
-        ContactMultiDeletionInteraction.MultiContactDeleteListener,
-        WallpaperBlurCompat.ChangeWallPaperListener, BtalkDataObserver.OnChangeListener,
+//        ConversationListFragment.ConversationListFragmentHost, DialpadFragment.HostInterface,
+//        SearchFragment.HostInterface, OnListFragmentScrolledListener,
+//        ContactMultiDeletionInteraction.MultiContactDeleteListener,
+//        WallpaperBlurCompat.ChangeWallPaperListener, BtalkDataObserver.OnChangeListener,
         BtalkMissingStoragePermissionDialog.OnRequestStoragePermission,
         PermissionUtil.CallbackCheckPermission /* TrungTH THem check quyen */ {
 
@@ -186,6 +186,8 @@ public class BtalkActivity extends TransactionSafeActivity implements
 
     private BkavViewPager mViewPager;
 
+    private View mRootView;
+
     private BtalkPhoneFragment mPhoneFragment;
 
     private BtalkConversationListFragment mMessagesFragment;
@@ -196,7 +198,7 @@ public class BtalkActivity extends TransactionSafeActivity implements
 
     private String[] mTabTitles;
 
-    private ViewPagerAdapter mViewPagerAdapter;
+//    private ViewPagerAdapter mViewPagerAdapter;
 
     private boolean mIsAccessCallLog = false;
 
@@ -247,21 +249,13 @@ public class BtalkActivity extends TransactionSafeActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //Bkav QuangNDb save default profile esim
-        ESimUtils.saveEsimDefaultProfile(getApplicationContext());
-        //Bkav QuangNDb neu dang o trial mode ma bien pref = fasle thi thuc hien update lai data trial mode
-        if (Config.isTrialMode(this) && !PrefUtils.get().loadBooleanPreferences(Factory.get().getApplicationContext(), IS_TRIAL_MODE_PREF_KEY, false)) {
-            TrialModeUtils.updateDataInTrialMode(Factory.get().getApplicationContext());
-        }
+        setContentView(R.layout.main_activity);
+        mRootView = findViewById(R.id.main_fragment);
+
         //Bkav QuangNDb cache multi sim truoc de khong loi hien thi suggest popup
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED) {
             BtalkCallLogCache.getCallLogCache(getApplicationContext()).checkMutilSim();
-        }
-        // Anhdts xin cap quyen - Them khong phai la trialMode thi add vao
-        if (PermissionUtil.get().requestPermission(this) && !Config.isTrialMode(this)) {
-            addConnectPhone(this);
-            removeOldConnectPhone(this);
         }
 
         // Bkav TienNAb: Them check quyen CALL_PHONE
@@ -271,31 +265,23 @@ public class BtalkActivity extends TransactionSafeActivity implements
                     CALL_PHONE_PERMISSION_REQUEST_CODE);
         }
 
-        // Bkav Anhdts khoi tao DB cho Smart Search
-        mDialerDatabaseHelper = BtalkDialerDatabaseHelper.getInstance(getApplicationContext());
-        mRequest = new ContactsRequest();
-        mIntentResolver = new ContactsIntentResolver(this);
-
-        // Anhdts gioi han font o kich thuoc vua phai
-        adjustFontScale(getResources().getConfiguration());
-        setStatusBarColor(TAB_PHONE_INDEX);
+//        adjustFontScale(getResources().getConfiguration());
+        setStatusBarColor(1);
         // Bkav HuyNQN them xu ly setstatusbar mau trang khi o che do chia doi man hinh
         setWindowStatusBarColor();
-        mPrivateHandler = new PrivateHandler(this);
-        // AnhNDd: điều chỉnh lại view có drawer
         WallpaperBlurCompat blurCompat = WallpaperBlurCompat.getInstance(getApplicationContext());
         mBkavBlurHelper = new BkavBlurHelper(this, R.layout.btalk_activity_drawer,
                 blurCompat.isConfigBkav());
         // Anhdts neu trong che do da man hinh thi khong set actionBar
         // mBkavBlurHelper.setIsNoActionBar(BkavUiUtils.isModeMultiScreen(this));
         // Anhdts dang ki lang nghe doi man hinh
-        blurCompat.addOnChangeWallpaperListener(this);
+//        blurCompat.addOnChangeWallpaperListener(this);
         // Anhdts
-        View contentView = mBkavBlurHelper.createView(false);
-        if (WallpaperBlurCompat.getInstance(getApplicationContext()).isConfigBkav()) {
-            contentView.setBackground(
-                    new BitmapDrawable(getResources(), blurCompat.getWallpaperBlur()));
-        }
+//        View contentView = mBkavBlurHelper.createView(false);
+//        if (WallpaperBlurCompat.getInstance(getApplicationContext()).isConfigBkav()) {
+//            contentView.setBackground(
+//                    new BitmapDrawable(getResources(), blurCompat.getWallpaperBlur()));
+//        }
 
         // Anhdts bo
         // RelativeLayout content = (RelativeLayout)
@@ -303,109 +289,107 @@ public class BtalkActivity extends TransactionSafeActivity implements
         // DrawerLayout.LayoutParams params = (DrawerLayout.LayoutParams) content.getLayoutParams();
         // params.topMargin = mBkavBlurHelper.getStatusBarHeight();
 
-        setContentView(contentView);
-
-        mViewPager = (BkavViewPager) findViewById(R.id.viewpager);
-        setupViewPager();
-        mDividerTabsView = findViewById(R.id.divider_tabs);
-        mTabLayout = (TabLayout) findViewById(R.id.tabs);
-        mTabLayout.setupWithViewPager(mViewPager, true);
-        setupTabView();
-        PrefUtils.get().saveBooleanPreferences(this, PrefUtils.KEEP_STATUS_APP, false);// huy keep giao dien message
-        displayFragment(getIntent());
-        initTooltipController();
+//        mViewPager = (BkavViewPager) findViewById(R.id.viewpager);
+//        setupViewPager();
+//        mDividerTabsView = findViewById(R.id.divider_tabs);
+//        mTabLayout = (TabLayout) findViewById(R.id.tabs);
+//        mTabLayout.setupWithViewPager(mViewPager, true);
+//        setupTabView();
+//        PrefUtils.get().saveBooleanPreferences(this, PrefUtils.KEEP_STATUS_APP, false);// huy keep giao dien message
+//        displayFragment(getIntent());
+//        initTooltipController();
         // Bkav TrungTh thay icon status bar sang mau xam va doi mau cua status bar
-        BtalkUiUtils.setSystemUiVisibility(mViewPager, View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+//        BtalkUiUtils.setSystemUiVisibility(mViewPager, View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         // AnhNDd:
-        mNavigationView = (NavigationView) findViewById(R.id.btalk_activity_nav_view);
+//        mNavigationView = (NavigationView) findViewById(R.id.btalk_activity_nav_view);
 
         // QuangNDb
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        setUpNavigationView();
-        initDrawerBlurView(mDrawerLayout);
+//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        setUpNavigationView();
+//        initDrawerBlurView(mDrawerLayout);
         // ANhdts view hieu ung cho giao dien setting
-        BtalkViewAnchorNav anchorNav = (BtalkViewAnchorNav) findViewById(R.id.anchor_nav);
-        mDrawerLayout.addDrawerListener(anchorNav);
-        initTabBarColor();
-        mCallRecordObserver = new BtalkDataObserver(new Handler());
-        getContentResolver().registerContentObserver(MessagingContentProvider.CALL_RECORD_URI, true,
-                mCallRecordObserver);
-        mCallRecordObserver.setOnChangeListener(this);
-        mSmartSuggestLoaderManage = new SuggestLoaderManager(this);
+//        BtalkViewAnchorNav anchorNav = (BtalkViewAnchorNav) findViewById(R.id.anchor_nav);
+//        mDrawerLayout.addDrawerListener(anchorNav);
+//        initTabBarColor();
+//        mCallRecordObserver = new BtalkDataObserver(new Handler());
+//        getContentResolver().registerContentObserver(MessagingContentProvider.CALL_RECORD_URI, true,
+//                mCallRecordObserver);
+//        mCallRecordObserver.setOnChangeListener(this);
+//        mSmartSuggestLoaderManage = new SuggestLoaderManager(this);
         // Anhdts fake navigation
-        showFakeNavigationBackground();
+//        showFakeNavigationBackground();
 
-        registerListenAction();
+//        registerListenAction();
         //HienDTk: lay key trong setting
-        mDayAutoDeleteAudio = Settings.System.getInt(getContentResolver(), TIME_AUTO_DELETE_RECODER, 0);
+//        mDayAutoDeleteAudio = Settings.System.getInt(getContentResolver(), TIME_AUTO_DELETE_RECODER, 0);
     }
 
 
-    private ActiveDefaultProfileReceiver mActiveDefaultReceiver;
+//    private ActiveDefaultProfileReceiver mActiveDefaultReceiver;
 
     // Bkav HuyNQN lang nghe su kien vuot home, vuot back va tat man hinh cua nguoi dung
-    private void registerListenAction() {
-        mActiveDefaultReceiver = new ActiveDefaultProfileReceiver();
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(ActiveDefaultProfileReceiver.ACTION_MOVE_TO_HOME);
-        intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
-        intentFilter.addAction(ActiveDefaultProfileReceiver.EVENT_BACK_PRESS_BTALK_ACTIVITY);
-        intentFilter.addAction(ActiveDefaultProfileReceiver.EVENT_BACK_PRESS);
-        // Bkav HuyNQN  BPHONE4-236 end
-        registerReceiver(mActiveDefaultReceiver, intentFilter);
-    }
+//    private void registerListenAction() {
+//        mActiveDefaultReceiver = new ActiveDefaultProfileReceiver();
+//        IntentFilter intentFilter = new IntentFilter();
+//        intentFilter.addAction(ActiveDefaultProfileReceiver.ACTION_MOVE_TO_HOME);
+//        intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
+//        intentFilter.addAction(ActiveDefaultProfileReceiver.EVENT_BACK_PRESS_BTALK_ACTIVITY);
+//        intentFilter.addAction(ActiveDefaultProfileReceiver.EVENT_BACK_PRESS);
+//        // Bkav HuyNQN  BPHONE4-236 end
+//        registerReceiver(mActiveDefaultReceiver, intentFilter);
+//    }
 
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        adjustFontScale(newConfig);
-    }
+//    @Override
+//    public void onConfigurationChanged(Configuration newConfig) {
+//        super.onConfigurationChanged(newConfig);
+//        adjustFontScale(newConfig);
+//    }
 
     /**
      * Bkav QuangNDb hien thi dialog thong bao thieu quen storage de luu ghi am cuoc goi
      */
-    private void showRequestPermissionDialog() {
-        if (checkExistCallRecord()) {
-            if (ContextCompat.checkSelfPermission(this,
-                    Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
-                    && android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
-                PermissionUtil.get().checkPermission(new String[]{
-                        Manifest.permission.READ_EXTERNAL_STORAGE
-                }, STORAGE_PERMISSION_REQUEST_CODE, this, this);
-            } else {
-                // KHi co quyen roi thi insertmms
-                InsertMMSRecordAction.insertMMSRecordAction();
-            }
-        }
-    }
+//    private void showRequestPermissionDialog() {
+//        if (checkExistCallRecord()) {
+//            if (ContextCompat.checkSelfPermission(this,
+//                    Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+//                    && android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
+//                PermissionUtil.get().checkPermission(new String[]{
+//                        Manifest.permission.READ_EXTERNAL_STORAGE
+//                }, STORAGE_PERMISSION_REQUEST_CODE, this, this);
+//            } else {
+//                // KHi co quyen roi thi insertmms
+//                InsertMMSRecordAction.insertMMSRecordAction();
+//            }
+//        }
+//    }
 
-    public void adjustFontScale(Configuration configuration) {
-        if (configuration.fontScale > MAX_SIZE_TEXT_SCALE ||
-                (BtalkUiUtils.isModeMultiScreen(this) && configuration.fontScale > 1.1)) {
+//    public void adjustFontScale(Configuration configuration) {
+//        if (configuration.fontScale > MAX_SIZE_TEXT_SCALE ||
+//                (BtalkUiUtils.isModeMultiScreen(this) && configuration.fontScale > 1.1)) {
+//
+//            if (ChipsUtil.isRunningNOrLater()) {
+//                if (BtalkUiUtils.isModeMultiScreen(this)) {
+//                    configuration.fontScale = 1.1f;
+//                } else {
+//                    configuration.fontScale = MAX_SIZE_TEXT_SCALE;
+//                }
+//            } else {
+//                configuration.fontScale = MAX_SIZE_TEXT_SCALE;
+//            }
+//            // TrungTH tach ham hoan nay
+//            DisplayMetrics metrics = getResources().getDisplayMetrics();
+//            WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
+//            wm.getDefaultDisplay().getMetrics(metrics);
+//            metrics.scaledDensity = configuration.fontScale * metrics.density;
+//            getResources().updateConfiguration(configuration, metrics);
+//        }
+//    }
 
-            if (ChipsUtil.isRunningNOrLater()) {
-                if (BtalkUiUtils.isModeMultiScreen(this)) {
-                    configuration.fontScale = 1.1f;
-                } else {
-                    configuration.fontScale = MAX_SIZE_TEXT_SCALE;
-                }
-            } else {
-                configuration.fontScale = MAX_SIZE_TEXT_SCALE;
-            }
-            // TrungTH tach ham hoan nay
-            DisplayMetrics metrics = getResources().getDisplayMetrics();
-            WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
-            wm.getDefaultDisplay().getMetrics(metrics);
-            metrics.scaledDensity = configuration.fontScale * metrics.density;
-            getResources().updateConfiguration(configuration, metrics);
-        }
-    }
-
-    private void initTooltipController() {
-        if (mTooltipController == null) {
-            mTooltipController = new TooltipController(this);
-        }
-    }
+//    private void initTooltipController() {
+//        if (mTooltipController == null) {
+//            mTooltipController = new TooltipController(this);
+//        }
+//    }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -419,7 +403,7 @@ public class BtalkActivity extends TransactionSafeActivity implements
     @Override
     protected void onResume() {
         super.onResume();
-        showRequestPermissionDialog();
+//        showRequestPermissionDialog();
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED) {
             BtalkCallLogCache.getCallLogCache(getApplicationContext()).checkMutilSim();
@@ -430,26 +414,26 @@ public class BtalkActivity extends TransactionSafeActivity implements
                 }
             }
         }
-        mDialerDatabaseHelper.startSmartDialUpdateThread();
-        if (mPhoneFragment != null) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                mPhoneFragment.getDialpadFragment().checkConfigTwoButton();
-            }
-        }
+//        mDialerDatabaseHelper.startSmartDialUpdateThread();
+//        if (mPhoneFragment != null) {
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                mPhoneFragment.getDialpadFragment().checkConfigTwoButton();
+//            }
+//        }
         // Bkav QuangNDb them doan nay vao de luon sync du lieu tin nhan neu thay doi, (luc dua
         // source goc sang thieu mat doan nay lam no k cap nhat tin nhan o BMS khi khoi phuc)
-        BugleActivityUtil.onActivityResume(this, BtalkActivity.this);
-        mIsLightTab = PrefUtils.get().loadBooleanPreferences(this, PREF_IS_LIGHT_TAB_BAR, false);
-        if (mSmartSuggestLoaderManage != null) {
-            mSmartSuggestLoaderManage.hideViewSuggest();
-        }
+//        BugleActivityUtil.onActivityResume(this, BtalkActivity.this);
+//        mIsLightTab = PrefUtils.get().loadBooleanPreferences(this, PREF_IS_LIGHT_TAB_BAR, false);
+//        if (mSmartSuggestLoaderManage != null) {
+//            mSmartSuggestLoaderManage.hideViewSuggest();
+//        }
         //Bkav QuangNDb check de update icon call recorder tren launcher la an hay hien
-        BtalkExecutors.runOnBGThread(new Runnable() {
-            @Override
-            public void run() {
-                ShortcutUtils.get().updateCallLogRecordShortcut();
-            }
-        });
+//        BtalkExecutors.runOnBGThread(new Runnable() {
+//            @Override
+//            public void run() {
+//                ShortcutUtils.get().updateCallLogRecordShortcut();
+//            }
+//        });
 
 //        SubscriptionManager subscriptionManager = (SubscriptionManager) getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE);
 //        List<SubscriptionInfo> subscriptionInfos = subscriptionManager.getActiveSubscriptionInfoList();
@@ -471,40 +455,40 @@ public class BtalkActivity extends TransactionSafeActivity implements
         }
 
         //HienDTk: xoa file ghi am
-        mAsyncTaskDeleteRecoder = new AsyncTask() {
-            @Override
-            protected Object doInBackground(Object[] objects) {
-                //HienDTk: tu dong xoa file ghi am theo ngay nguoi dung cai dat
-                AutoDelateRecoder.getInstance().getDay(PATH_RECODER, mDayAutoDeleteAudio);
-
-                return null;
-            }
-        };
+//        mAsyncTaskDeleteRecoder = new AsyncTask() {
+//            @Override
+//            protected Object doInBackground(Object[] objects) {
+//                //HienDTk: tu dong xoa file ghi am theo ngay nguoi dung cai dat
+//                AutoDelateRecoder.getInstance().getDay(PATH_RECODER, mDayAutoDeleteAudio);
+//
+//                return null;
+//            }
+//        };
 
         // Bkav HienDTk: BOS-3181 - Start
         // Bkav HienDTk: lang nghe su thay doi khi chuyen tu tab
-        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int i, float v, int i1) {
-
-            }
-
-            @Override
-            public void onPageSelected(int i) {
-                TAB_SELECT = i;
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int i) {
-
-            }
-        });
+//        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+//            @Override
+//            public void onPageScrolled(int i, float v, int i1) {
+//
+//            }
+//
+//            @Override
+//            public void onPageSelected(int i) {
+//                TAB_SELECT = i;
+//            }
+//
+//            @Override
+//            public void onPageScrollStateChanged(int i) {
+//
+//            }
+//        });
         // Bkav HienDTk:  BOS-3181 - End
 
         // Bkav HienDTk: fix bug - BOS-2782 - Start
         // Bkav HienDTk: moi lan vao deu lang nghe xem co su thay doi notification dot hay khong
-        DatabaseWrapper db = DataModel.get().getDatabase();
-        SendBroadcastUnreadMessage.sendLocalBroadCast(getApplicationContext(), db);
+//        DatabaseWrapper db = DataModel.get().getDatabase();
+//        SendBroadcastUnreadMessage.sendLocalBroadCast(getApplicationContext(), db);
         // Bkav HienDTk: fix bug - BOS-2782 - End
 
     }
@@ -533,152 +517,152 @@ public class BtalkActivity extends TransactionSafeActivity implements
     /**
      * Bkav TrungTH: cai dat view cho cac tab
      */
-    private void setupTabView() {
-        View tabPhones = inflateTabView(mTabTitles[TAB_PHONE_INDEX],
-                ContextCompat.getDrawable(this, R.drawable.ic_tab_phones_new));
-        ImageView iconPhone = (ImageView) tabPhones.findViewById(R.id.tabs_icon);
-        TextView textPhone = (TextView) tabPhones.findViewById(R.id.tabs_textview);
-        textPhone.setTextColor(ContextCompat.getColor(BtalkActivity.this,
-                R.color.btalk_ab_text_and_icon_selected_color));
-        iconPhone.setColorFilter(ContextCompat.getColor(BtalkActivity.this,
-                R.color.btalk_ab_text_and_icon_selected_color));
-        mTabLayout.getTabAt(TAB_PHONE_INDEX).setCustomView(tabPhones);
-
-        View tabMessages = inflateTabView(mTabTitles[TAB_MESSAGES_INDEX],
-                ContextCompat.getDrawable(this, R.drawable.ic_tab_messages_new));
-        mTabLayout.getTabAt(TAB_MESSAGES_INDEX).setCustomView(tabMessages);
-
-        View tabRecents = inflateTabView(mTabTitles[TAB_CALLLOG_INDEX],
-                ContextCompat.getDrawable(this, R.drawable.ic_tab_recents_new));
-        mTabLayout.getTabAt(TAB_CALLLOG_INDEX).setCustomView(tabRecents);
-
-        View tabContacts = inflateTabView(mTabTitles[TAB_CONTACTS_INDEX],
-                ContextCompat.getDrawable(this, R.drawable.ic_tab_contacts_new));
-        mTabLayout.getTabAt(TAB_CONTACTS_INDEX).setCustomView(tabContacts);
-
-        mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                View selectedView = tab.getCustomView();
-                setColor(selectedView, ContextCompat.getColor(BtalkActivity.this,
-                        R.color.btalk_ab_text_and_icon_selected_color), ContextCompat.getColor(BtalkActivity.this,
-                        R.color.btalk_ab_text_and_icon_selected_color));
-                // Bkav QuangNDb an che do multi edit khi roi tab tin nhan
-                if (tab.getPosition() != TAB_MESSAGES_INDEX) {
-                    if (mMessagesFragment != null && mMessagesFragment.isSelectionMode()) {
-                        mMessagesFragment.exitMultiSelectState();
-                    }
-                }
-                // Anhdts chuyen sang tab danh ba thi hien luon ban phim len
-                if ((mTabOpen != TAB_CONTACTS_INDEX && tab.getPosition() == TAB_CONTACTS_INDEX)) {
-                    if (mContactsFragment != null) {
-                        mContactsFragment.onTabSelected();
-                    }
-                }
-                changeStateFabButton(tab.getPosition(), View.VISIBLE);
-                setBackgroundTabBar(tab.getPosition());
-                setStatusBarColor(tab.getPosition());
-
-                querySmartContact("", null);
-
-                if (PreferenceManager.getDefaultSharedPreferences(BtalkActivity.this)
-                        .getBoolean(BtalkSettingOpenAppFragment.OPTION_KEEP_STATE, true)) {
-                    if ((mTabOpen != TAB_CONTACTS_INDEX || tab.getPosition() != TAB_CONTACTS_INDEX)
-                            &&
-                            (mTabOpen != TAB_MESSAGES_INDEX
-                                    || tab.getPosition() != TAB_MESSAGES_INDEX)) {
-                        PrefUtils.get().saveIntPreferences(BtalkActivity.this, PrefUtils.TAB_CACHE_PHONE,
-                                tab.getPosition());
-                    } else {
-                        mTabOpen = -1;
-                    }
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-                View unselectedView = tab.getCustomView();
-                setColor(unselectedView, ContextCompat.getColor(BtalkActivity.this,
-                        R.color.color_icon_tablayout), ContextCompat.getColor(BtalkActivity.this,
-                        R.color.color_text_tablayout));
-                changeStateFabButton(tab.getPosition(), View.GONE);
-                if (mCallLogFragment != null && tab.getPosition() == TAB_CALLLOG_INDEX) {
-                    updateMissedCalls();
-                    mCallLogFragment.changeTab();
-                } else if (mContactsFragment != null && tab.getPosition() == TAB_CONTACTS_INDEX) {
-                    mContactsFragment.updateSelectionMode();
-                }
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-                switch (tab.getPosition()) {
-                    case TAB_PHONE_INDEX:
-                        if (mPhoneFragment != null && mPhoneFragment.getDialpadFragment() != null) {
-                            mPhoneFragment.getDialpadFragment().handleDialButtonPressed();
-                        }
-                        break;
-                    case TAB_MESSAGES_INDEX:
-                        if (mMessagesFragment != null) {
-                            mMessagesFragment.doubleClickTab();
-                        }
-                        break;
-                    case TAB_CALLLOG_INDEX:
-                        if (mCallLogFragment != null) {
-                            mCallLogFragment.doubleClickTab();
-                        }
-                        break;
-                    case TAB_CONTACTS_INDEX:
-                        if (mContactsFragment != null) {
-                            mContactsFragment.doubleClickTab();
-                        }
-                }
-            }
-        });
-    }
+//    private void setupTabView() {
+//        View tabPhones = inflateTabView(mTabTitles[TAB_PHONE_INDEX],
+//                ContextCompat.getDrawable(this, R.drawable.ic_tab_phones_new));
+//        ImageView iconPhone = (ImageView) tabPhones.findViewById(R.id.tabs_icon);
+//        TextView textPhone = (TextView) tabPhones.findViewById(R.id.tabs_textview);
+//        textPhone.setTextColor(ContextCompat.getColor(BtalkActivity.this,
+//                R.color.btalk_ab_text_and_icon_selected_color));
+//        iconPhone.setColorFilter(ContextCompat.getColor(BtalkActivity.this,
+//                R.color.btalk_ab_text_and_icon_selected_color));
+//        mTabLayout.getTabAt(TAB_PHONE_INDEX).setCustomView(tabPhones);
+//
+//        View tabMessages = inflateTabView(mTabTitles[TAB_MESSAGES_INDEX],
+//                ContextCompat.getDrawable(this, R.drawable.ic_tab_messages_new));
+//        mTabLayout.getTabAt(TAB_MESSAGES_INDEX).setCustomView(tabMessages);
+//
+//        View tabRecents = inflateTabView(mTabTitles[TAB_CALLLOG_INDEX],
+//                ContextCompat.getDrawable(this, R.drawable.ic_tab_recents_new));
+//        mTabLayout.getTabAt(TAB_CALLLOG_INDEX).setCustomView(tabRecents);
+//
+//        View tabContacts = inflateTabView(mTabTitles[TAB_CONTACTS_INDEX],
+//                ContextCompat.getDrawable(this, R.drawable.ic_tab_contacts_new));
+//        mTabLayout.getTabAt(TAB_CONTACTS_INDEX).setCustomView(tabContacts);
+//
+//        mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//            @Override
+//            public void onTabSelected(TabLayout.Tab tab) {
+//                View selectedView = tab.getCustomView();
+//                setColor(selectedView, ContextCompat.getColor(BtalkActivity.this,
+//                        R.color.btalk_ab_text_and_icon_selected_color), ContextCompat.getColor(BtalkActivity.this,
+//                        R.color.btalk_ab_text_and_icon_selected_color));
+//                // Bkav QuangNDb an che do multi edit khi roi tab tin nhan
+//                if (tab.getPosition() != TAB_MESSAGES_INDEX) {
+//                    if (mMessagesFragment != null && mMessagesFragment.isSelectionMode()) {
+//                        mMessagesFragment.exitMultiSelectState();
+//                    }
+//                }
+//                // Anhdts chuyen sang tab danh ba thi hien luon ban phim len
+//                if ((mTabOpen != TAB_CONTACTS_INDEX && tab.getPosition() == TAB_CONTACTS_INDEX)) {
+//                    if (mContactsFragment != null) {
+//                        mContactsFragment.onTabSelected();
+//                    }
+//                }
+//                changeStateFabButton(tab.getPosition(), View.VISIBLE);
+//                setBackgroundTabBar(tab.getPosition());
+//                setStatusBarColor(tab.getPosition());
+//
+//                querySmartContact("", null);
+//
+//                if (PreferenceManager.getDefaultSharedPreferences(BtalkActivity.this)
+//                        .getBoolean(BtalkSettingOpenAppFragment.OPTION_KEEP_STATE, true)) {
+//                    if ((mTabOpen != TAB_CONTACTS_INDEX || tab.getPosition() != TAB_CONTACTS_INDEX)
+//                            &&
+//                            (mTabOpen != TAB_MESSAGES_INDEX
+//                                    || tab.getPosition() != TAB_MESSAGES_INDEX)) {
+//                        PrefUtils.get().saveIntPreferences(BtalkActivity.this, PrefUtils.TAB_CACHE_PHONE,
+//                                tab.getPosition());
+//                    } else {
+//                        mTabOpen = -1;
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onTabUnselected(TabLayout.Tab tab) {
+//                View unselectedView = tab.getCustomView();
+//                setColor(unselectedView, ContextCompat.getColor(BtalkActivity.this,
+//                        R.color.color_icon_tablayout), ContextCompat.getColor(BtalkActivity.this,
+//                        R.color.color_text_tablayout));
+//                changeStateFabButton(tab.getPosition(), View.GONE);
+//                if (mCallLogFragment != null && tab.getPosition() == TAB_CALLLOG_INDEX) {
+//                    updateMissedCalls();
+//                    mCallLogFragment.changeTab();
+//                } else if (mContactsFragment != null && tab.getPosition() == TAB_CONTACTS_INDEX) {
+//                    mContactsFragment.updateSelectionMode();
+//                }
+//            }
+//
+//            @Override
+//            public void onTabReselected(TabLayout.Tab tab) {
+//                switch (tab.getPosition()) {
+//                    case TAB_PHONE_INDEX:
+//                        if (mPhoneFragment != null && mPhoneFragment.getDialpadFragment() != null) {
+//                            mPhoneFragment.getDialpadFragment().handleDialButtonPressed();
+//                        }
+//                        break;
+//                    case TAB_MESSAGES_INDEX:
+//                        if (mMessagesFragment != null) {
+//                            mMessagesFragment.doubleClickTab();
+//                        }
+//                        break;
+//                    case TAB_CALLLOG_INDEX:
+//                        if (mCallLogFragment != null) {
+//                            mCallLogFragment.doubleClickTab();
+//                        }
+//                        break;
+//                    case TAB_CONTACTS_INDEX:
+//                        if (mContactsFragment != null) {
+//                            mContactsFragment.doubleClickTab();
+//                        }
+//                }
+//            }
+//        });
+//    }
 
     /**
      * Bkav QuangNDb change state cua fab button
      */
-    private void changeStateFabButton(int position, int state) {
-        switch (position) {
-            case TAB_MESSAGES_INDEX:
-                if (mMessagesFragment != null) {
-                    BtalkLog.logD("BtalkActivity", "changeStateFabButton: remove notify");
-                    mMessagesFragment.setScrolledToNewestConversationIfNeeded();
-                    mMessagesFragment.setVisibleFabButton(state);
-                    mMessagesFragment.setVisibleFabButtonSmall(state);
-                }
-                break;
-            case TAB_CONTACTS_INDEX:
-                if (mContactsFragment != null) {
-                    mContactsFragment.setVisibleFabButton(state);
-                    mContactsFragment.setVisibleFabButtonSmall(state);
-                }
-                break;
-            case TAB_PHONE_INDEX:
-                if (mPhoneFragment != null) {
-                    mPhoneFragment.setVisibleFabButton(state);
-                }
-                break;
-            case TAB_CALLLOG_INDEX:
-                if (mCallLogFragment != null) {
-                    mCallLogFragment.setVisibleFabButton(state);
-                    mCallLogFragment.setVisibleFabButtonSmall(state);
-                }
-                break;
-        }
-    }
+//    private void changeStateFabButton(int position, int state) {
+//        switch (position) {
+//            case TAB_MESSAGES_INDEX:
+//                if (mMessagesFragment != null) {
+//                    BtalkLog.logD("BtalkActivity", "changeStateFabButton: remove notify");
+//                    mMessagesFragment.setScrolledToNewestConversationIfNeeded();
+//                    mMessagesFragment.setVisibleFabButton(state);
+//                    mMessagesFragment.setVisibleFabButtonSmall(state);
+//                }
+//                break;
+//            case TAB_CONTACTS_INDEX:
+//                if (mContactsFragment != null) {
+//                    mContactsFragment.setVisibleFabButton(state);
+//                    mContactsFragment.setVisibleFabButtonSmall(state);
+//                }
+//                break;
+//            case TAB_PHONE_INDEX:
+//                if (mPhoneFragment != null) {
+//                    mPhoneFragment.setVisibleFabButton(state);
+//                }
+//                break;
+//            case TAB_CALLLOG_INDEX:
+//                if (mCallLogFragment != null) {
+//                    mCallLogFragment.setVisibleFabButton(state);
+//                    mCallLogFragment.setVisibleFabButtonSmall(state);
+//                }
+//                break;
+//        }
+//    }
 
     // Bkav TienNAb: sua lai mau text va icon tablayout
-    private void setColor(View view, int colorIcon, int colorText) {
-        if (view != null) {
-            TextView tabText = (TextView) view.findViewById(R.id.tabs_textview);
-            tabText.setTextColor(colorText);
-            ImageView imageView = (ImageView) view.findViewById(R.id.tabs_icon);
-            imageView.setColorFilter(colorIcon);
-        }
-    }
+//    private void setColor(View view, int colorIcon, int colorText) {
+//        if (view != null) {
+//            TextView tabText = (TextView) view.findViewById(R.id.tabs_textview);
+//            tabText.setTextColor(colorText);
+//            ImageView imageView = (ImageView) view.findViewById(R.id.tabs_icon);
+//            imageView.setColorFilter(colorIcon);
+//        }
+//    }
 
     /**
      * Bkav TrungTH: custom lai view cua tab thanh dang tren icon duoi text
@@ -687,52 +671,52 @@ public class BtalkActivity extends TransactionSafeActivity implements
      * @param icon
      * @return
      */
-    private View inflateTabView(final String text, final Drawable icon) {
-        View view = LayoutInflater.from(this).inflate(R.layout.tab_item_views, null, false);
-        ImageView image = (ImageView) view.findViewById(R.id.tabs_icon);
-        image.setImageDrawable(icon);
-        TextView tv = (TextView) view.findViewById(R.id.tabs_textview);
-        tv.setText(text);
-        return view;
-    }
+//    private View inflateTabView(final String text, final Drawable icon) {
+//        View view = LayoutInflater.from(this).inflate(R.layout.tab_item_views, null, false);
+//        ImageView image = (ImageView) view.findViewById(R.id.tabs_icon);
+//        image.setImageDrawable(icon);
+//        TextView tv = (TextView) view.findViewById(R.id.tabs_textview);
+//        tv.setText(text);
+//        return view;
+//    }
 
     /**
      * Bkav TrungTH cai dat cho view pager
      */
-    private void setupViewPager() {
-
-        // Anhdts dang ki trang thai cuoc goi
-        if (mPhoneFragment != null) {
-            mPhoneFragment.getDialpadFragment().registerCallState();
-        }
-
-        // Bkav TrungTh bien dem so luong tab load , va bien xac dinh da load chua
-        mLoadedTabCount = 0;
-        mFinishedLoadTab = false;
-
-        mTabTitles = new String[TAB_COUNT_DEFAULT];
-        mTabTitles[TAB_PHONE_INDEX] = getResources().getString(R.string.title_tab_phone);
-        mTabTitles[TAB_MESSAGES_INDEX] = getResources().getString(R.string.title_tab_messages);
-        mTabTitles[TAB_CALLLOG_INDEX] = getResources().getString(R.string.title_tab_recents_call);
-        mTabTitles[TAB_CONTACTS_INDEX] = getResources().getString(R.string.title_tab_contacts);
-
-        android.app.FragmentManager ft = getFragmentManager();
-        mViewPagerAdapter = new ViewPagerAdapter(this, ft);
-        mViewPager.setAdapter(mViewPagerAdapter);
-        // QuangNDb dong lai
-        // mViewPager.addOnPageChangeListener(mOnPageChangeListener);
-        // based on the current position you can then cast the page to the correct Fragment class
-        // and call some method inside that fragment to reload the data:
-        if (Config.IS_BPHONE) {
-            // Bkav TrungTH : la Bphone thi chay them ham nay
-            mViewPager.enablePager(BkavViewPager.ENABLE_VIEWPAGER);
-            mViewPager.setOffscreenPageLimit(BkavViewPager.TAB_NUMBERS_FIRST_TIME);
-            mViewPager.enableKeepPage(true);
-            mViewPager.enableLoadOneTab(true);
-        } else {
-            mViewPager.setOffscreenPageLimit(TAB_COUNT_DEFAULT);
-        }
-    }
+//    private void setupViewPager() {
+//
+//        // Anhdts dang ki trang thai cuoc goi
+//        if (mPhoneFragment != null) {
+//            mPhoneFragment.getDialpadFragment().registerCallState();
+//        }
+//
+//        // Bkav TrungTh bien dem so luong tab load , va bien xac dinh da load chua
+//        mLoadedTabCount = 0;
+//        mFinishedLoadTab = false;
+//
+//        mTabTitles = new String[TAB_COUNT_DEFAULT];
+//        mTabTitles[TAB_PHONE_INDEX] = getResources().getString(R.string.title_tab_phone);
+//        mTabTitles[TAB_MESSAGES_INDEX] = getResources().getString(R.string.title_tab_messages);
+//        mTabTitles[TAB_CALLLOG_INDEX] = getResources().getString(R.string.title_tab_recents_call);
+//        mTabTitles[TAB_CONTACTS_INDEX] = getResources().getString(R.string.title_tab_contacts);
+//
+//        android.app.FragmentManager ft = getFragmentManager();
+//        mViewPagerAdapter = new ViewPagerAdapter(this, ft);
+//        mViewPager.setAdapter(mViewPagerAdapter);
+//        // QuangNDb dong lai
+//        // mViewPager.addOnPageChangeListener(mOnPageChangeListener);
+//        // based on the current position you can then cast the page to the correct Fragment class
+//        // and call some method inside that fragment to reload the data:
+//        if (Config.IS_BPHONE) {
+//            // Bkav TrungTH : la Bphone thi chay them ham nay
+//            mViewPager.enablePager(BkavViewPager.ENABLE_VIEWPAGER);
+//            mViewPager.setOffscreenPageLimit(BkavViewPager.TAB_NUMBERS_FIRST_TIME);
+//            mViewPager.enableKeepPage(true);
+//            mViewPager.enableLoadOneTab(true);
+//        } else {
+//            mViewPager.setOffscreenPageLimit(TAB_COUNT_DEFAULT);
+//        }
+//    }
 
     /**
      * TrungTH doi mau cua status bar fake
@@ -762,178 +746,178 @@ public class BtalkActivity extends TransactionSafeActivity implements
      *
      * @param position
      */
-    private void setBackgroundTabBar(int position) {
-        mTabLayout.setBackgroundColor(ContextCompat.getColor(BtalkActivity.this,
-                (position == TAB_PHONE_INDEX) ? R.color.btalk_color_for_dialpad
-                        : (mIsLightTab) ? R.color.btalk_white_opacity_bg
-                        : R.color.btalk_actionbar_and_tabbar_bg_color));
-        // Bkav TrungTh an hien mDivider Tab
-        mDividerTabsView.setVisibility(
-                (position != TAB_PHONE_INDEX && mIsLightTab) ? View.VISIBLE : View.GONE);
+//    private void setBackgroundTabBar(int position) {
+//        mTabLayout.setBackgroundColor(ContextCompat.getColor(BtalkActivity.this,
+//                (position == TAB_PHONE_INDEX) ? R.color.btalk_color_for_dialpad
+//                        : (mIsLightTab) ? R.color.btalk_white_opacity_bg
+//                        : R.color.btalk_actionbar_and_tabbar_bg_color));
+//        // Bkav TrungTh an hien mDivider Tab
+//        mDividerTabsView.setVisibility(
+//                (position != TAB_PHONE_INDEX && mIsLightTab) ? View.VISIBLE : View.GONE);
+//
+//        View view = findViewById(R.id.navigation_view);
+//
+//        view.setBackgroundColor(ContextCompat.getColor(BtalkActivity.this,
+//                (position == TAB_PHONE_INDEX) ? R.color.btalk_color_for_dialpad
+//                        : (mIsLightTab) ? R.color.btalk_white_opacity_bg
+//                        : R.color.btalk_actionbar_and_tabbar_bg_color));
+//    }
 
-        View view = findViewById(R.id.navigation_view);
+//    @Override
+//    public boolean isActionBarShowing() {
+//        return mPhoneFragment != null && mPhoneFragment.isActionBarShowing();
+//    }
 
-        view.setBackgroundColor(ContextCompat.getColor(BtalkActivity.this,
-                (position == TAB_PHONE_INDEX) ? R.color.btalk_color_for_dialpad
-                        : (mIsLightTab) ? R.color.btalk_white_opacity_bg
-                        : R.color.btalk_actionbar_and_tabbar_bg_color));
-    }
+//    @Override
+//    public boolean isDialpadShown() {
+//        return mPhoneFragment != null && mPhoneFragment.isDialpadShown();
+//    }
 
-    @Override
-    public boolean isActionBarShowing() {
-        return mPhoneFragment != null && mPhoneFragment.isActionBarShowing();
-    }
+//    @Override
+//    public int getDialpadHeight() {
+//        if (mPhoneFragment != null) {
+//            return mPhoneFragment.getDialpadHeight();
+//        }
+//        // return -1 de biet active chua kip khoi tao
+//        return -1;
+//    }
 
-    @Override
-    public boolean isDialpadShown() {
-        return mPhoneFragment != null && mPhoneFragment.isDialpadShown();
-    }
+//    @Override
+//    public int getActionBarHideOffset() {
+//        if (mPhoneFragment != null)
+//            return mPhoneFragment.getActionBarHideOffset();
+//        return 0;
+//    }
 
-    @Override
-    public int getDialpadHeight() {
-        if (mPhoneFragment != null) {
-            return mPhoneFragment.getDialpadHeight();
-        }
-        // return -1 de biet active chua kip khoi tao
-        return -1;
-    }
+//    @Override
+//    public int getActionBarHeight() {
+//        if (mPhoneFragment != null)
+//            return mPhoneFragment.getActionBarHeight();
+//        return 0;
+//    }
 
-    @Override
-    public int getActionBarHideOffset() {
-        if (mPhoneFragment != null)
-            return mPhoneFragment.getActionBarHideOffset();
-        return 0;
-    }
-
-    @Override
-    public int getActionBarHeight() {
-        if (mPhoneFragment != null)
-            return mPhoneFragment.getActionBarHeight();
-        return 0;
-    }
-
-    public void hideDialpadFragment(boolean animate, boolean b) {
-        // Toast.makeText(this, "hideDialpadFragment", Toast.LENGTH_SHORT).show();
-    }
+//    public void hideDialpadFragment(boolean animate, boolean b) {
+//        // Toast.makeText(this, "hideDialpadFragment", Toast.LENGTH_SHORT).show();
+//    }
 
     /**
      * Callback from child DialpadFragment when the dialpad is shown.
      */
-    public void onDialpadShown() {
-        if (mPhoneFragment != null)
-            mPhoneFragment.onDialpadShown();
-    }
+//    public void onDialpadShown() {
+//        if (mPhoneFragment != null)
+//            mPhoneFragment.onDialpadShown();
+//    }
 
-    @Override
-    public void onConversationClick(ConversationListData listData,
-                                    ConversationListItemData conversationListItemData, boolean isLongClick,
-                                    ConversationListItemView conversationView) {
-        // Bkav TrungTh - callback cua tab tin nhan => tim huong chuyen vao fragment sau
-    }
+//    @Override
+//    public void onConversationClick(ConversationListData listData,
+//                                    ConversationListItemData conversationListItemData, boolean isLongClick,
+//                                    ConversationListItemView conversationView) {
+//        // Bkav TrungTh - callback cua tab tin nhan => tim huong chuyen vao fragment sau
+//    }
 
-    @Override
-    public void onCreateConversationClick() {
-        // Bkav TrungTh - callback cua tab tin nhan => tim huong chuyen vao fragment sau
-    }
+//    @Override
+//    public void onCreateConversationClick() {
+//        // Bkav TrungTh - callback cua tab tin nhan => tim huong chuyen vao fragment sau
+//    }
 
-    @Override
-    public boolean isConversationSelected(String conversationId) {
-        // Bkav TrungTh - callback cua tab tin nhan => tim huong chuyen vao fragment sau
-        return false;
-    }
+//    @Override
+//    public boolean isConversationSelected(String conversationId) {
+//        // Bkav TrungTh - callback cua tab tin nhan => tim huong chuyen vao fragment sau
+//        return false;
+//    }
 
-    @Override
-    public boolean isSwipeAnimatable() {
-        // Bkav TrungTh - callback cua tab tin nhan => tim huong chuyen vao fragment sau
-        return false;
-    }
+//    @Override
+//    public boolean isSwipeAnimatable() {
+//        // Bkav TrungTh - callback cua tab tin nhan => tim huong chuyen vao fragment sau
+//        return false;
+//    }
 
-    @Override
-    public boolean isSelectionMode() {
-        // Bkav TrungTh - callback cua tab tin nhan => tim huong chuyen vao fragment sau
-        return false;
-    }
+//    @Override
+//    public boolean isSelectionMode() {
+//        // Bkav TrungTh - callback cua tab tin nhan => tim huong chuyen vao fragment sau
+//        return false;
+//    }
 
-    @Override
-    public void onListFragmentScrollStateChange(int scrollState) {
-        if (mPhoneFragment != null) {
-            // Anhdts bo di, loi gay ra hien speedDial
-            // mPhoneFragment.onListFragmentScrollStateChange(scrollState);
-        }
-    }
+//    @Override
+//    public void onListFragmentScrollStateChange(int scrollState) {
+//        if (mPhoneFragment != null) {
+//            // Anhdts bo di, loi gay ra hien speedDial
+//            // mPhoneFragment.onListFragmentScrollStateChange(scrollState);
+//        }
+//    }
 
-    @Override
-    public void onListFragmentScroll(int firstVisibleItem, int visibleItemCount,
-                                     int totalItemCount) {
-        if (mPhoneFragment != null) {
-            mPhoneFragment.onListFragmentScroll(firstVisibleItem, visibleItemCount, totalItemCount);
-        }
-    }
+//    @Override
+//    public void onListFragmentScroll(int firstVisibleItem, int visibleItemCount,
+//                                     int totalItemCount) {
+//        if (mPhoneFragment != null) {
+//            mPhoneFragment.onListFragmentScroll(firstVisibleItem, visibleItemCount, totalItemCount);
+//        }
+//    }
 
-    @Override
-    public boolean onDialpadSpacerTouchWithEmptyQuery() {
-        return mPhoneFragment != null && mPhoneFragment.onDialpadSpacerTouchWithEmptyQuery();
-    }
+//    @Override
+//    public boolean onDialpadSpacerTouchWithEmptyQuery() {
+//        return mPhoneFragment != null && mPhoneFragment.onDialpadSpacerTouchWithEmptyQuery();
+//    }
 
-    @Override
-    public void setConferenceDialButtonVisibility(boolean enabled) {
-        // Bkav TrungTh - Khong thuc hien
-    }
+//    @Override
+//    public void setConferenceDialButtonVisibility(boolean enabled) {
+//        // Bkav TrungTh - Khong thuc hien
+//    }
 
-    @Override
-    public void setConferenceDialButtonImage(boolean setAddParticipantButton) {
-        // Bkav TrungTh - Khong thuc hien
-    }
+//    @Override
+//    public void setConferenceDialButtonImage(boolean setAddParticipantButton) {
+//        // Bkav TrungTh - Khong thuc hien
+//    }
 
     // Anhdts doi man hinh
-    @Override
-    public void onChangeWallpaper() {
-        mBkavBlurHelper.changeWallpaper(
-                WallpaperBlurCompat.getInstance(getApplicationContext()).getWallpaperBlur());
-    }
+//    @Override
+//    public void onChangeWallpaper() {
+//        mBkavBlurHelper.changeWallpaper(
+//                WallpaperBlurCompat.getInstance(getApplicationContext()).getWallpaperBlur());
+//    }
 
     /**
      * Anhdts dang ki listener search du lieu va xu ly xong va bind du lieu goi y ra
      */
-    public void setOnQueryCompleteListener(
-            PhoneNumberPickerFragment.OnQueryCompleteListener onQueryCompleteListener) {
-        if (mPhoneFragment != null) {
-            mPhoneFragment.setOnQueryCompleteListener(onQueryCompleteListener);
-        }
-    }
+//    public void setOnQueryCompleteListener(
+//            PhoneNumberPickerFragment.OnQueryCompleteListener onQueryCompleteListener) {
+//        if (mPhoneFragment != null) {
+//            mPhoneFragment.setOnQueryCompleteListener(onQueryCompleteListener);
+//        }
+//    }
 
     /**
      * Anhdts thong bao co cuoc goi nho chua doc
      */
-    public void setReadMissCall() {
-        mIsAccessCallLog = true;
-    }
+//    public void setReadMissCall() {
+//        mIsAccessCallLog = true;
+//    }
 
-    @Override
-    public void onChange(Uri uri) {
-        if (MessagingContentProvider.CALL_RECORD_URI.equals(uri)) {// Th csdl cua bang call record
-            // bi thay doi
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                showRequestPermissionDialog();
-            }
-        }
-    }
+//    @Override
+//    public void onChange(Uri uri) {
+//        if (MessagingContentProvider.CALL_RECORD_URI.equals(uri)) {// Th csdl cua bang call record
+//            // bi thay doi
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                showRequestPermissionDialog();
+//            }
+//        }
+//    }
 
-    private boolean checkExistCallRecord() {
-        Cursor cursor = null;
-        try {
-            cursor = getContentResolver().query(MessagingContentProvider.CALL_RECORD_URI, null,
-                    null, null, null);
-            if (cursor != null && cursor.getCount() > 0) {
-                return true;
-            }
-        } finally {
-            if (cursor != null) {
-                cursor.close();
-            }
-        }
-        return false;
-    }
+//    private boolean checkExistCallRecord() {
+//        Cursor cursor = null;
+//        try {
+//            cursor = getContentResolver().query(MessagingContentProvider.CALL_RECORD_URI, null,
+//                    null, null, null);
+//            if (cursor != null && cursor.getCount() > 0) {
+//                return true;
+//            }
+//        } finally {
+//            if (cursor != null) {
+//                cursor.close();
+//            }
+//        }
+//        return false;
+//    }
 
     private static final int STORAGE_PERMISSION_REQUEST_CODE = 5;
     private static final int CALL_PHONE_PERMISSION_REQUEST_CODE = 6;
@@ -972,264 +956,264 @@ public class BtalkActivity extends TransactionSafeActivity implements
     /**
      * Bkav TrungTH: adapter cua viewpager
      */
-    public static class ViewPagerAdapter extends android.support.v13.app.FragmentPagerAdapter {
-
-        private WeakReference<BtalkActivity> mWeakReference;
-
-        public ViewPagerAdapter(BtalkActivity btalkActivity, android.app.FragmentManager fm) {
-            super(fm);
-            mWeakReference = new WeakReference<>(btalkActivity);
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @Override
-        public android.app.Fragment getItem(int position) {
-            switch (position) {
-                case TAB_PHONE_INDEX:
-                    mWeakReference.get().mPhoneFragment = BtalkPhoneFragment.newInstance();
-                    // mWeakReference.get().mDialerDatabaseHelper.setOnQueryPhoneSuccessListener(mWeakReference.get().mPhoneFragment);
-                    return mWeakReference.get().mPhoneFragment;
-                case TAB_MESSAGES_INDEX:
-                    // QuangNdb sua lai doan nay de hop voi lop custom extend lai
-                    mWeakReference.get().mMessagesFragment = new BtalkConversationListFragment();
-                    // Bkav QuangNDb chuyen doan set Host xuong duoi ham instantiateItem de khong bi
-                    // bug chet null host
-                    // mWeakReference.get().mMessagesFragment.setHost(mWeakReference.get());
-                    // Log.d(TAG, "getItem: Test");
-                    return mWeakReference.get().mMessagesFragment;
-                case TAB_CALLLOG_INDEX:
-                    mWeakReference.get().mCallLogFragment = new BtalkCallLogFragment(
-                            CallLogQueryHandler.CALL_TYPE_ALL);
-                    return mWeakReference.get().mCallLogFragment;
-                case TAB_CONTACTS_INDEX:
-                    mWeakReference
-                            .get().mContactsFragment = new BtalkMultiSelectContactsListFragment();
-                    return mWeakReference.get().mContactsFragment;
-            }
-            throw new IllegalStateException("No fragment at position " + position);
-        }
-
-        private static final String TAG = "ViewPagerAdapter";
-
-        @Override
-        public android.app.Fragment instantiateItem(ViewGroup container, int position) {
-            // On rotation the FragmentManager handles rotation. Therefore getItem() isn't called.
-            // Copy the fragments that the FragmentManager finds so that we can store them in
-            // instance variables for later.
-            final android.app.Fragment fragment = (android.app.Fragment) super.instantiateItem(
-                    container, position);
-            if (fragment instanceof BtalkPhoneFragment) {
-                // Bkav HienDTk: fix bug - BOS-3305 - Start
-                // Bkav HienDTk: fix bug Fragment already active
-                if(mWeakReference.get().mPhoneFragment != null &&
-                        !mWeakReference.get().mPhoneFragment.isAdded())
-                mWeakReference.get().mPhoneFragment = (BtalkPhoneFragment) fragment;
-                if (mWeakReference.get().mDialerDatabaseHelper != null) {
-                    mWeakReference.get().mDialerDatabaseHelper
-                            .setOnQueryPhoneSuccessListener(mWeakReference.get().mPhoneFragment);
-                }
-                ((BtalkPhoneFragment) fragment).resetValue();
-
-            } else if (fragment instanceof ConversationListFragment
-                    && position == TAB_MESSAGES_INDEX) {
-                if(mWeakReference.get().mMessagesFragment != null &&
-                        !mWeakReference.get().mMessagesFragment.isAdded())
-                mWeakReference.get().mMessagesFragment = (BtalkConversationListFragment) fragment;
-            } else if (fragment instanceof BtalkCallLogFragment && position == TAB_CALLLOG_INDEX) {
-                if(mWeakReference.get().mCallLogFragment != null &&
-                        !mWeakReference.get().mCallLogFragment.isAdded())
-                    // Bkav HienDTk: fix bug - BOS-3305 - End
-                mWeakReference.get().mCallLogFragment = (BtalkCallLogFragment) fragment;
-            } else if (fragment instanceof BtalkMultiSelectContactsListFragment
-                    && position == TAB_CONTACTS_INDEX) {
-                // Bkav TienNAb - Fix bug #BOS-2316 - Start
-                // Check fragment chua duoc add thi moi tao
-                // Bkav HienDTk: Lỗi: Bị thoát app Btalk sau khi thay đổi kích thước phông chữ, kích thước hiển thị => BOS-2907 - Start
-                if(mWeakReference.get().mContactsFragment != null)
-                    // Bkav HienDTk: Lỗi: Bị thoát app Btalk sau khi thay đổi kích thước phông chữ, kích thước hiển thị => BOS-2907 - End
-                if (!mWeakReference.get().mContactsFragment.isAdded()){
-                    mWeakReference
-                            .get().mContactsFragment = (BtalkMultiSelectContactsListFragment) fragment;
-                }
-                // Bkav TienNAb - Fix bug #BOS-2316 - End
-            }
-            return fragment;
-        }
-
-        /**
-         * When {@link android.support.v4.view.PagerAdapter#notifyDataSetChanged} is called, this
-         * method is called on all pages to determine whether they need to be recreated. When the
-         * voicemail tab is removed, the view needs to be recreated by returning POSITION_NONE. If
-         * notifyDataSetChanged is called for some other reason, the voicemail tab is recreated only
-         * if it is active. All other tabs do not need to be recreated and POSITION_UNCHANGED is
-         * returned.
-         */
-        @Override
-        public int getItemPosition(Object object) {
-            return POSITION_UNCHANGED;
-        }
-
-        @Override
-        public int getCount() {
-            return TAB_COUNT_DEFAULT;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mWeakReference.get().mTabTitles[position];
-        }
-    }
+//    public static class ViewPagerAdapter extends android.support.v13.app.FragmentPagerAdapter {
+//
+//        private WeakReference<BtalkActivity> mWeakReference;
+//
+//        public ViewPagerAdapter(BtalkActivity btalkActivity, android.app.FragmentManager fm) {
+//            super(fm);
+//            mWeakReference = new WeakReference<>(btalkActivity);
+//        }
+//
+//        @Override
+//        public long getItemId(int position) {
+//            return position;
+//        }
+//
+//        @Override
+//        public android.app.Fragment getItem(int position) {
+//            switch (position) {
+//                case TAB_PHONE_INDEX:
+//                    mWeakReference.get().mPhoneFragment = BtalkPhoneFragment.newInstance();
+//                    // mWeakReference.get().mDialerDatabaseHelper.setOnQueryPhoneSuccessListener(mWeakReference.get().mPhoneFragment);
+//                    return mWeakReference.get().mPhoneFragment;
+//                case TAB_MESSAGES_INDEX:
+//                    // QuangNdb sua lai doan nay de hop voi lop custom extend lai
+//                    mWeakReference.get().mMessagesFragment = new BtalkConversationListFragment();
+//                    // Bkav QuangNDb chuyen doan set Host xuong duoi ham instantiateItem de khong bi
+//                    // bug chet null host
+//                    // mWeakReference.get().mMessagesFragment.setHost(mWeakReference.get());
+//                    // Log.d(TAG, "getItem: Test");
+//                    return mWeakReference.get().mMessagesFragment;
+//                case TAB_CALLLOG_INDEX:
+//                    mWeakReference.get().mCallLogFragment = new BtalkCallLogFragment(
+//                            CallLogQueryHandler.CALL_TYPE_ALL);
+//                    return mWeakReference.get().mCallLogFragment;
+//                case TAB_CONTACTS_INDEX:
+//                    mWeakReference
+//                            .get().mContactsFragment = new BtalkMultiSelectContactsListFragment();
+//                    return mWeakReference.get().mContactsFragment;
+//            }
+//            throw new IllegalStateException("No fragment at position " + position);
+//        }
+//
+//        private static final String TAG = "ViewPagerAdapter";
+//
+//        @Override
+//        public android.app.Fragment instantiateItem(ViewGroup container, int position) {
+//            // On rotation the FragmentManager handles rotation. Therefore getItem() isn't called.
+//            // Copy the fragments that the FragmentManager finds so that we can store them in
+//            // instance variables for later.
+//            final android.app.Fragment fragment = (android.app.Fragment) super.instantiateItem(
+//                    container, position);
+//            if (fragment instanceof BtalkPhoneFragment) {
+//                // Bkav HienDTk: fix bug - BOS-3305 - Start
+//                // Bkav HienDTk: fix bug Fragment already active
+//                if(mWeakReference.get().mPhoneFragment != null &&
+//                        !mWeakReference.get().mPhoneFragment.isAdded())
+//                mWeakReference.get().mPhoneFragment = (BtalkPhoneFragment) fragment;
+//                if (mWeakReference.get().mDialerDatabaseHelper != null) {
+//                    mWeakReference.get().mDialerDatabaseHelper
+//                            .setOnQueryPhoneSuccessListener(mWeakReference.get().mPhoneFragment);
+//                }
+//                ((BtalkPhoneFragment) fragment).resetValue();
+//
+//            } else if (fragment instanceof ConversationListFragment
+//                    && position == TAB_MESSAGES_INDEX) {
+//                if(mWeakReference.get().mMessagesFragment != null &&
+//                        !mWeakReference.get().mMessagesFragment.isAdded())
+//                mWeakReference.get().mMessagesFragment = (BtalkConversationListFragment) fragment;
+//            } else if (fragment instanceof BtalkCallLogFragment && position == TAB_CALLLOG_INDEX) {
+//                if(mWeakReference.get().mCallLogFragment != null &&
+//                        !mWeakReference.get().mCallLogFragment.isAdded())
+//                    // Bkav HienDTk: fix bug - BOS-3305 - End
+//                mWeakReference.get().mCallLogFragment = (BtalkCallLogFragment) fragment;
+//            } else if (fragment instanceof BtalkMultiSelectContactsListFragment
+//                    && position == TAB_CONTACTS_INDEX) {
+//                // Bkav TienNAb - Fix bug #BOS-2316 - Start
+//                // Check fragment chua duoc add thi moi tao
+//                // Bkav HienDTk: Lỗi: Bị thoát app Btalk sau khi thay đổi kích thước phông chữ, kích thước hiển thị => BOS-2907 - Start
+//                if(mWeakReference.get().mContactsFragment != null)
+//                    // Bkav HienDTk: Lỗi: Bị thoát app Btalk sau khi thay đổi kích thước phông chữ, kích thước hiển thị => BOS-2907 - End
+//                if (!mWeakReference.get().mContactsFragment.isAdded()){
+//                    mWeakReference
+//                            .get().mContactsFragment = (BtalkMultiSelectContactsListFragment) fragment;
+//                }
+//                // Bkav TienNAb - Fix bug #BOS-2316 - End
+//            }
+//            return fragment;
+//        }
+//
+//        /**
+//         * When {@link android.support.v4.view.PagerAdapter#notifyDataSetChanged} is called, this
+//         * method is called on all pages to determine whether they need to be recreated. When the
+//         * voicemail tab is removed, the view needs to be recreated by returning POSITION_NONE. If
+//         * notifyDataSetChanged is called for some other reason, the voicemail tab is recreated only
+//         * if it is active. All other tabs do not need to be recreated and POSITION_UNCHANGED is
+//         * returned.
+//         */
+//        @Override
+//        public int getItemPosition(Object object) {
+//            return POSITION_UNCHANGED;
+//        }
+//
+//        @Override
+//        public int getCount() {
+//            return TAB_COUNT_DEFAULT;
+//        }
+//
+//        @Override
+//        public CharSequence getPageTitle(int position) {
+//            return mWeakReference.get().mTabTitles[position];
+//        }
+//    }
 
     // AnhNDd: activity result.
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (mContactsFragment != null) {
-            // AnhNDd: trường hợp xuất danh bạ sẽ gọi vào đây.
-            if (requestCode == ImportExportDialogFragment.SUBACTIVITY_EXPORT_CONTACTS) {
-                if (resultCode == RESULT_OK) {
-                    mContactsFragment.exportContactsToVCF(data);
-                }
-            } else if (requestCode == ImportExportDialogFragment.SUBACTIVITY_MULTI_PICK_CONTACT) {
-                if (resultCode == RESULT_OK) {
-                    mContactsFragment.exportContactsToSIM(data);
-                }
-            }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (mContactsFragment != null) {
+//            // AnhNDd: trường hợp xuất danh bạ sẽ gọi vào đây.
+//            if (requestCode == ImportExportDialogFragment.SUBACTIVITY_EXPORT_CONTACTS) {
+//                if (resultCode == RESULT_OK) {
+//                    mContactsFragment.exportContactsToVCF(data);
+//                }
+//            } else if (requestCode == ImportExportDialogFragment.SUBACTIVITY_MULTI_PICK_CONTACT) {
+//                if (resultCode == RESULT_OK) {
+//                    mContactsFragment.exportContactsToSIM(data);
+//                }
+//            }
+//
+//            // AnhNDd: trường hợp khi lọc danh bạ
+//            if (requestCode == BtalkMultiSelectContactsListFragment.SUBACTIVITY_ACCOUNT_FILTER) {
+//                mContactsFragment.handleFilterResult(resultCode, data);
+//            }
+//        }
+//    }
 
-            // AnhNDd: trường hợp khi lọc danh bạ
-            if (requestCode == BtalkMultiSelectContactsListFragment.SUBACTIVITY_ACCOUNT_FILTER) {
-                mContactsFragment.handleFilterResult(resultCode, data);
-            }
-        }
-    }
+//    @Override
+//    public void onBackPressed() {
+//        if (isTaskRoot()) {
+//            //Bkav QuangNDb gui su kien back de update lai profile mac dinh
+//            Intent intent = new Intent(ActiveDefaultProfileReceiver.EVENT_BACK_PRESS_BTALK_ACTIVITY);
+//            sendBroadcast(intent);
+//        }
+//
+//        // ANhd
+//        if (mViewPager.getCurrentItem() == TAB_MESSAGES_INDEX && mMessagesFragment != null
+//                && mMessagesFragment.isSearchBarShown()) {
+//            mMessagesFragment.hideSearch();
+//        } else if (mViewPager.getCurrentItem() == TAB_CONTACTS_INDEX && mContactsFragment != null) {
+//            // AnhNDd: Nếu còn cửa sổ search hoac selection thì ẩn nó đi chứ ko thoát ứng dụng.
+//            if (mContactsFragment.toolbarIsSearchMode() || mContactsFragment.isSelectionMode()) {
+//                mContactsFragment.handleBackPressed();
+//            } else {
+//                super.onBackPressed();
+//            }
+//        } else if (mViewPager.getCurrentItem() == TAB_CALLLOG_INDEX) {
+//            if (!mCallLogFragment.onBackPress()) {
+//                if (!PinnedHeaderListView.isCheckKeyDown) {
+//                    super.onBackPressed();
+//                } else {
+//                    PinnedHeaderListView.isCheckKeyDown = false;
+//                }
+//            }
+//        } else {
+//            super.onBackPressed();
+//        }
+//
+//
+//    }
 
-    @Override
-    public void onBackPressed() {
-        if (isTaskRoot()) {
-            //Bkav QuangNDb gui su kien back de update lai profile mac dinh
-            Intent intent = new Intent(ActiveDefaultProfileReceiver.EVENT_BACK_PRESS_BTALK_ACTIVITY);
-            sendBroadcast(intent);
-        }
+//    @Override
+//    protected void onNewIntent(Intent intent) {
+//        displayFragment(intent); // Viec xu ly intent duoc viet trong day
+//        setIntent(intent);
+//        if (mViewPager.getCurrentItem() == TAB_CONTACTS_INDEX && mContactsFragment != null) {
+//            mContactsFragment.configureFromRequest();
+//        }
+//    }
 
-        // ANhd
-        if (mViewPager.getCurrentItem() == TAB_MESSAGES_INDEX && mMessagesFragment != null
-                && mMessagesFragment.isSearchBarShown()) {
-            mMessagesFragment.hideSearch();
-        } else if (mViewPager.getCurrentItem() == TAB_CONTACTS_INDEX && mContactsFragment != null) {
-            // AnhNDd: Nếu còn cửa sổ search hoac selection thì ẩn nó đi chứ ko thoát ứng dụng.
-            if (mContactsFragment.toolbarIsSearchMode() || mContactsFragment.isSelectionMode()) {
-                mContactsFragment.handleBackPressed();
-            } else {
-                super.onBackPressed();
-            }
-        } else if (mViewPager.getCurrentItem() == TAB_CALLLOG_INDEX) {
-            if (!mCallLogFragment.onBackPress()) {
-                if (!PinnedHeaderListView.isCheckKeyDown) {
-                    super.onBackPressed();
-                } else {
-                    PinnedHeaderListView.isCheckKeyDown = false;
-                }
-            }
-        } else {
-            super.onBackPressed();
-        }
-
-
-    }
-
-    @Override
-    protected void onNewIntent(Intent intent) {
-        displayFragment(intent); // Viec xu ly intent duoc viet trong day
-        setIntent(intent);
-        if (mViewPager.getCurrentItem() == TAB_CONTACTS_INDEX && mContactsFragment != null) {
-            mContactsFragment.configureFromRequest();
-        }
-    }
-
-    @Override
-    public void onDeletionFinished() {
-        // AnhNDd: xử lý delete contact thành công.
-        if (mContactsFragment != null) {
-            // Bkav TienNAb: update database smartdial
-            mDialerDatabaseHelper.startSmartDialUpdateThread();
-            mContactsFragment.handleStopSelectionMode();
-        }
-    }
+//    @Override
+//    public void onDeletionFinished() {
+//        // AnhNDd: xử lý delete contact thành công.
+//        if (mContactsFragment != null) {
+//            // Bkav TienNAb: update database smartdial
+//            mDialerDatabaseHelper.startSmartDialUpdateThread();
+//            mContactsFragment.handleStopSelectionMode();
+//        }
+//    }
 
     /**
      * Anhdts: Goi hien thi tooltip
      */
-    private void callShowTooltipDialpad() {
-        if (shouldShowTooltip()) {
-            mTooltipController.showMagicPadTooltip();
-        }
-    }
+//    private void callShowTooltipDialpad() {
+//        if (shouldShowTooltip()) {
+//            mTooltipController.showMagicPadTooltip();
+//        }
+//    }
 
     /**
      * Anhdts: Check cac dieu kien co cho phep hien thi tooltip giua phone hay khong
      */
-    private boolean shouldShowTooltip() {
-        return mTooltipController.getShowTooltip() &&
-                mPhoneFragment != null &&
-                ((mPhoneFragment.getDialpadFragment() != null &&
-                        mPhoneFragment.getDialpadFragment().isDigitsEmpty()) ||
-                        mPhoneFragment.getDialpadFragment() == null)
-                &&
-                mTooltipController != null &&
-                !mTooltipController.isTooltipShowing();
-    }
+//    private boolean shouldShowTooltip() {
+//        return mTooltipController.getShowTooltip() &&
+//                mPhoneFragment != null &&
+//                ((mPhoneFragment.getDialpadFragment() != null &&
+//                        mPhoneFragment.getDialpadFragment().isDigitsEmpty()) ||
+//                        mPhoneFragment.getDialpadFragment() == null)
+//                &&
+//                mTooltipController != null &&
+//                !mTooltipController.isTooltipShowing();
+//    }
 
     /**
      * Anhdts: Check cac dieu kien co cho phep hien thi tooltip message tab hay khong
      */
-    private boolean shouldShowTooltipMessage() {
-        int learnDoubleClickMessageTab = mTooltipController.getTimesUseTooltipMessage();
-        return learnDoubleClickMessageTab < TooltipController.LEARN_DOUBLE_CLICK_MESSAGE_TAB
-                && !mTooltipController.isTooltipMessageShowing();
-    }
+//    private boolean shouldShowTooltipMessage() {
+//        int learnDoubleClickMessageTab = mTooltipController.getTimesUseTooltipMessage();
+//        return learnDoubleClickMessageTab < TooltipController.LEARN_DOUBLE_CLICK_MESSAGE_TAB
+//                && !mTooltipController.isTooltipMessageShowing();
+//    }
 
     /**
      * Anhdts Check cac dieu kien co cho phep hien thi tooltip contact tab hay khong
      */
-    private boolean shouldShowTooltipContact() {
-        int learnDoubleClickContactTab = mTooltipController.getTimesUseTooltipContact();
-        return learnDoubleClickContactTab < TooltipController.LEARN_DOUBLE_CLICK_CONTACT_TAB
-                && !mTooltipController.isTooltipContactShowing();
-    }
+//    private boolean shouldShowTooltipContact() {
+//        int learnDoubleClickContactTab = mTooltipController.getTimesUseTooltipContact();
+//        return learnDoubleClickContactTab < TooltipController.LEARN_DOUBLE_CLICK_CONTACT_TAB
+//                && !mTooltipController.isTooltipContactShowing();
+//    }
 
     /**
      * Anhdts: Goi hien thi tooltip top contact
      */
-    private void callShowTooltipTop() {
-        if (shouldShowTooltip()) {
-            if (!mTooltipController.isTooltipTopShowing()) {
-                mTooltipController.showMagicPadTooltipTop();
-            }
-        }
-    }
+//    private void callShowTooltipTop() {
+//        if (shouldShowTooltip()) {
+//            if (!mTooltipController.isTooltipTopShowing()) {
+//                mTooltipController.showMagicPadTooltipTop();
+//            }
+//        }
+//    }
 
     /**
      * Anhdts: Goi hien thi tooltip message tab
      */
-    private void callShowTooltipMessageTab() {
-        if (shouldShowTooltipMessage()) {
-            mTooltipController.showMessageTabTooltip();
-        }
-    }
+//    private void callShowTooltipMessageTab() {
+//        if (shouldShowTooltipMessage()) {
+//            mTooltipController.showMessageTabTooltip();
+//        }
+//    }
 
     /**
      * Anhdts: Goi hien thi tooltip contact tab
      */
-    private void callShowTooltipContactTab() {
-        if (shouldShowTooltipContact()) {
-            mTooltipController.showContactTabTooltip();
-        }
-    }
+//    private void callShowTooltipContactTab() {
+//        if (shouldShowTooltipContact()) {
+//            mTooltipController.showContactTabTooltip();
+//        }
+//    }
 
     /**
      * Anhdts: get height tab
@@ -1241,79 +1225,79 @@ public class BtalkActivity extends TransactionSafeActivity implements
     /**
      * Anhdts: get height tab
      */
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (mTooltipController.isTooltipShowing()) {
-            mTooltipController.hideToolTipDialpad();
-        }
-        if (mViewPager != null && mViewPager.getCurrentItem() == TAB_PHONE_INDEX
-                && mPhoneFragment != null) {
-            if (mPhoneFragment.dispatchTouchEvent(ev)) {
-                return true;
-            }
-        }
-        if (mSmartSuggestLoaderManage != null && !mSmartSuggestLoaderManage.isInteractive()) {
-            mSmartSuggestLoaderManage.hideViewSuggest();
-        }
-        try {
-            return super.dispatchTouchEvent(ev);
-        } catch (IllegalArgumentException ex) {
-            ex.printStackTrace();
-            return false;
-        }
-    }
+//    @Override
+//    public boolean dispatchTouchEvent(MotionEvent ev) {
+//        if (mTooltipController.isTooltipShowing()) {
+//            mTooltipController.hideToolTipDialpad();
+//        }
+//        if (mViewPager != null && mViewPager.getCurrentItem() == TAB_PHONE_INDEX
+//                && mPhoneFragment != null) {
+//            if (mPhoneFragment.dispatchTouchEvent(ev)) {
+//                return true;
+//            }
+//        }
+//        if (mSmartSuggestLoaderManage != null && !mSmartSuggestLoaderManage.isInteractive()) {
+//            mSmartSuggestLoaderManage.hideViewSuggest();
+//        }
+//        try {
+//            return super.dispatchTouchEvent(ev);
+//        } catch (IllegalArgumentException ex) {
+//            ex.printStackTrace();
+//            return false;
+//        }
+//    }
 
-    private void setUpNavigationView() {
-        // Bkav TienNAb: tam khoa thao tac vuot ngang tu phai qua thi hien thi navigation drawer
-        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-        if (mNavigationView != null) {
-            mNavigationView.setNavigationItemSelectedListener(
-                    new NavigationView.OnNavigationItemSelectedListener() {
-                        @Override
-                        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                            switch (item.getItemId()) {
-                                // AnhNDd: khi click vao item sẽ vào phần setting tương ứng
-                                case R.id.nav_setting_phones:
-                                    startActivity(new Intent(getApplicationContext(),
-                                            BtalkDialerSettingsActivity.class));
-                                    item.setChecked(false);
-                                    break;
-                                case R.id.nav_setting_messages:
-                                    startActivity(new Intent(getApplicationContext(),
-                                            BtalkApplicationSettingsActivity.class));
-                                    item.setChecked(false);
-                                    break;
-                                case R.id.nav_setting_contacts:
-                                    startActivity(new Intent(getApplicationContext(),
-                                            BtalkContactsPreferenceActivity.class));
-                                    item.setChecked(false);
-                                    break;
-                                // Bkav QuangNdb them su kien bam vao setting change mau tab
-                                case R.id.nav_setting_tab:
-                                    mIsLightTab = !mIsLightTab;
-                                    switchColorTabBar();
-                                    PrefUtils.get().saveBooleanPreferences(BtalkActivity.this,
-                                            PREF_IS_LIGHT_TAB_BAR, mIsLightTab);
-                                    break;
-                            }
-                            mDrawerLayout.closeDrawers();
-                            return true;
-                        }
-                    });
-        }
-    }
+//    private void setUpNavigationView() {
+//        // Bkav TienNAb: tam khoa thao tac vuot ngang tu phai qua thi hien thi navigation drawer
+//        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+//        if (mNavigationView != null) {
+//            mNavigationView.setNavigationItemSelectedListener(
+//                    new NavigationView.OnNavigationItemSelectedListener() {
+//                        @Override
+//                        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                            switch (item.getItemId()) {
+//                                // AnhNDd: khi click vao item sẽ vào phần setting tương ứng
+//                                case R.id.nav_setting_phones:
+//                                    startActivity(new Intent(getApplicationContext(),
+//                                            BtalkDialerSettingsActivity.class));
+//                                    item.setChecked(false);
+//                                    break;
+//                                case R.id.nav_setting_messages:
+//                                    startActivity(new Intent(getApplicationContext(),
+//                                            BtalkApplicationSettingsActivity.class));
+//                                    item.setChecked(false);
+//                                    break;
+//                                case R.id.nav_setting_contacts:
+//                                    startActivity(new Intent(getApplicationContext(),
+//                                            BtalkContactsPreferenceActivity.class));
+//                                    item.setChecked(false);
+//                                    break;
+//                                // Bkav QuangNdb them su kien bam vao setting change mau tab
+//                                case R.id.nav_setting_tab:
+//                                    mIsLightTab = !mIsLightTab;
+//                                    switchColorTabBar();
+//                                    PrefUtils.get().saveBooleanPreferences(BtalkActivity.this,
+//                                            PREF_IS_LIGHT_TAB_BAR, mIsLightTab);
+//                                    break;
+//                            }
+//                            mDrawerLayout.closeDrawers();
+//                            return true;
+//                        }
+//                    });
+//        }
+//    }
 
     /**
      * Anhdts hien navigation khi click vao button over flow
      */
-    public void showNavigation() {
-        new Handler().post(new Runnable() {
-            @Override
-            public void run() {
-                mDrawerLayout.openDrawer(mNavigationView);
-            }
-        });
-    }
+//    public void showNavigation() {
+//        new Handler().post(new Runnable() {
+//            @Override
+//            public void run() {
+//                mDrawerLayout.openDrawer(mNavigationView);
+//            }
+//        });
+//    }
 
     // Bkav TrungTH them ham de xu ly sau khi load xong 1 tab thi load tiep cac tab khac
     private int mLoadedTabCount;
@@ -1324,166 +1308,166 @@ public class BtalkActivity extends TransactionSafeActivity implements
 
     private static final int MSG_LOAD_MORE_TABS = 1;
 
-    private PrivateHandler mPrivateHandler;
+//    private PrivateHandler mPrivateHandler;
 
-    public void justFinishLoadingTab() {
-        mLoadedTabCount++;
-        // Bkav TrungTH load duoc tab dau thi send notify load them tab
-        if (mLoadedTabCount == 1 || mLoadedTabCount == TAB_COUNT_DEFAULT) {
-            if (!mFinishedLoadTab && mPrivateHandler != null) {
-                mPrivateHandler.sendEmptyMessageDelayed(MSG_LOAD_MORE_TABS, LOAD_MORE_TABS_DELAY);
-                mFinishedLoadTab = true;
-            }
-        }
-    }
+//    public void justFinishLoadingTab() {
+//        mLoadedTabCount++;
+//        // Bkav TrungTH load duoc tab dau thi send notify load them tab
+//        if (mLoadedTabCount == 1 || mLoadedTabCount == TAB_COUNT_DEFAULT) {
+//            if (!mFinishedLoadTab && mPrivateHandler != null) {
+//                mPrivateHandler.sendEmptyMessageDelayed(MSG_LOAD_MORE_TABS, LOAD_MORE_TABS_DELAY);
+//                mFinishedLoadTab = true;
+//            }
+//        }
+//    }
 
     /**
      * Bkav TrungTH Handler xu ly viec
      */
-    private static class PrivateHandler extends Handler {
-
-        private WeakReference<BtalkActivity> mWeakReference;
-
-        PrivateHandler(BtalkActivity btalkActivity) {
-            mWeakReference = new WeakReference<>(btalkActivity);
-        }
-
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            if (msg.what == MSG_LOAD_MORE_TABS) {
-                mWeakReference.get().reloadViewPager();
-            }
-        }
-    }
+//    private static class PrivateHandler extends Handler {
+//
+//        private WeakReference<BtalkActivity> mWeakReference;
+//
+//        PrivateHandler(BtalkActivity btalkActivity) {
+//            mWeakReference = new WeakReference<>(btalkActivity);
+//        }
+//
+//        @Override
+//        public void handleMessage(Message msg) {
+//            super.handleMessage(msg);
+//            if (msg.what == MSG_LOAD_MORE_TABS) {
+//                mWeakReference.get().reloadViewPager();
+//            }
+//        }
+//    }
 
     /**
      * TrungTH reload lai view sau khi tab dau tien duoc load
      */
-    private void reloadViewPager() {
-        if (Config.IS_BPHONE) {
-            mViewPager.setOffscreenPageLimit(TAB_COUNT_DEFAULT);
-            mViewPager.populate(true); // Bkav TrungTH : la Bphone thi chay them ham nay
-        }
-        if (mBkavBlurHelper != null) {
-            mBkavBlurHelper.startBlur(true); // TrungTh lat co de thuc hien blur
-            setStatusBarColor(mViewPager.getCurrentItem());
-        }
-    }
+//    private void reloadViewPager() {
+//        if (Config.IS_BPHONE) {
+//            mViewPager.setOffscreenPageLimit(TAB_COUNT_DEFAULT);
+//            mViewPager.populate(true); // Bkav TrungTH : la Bphone thi chay them ham nay
+//        }
+//        if (mBkavBlurHelper != null) {
+//            mBkavBlurHelper.startBlur(true); // TrungTh lat co de thuc hien blur
+//            setStatusBarColor(mViewPager.getCurrentItem());
+//        }
+//    }
 
-    public void setCurrentTab(int item) {
-        if (mViewPager != null) {
-            mViewPager.setCurrentItem(item);
-        }
-    }
+//    public void setCurrentTab(int item) {
+//        if (mViewPager != null) {
+//            mViewPager.setCurrentItem(item);
+//        }
+//    }
 
     /**
      * Anhdts sua so truoc khi goi
      */
-    public void setActionFixBeforeCall(String phoneNumber) {
-        if (mPhoneFragment != null) {
-            mPhoneFragment.setNumberDigitsActionFix(phoneNumber);
-        }
-    }
+//    public void setActionFixBeforeCall(String phoneNumber) {
+//        if (mPhoneFragment != null) {
+//            mPhoneFragment.setNumberDigitsActionFix(phoneNumber);
+//        }
+//    }
 
     /**
      * Anhdts update tin call log chua doc Neu dang o tab CallLog thi xac nhan da doc nhung chua
      * thay doi gi khi chuyen tab khac thi doi view thanh trang thai da doc
      */
-    private void updateMissedCalls() {
-        // TODO: 25/03/2020 quangndb fix tam loi badge icon misscall tren icon goi dien khong het
-//        if (mIsAccessCallLog) {
-        if (mCallLogFragment != null) {
-            mCallLogFragment.markMissedCallsAsReadAndRemoveNotifications();
-        }
-        updateMissCallNotificationLauncher();
-//            mIsAccessCallLog = false;
+//    private void updateMissedCalls() {
+//        // TODO: 25/03/2020 quangndb fix tam loi badge icon misscall tren icon goi dien khong het
+////        if (mIsAccessCallLog) {
+//        if (mCallLogFragment != null) {
+//            mCallLogFragment.markMissedCallsAsReadAndRemoveNotifications();
 //        }
-    }
+//        updateMissCallNotificationLauncher();
+////            mIsAccessCallLog = false;
+////        }
+//    }
 
     /**
      * Anhdts cap nhat cuoc goi nho
      */
-    @Override
-    protected void onPause() {
-        if (mViewPager.getCurrentItem() == TAB_CALLLOG_INDEX) {
-            updateMissedCalls();
-        }
-        // TrungTh khi giao dien pause dong popup search lai
-        if (mSmartSuggestLoaderManage != null) {
-            mSmartSuggestLoaderManage.hideViewSuggest();
-        }
-        super.onPause();
-    }
+//    @Override
+//    protected void onPause() {
+//        if (mViewPager.getCurrentItem() == TAB_CALLLOG_INDEX) {
+//            updateMissedCalls();
+//        }
+//        // TrungTh khi giao dien pause dong popup search lai
+//        if (mSmartSuggestLoaderManage != null) {
+//            mSmartSuggestLoaderManage.hideViewSuggest();
+//        }
+//        super.onPause();
+//    }
 
     /**
      * Anhdts xoa listener change background
      */
-    @Override
-    public void onDestroy() {
-
-        super.onDestroy();
-        WallpaperBlurCompat.getInstance(this).removeOnChangeWallpaperListener(this);
-        mTabLayout.clearOnTabSelectedListeners();
-        mTabLayout.removeAllTabs();
-        mViewPager.clearOnPageChangeListeners();
-
-        if (mContactsFragment != null) {
-            mContactsFragment.unRegisterReceiver();
-        }
-        if (mPhoneFragment != null) {
-            mPhoneFragment.getDialpadFragment().unRegisterCallState(this);
-        }
-
-        // Anhdts remove observer
-        if (mCallRecordObserver != null) {
-            getContentResolver().unregisterContentObserver(mCallRecordObserver);
-            mCallRecordObserver = null;
-        }
-        if (mActiveDefaultReceiver != null) {
-            unregisterReceiver(mActiveDefaultReceiver);
-        }
-        //HienDTk: dung aysnstask delete recoder
-        if (mAsyncTaskDeleteRecoder != null && !mAsyncTaskDeleteRecoder.isCancelled()) {
-            mAsyncTaskDeleteRecoder.cancel(true);
-        }
-
-    }
+//    @Override
+//    public void onDestroy() {
+//
+//        super.onDestroy();
+//        WallpaperBlurCompat.getInstance(this).removeOnChangeWallpaperListener(this);
+//        mTabLayout.clearOnTabSelectedListeners();
+//        mTabLayout.removeAllTabs();
+//        mViewPager.clearOnPageChangeListeners();
+//
+//        if (mContactsFragment != null) {
+//            mContactsFragment.unRegisterReceiver();
+//        }
+//        if (mPhoneFragment != null) {
+//            mPhoneFragment.getDialpadFragment().unRegisterCallState(this);
+//        }
+//
+//        // Anhdts remove observer
+//        if (mCallRecordObserver != null) {
+//            getContentResolver().unregisterContentObserver(mCallRecordObserver);
+//            mCallRecordObserver = null;
+//        }
+//        if (mActiveDefaultReceiver != null) {
+//            unregisterReceiver(mActiveDefaultReceiver);
+//        }
+//        //HienDTk: dung aysnstask delete recoder
+//        if (mAsyncTaskDeleteRecoder != null && !mAsyncTaskDeleteRecoder.isCancelled()) {
+//            mAsyncTaskDeleteRecoder.cancel(true);
+//        }
+//
+//    }
 
     /**
      * TrungTH them ham xu ly blur view nhung khong duoc
      *
      * @param drawerLayout
      */
-    private void initDrawerBlurView(@NonNull final DrawerLayout drawerLayout) {
-        BlurSupport.addTo(drawerLayout, mBkavBlurHelper.getBlurringView(),
-                R.color.btalk_blur_setting);
-        drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
-            @Override
-            public void onDrawerStateChanged(int newState) {
-                // if(newState == DrawerLayout.STATE_DRAGGING){
-                // mBkavBlurHelper.setFakeStatusBarColor(ContextCompat.getColor(BtalkActivity.this,
-                // R.color.btalk_drawer_background_color));
-                // }
-                super.onDrawerStateChanged(newState);
-            }
-
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                // mBkavBlurHelper.setFakeStatusBarColor(ContextCompat.getColor(BtalkActivity.this,
-                // R.color.btalk_drawer_background_color));
-                supportInvalidateOptionsMenu();
-            }
-
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                // setStatusBarColor(mViewPager.getCurrentItem());
-                supportInvalidateOptionsMenu();
-            }
-        });
-
-        drawerLayout.setScrimColor(ContextCompat.getColor(this, R.color.bg_glass));
-    }
+//    private void initDrawerBlurView(@NonNull final DrawerLayout drawerLayout) {
+//        BlurSupport.addTo(drawerLayout, mBkavBlurHelper.getBlurringView(),
+//                R.color.btalk_blur_setting);
+//        drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
+//            @Override
+//            public void onDrawerStateChanged(int newState) {
+//                // if(newState == DrawerLayout.STATE_DRAGGING){
+//                // mBkavBlurHelper.setFakeStatusBarColor(ContextCompat.getColor(BtalkActivity.this,
+//                // R.color.btalk_drawer_background_color));
+//                // }
+//                super.onDrawerStateChanged(newState);
+//            }
+//
+//            @Override
+//            public void onDrawerOpened(View drawerView) {
+//                // mBkavBlurHelper.setFakeStatusBarColor(ContextCompat.getColor(BtalkActivity.this,
+//                // R.color.btalk_drawer_background_color));
+//                supportInvalidateOptionsMenu();
+//            }
+//
+//            @Override
+//            public void onDrawerClosed(View drawerView) {
+//                // setStatusBarColor(mViewPager.getCurrentItem());
+//                supportInvalidateOptionsMenu();
+//            }
+//        });
+//
+//        drawerLayout.setScrimColor(ContextCompat.getColor(this, R.color.bg_glass));
+//    }
 
     // bkav TrungTh them xu ly ve view dialIntent
     private static final String ACTION_TOUCH_DIALER = "com.android.phone.action.TOUCH_DIALER";
@@ -1491,33 +1475,33 @@ public class BtalkActivity extends TransactionSafeActivity implements
     /**
      * Returns true if the given intent contains a phone number to populate the dialer with
      */
-    private boolean isDialIntent(Intent intent) {
-        final String action = intent.getAction();
-
-        if ((Intent.ACTION_DIAL + "_BKAV").equals(action) || ACTION_TOUCH_DIALER.equals(action)) {
-            return true;
-        }
-        // Bkav TienNAb: sua action Intent.VIEW thanh ACTION_DIAL_BKAV_VIEW
-        if (ACTION_DIAL_BKAV_VIEW.equals(action)) {
-            final Uri data = intent.getData();
-            if (data != null && PhoneAccount.SCHEME_TEL.equals(data.getScheme())) {
-                return true;
-            }
-        }
-
-        if (ACTION_FIX_BEFORE_CALL.equals(action)) {
-            if (intent.getExtras() != null) {
-                setActionFixBeforeCall(intent.getExtras().getString(ARGUMENT_NUMBER));
-            }
-            return true;
-        }
-
-        // Vao tu icon phone
-        String classname = getIntent().getComponent().getClassName();
-        return Intent.ACTION_MAIN.equals(action) && classname != null
-                && classname.equals("bkav.android.btalk.activities.BtalkActivity");
-
-    }
+//    private boolean isDialIntent(Intent intent) {
+//        final String action = intent.getAction();
+//
+//        if ((Intent.ACTION_DIAL + "_BKAV").equals(action) || ACTION_TOUCH_DIALER.equals(action)) {
+//            return true;
+//        }
+//        // Bkav TienNAb: sua action Intent.VIEW thanh ACTION_DIAL_BKAV_VIEW
+//        if (ACTION_DIAL_BKAV_VIEW.equals(action)) {
+//            final Uri data = intent.getData();
+//            if (data != null && PhoneAccount.SCHEME_TEL.equals(data.getScheme())) {
+//                return true;
+//            }
+//        }
+//
+//        if (ACTION_FIX_BEFORE_CALL.equals(action)) {
+//            if (intent.getExtras() != null) {
+//                setActionFixBeforeCall(intent.getExtras().getString(ARGUMENT_NUMBER));
+//            }
+//            return true;
+//        }
+//
+//        // Vao tu icon phone
+//        String classname = getIntent().getComponent().getClassName();
+//        return Intent.ACTION_MAIN.equals(action) && classname != null
+//                && classname.equals("bkav.android.btalk.activities.BtalkActivity");
+//
+//    }
 
     /**
      * Sets the current tab based on the intent's request type Bkav TrungTH: Them ham xu ly khi vao
@@ -1526,284 +1510,284 @@ public class BtalkActivity extends TransactionSafeActivity implements
      * @param intent Intent that contains information about which tab should be selected
      */
 
-    private void displayFragment(Intent intent) {
-        // BKav TrungTH, xu ly ttruong hop vao tu notify goi nho
-        if (CallLog.Calls.CONTENT_TYPE.equals(intent.getType())) {
-            // Externally specified extras take precedence to EXTRA_SHOW_TAB, which is only
-            // used internally.
-            final Bundle extras = intent.getExtras();
-            if (extras != null
-                    && extras.getInt(
-                    CallLog.Calls.EXTRA_CALL_TYPE_FILTER) == CallLog.Calls.VOICEMAIL_TYPE) {
-                // Bkav TrungTH , hien ko co VoiceMail
-            } else {
-                mViewPager.setCurrentItem(TAB_CALLLOG_INDEX);
-                return;
-            }
-        }
-        int tabIndex;
-        String action = intent.getAction();
-        if (MESSAGE_ACTION.equalsIgnoreCase(action)) {
-            // Bkav QuangNDb them ham xu ly notification message khi nhan vao
-            tabIndex = TAB_MESSAGES_INDEX;
-            mTabOpen = TAB_MESSAGES_INDEX;
-            // Bkav QuangNDb chi mo thread khi click vao shortcut
-            if (intent.getBooleanExtra(BtalkMessageActivity.IS_MESSAGE_SHORT_CUT, false)) {
-                checkOpenConversation();
-            }
-        } else if (ACTION_SHOW_CALL_LOG.equals(action)) {
-            tabIndex = TAB_CALLLOG_INDEX;
-        } else if (isDialIntent(intent)) {
-            if (hasMissCalled()) {
-                tabIndex = TAB_CALLLOG_INDEX;
-            } else if (Intent.ACTION_MAIN.equals(action)) {
-                mTabOpen = TAB_PHONE_INDEX;
-                tabIndex = TAB_PHONE_INDEX;
-                if (PreferenceManager.getDefaultSharedPreferences(this)
-                        .getBoolean(BtalkSettingOpenAppFragment.OPTION_KEEP_STATE, true)) {
-                    tabIndex = PrefUtils.get().loadIntPreferences(this, PrefUtils.TAB_CACHE_PHONE, 0);
-                    if (tabIndex == TAB_CONTACTS_INDEX) {
-                        processIntentContacts(intent, false);
-                    }
-                }
-            } else {
-                tabIndex = TAB_PHONE_INDEX;
-                if (mPhoneFragment != null)
-                    mPhoneFragment.setStartedFromNewIntent(true);
-            }
-        } else if (processIntentContacts(intent, false)) {
-            mTabOpen = TAB_CONTACTS_INDEX;
-            tabIndex = TAB_CONTACTS_INDEX;
-        } else {
-            tabIndex = TAB_MESSAGES_INDEX;
-        }
-        if (tabIndex == TAB_PHONE_INDEX) {
-            setBackgroundTabBar(TAB_PHONE_INDEX);
-            setStatusBarColor(TAB_PHONE_INDEX);
-        }
-        mViewPager.setCurrentItem(tabIndex, false);
-        TAB_SELECT = tabIndex;
-        DialerUtils.sendBroadcastCount(getApplicationContext(), DialerUtils.convertTabSelectForOpen(tabIndex), 1);
-
-    }
+//    private void displayFragment(Intent intent) {
+//        // BKav TrungTH, xu ly ttruong hop vao tu notify goi nho
+//        if (CallLog.Calls.CONTENT_TYPE.equals(intent.getType())) {
+//            // Externally specified extras take precedence to EXTRA_SHOW_TAB, which is only
+//            // used internally.
+//            final Bundle extras = intent.getExtras();
+//            if (extras != null
+//                    && extras.getInt(
+//                    CallLog.Calls.EXTRA_CALL_TYPE_FILTER) == CallLog.Calls.VOICEMAIL_TYPE) {
+//                // Bkav TrungTH , hien ko co VoiceMail
+//            } else {
+//                mViewPager.setCurrentItem(TAB_CALLLOG_INDEX);
+//                return;
+//            }
+//        }
+//        int tabIndex;
+//        String action = intent.getAction();
+//        if (MESSAGE_ACTION.equalsIgnoreCase(action)) {
+//            // Bkav QuangNDb them ham xu ly notification message khi nhan vao
+//            tabIndex = TAB_MESSAGES_INDEX;
+//            mTabOpen = TAB_MESSAGES_INDEX;
+//            // Bkav QuangNDb chi mo thread khi click vao shortcut
+//            if (intent.getBooleanExtra(BtalkMessageActivity.IS_MESSAGE_SHORT_CUT, false)) {
+//                checkOpenConversation();
+//            }
+//        } else if (ACTION_SHOW_CALL_LOG.equals(action)) {
+//            tabIndex = TAB_CALLLOG_INDEX;
+//        } else if (isDialIntent(intent)) {
+//            if (hasMissCalled()) {
+//                tabIndex = TAB_CALLLOG_INDEX;
+//            } else if (Intent.ACTION_MAIN.equals(action)) {
+//                mTabOpen = TAB_PHONE_INDEX;
+//                tabIndex = TAB_PHONE_INDEX;
+//                if (PreferenceManager.getDefaultSharedPreferences(this)
+//                        .getBoolean(BtalkSettingOpenAppFragment.OPTION_KEEP_STATE, true)) {
+//                    tabIndex = PrefUtils.get().loadIntPreferences(this, PrefUtils.TAB_CACHE_PHONE, 0);
+//                    if (tabIndex == TAB_CONTACTS_INDEX) {
+//                        processIntentContacts(intent, false);
+//                    }
+//                }
+//            } else {
+//                tabIndex = TAB_PHONE_INDEX;
+//                if (mPhoneFragment != null)
+//                    mPhoneFragment.setStartedFromNewIntent(true);
+//            }
+//        } else if (processIntentContacts(intent, false)) {
+//            mTabOpen = TAB_CONTACTS_INDEX;
+//            tabIndex = TAB_CONTACTS_INDEX;
+//        } else {
+//            tabIndex = TAB_MESSAGES_INDEX;
+//        }
+//        if (tabIndex == TAB_PHONE_INDEX) {
+//            setBackgroundTabBar(TAB_PHONE_INDEX);
+//            setStatusBarColor(TAB_PHONE_INDEX);
+//        }
+//        mViewPager.setCurrentItem(tabIndex, false);
+//        TAB_SELECT = tabIndex;
+//        DialerUtils.sendBroadcastCount(getApplicationContext(), DialerUtils.convertTabSelectForOpen(tabIndex), 1);
+//
+//    }
 
     /**
      * Bkav QuangNDb mo conversation neu dang o pause khoi 1 conversation
      */
 
-    private void checkOpenConversation() {
-        if (PrefUtils.get().loadBooleanPreferences(this, PrefUtils.KEEP_STATUS_APP, false)) {
-            long deltaTime = System.currentTimeMillis() - PrefUtils.get().loadLongPreferences(this,
-                    PrefUtils.TIME_PAUSE_APP, System.currentTimeMillis());
-            if (convertMillisToMinutes(deltaTime) <= 15) {
-                final String conversationId = PrefUtils.get().loadStringPreferences(this,
-                        PrefUtils.CONVERSATION_ID, "-1");
-                UIIntents.get().launchConversationActivity(
-                        this, conversationId, null,
-                        null,
-                        false);
-            }
-        }
-    }
+//    private void checkOpenConversation() {
+//        if (PrefUtils.get().loadBooleanPreferences(this, PrefUtils.KEEP_STATUS_APP, false)) {
+//            long deltaTime = System.currentTimeMillis() - PrefUtils.get().loadLongPreferences(this,
+//                    PrefUtils.TIME_PAUSE_APP, System.currentTimeMillis());
+//            if (convertMillisToMinutes(deltaTime) <= 15) {
+//                final String conversationId = PrefUtils.get().loadStringPreferences(this,
+//                        PrefUtils.CONVERSATION_ID, "-1");
+//                UIIntents.get().launchConversationActivity(
+//                        this, conversationId, null,
+//                        null,
+//                        false);
+//            }
+//        }
+//    }
 
     /**
      * Bkav QuangNDb Chuyen doi thoi gian tu ms -> phut
      */
-    private long convertMillisToMinutes(long time) {
-        return time / 60000;
-    }
+//    private long convertMillisToMinutes(long time) {
+//        return time / 60000;
+//    }
 
     /**
      * Khoi tao mau cho tab luc moi vao , get lai setting va set
      */
-    private void initTabBarColor() {
-        mIsLightTab = PrefUtils.get().loadBooleanPreferences(this, PREF_IS_LIGHT_TAB_BAR, false);
-        switchColorTabBar();
-    }
+//    private void initTabBarColor() {
+//        mIsLightTab = PrefUtils.get().loadBooleanPreferences(this, PREF_IS_LIGHT_TAB_BAR, false);
+//        switchColorTabBar();
+//    }
 
     /**
      * TrungTH doi mau cua Tab
      */
-    private void switchColorTabBar() {
-        mDividerTabsView.setVisibility(mIsLightTab ? View.VISIBLE : View.GONE);
-        setBackgroundTabBar(mViewPager.getCurrentItem());
-    }
+//    private void switchColorTabBar() {
+//        mDividerTabsView.setVisibility(mIsLightTab ? View.VISIBLE : View.GONE);
+//        setBackgroundTabBar(mViewPager.getCurrentItem());
+//    }
 
     /**
      * Anhdts cap nhat so cuoc goi nho = 0 khi vuot home
      */
-    private void updateMissCallNotificationLauncher() {
-        int unRead = 0;
-        Intent intentUnread = new Intent();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            intentUnread.setAction(ACTION_UNREAD_CHANGED_O);
-            intentUnread.putExtra(INTENT_EXTRA_BADGE_COUNT, unRead);
-            intentUnread.putExtra(INTENT_EXTRA_PACKAGENAME, "bkav.android.btalk");
-            intentUnread.putExtra(INTENT_EXTRA_ACTIVITY_NAME, getComponentName().getClassName());
-            intentUnread.setClassName("bkav.android.launcher3", "com.android.launcher3.bkav.BkavUnreadReceive");
-        } else {
-            intentUnread.setAction(ACTION_UNREAD_CHANGED);
-            intentUnread.putExtra(INTENT_EXTRA_BADGE_COUNT, unRead);
-            intentUnread.putExtra(INTENT_EXTRA_PACKAGENAME, "bkav.android.btalk");
-            intentUnread.putExtra(INTENT_EXTRA_ACTIVITY_NAME, getComponentName().getClassName());
-            intentUnread.setClassName("bkav.android.launcher3", "com.android.launcher3.bkav.BkavUnreadReceive");
-        }
-        sendBroadcast(intentUnread);
-    }
+//    private void updateMissCallNotificationLauncher() {
+//        int unRead = 0;
+//        Intent intentUnread = new Intent();
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            intentUnread.setAction(ACTION_UNREAD_CHANGED_O);
+//            intentUnread.putExtra(INTENT_EXTRA_BADGE_COUNT, unRead);
+//            intentUnread.putExtra(INTENT_EXTRA_PACKAGENAME, "bkav.android.btalk");
+//            intentUnread.putExtra(INTENT_EXTRA_ACTIVITY_NAME, getComponentName().getClassName());
+//            intentUnread.setClassName("bkav.android.launcher3", "com.android.launcher3.bkav.BkavUnreadReceive");
+//        } else {
+//            intentUnread.setAction(ACTION_UNREAD_CHANGED);
+//            intentUnread.putExtra(INTENT_EXTRA_BADGE_COUNT, unRead);
+//            intentUnread.putExtra(INTENT_EXTRA_PACKAGENAME, "bkav.android.btalk");
+//            intentUnread.putExtra(INTENT_EXTRA_ACTIVITY_NAME, getComponentName().getClassName());
+//            intentUnread.setClassName("bkav.android.launcher3", "com.android.launcher3.bkav.BkavUnreadReceive");
+//        }
+//        sendBroadcast(intentUnread);
+//    }
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus && mMessagesFragment != null
-                && (mTabLayout.getSelectedTabPosition() == TAB_MESSAGES_INDEX)) {
-            BtalkLog.logD("BtalkActivity", "onWindowFocusChanged: remove notify");
-            mMessagesFragment.setScrolledToNewestConversationIfNeeded();
-        }
-        if (hasFocus) {
-            try {
-                Intent intent = new Intent();
-                intent.setAction(ACTION_BIND_DIALER_SERVICE);
-                intent.setComponent(
-                        new ComponentName("com.android.dialer",
-                                "com.android.incallui.customizebkav.receiver.BkavReceiver"));
-                sendBroadcast(intent);
-            } catch (Exception ignore) {
-            }
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                // Anhdts neu cua so phia tren thi hien fake status bar
-                if (isInMultiWindowMode()) {
-                    int[] rect = new int[2];
-                    findViewById(R.id.root_view).getLocationOnScreen(rect);
-                    DisplayMetrics metrics = new DisplayMetrics();
-
-                    getWindowManager().getDefaultDisplay().getMetrics(metrics);
-                    // phia duoi thi khong hien status bar, phia tren thi bo view navigation bar
-                    if (rect[1] > metrics.heightPixels / 2) {
-                        findViewById(R.id.fake_statusBar).setVisibility(View.GONE);
-                        mBkavBlurHelper.setIsNoActionBar(true);
-                        mBkavBlurHelper.addFlagNoLimitsAndShowFakeView();
-                    }
-                } else {
-                    showFakeNavigationBackground();
-                }
-            }
-        }
-    }
+//    @Override
+//    public void onWindowFocusChanged(boolean hasFocus) {
+//        super.onWindowFocusChanged(hasFocus);
+//        if (hasFocus && mMessagesFragment != null
+//                && (mTabLayout.getSelectedTabPosition() == TAB_MESSAGES_INDEX)) {
+//            BtalkLog.logD("BtalkActivity", "onWindowFocusChanged: remove notify");
+//            mMessagesFragment.setScrolledToNewestConversationIfNeeded();
+//        }
+//        if (hasFocus) {
+//            try {
+//                Intent intent = new Intent();
+//                intent.setAction(ACTION_BIND_DIALER_SERVICE);
+//                intent.setComponent(
+//                        new ComponentName("com.android.dialer",
+//                                "com.android.incallui.customizebkav.receiver.BkavReceiver"));
+//                sendBroadcast(intent);
+//            } catch (Exception ignore) {
+//            }
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//                // Anhdts neu cua so phia tren thi hien fake status bar
+//                if (isInMultiWindowMode()) {
+//                    int[] rect = new int[2];
+//                    findViewById(R.id.root_view).getLocationOnScreen(rect);
+//                    DisplayMetrics metrics = new DisplayMetrics();
+//
+//                    getWindowManager().getDefaultDisplay().getMetrics(metrics);
+//                    // phia duoi thi khong hien status bar, phia tren thi bo view navigation bar
+//                    if (rect[1] > metrics.heightPixels / 2) {
+//                        findViewById(R.id.fake_statusBar).setVisibility(View.GONE);
+//                        mBkavBlurHelper.setIsNoActionBar(true);
+//                        mBkavBlurHelper.addFlagNoLimitsAndShowFakeView();
+//                    }
+//                } else {
+//                    showFakeNavigationBackground();
+//                }
+//            }
+//        }
+//    }
 
     // Anhdts
-    private void showFakeNavigationBackground() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            if (hasNavigationBar() && !isInMultiWindowMode()) {
-                View view = findViewById(R.id.navigation_view);
-                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) view
-                        .getLayoutParams();
-                params.height = getHeightOfNavigationBar();
-            } else {
-                View view = findViewById(R.id.navigation_view);
-                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) view
-                        .getLayoutParams();
-                params.height = 0;
-            }
-        }
-    }
+//    private void showFakeNavigationBackground() {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+//            if (hasNavigationBar() && !isInMultiWindowMode()) {
+//                View view = findViewById(R.id.navigation_view);
+//                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) view
+//                        .getLayoutParams();
+//                params.height = getHeightOfNavigationBar();
+//            } else {
+//                View view = findViewById(R.id.navigation_view);
+//                RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) view
+//                        .getLayoutParams();
+//                params.height = 0;
+//            }
+//        }
+//    }
 
     /**
      * Anhdts
      *
      * @return true neu co cuoc goi nho
      */
-    private boolean hasMissCalled() {
-        if (ActivityCompat.checkSelfPermission(this,
-                Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            // ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            // public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            // int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return false;
-        }
-        // Bkav TienNAb: Them Type MISSED_IMS_TYPE cua sim volte de truy van cuoc goi nho khi dung sim volte
-        Cursor cursor = getContentResolver().query(CallLog.Calls.CONTENT_URI,
-                new String[]{
-                        CallLog.Calls._ID
-                },
-                "(" + CallLog.Calls.TYPE + "=" + CallLog.Calls.MISSED_TYPE
-                        + " or " + CallLog.Calls.TYPE + " = " + AppCompatConstants.MISSED_IMS_TYPE + ")"
-                        + " and " + CallLog.Calls.IS_READ + " = 0 ",
-                null,
-                CallLog.Calls._ID + " LIMIT 1");
-        if (cursor != null) {
-            if (cursor.getCount() > 0) {
-                cursor.close();
-                return true;
-            }
-            cursor.close();
-        }
-        return false;
-    }
+//    private boolean hasMissCalled() {
+//        if (ActivityCompat.checkSelfPermission(this,
+//                Manifest.permission.READ_CALL_LOG) != PackageManager.PERMISSION_GRANTED) {
+//            // TODO: Consider calling
+//            // ActivityCompat#requestPermissions
+//            // here to request the missing permissions, and then overriding
+//            // public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//            // int[] grantResults)
+//            // to handle the case where the user grants the permission. See the documentation
+//            // for ActivityCompat#requestPermissions for more details.
+//            return false;
+//        }
+//        // Bkav TienNAb: Them Type MISSED_IMS_TYPE cua sim volte de truy van cuoc goi nho khi dung sim volte
+//        Cursor cursor = getContentResolver().query(CallLog.Calls.CONTENT_URI,
+//                new String[]{
+//                        CallLog.Calls._ID
+//                },
+//                "(" + CallLog.Calls.TYPE + "=" + CallLog.Calls.MISSED_TYPE
+//                        + " or " + CallLog.Calls.TYPE + " = " + AppCompatConstants.MISSED_IMS_TYPE + ")"
+//                        + " and " + CallLog.Calls.IS_READ + " = 0 ",
+//                null,
+//                CallLog.Calls._ID + " LIMIT 1");
+//        if (cursor != null) {
+//            if (cursor.getCount() > 0) {
+//                cursor.close();
+//                return true;
+//            }
+//            cursor.close();
+//        }
+//        return false;
+//    }
 
     /**
      * Anhdts cac intent ben tab danh ba
      */
-    public boolean processIntentContacts(Intent intent, boolean forNewIntent) {
-        mRequest = mIntentResolver.resolveIntent(intent);
-        if (Log.isLoggable("", Log.DEBUG)) {
-            Log.d("", this + " processIntent: forNewIntent=" + forNewIntent
-                    + " intent=" + intent + " request=" + mRequest);
-        }
-        if (!mRequest.isValid()) {
-            setResult(RESULT_CANCELED);
-            return false;
-        }
+//    public boolean processIntentContacts(Intent intent, boolean forNewIntent) {
+//        mRequest = mIntentResolver.resolveIntent(intent);
+//        if (Log.isLoggable("", Log.DEBUG)) {
+//            Log.d("", this + " processIntent: forNewIntent=" + forNewIntent
+//                    + " intent=" + intent + " request=" + mRequest);
+//        }
+//        if (!mRequest.isValid()) {
+//            setResult(RESULT_CANCELED);
+//            return false;
+//        }
+//
+//        if (mRequest.getActionCode() == ContactsRequest.ACTION_VIEW_CONTACT) {
+//            final Intent intentGo = ImplicitIntentsUtil.composeQuickContactIntent(
+//                    mRequest.getContactUri(), QuickContactActivity.MODE_FULLY_EXPANDED);
+//            intentGo.putExtra(QuickContactActivity.EXTRA_PREVIOUS_SCREEN_TYPE,
+//                    ScreenEvent.ScreenType.UNKNOWN);
+//            ImplicitIntentsUtil.startActivityInApp(this, intentGo);
+//            return false;
+//        }
+//        // Anhdts vao search luon khi vao tab danh ba
+//        if (mRequest.getActionCode() != ContactsRequest.ACTION_STARRED
+//                && mRequest.getActionCode() != ContactsRequest.ACTION_FREQUENT) {
+//            mRequest.setSearchMode(true);
+//        }
+//        return true;
+//    }
 
-        if (mRequest.getActionCode() == ContactsRequest.ACTION_VIEW_CONTACT) {
-            final Intent intentGo = ImplicitIntentsUtil.composeQuickContactIntent(
-                    mRequest.getContactUri(), QuickContactActivity.MODE_FULLY_EXPANDED);
-            intentGo.putExtra(QuickContactActivity.EXTRA_PREVIOUS_SCREEN_TYPE,
-                    ScreenEvent.ScreenType.UNKNOWN);
-            ImplicitIntentsUtil.startActivityInApp(this, intentGo);
-            return false;
-        }
-        // Anhdts vao search luon khi vao tab danh ba
-        if (mRequest.getActionCode() != ContactsRequest.ACTION_STARRED
-                && mRequest.getActionCode() != ContactsRequest.ACTION_FREQUENT) {
-            mRequest.setSearchMode(true);
-        }
-        return true;
-    }
-
-    public ContactsRequest getRequest() {
-        return mRequest;
-    }
+//    public ContactsRequest getRequest() {
+//        return mRequest;
+//    }
 
     /**
      * Bkav QuangNDb Add connect phone Bkav
      */
-    private void addConnectPhone(Context context) {
-        String displayName;
-        String[] numbers;
-        if (Config.isMyanmar()) {
-            displayName = TelephoneExchangeUtils.BKAV_SUPPORT_MY;
-            numbers = new String[]{TelephoneExchangeUtils.BKAV_NUMBER_MY};
-        } else {
-            // Bkav TienNAb: sua text cho phu hop voi ban BCY
-            displayName = CompatUtils.isBCY() ? "CSKH" : "Bkav CSKH";
+//    private void addConnectPhone(Context context) {
+//        String displayName;
+//        String[] numbers;
+//        if (Config.isMyanmar()) {
+//            displayName = TelephoneExchangeUtils.BKAV_SUPPORT_MY;
+//            numbers = new String[]{TelephoneExchangeUtils.BKAV_NUMBER_MY};
+//        } else {
+//            // Bkav TienNAb: sua text cho phu hop voi ban BCY
+//            displayName = CompatUtils.isBCY() ? "CSKH" : "Bkav CSKH";
+//
+//            //Bkav QuangNDb bo "1900545499",  di
+//            numbers = new String[]{"02473050069", "02473050050", "1800545448", "02862966626"};
+//        }
+//        ContactUtils.get().addConnectPhone(context, displayName, numbers);
+//    }
 
-            //Bkav QuangNDb bo "1900545499",  di
-            numbers = new String[]{"02473050069", "02473050050", "1800545448", "02862966626"};
-        }
-        ContactUtils.get().addConnectPhone(context, displayName, numbers);
-    }
-
-    private void removeOldConnectPhone(Context context) {
-        String displayName;
-        // Bkav TienNAb: sua text cho phu hop voi ban BCY
-        displayName = CompatUtils.isBCY() ? "CSKH" : "Bkav CSKH";
-        String number = "1900545499";
-        ContactUtils.get().removeOldConnectPhone(context, displayName, number);
-    }
+//    private void removeOldConnectPhone(Context context) {
+//        String displayName;
+//        // Bkav TienNAb: sua text cho phu hop voi ban BCY
+//        displayName = CompatUtils.isBCY() ? "CSKH" : "Bkav CSKH";
+//        String number = "1900545499";
+//        ContactUtils.get().removeOldConnectPhone(context, displayName, number);
+//    }
 
 
     /**
@@ -1825,25 +1809,25 @@ public class BtalkActivity extends TransactionSafeActivity implements
             mBkavBlurHelper.setFakeStatusBarColor(
                     ContextCompat.getColor(BtalkActivity.this, R.color.btalk_white_opacity_bg));
         }
-        BtalkUiUtils.setSystemUiVisibility(mViewPager, View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        BtalkUiUtils.setSystemUiVisibility(mRootView, View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
     }
 
     /**
      * Bkav TienNAb doi mau status bar khi bat che do action mode trong message
      */
     public void setStatusbarOnActionModeMessage() {
-        BtalkUiUtils.resetSystemUiVisibility(mViewPager);
+        BtalkUiUtils.resetSystemUiVisibility(mRootView);
         if (mBkavBlurHelper != null) {
             mBkavBlurHelper.setFakeStatusBarColor(
                     ContextCompat.getColor(BtalkActivity.this, R.color.action_mode_message_color));
         }
     }
 
-    public void querySmartContact(String query, SuggestPopup.ActionSmartSuggest listener) {
-        if (mSmartSuggestLoaderManage != null) {
-            mSmartSuggestLoaderManage.startLoad(query, false, listener);
-        }
-    }
+//    public void querySmartContact(String query, SuggestPopup.ActionSmartSuggest listener) {
+//        if (mSmartSuggestLoaderManage != null) {
+//            mSmartSuggestLoaderManage.startLoad(query, false, listener);
+//        }
+//    }
 
     public SuggestLoaderManager getSmartSuggestLoaderManage() {
         return mSmartSuggestLoaderManage;
@@ -1854,18 +1838,18 @@ public class BtalkActivity extends TransactionSafeActivity implements
     /**
      * Anhdts broadcast thay doi sim, neu thay doi thi clear cache
      */
-    public static class BroadcastSimChange extends BroadcastReceiver {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-            if (action != null && action.equals(ACTION_SIM_CHANGE)) {
-                BtalkCallLogCache.getCallLogCache(context).checkMutilSim();
-                BtalkCallLogCache.getCallLogCache(context).setSimChange();
-                BtalkCallLogCache.getCallLogCache(context).clearSimIconCache();
-            }
-        }
-    }
+//    public static class BroadcastSimChange extends BroadcastReceiver {
+//
+//        @Override
+//        public void onReceive(Context context, Intent intent) {
+//            String action = intent.getAction();
+//            if (action != null && action.equals(ACTION_SIM_CHANGE)) {
+//                BtalkCallLogCache.getCallLogCache(context).checkMutilSim();
+//                BtalkCallLogCache.getCallLogCache(context).setSimChange();
+//                BtalkCallLogCache.getCallLogCache(context).clearSimIconCache();
+//            }
+//        }
+//    }
 
     private boolean navigationBarIsVisible() {
         Display d = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();

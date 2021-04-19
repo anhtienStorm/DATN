@@ -156,7 +156,7 @@ public class BtalkDialpadFragment extends DialpadFragment {
 
     @Override
     public void hideAndClearDialpad(boolean animate) {
-        ((BtalkActivity) getActivity()).hideDialpadFragment(animate, true);
+//        ((BtalkActivity) getActivity()).hideDialpadFragment(animate, true);
         if (mListener != null) {
             mListener.goneRecycleView();
         }
@@ -164,7 +164,7 @@ public class BtalkDialpadFragment extends DialpadFragment {
 
     @Override
     protected void onDialpadShown() {
-        ((BtalkActivity) getActivity()).onDialpadShown();
+//        ((BtalkActivity) getActivity()).onDialpadShown();
     }
 
     @Override
@@ -436,7 +436,7 @@ public class BtalkDialpadFragment extends DialpadFragment {
         if (getActivity() != null && getActivity() instanceof BtalkActivity) {
             // Bkav TrungTh goi ham thong bao da vao onResume de bao da load xong fragment nay
             mContext = getActivity().getApplicationContext();
-            ((BtalkActivity) getActivity()).justFinishLoadingTab();
+//            ((BtalkActivity) getActivity()).justFinishLoadingTab();
         }
         super.onResume();
         updateDeleteButton(TextUtils.isEmpty(mDigits.getText()));

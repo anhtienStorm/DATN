@@ -291,8 +291,8 @@ public class BtalkCallLogListItemViewHolderNew extends CallLogListItemViewHolder
     @Override
     protected void fixBeforeCallAction() {
         if (mContext instanceof BtalkActivity) {
-            ((BtalkActivity) mContext).setCurrentTab(BtalkActivity.TAB_PHONE_INDEX);
-            ((BtalkActivity) mContext).setActionFixBeforeCall(mFinalNumber);
+//            ((BtalkActivity) mContext).setCurrentTab(BtalkActivity.TAB_PHONE_INDEX);
+//            ((BtalkActivity) mContext).setActionFixBeforeCall(mFinalNumber);
         } else {
             Bundle data = new Bundle();
             data.putString(BtalkActivity.ARGUMENT_NUMBER, number);

@@ -983,7 +983,7 @@ public class BtalkMultiSelectContactsListFragment extends MultiSelectContactsLis
                 setVisibleScrollbarEnabled(!isSearchMode());
                 mContactAdapter.setQueryString(queryString);
                 reStartContactLoader();
-                mBtalkActivity.querySmartContact(mBtalkFrameToolAdapter.getQueryString(), this);
+//                mBtalkActivity.querySmartContact(mBtalkFrameToolAdapter.getQueryString(), this);
                 break;
             case BtalkFrameToolAdapter.Listener.Action.STOP_SEARCH_AND_SELECTION_MODE:
                 setQueryString("", true);
@@ -991,7 +991,7 @@ public class BtalkMultiSelectContactsListFragment extends MultiSelectContactsLis
                 showFabWithAnimation(true);
                 mContactAdapter.setQueryString("");
                 reStartContactLoader();
-                mBtalkActivity.querySmartContact("", this);
+//                mBtalkActivity.querySmartContact("", this);
                 break;
         }
     }
@@ -2397,7 +2397,7 @@ public class BtalkMultiSelectContactsListFragment extends MultiSelectContactsLis
 
         // Bkav TrungTh goi ham thong bao da vao onResume de bao da load xong fragment nay
         if (getActivity() != null && getActivity() instanceof BtalkActivity) {
-            ((BtalkActivity) getActivity()).justFinishLoadingTab();
+//            ((BtalkActivity) getActivity()).justFinishLoadingTab();
         }
         ((BtalkMultiSelectEntryContactListAdapter) mAdapter).setShowPhoneNumber(PreferenceManager.getDefaultSharedPreferences(getActivity()).
                 getBoolean(getActivity().getString(R.string.show_phone_number), false));
@@ -2533,7 +2533,8 @@ public class BtalkMultiSelectContactsListFragment extends MultiSelectContactsLis
      * Anhdts xu ly intent den
      */
     public void configureFromRequest() {
-        final ContactsRequest request = ((BtalkActivity) getActivity()).getRequest();
+//        final ContactsRequest request = ((BtalkActivity) getActivity()).getRequest();
+        final ContactsRequest request = null;
 
         boolean searchMode = request.isSearchMode();
         ContactListFilter filter = null;

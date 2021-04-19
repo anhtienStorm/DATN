@@ -91,7 +91,7 @@ Bkav TrungTH activity moi cho icon mesage
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
             </intent-filter>
@@ -123,15 +123,34 @@ Bkav TrungTH activity moi cho icon mesage
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
             </intent-filter>
         </activity>
+
+<!--        <activity-->
+<!--            android:name=".activities.MainActivity"-->
+<!--            android:icon="@drawable/ic_launcher_message"-->
+<!--            android:label="@string/launcherMessage"-->
+<!--            android:configChanges="screenLayout|layoutDirection|uiMode"-->
+<!--            android:launchMode="singleTask"-->
+<!--            android:theme="@style/BtalkPeopleTheme"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:windowSoftInputMode="stateHidden|adjustNothing">-->
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN"/>-->
+<!--                <category android:name="android.intent.category.DEFAULT"/>-->
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
+<!--            </intent-filter>-->
+
+<!--        </activity>-->
+
         <activity
             android:name=".activities.BtalkActivity"
             android:configChanges="screenLayout|layoutDirection|uiMode"
-            android:icon="@drawable/ic_phone_launcher"
+            android:icon="@drawable/ic_launcher_message"
             android:label="@string/launcherDialer"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -356,7 +375,7 @@ Bkav TrungTH activity moi cho icon mesage
                 <action android:name="btalk.android.SPEED_DIAL"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+<!--                <category android:name="android.intent.category.LAUNCHER"/>-->
             </intent-filter>
         </activity>
         <activity

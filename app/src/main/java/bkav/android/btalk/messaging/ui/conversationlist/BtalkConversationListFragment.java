@@ -905,7 +905,7 @@ public class BtalkConversationListFragment extends ConversationListFragment
         updateSetAsDefaultSmsView();
         // Bkav TrungTh goi ham thong bao da vao onResume de bao da load xong fragment nay
         if (getActivity() != null && getActivity() instanceof BtalkActivity) {
-            ((BtalkActivity) getActivity()).justFinishLoadingTab();
+//            ((BtalkActivity) getActivity()).justFinishLoadingTab();
         }
     }
 
